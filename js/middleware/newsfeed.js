@@ -1,20 +1,20 @@
 const gigsList = document.getElementById("gigsContainer");
 
 const init = async () => {
-    let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/viewJobs";
-    let elm = "";
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/viewJobs";
+  let elm = "";
 
-    try{
-        const res = await fetch(url);
-        const data = await res.json();
-        console.log(data);
-        data.jobs.forEach((jobs)=>{
-            
-            var date = moment(parseInt(jobs.deadline.$date.$numberLong)) ;
-            console.log(jobs);
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    console.log(data);
+    data.jobs.forEach((jobs) => {
+      var date = moment(parseInt(jobs.deadline.$date.$numberLong));
+      console.log(jobs);
 
-            //Add to element
-            elm += `
+      //Add to element
+      elm += `
             <!-- TABLE ROW -->
             <div class="table-row small">
               <!-- TABLE COLUMN -->
@@ -55,24 +55,19 @@ const init = async () => {
   
               </div>
               <!-- /TABLE COLUMN -->
-            </div>`
-            
-        });
+            </div>`;
+    });
 
-        gigsList.innerHTML = elm;
-        
-
-    } catch(error){
-        console.log(error.message)
-    }
+    gigsList.innerHTML = elm;
+  } catch (error) {
+    console.log(error.message);
+  }
 };
 
 const sessStorage = async (e) => {
-  
   console.log(e);
   window.sessionStorage.setItem("title", e);
   window.location.href = "05_Gig_info.html";
 };
 
 init();
-
