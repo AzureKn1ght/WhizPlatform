@@ -11,7 +11,7 @@ const init = async () => {
         data.jobs.forEach((jobs)=>{
             
             var date = moment(parseInt(jobs.deadline.$date.$numberLong)) ;
-          
+            console.log(jobs);
 
             //Add to element
             elm += `
@@ -22,7 +22,7 @@ const init = async () => {
                 <!-- TABLE INFORMATION -->
                 <div class="table-information">
                   <!-- TABLE TITLE -->
-                  <p class="table-title"><a href="gig1.html">${jobs.title}</p></a>
+                  <p class="table-title"><a href="#" onclick="sessStorage('${jobs.title}')">${jobs.title}</p></a>
                   <!-- /TABLE TITLE -->
                 </div>
                 <!-- /TABLE INFORMATION -->
@@ -56,13 +56,22 @@ const init = async () => {
               </div>
               <!-- /TABLE COLUMN -->
             </div>`
+            
         });
 
         gigsList.innerHTML = elm;
+        
 
     } catch(error){
         console.log(error.message)
     }
+};
+
+const sessStorage = async (e) => {
+  
+  console.log(e);
+  window.sessionStorage.setItem("title", e);
+  window.location.href = "05_Gig_info.html";
 };
 
 init();
