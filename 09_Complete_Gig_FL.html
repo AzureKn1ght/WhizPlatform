@@ -2914,106 +2914,137 @@
     <div class="grid grid mobile-prefer-content">
       <!-- GRID COLUMN -->
       <div class="grid-column">
-        <!-- WIDGET BOX -->
+
         <div class="widget-box">
 
-          <!-- SECTION TITLE -->
-          <form action="/" method="post">
-            <div class="container">
-
-
-              <label for="overall_rating"><b>Overall Hirer Rating</b></label>
-              <select id="overall_rating" name="overall_rating" required>
-                <option value="none" selected disabled hidden>
-                  Select Rating
-              </option>
-                <option value="select">5 - Very Good</option>
-                <option value="select">4 - Good</option>
-                <option value="select">3 - Satisfactory</option>
-                <option value="select">2 - Can Be Improved</option>
-                <option value="select">1 - Bad</option>
-              </select>
-              <br><br>
-
-              <label for="job_brief_rating"><b>Job Brief and Description</b></label>
-              <select id="job_brief_rating" name="job_brief_rating" required>
-                <option value="none" selected disabled hidden>
-                  Select Rating
-              </option>
-                <option value="select">5 - Very Good</option>
-                <option value="select">4 - Good</option>
-                <option value="select">3 - Satisfactory</option>
-                <option value="select">2 - Can Be Improved</option>
-                <option value="select">1 - Bad</option>
-              </select>
-              <br><br>
-
-              <label for="comms_rating"><b>Communication</b></label>
-              <select id="comms_rating" name="comms_rating" required>
-                <option value="none" selected disabled hidden>
-                  Select Rating
-              </option>
-                <option value="select">5 - Very Good</option>
-                <option value="select">4 - Good</option>
-                <option value="select">3 - Satisfactory</option>
-                <option value="select">2 - Can Be Improved</option>
-                <option value="select">1 - Bad</option>
-              </select>
-              <br><br>
-
-              <label for="comments"><b>Comments</b></label>
-              <textarea id="comments" name="comments" rows="4" cols="50">
-              </textarea><br>
-              <br>
-
-
-              <button class="button secondary">Submit</button>
-              <br><br>
-              <button class="button primary">Go Back</button>
-
-
-              <!-- /SECTION TITLE -->
-            </div>
-            <!-- /SECTION HEADER INFO -->
+          <!--Job Details-->
+          <h2>Translation for Marketing Brochure</h2><br><br>
+          <h3>Description</h3><br>
+          <p>Translate from English to Native Japanese</p><br>
+          <h3>Skills Required</h3><br>
+          <p>Translation</p><Br>
+          <h3>Hirer</h3><br>
+          <p>Hirer Name</p><br>
+          <h3>Deadline</h3><br>
+          <p>Date</p>
         </div>
-        <!-- /SECTION HEADER -->
-        </form>
 
 
-        <!-- app -->
-        <script src="js/utils/app.js"></script>
-        <!-- page loader -->
-        <script src="js/utils/page-loader.js"></script>
-        <!-- simplebar -->
-        <script src="js/vendor/simplebar.min.js"></script>
-        <!-- liquidify -->
-        <script src="js/utils/liquidify.js"></script>
-        <!-- XM_Plugins -->
-        <script src="js/vendor/xm_plugins.min.js"></script>
-        <!-- tiny-slider -->
-        <script src="js/vendor/tiny-slider.min.js"></script>
-        <!-- chartJS -->
-        <script src="js/vendor/Chart.bundle.min.js"></script>
-        <!-- global.hexagons -->
-        <script src="js/global/global.hexagons.js"></script>
-        <!-- global.tooltips -->
-        <script src="js/global/global.tooltips.js"></script>
-        <!-- global.popups -->
-        <script src="js/global/global.popups.js"></script>
-        <!-- global.charts -->
-        <script src="js/global/global.charts.js"></script>
-        <!-- header -->
-        <script src="js/header/header.js"></script>
-        <!-- sidebar -->
-        <script src="js/sidebar/sidebar.js"></script>
-        <!-- content -->
-        <script src="js/content/content.js"></script>
-        <!-- form.utils -->
-        <script src="js/form/form.utils.js"></script>
-        <!-- SVG icons -->
-        <script src="js/utils/svg-loader.js"></script>
-        <!-- MongoDB -->
-        <script src="js/utils/db.js"></script>
+
+
+
+        <!-- SECTION TITLE -->
+
+        <div id="gigInfo">
+
+        </div>
+      </div>
+
+
+      <!-- WIDGET BOX -->
+      <div class="widget-box">
+
+        <!-- SECTION TITLE -->
+        <h2>Ratings and Comments</h2><br><br>
+        <form action="/" method="post">
+
+            <label for="overall_rating"><b>Overall Hirer Rating</b></label>
+            <select id="overall_rating" name="overall_rating" required>
+              <option value="none" selected disabled hidden>
+                Select Rating
+              </option>
+              <option value="select">5 - Very Good</option>
+              <option value="select">4 - Good</option>
+              <option value="select">3 - Satisfactory</option>
+              <option value="select">2 - Can Be Improved</option>
+              <option value="select">1 - Bad</option>
+            </select>
+            <br><br>
+
+            <label for="job_brief_rating"><b>Job Brief and Description</b></label>
+            <select id="job_brief_rating" name="job_brief_rating" required>
+              <option value="none" selected disabled hidden>
+                Select Rating
+              </option>
+              <option value="select">5 - Very Good</option>
+              <option value="select">4 - Good</option>
+              <option value="select">3 - Satisfactory</option>
+              <option value="select">2 - Can Be Improved</option>
+              <option value="select">1 - Bad</option>
+            </select>
+            <br><br>
+
+            <label for="comms_rating"><b>Communication</b></label>
+            <select id="comms_rating" name="comms_rating" required>
+              <option value="none" selected disabled hidden>
+                Select Rating
+              </option>
+              <option value="select">5 - Very Good</option>
+              <option value="select">4 - Good</option>
+              <option value="select">3 - Satisfactory</option>
+              <option value="select">2 - Can Be Improved</option>
+              <option value="select">1 - Bad</option>
+            </select>
+            <br><br>
+
+            <label for="comments"><b>Comments</b></label>
+            <textarea id="comments" name="comments" rows="4" cols="50">
+              </textarea><br>
+            <br>
+
+
+            <button class="button secondary">Submit</button>
+            <br><br>
+            <button class="button primary">Go Back</button>
+
+
+            <!-- /SECTION TITLE -->
+          <!-- /SECTION HEADER INFO -->
+      </div>
+      <!-- /SECTION HEADER -->
+      </form>
+
+
+      <!--momentJS  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <!-- gig-details JS  -->
+      <script src="js/middleware/gig-details.js"></script>
+      <!-- app -->
+      <script src="js/utils/app.js"></script>
+      <!-- page loader -->
+      <script src="js/utils/page-loader.js"></script>
+      <!-- simplebar -->
+      <script src="js/vendor/simplebar.min.js"></script>
+      <!-- liquidify -->
+      <script src="js/utils/liquidify.js"></script>
+      <!-- XM_Plugins -->
+      <script src="js/vendor/xm_plugins.min.js"></script>
+      <!-- tiny-slider -->
+      <script src="js/vendor/tiny-slider.min.js"></script>
+      <!-- chartJS -->
+      <script src="js/vendor/Chart.bundle.min.js"></script>
+      <!-- global.hexagons -->
+      <script src="js/global/global.hexagons.js"></script>
+      <!-- global.tooltips -->
+      <script src="js/global/global.tooltips.js"></script>
+      <!-- global.popups -->
+      <script src="js/global/global.popups.js"></script>
+      <!-- global.charts -->
+      <script src="js/global/global.charts.js"></script>
+      <!-- header -->
+      <script src="js/header/header.js"></script>
+      <!-- sidebar -->
+      <script src="js/sidebar/sidebar.js"></script>
+      <!-- content -->
+      <script src="js/content/content.js"></script>
+      <!-- form.utils -->
+      <script src="js/form/form.utils.js"></script>
+      <!-- SVG icons -->
+      <script src="js/utils/svg-loader.js"></script>
+      <!-- MongoDB -->
+      <script src="js/utils/db.js"></script>
 </body>
 
 </html>
