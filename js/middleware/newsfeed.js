@@ -22,7 +22,7 @@ const init = async () => {
                 <!-- TABLE INFORMATION -->
                 <div class="table-information">
                   <!-- TABLE TITLE -->
-                  <p class="table-title"><a href="#" onclick="sessStorage('${jobs.title}')">${jobs.title}</p></a>
+                  <p class="table-title"><a href="#" onclick="sessStorage('${jobs._id.$oid}')">${jobs.title}</p></a>
                   <!-- /TABLE TITLE -->
                 </div>
                 <!-- /TABLE INFORMATION -->
@@ -66,7 +66,7 @@ const init = async () => {
 
 const sessStorage = async (e) => {
   console.log(e);
-  window.sessionStorage.setItem("title", e);
+  window.sessionStorage.setItem("gigId", e);
   window.location.href = "05_Gig_info.html";
 };
 

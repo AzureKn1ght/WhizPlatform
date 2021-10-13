@@ -1,7 +1,7 @@
 const gigInfo = document.getElementById("gigInfo");
 
 //const input = document.getElementById("input");
-let data = sessionStorage.getItem("title");
+let data = sessionStorage.getItem("gigId");
 const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
 
@@ -13,9 +13,9 @@ const bidGig = async(e) =>{
 
   let url=
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/bidJob"
-  let titleJob=data;
+  let idJob=data;
   const gigApply = {
-    title: titleJob,
+    _id: idJob,
     applicants: "Marina Valentine"
   };
 
@@ -46,16 +46,15 @@ const gigDetails = async (e) => {
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
   let elm = "";
-  let titleJob = data;
-  console.log(data);
-  const gigTitle = {
-    title: titleJob,
+  let idJob = data;
+  const gigId = {
+    _id: idJob,
   };
 
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(gigTitle),
+      body: JSON.stringify(gigId),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
