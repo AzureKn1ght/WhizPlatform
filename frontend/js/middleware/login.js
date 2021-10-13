@@ -1,21 +1,27 @@
-const emailFreelancerRef = useRef(null);
-  const passFreelancerRef = useRef(null);
-  const emailHirerRef = useRef(null);
-  const passHirerRef = useRef(null);
-
+  const emailFreelancerRef = document.getElementById("freelancer-email");
+  const passFreelancerRef = document.getElementById("freelancer-password");
+  const emailHirerRef = document.getElementById("hirer-email");
+  const passHirerRef = document.getElementById("hirer-password");
+  const freelancerLoginButton = document.getElementById("freelancer-login");
+  const hirerLoginButton = document.getElementById("hirer-login");
+  
+  function handleCredentialResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+  }
+ 
   const loginFreelancer = async (event) => {
     event.preventDefault();
 
-    const enteredEmail = emailFreelancerRef.current.value;
-    const enteredPassword = passFreelancerRef.current.value;
+    var enteredEmail = emailFreelancerRef.value;
+    const enteredPassword = passFreelancerRef.value;
 
     const userData = {
       email: enteredEmail,
-      pwd: enteredPassword,
+      password: enteredPassword,
     };
 
     try {
-      const res = await fetch("http://localhost:4000/freelancerlogin", {
+      const res = await fetch("https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/loginFreelancer", {
         method: "POST",
         body: JSON.stringify(userData),
         mode: "cors",
@@ -28,7 +34,8 @@ const emailFreelancerRef = useRef(null);
         const data = await res.json();
         console.log(data);
         console.log(`Logged in successfully welcome ${enteredEmail}!`);
-        window.location.href = "/dashboard";
+        window.sessionStorage.setItem("userId",data._id)
+        window.location.href = "02_Newsfeed.html";
       } else {
         const message = await res.text();
         alert(message);
@@ -41,16 +48,16 @@ const emailFreelancerRef = useRef(null);
   const loginHirer = async (event) => {
     event.preventDefault();
 
-    const enteredEmail = emailHirerRef.current.value;
-    const enteredPassword = passHirerRef.current.value;
+    const enteredEmail = emailHirerRef.value;
+    const enteredPassword = passHirerRef.value;
 
     const userData = {
       email: enteredEmail,
-      pwd: enteredPassword,
+      password: enteredPassword,
     };
 
     try {
-      const res = await fetch("http://localhost:4000/hirerlogin", {
+      const res = await fetch("https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/loginHirer", {
         method: "POST",
         body: JSON.stringify(userData),
         mode: "cors",
@@ -62,9 +69,10 @@ const emailFreelancerRef = useRef(null);
       if (res.ok) {
         const data = await res.json();
         console.log(data);
-        alert(`Logged in successfully welcome ${enteredEmail}!`);
-       //history.replace("/dashboard");
-        window.location.href="/dashboard";
+        console.log(data._id);
+        console.log(`Logged in successfully welcome ${enteredEmail}!`);
+        window.sessionStorage.setItem("userId",data._id)
+        window.location.href="02_Newsfeed.html";
       } else {
         const message = await res.text();
         alert(message);
@@ -74,31 +82,14 @@ const emailFreelancerRef = useRef(null);
     }
   };
 
-  const refreshTokenSetup = (res) => {
-    // Timing to renew access token
-    let refreshTiming = (res.tokenObj.expires_in || 3600 - 5 * 60) * 1000;
-
-    const refreshToken = async () => {
-      const newAuthRes = await res.reloadAuthResponse();
-      refreshTiming = (newAuthRes.expires_in || 3600 - 5 * 60) * 1000;
-      console.log("newAuthRes:", newAuthRes);
-      // saveUserToken(newAuthRes.access_token);  <-- save new token
-      localStorage.setItem("authToken", newAuthRes.id_token);
-
-      // Setup the other timer after the first one
-      setTimeout(refreshToken, refreshTiming);
-    };
-
-    // Setup first refresh timer
-    setTimeout(refreshToken, refreshTiming);
-  };
 
   const clientId =
     "447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com";
 
   //Google login handler to verify
-  const handleFreelancerLogin = async (googleData) => {
-    try {
+  const handleCredentialResponseFreelancer = async (response) => {
+    console.log("Encoded JWT ID token: " + response.credential);
+    /* try {
       const res = await fetch(
         "http://localhost:4000/freelancer/api/v1/auth/google",
         {
@@ -118,7 +109,7 @@ const emailFreelancerRef = useRef(null);
         /*alert(
           `Logged in successfully welcome ${googleData.profileObj.name} 😍. \n See console for full profile object.`
         );
-        //history.replace("/dashboard");*/
+        //history.replace("/dashboard");
         window.location.href="/dashboard";
       } else {
         const message = await res.text();
@@ -130,10 +121,10 @@ const emailFreelancerRef = useRef(null);
       // store returned user somehow
     } catch (error) {
       console.log(error.message);
-    }
+    } */
   };
 
-  const handleHirerLogin = async (googleData) => {
+  const handleCredentialResponseHirer = async (googleData) => {
     try {
       const res = await fetch(
         "http://localhost:4000/hirer/api/v1/auth/google",
@@ -164,7 +155,7 @@ const emailFreelancerRef = useRef(null);
         alert(message);
       }
 
-      refreshTokenSetup(res);
+    
       // store returned user somehow
     } catch (error) {
       console.log(error.message);
@@ -180,3 +171,6 @@ const emailFreelancerRef = useRef(null);
       e.preventDefault();
       window.location.href = "/registerfreelancer";
   };
+
+  freelancerLoginButton.addEventListener("click", loginFreelancer);
+  hirerLoginButton.addEventListener("click",loginHirer)

@@ -2,6 +2,7 @@ const gigInfo = document.getElementById("gigInfo");
 
 //const input = document.getElementById("input");
 let data = sessionStorage.getItem("gigId");
+let idFreelancer = sessionStorage.getItem("userId");
 const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
 
@@ -16,7 +17,7 @@ const bidGig = async(e) =>{
   let idJob=data;
   const gigApply = {
     _id: idJob,
-    applicants: "Marina Valentine"
+    applicants: idFreelancer
   };
 
   try{
