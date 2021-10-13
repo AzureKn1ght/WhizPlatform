@@ -87,8 +87,8 @@
     "447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com";
 
   //Google login handler to verify
-  const handleCredentialResponseFreelancer = async (googleData) => {
-    console.log("Encoded JWT ID token: " + googleData.credential);
+  const handleCredentialResponseFreelancer = async (response) => {
+    console.log("Encoded JWT ID token: " + response.credential);
     /* try {
       const res = await fetch(
         "http://localhost:4000/freelancer/api/v1/auth/google",
