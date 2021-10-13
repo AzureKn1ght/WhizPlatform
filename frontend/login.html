@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
+    />
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css" />
+    
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico" />
+    <title>Whiz | Home</title>
+  </head>
+  <body>
+    <!-- LANDING -->
+    <div class="landing">
+      <!-- LANDING DECORATION -->
+      <div class="landing-decoration"></div>
+      <!-- /LANDING DECORATION -->
+
+      <!-- LANDING INFO -->
+      <div class="landing-info">
+        <!-- LOGO -->
+        <div class="logo">
+          <!-- ICON LOGO VIKINGER -->
+          <div>
+            <img
+              className="login-icon-logo"
+              src="./img/whiz/hat_coin_icon.png"
+              alt="Whiz Logo"
+            />
+          </div>
+          <!-- /ICON LOGO VIKINGER -->
+        </div>
+        <!-- /LOGO -->
+
+        <!-- LANDING INFO PRETITLE -->
+        <h2 class="landing-info-pretitle">Welcome to</h2>
+        <!-- /LANDING INFO PRETITLE -->
+
+        <!-- LANDING INFO TITLE -->
+        <h1 class="landing-info-title">Whiz</h1>
+        <!-- /LANDING INFO TITLE -->
+
+        <!-- LANDING INFO TEXT -->
+        <p class="landing-info-text">
+          The next generation social network &amp; community! Connect with jobs
+          and play with our quests and badges gamification system!
+        </p>
+        <!-- /LANDING INFO TEXT -->
+
+        <!-- TAB SWITCH -->
+        <div class="tab-switch">
+          <!-- TAB SWITCH BUTTON -->
+          <p class="tab-switch-button login-register-form-trigger">
+            Freelancer
+          </p>
+          <!-- /TAB SWITCH BUTTON -->
+
+          <!-- TAB SWITCH BUTTON -->
+          <p class="tab-switch-button login-register-form-trigger">Hirer</p>
+          <!-- /TAB SWITCH BUTTON -->
+        </div>
+        <!-- /TAB SWITCH -->
+      </div>
+      <!-- /LANDING INFO -->
+
+      <!-- LANDING FORM -->
+      <div class="landing-form">
+        <!-- FORM BOX -->
+        <div class="form-box login-register-form-element">
+          <!-- FORM BOX DECORATION -->
+          <img
+            class="form-box-decoration overflowing"
+            src="./img/landing/rocket.png"
+            alt="rocket"
+          />
+          <!-- /FORM BOX DECORATION -->
+
+          <!-- FORM BOX TITLE -->
+          <h2 class="form-box-title">Freelancer Login</h2>
+          <!-- /FORM BOX TITLE -->
+
+          <!-- FORM -->
+          <form class="form">
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="login-username">Email</label>
+                  <input
+                    type="text"
+                    id="freelancer-email"
+                    name="login_username"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM INPUT -->
+                <div class="form-input">
+                  <label for="login-password">Password</label>
+                  <input
+                    type="password"
+                    id="freelancer-password"
+                    name="login_password"
+                  />
+                </div>
+                <!-- /FORM INPUT -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row space-between">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- CHECKBOX WRAP -->
+                <div class="checkbox-wrap">
+                  <input
+                    type="checkbox"
+                    id="login-remember"
+                    name="login_remember"
+                    checked
+                  />
+                  <!-- CHECKBOX BOX -->
+                  <div class="checkbox-box">
+                    <!-- ICON CROSS -->
+                    <svg class="icon-cross">
+                      <use xlink:href="#svg-cross"></use>
+                    </svg>
+                    <!-- /ICON CROSS -->
+                  </div>
+                  <!-- /CHECKBOX BOX -->
+                  <label for="login-remember">Remember Me</label>
+                </div>
+                <!-- /CHECKBOX WRAP -->
+              </div>
+              <!-- /FORM ITEM -->
+
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- FORM LINK -->
+                <a class="form-link" href="/#">Forgot Password?</a>
+                <!-- /FORM LINK -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- BUTTON -->
+                <button class="button medium secondary" id="freelancer-login">Login</button>
+                <!-- /BUTTON -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+            <!-- FORM ROW -->
+            <div class="form-row">
+              <!-- FORM ITEM -->
+              <div class="form-item">
+                <!-- BUTTON -->
+                <button class="button medium primary">Register Now!</button>
+                <!-- /BUTTON -->
+              </div>
+              <!-- /FORM ITEM -->
+            </div>
+            <!-- /FORM ROW -->
+          </form>
+          <!-- /FORM -->
+
+          <!-- LINED TEXT -->
+          <p class="lined-text">Login with Google Account</p>
+          <!-- /LINED TEXT -->
+          <div id="g_id_onload"
+     data-client_id="447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="handleCredentialResponseFreelancer"
+     data-nonce=""
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="filled_blue"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left"
+     data-width="356.02">
+</div>
+        </div>
+          <!-- /FORM BOX -->
+
+          <!-- FORM BOX -->
+          <div class="form-box login-register-form-element">
+            <!-- FORM BOX DECORATION -->
+            <img
+            class="form-box-decoration overflowing"
+            src="./img/landing/rocket.png"
+            alt="rocket"
+            />
+            <!-- /FORM BOX DECORATION -->
+
+            <!-- FORM BOX TITLE -->
+            <h2 class="form-box-title">Hirer Login</h2>
+            <!-- /FORM BOX TITLE -->
+
+            <!-- FORM -->
+            <form class="form">
+              <!-- FORM ROW -->
+              <div class="form-row">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- FORM INPUT -->
+                  <div class="form-input">
+                    <label for="login-username">Email</label>
+                    <input
+                      type="text"
+                      id="hirer-email"
+                      name="login_username"
+                    />
+                  </div>
+                  <!-- /FORM INPUT -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+
+              <!-- FORM ROW -->
+              <div class="form-row">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- FORM INPUT -->
+                  <div class="form-input">
+                    <label for="login-password">Password</label>
+                    <input
+                      type="password"
+                      id="hirer-password"
+                      name="login_password"
+                    />
+                  </div>
+                  <!-- /FORM INPUT -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+
+              <!-- FORM ROW -->
+              <div class="form-row space-between">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- CHECKBOX WRAP -->
+                  <div class="checkbox-wrap">
+                    <input
+                      type="checkbox"
+                      id="login-remember"
+                      name="login_remember"
+                      checked
+                    />
+                    <!-- CHECKBOX BOX -->
+                    <div class="checkbox-box">
+                      <!-- ICON CROSS -->
+                      <svg class="icon-cross">
+                        <use xlink:href="#svg-cross"></use>
+                      </svg>
+                      <!-- /ICON CROSS -->
+                    </div>
+                    <!-- /CHECKBOX BOX -->
+                    <label for="login-remember">Remember Me</label>
+                  </div>
+                  <!-- /CHECKBOX WRAP -->
+                </div>
+                <!-- /FORM ITEM -->
+
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- FORM LINK -->
+                  <a class="form-link" href="/#">Forgot Password?</a>
+                  <!-- /FORM LINK -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+
+              <!-- FORM ROW -->
+              <div class="form-row">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- BUTTON -->
+                  <button class="button medium secondary" id="hirer-login">Login</button>
+                  <!-- /BUTTON -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+              <!-- FORM ROW -->
+              <div class="form-row">
+                <!-- FORM ITEM -->
+                <div class="form-item">
+                  <!-- BUTTON -->
+                  <button class="button medium primary">Register Now!</button>
+                  <!-- /BUTTON -->
+                </div>
+                <!-- /FORM ITEM -->
+              </div>
+              <!-- /FORM ROW -->
+            </form>
+            <!-- /FORM -->
+
+            <!-- LINED TEXT -->
+            <p class="lined-text">Login with your Google Account</p>
+            <!-- /LINED TEXT -->
+            <div id="g_id_onload"
+     data-client_id="447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+     data-callback="handleCredentialResponseHirer"
+     data-nonce=""
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="filled_blue"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left"
+     data-width="356.02">
+</div>
+            <!-- SOCIAL LINKS -->
+          </div>
+          <!-- /SOCIAL LINKS -->
+        </div>
+        <!-- /FORM BOX -->
+      </div>
+      <!-- /LANDING FORM -->
+    </div>
+    <!-- /LANDING -->
+
+    <!--Login JS-->
+    <script src="./js/middleware/login.js"></script>
+    <!--Google Login-->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- app -->
+    <script src="js/utils/app.js" defer></script>
+    <!-- XM_Plugins -->
+    <script src="js/vendor/xm_plugins.min.js" defer></script>
+    <!-- form.utils -->
+    <script src="js/form/form.utils.js" defer></script>
+    <!-- landing.tabs -->
+    <script src="js/landing/landing.tabs.js" defer></script>
+    <!-- SVG icons -->
+    <script src="js/utils/svg-loader.js" defer></script>
+  </body>
+</html>
