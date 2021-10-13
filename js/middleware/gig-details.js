@@ -3,9 +3,41 @@ const gigInfo = document.getElementById("gigInfo");
 //const input = document.getElementById("input");
 let data = sessionStorage.getItem("title");
 const b1 = document.getElementById("b1");
+const b2 = document.getElementById("b2");
 
 const goBack = async (e) => {
   window.location.href = "04_Gig_Search.html";
+};
+
+const bidGig = async(e) =>{
+
+  let url=
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/bidJob"
+  let titleJob=data;
+  const gigApply = {
+    title: titleJob,
+    applicants: "Marina Valentine"
+  };
+
+  try{
+    const res = await fetch(url,{
+      method: "POST",
+      body: JSON.stringify(gigApply),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    });
+
+    if(res.ok){
+      alert('Gig successfully bid for!')
+    }else {
+      const message = await res.text();
+      alert(message);
+    }
+  }catch(error){
+    console.log(error);
+  }
 };
 
 const gigDetails = async (e) => {
@@ -67,3 +99,4 @@ const gigDetails = async (e) => {
 gigDetails();
 
 b1.addEventListener("click", goBack);
+b2.addEventListener("click", bidGig);
