@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MPL-2.0-no-copyleft-exception
 pragma solidity ^0.8.7;
 
+
 contract ReviewsContract
 {
     
@@ -38,24 +39,16 @@ contract ReviewsContract
         string location;
     }
     
-    
-    //User data type definition
-    struct User
-    {
-        address userAddress;
-        string userName;
-    }
-    
 
     //Review data type definition
     struct Review
     {
         uint reviewID;
-        User reviewer;
-        User reviewee;
-        Rating ratings;
+        address reviewer;
+        address reviewee;
+        //Rating ratings;
         string comments;
-        Job job;
+        //Job job;
     }
     
     
@@ -105,7 +98,7 @@ contract ReviewsContract
     
     
     //CREATES A NEW REVIEWS AND ADDS TO THE APPROPRIATE REVIEWER/REVEIWEE ADDRESS
-    function addReview(address reviewerAddress, address revieweeAddress, Review memory review) public 
+    function addReview(Review memory review) public 
     {
         //Increment counter and create new Review
         totalReviewsCounter = totalReviewsCounter + 1;
@@ -113,9 +106,22 @@ contract ReviewsContract
         newReview.reviewID = totalReviewsCounter;
         
         //Add the newReview to the lists of Reviews
+        address reviewerAddress = newReview.reviewer; 
+        address revieweeAddress = newReview.reviewee;
         __receivedReviews[revieweeAddress].push(newReview);
         __writtenReviews[reviewerAddress].push(newReview);
+        
         emit Add(reviewerAddress, revieweeAddress, newReview);
     }
     
+    
+    // //EXAMPLE JSON INPUT PARAMETER
+    // var input = {
+    //     reviewID: 0,
+    //     reviewer: 0x769c4342bac4559cd32c9d5b0f9109131c934a0f,
+    //     reviewee: 0x769c4342bac4559cd32c9d5b0f9109131c934a0f,
+    //     comments: 'some comment',
+    // };
+    
+
 }
