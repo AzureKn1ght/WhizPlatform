@@ -31,7 +31,7 @@ contract ReviewsContract
     //Job data type definition    
     struct Job
     {
-        uint jobID;
+        string jobID;
         uint budget;
         string title;
         string description;
@@ -46,9 +46,9 @@ contract ReviewsContract
         uint reviewID;
         address reviewer;
         address reviewee;
-        //Rating ratings;
+        Rating ratings;
         string comments;
-        //Job job;
+        Job job;
     }
     
     
@@ -113,15 +113,6 @@ contract ReviewsContract
         
         emit Add(reviewerAddress, revieweeAddress, newReview);
     }
-    
-    
-    // //EXAMPLE JSON INPUT PARAMETER
-    // var input = {
-    //     reviewID: 0,
-    //     reviewer: 0x769c4342bac4559cd32c9d5b0f9109131c934a0f,
-    //     reviewee: 0x769c4342bac4559cd32c9d5b0f9109131c934a0f,
-    //     comments: 'some comment',
-    // };
     
 
 }
