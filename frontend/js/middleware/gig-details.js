@@ -5,6 +5,7 @@ let data = sessionStorage.getItem("gigId");
 let idFreelancer = sessionStorage.getItem("userId");
 const b1 = document.getElementById("b1");
 const b2 = document.getElementById("b2");
+var jobDetails = null;
 
 const goBack = async (e) => {
   window.location.href = "04_Gig_Search.html";
@@ -63,6 +64,16 @@ const gigDetails = async (e) => {
     });
     const jobs = await res.json();
     console.log(jobs);
+    jobDetails = {
+      jobID: jobs._id,
+      budget: jobs.budget,
+      title: jobs.title,
+      description: jobs.description,
+      skills: jobs.skills_required,
+      location: jobs.required_location
+    };
+
+    console.log(jobDetails);
 
     //Add to element
     elm += `
@@ -91,6 +102,8 @@ const gigDetails = async (e) => {
             `;
 
     gigInfo.innerHTML = elm;
+
+
   } catch (error) {
     console.log(error.message);
   }

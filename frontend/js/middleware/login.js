@@ -4,9 +4,47 @@
   const passHirerRef = document.getElementById("hirer-password");
   const freelancerLoginButton = document.getElementById("freelancer-login");
   const hirerLoginButton = document.getElementById("hirer-login");
+  const freelancerMetaLog = document.getElementById("meta-freelancer");
+  const hirerMetaLog = document.getElementById("meta-hirer");
   
-  function handleCredentialResponse(response) {
-    console.log("Encoded JWT ID token: " + response.credential);
+  function freelancerMetalogin() {
+    ethereum
+      .request({ method: "eth_requestAccounts" })
+      .then(() => {
+        handleAccountsChanged;
+        console.log("connection done");
+        //window.location.href = "newsfeed.html";
+      })
+      .catch((err) => {
+        if (err.code === 4001) {
+          // EIP-1193 userRejectedRequest error
+          // If this happens, the user rejected the connection request.
+          alert("Please connect to MetaMask.");
+        } else {
+          alert("Error connecting to MetaMask. Please try again.");
+          console.error(err);
+        }
+      });
+  }
+
+  function hirerMetalogin() {
+    ethereum
+      .request({ method: "eth_requestAccounts" })
+      .then(() => {
+        handleAccountsChanged;
+        console.log("connection done");
+        //window.location.href = "dashboard.html";
+      })
+      .catch((err) => {
+        if (err.code === 4001) {
+          // EIP-1193 userRejectedRequest error
+          // If this happens, the user rejected the connection request.
+          alert("Please connect to MetaMask.");
+        } else {
+          alert("Error connecting to MetaMask. Please try again.");
+          console.error(err);
+        }
+      });
   }
  
   const loginFreelancer = async (event) => {
@@ -173,4 +211,6 @@
   };
 
   freelancerLoginButton.addEventListener("click", loginFreelancer);
-  hirerLoginButton.addEventListener("click",loginHirer)
+  hirerLoginButton.addEventListener("click",loginHirer);
+  freelancerMetaLog.addEventListener("click", freelancerMetalogin)
+  hirerMetaLog.addEventListener("click",hirerMetalogin)

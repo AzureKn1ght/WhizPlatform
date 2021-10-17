@@ -188,26 +188,18 @@
           <!-- /FORM -->
 
           <!-- LINED TEXT -->
-          <p class="lined-text">Login with Google Account</p>
+          <p class="lined-text">Login with Metamask Account</p>
           <!-- /LINED TEXT -->
-          <div id="g_id_onload"
-     data-client_id="447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com"
-     data-context="signin"
-     data-ux_mode="popup"
-     data-callback="handleCredentialResponse"
-     data-nonce=""
-     data-auto_prompt="false">
-</div>
-
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="rectangular"
-     data-theme="filled_blue"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left"
-     data-width="356.02">
-</div>
+          <div class="container">
+            <a class="btn btn-primary" id="meta-freelancer" href="#" role="button">
+              <img
+                src="./img/metamask.png"
+                height="25"
+                alt="Connect to Metamask"
+              />
+              &nbsp; Connect with Metamask
+            </a>
+          </div>
         </div>
           <!-- /FORM BOX -->
 
@@ -328,26 +320,18 @@
             <!-- /FORM -->
 
             <!-- LINED TEXT -->
-            <p class="lined-text">Login with your Google Account</p>
+            <p class="lined-text">Login with Metamask Account</p>
             <!-- /LINED TEXT -->
-            <div id="g_id_onload"
-     data-client_id="447766182718-8v51ihfmm6ndehpe3d58hm4pnje93poa.apps.googleusercontent.com"
-     data-context="signin"
-     data-ux_mode="popup"
-     data-callback="handleCredentialResponse"
-     data-nonce=""
-     data-auto_prompt="false">
-</div>
-
-<div class="g_id_signin"
-     data-type="standard"
-     data-shape="rectangular"
-     data-theme="filled_blue"
-     data-text="signin_with"
-     data-size="large"
-     data-logo_alignment="left"
-     data-width="356.02">
-</div>
+            <div class="container">
+              <a class="btn btn-primary" id="meta-hirer" href="#" role="button">
+                <img
+                  src="./img/metamask.png"
+                  height="25"
+                  alt="Connect to Metamask"
+                />
+                &nbsp; Connect with Metamask
+              </a>
+            </div>
             <!-- SOCIAL LINKS -->
           </div>
           <!-- /SOCIAL LINKS -->
@@ -360,7 +344,8 @@
 
    
     <!--Google Login-->
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="js/middleware/metamask.js"></script>
      <!--Login JS-->
      <script src="./js/middleware/login.js"></script>
     <!-- app -->
