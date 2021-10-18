@@ -166,7 +166,7 @@ const gigsProgress = async () => {
 const updateStatus = async (e) => {
   console.log(e);
   window.sessionStorage.setItem("gigId", e);
-  window.location.href = "09_Complete_Gig_FL.html";
+  window.location.href = "complete-gig-fl.html";
 };
 
 gigsProgress();
