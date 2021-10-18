@@ -1297,6 +1297,11 @@ textarea::placeholder {
   height: 40px;
 }
 
+.icon-logo-vikinger.large {
+  width: 42px;
+  height: 60px;
+}
+
 .icon-dots {
   fill: #fff;
   width: 10px;
@@ -1921,7 +1926,7 @@ textarea::placeholder {
 }
 
 body {
-  font-size: 16px;
+  font-size: 20px;
   background-color: #f8f8fb;
   overflow-x: hidden;
 }
