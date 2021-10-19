@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "target": "es2020",
+    "module": "es2015",
+    "baseUrl": "."
+  },
+  "exclude": [
+    "dist",
+    "node_modules",
+    "build",
+    ".vscode",
+    "coverage",
+    ".npm",
+    ".yarn"
+  ],
+  "include": ["js", "includes"],
+  "typeAcquisition": {
+    "enable": true,
+    "include": ["jquery", "jest"]
+  }
+}
