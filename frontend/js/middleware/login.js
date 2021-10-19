@@ -73,7 +73,7 @@
         console.log(data);
         console.log(`Logged in successfully welcome ${enteredEmail}!`);
         window.sessionStorage.setItem("userId",data._id)
-        window.location.href = "02_Newsfeed.html";
+        window.location.href = "dashboard-freelancer.html";
       } else {
         const message = await res.text();
         alert(message);

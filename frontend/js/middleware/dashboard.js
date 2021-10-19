@@ -1,29 +1,48 @@
 const gigsInProgress = document.getElementById("gigs-in-progress");
+const user = window.sessionStorage.getItem("userId");
 
 const gigsProgress = async () => {
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobsinProgress";
   let elm = "";
+  const freelancer = {
+    applicant: user,
+  };
 
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(freelancer),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
     const data = await res.json();
     console.log(data);
     data.gigs.forEach((gigs) => {
-      var date = moment(parseInt(gigs.deadline)).format("dddd, MMMM Do YYYY");
+      var date = moment(gigs.deadline).format("ddd, MMM  YYYY");
       console.log(gigs);
+      var image = Math.floor(Math.random() * 37) + 1; 
+      var profilePic = "img/avatar/"+ `${image}`+".jpg";
+      var file = profilePic.toString();
+      console.log(file);
+      console.log(typeof(file));
 
       //Add to element
-      elm += `
-      <!-- USER PREVIEW COVER -->
-      <figure class="user-preview-cover liquid">
-        <img src="img/cover/57.jpg" alt="cover-01">
+      elm += 
+      `<!-- USER PREVIEW -->
+      <div class="user-preview">
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="img/cover/57.jpg" alt="cover-01">
       </figure>
       <!-- /USER PREVIEW COVER -->
 
       <!-- USER PREVIEW INFO -->
       <div class="user-preview-info">
         <!-- USER SHORT DESCRIPTION -->
+
         <div class="user-short-description">
           <!-- USER SHORT DESCRIPTION AVATAR -->
           <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
@@ -154,7 +173,9 @@ const gigsProgress = async () => {
         </div>
         <!-- /USER PREVIEW ACTIONS -->
       </div>
-      <!-- /USER PREVIEW INFO -->`
+      <!-- /USER PREVIEW INFO -->
+      </div>
+      <!-- /USER PREVIEW -->`;
     });
 
     gigsInProgress.innerHTML = elm;
