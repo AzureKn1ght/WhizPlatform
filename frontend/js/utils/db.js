@@ -3,7 +3,7 @@ const ObjectID = require('mongodb').ObjectID;
 // name of our database
 const dbname = "jobs";
 // location of where our mongoDB database is located
-const url = "mongodb+srv://Whiz:Whiz@cluster0.cfwjw.mongodb.net/jobs?retryWrites=true&w=majority";
+const url = "";
 // Options for mongoDB
 const mongoOptions = {useNewUrlParser : true};
 

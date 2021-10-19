@@ -6,7 +6,7 @@ const ejs = require("ejs");
 app.set("view engine", "ejs");
 
 mongoose.connect(
-  "mongodb+srv://Whiz:Whiz@cluster0.cfwjw.mongodb.net/users?retryWrites=true&w=majority",
+  "",
   { useNewUrlParser: true },
   { useUnifiedTopology: true }
 );
