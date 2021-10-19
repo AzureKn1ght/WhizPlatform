@@ -31,18 +31,16 @@ const gigsProgress = async () => {
 
       //Add to element
       elm += 
-      `<!-- USER PREVIEW -->
-      <div class="user-preview">
-        <!-- USER PREVIEW COVER -->
-        <figure class="user-preview-cover liquid">
-          <img src="img/cover/57.jpg" alt="cover-01">
+      `<div class="user-preview">
+      <!-- USER PREVIEW COVER -->
+      <figure class="user-preview-cover liquid">
+        <img src="img/cover/56.jpg" alt="cover-02">
       </figure>
       <!-- /USER PREVIEW COVER -->
 
       <!-- USER PREVIEW INFO -->
       <div class="user-preview-info">
         <!-- USER SHORT DESCRIPTION -->
-
         <div class="user-short-description">
           <!-- USER SHORT DESCRIPTION AVATAR -->
           <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
@@ -57,7 +55,7 @@ const gigsProgress = async () => {
             <!-- USER AVATAR CONTENT -->
             <div class="user-avatar-content">
               <!-- HEXAGON -->
-              <div class="hexagon-image-82-90" data-src="img/avatar/34.jpg"></div>
+              <div class="hexagon-image-82-90" data-src="img/avatar/35.jpg"></div>
               <!-- /HEXAGON -->
             </div>
             <!-- /USER AVATAR CONTENT -->
@@ -105,11 +103,11 @@ const gigsProgress = async () => {
           <!-- /USER SHORT DESCRIPTION AVATAR -->
 
           <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
+          <p class="user-short-description-title"><a href="profile-timeline.html">Test Pte Ltd</a></p>
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text"><a href="#">${gigs.title}</a></p>
+          <p class="user-short-description-text"><a href="#">Coding for Machine Learning</a></p>
           <!-- /USER SHORT DESCRIPTION TEXT -->
         </div>
         <!-- /USER SHORT DESCRIPTION -->
@@ -135,7 +133,7 @@ const gigsProgress = async () => {
               <!-- USER STAT -->
               <div class="user-stat">
                 <!-- USER STAT TITLE -->
-                <p class="user-stat-title">USD${gigs.budget}</p>
+                <p class="user-stat-title">USD 6,000</p>
                 <!-- /USER STAT TITLE -->
 
                 <!-- USER STAT TEXT -->
@@ -147,7 +145,7 @@ const gigsProgress = async () => {
               <!-- USER STAT -->
               <div class="user-stat">
                 <!-- USER STAT TITLE -->
-                <p class="user-stat-title">${date}</p>
+                <p class="user-stat-title">25 Dec 2021</p>
                 <!-- /USER STAT TITLE -->
 
                 <!-- USER STAT TEXT -->
@@ -164,18 +162,17 @@ const gigsProgress = async () => {
         <!-- USER PREVIEW ACTIONS -->
         <div class="user-preview-actions">
           <!-- BUTTON -->
-          <p class="button secondary" onclick="sessStorage('${gigs._id}')">Gig Details</p>
+          <p class="button secondary">Gig Details</p>
           <!-- /BUTTON -->
 
           <!-- BUTTON -->
-          <p class="button primary" onclick="updateStatus('${gigs._id}')">Update Status</p>
+          <p class="button primary">Update Status</p>
           <!-- /BUTTON -->
         </div>
         <!-- /USER PREVIEW ACTIONS -->
       </div>
       <!-- /USER PREVIEW INFO -->
-      </div>
-      <!-- /USER PREVIEW -->`;
+    </div>`;
     });
 
     gigsInProgress.innerHTML = elm;
