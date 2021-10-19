@@ -16,17 +16,14 @@ contract ReviewsContract
     
     //Score variable definition (Rating 1-5, 0 = NIL)
     enum Score { NIL, BAD, CAN_IMPROVE, SATISFACTORY, GOOD, VERY_GOOD }
-    
-    //Grade variable definition (Grade 1-2, 0 = NIL)
-    enum Grade { NIL, EXCEEDS_EXPECTATIONS, MEETS_EXPECTATIONS }
 
     //Rating data type definition
     struct Rating
     {
-        Grade grading;
-        Score overall;
-        Score quality;
+        Score overallRating;
+        Score jobDescription;
         Score communication;
+        Score workQuality;
         Score timeliness; 
     }
 

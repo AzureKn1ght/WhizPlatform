@@ -67,7 +67,7 @@ const init = async () => {
 const sessStorage = async (e) => {
   console.log(e);
   window.sessionStorage.setItem("gigId", e);
-  window.location.href = "gig-info.html";
+  window.location.href = "05_Gig_info.html";
 };
 
 init();

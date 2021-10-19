@@ -1297,11 +1297,6 @@ textarea::placeholder {
   height: 40px;
 }
 
-.icon-logo-vikinger.large {
-  width: 42px;
-  height: 60px;
-}
-
 .icon-dots {
   fill: #fff;
   width: 10px;
@@ -1926,7 +1921,7 @@ textarea::placeholder {
 }
 
 body {
-  font-size: 20px;
+  font-size: 16px;
   background-color: #f8f8fb;
   overflow-x: hidden;
 }
@@ -2173,7 +2168,7 @@ figure > img {
 15. .tag-list
 16. .tag-item
 17. .xm-tooltip-text
-18. .user-short-grid ription
+18. .user-short-description
 19. .slider-control
 20. .slider-roster
 21. .slider-roster-item
@@ -12037,7 +12032,7 @@ figure > img {
 
 .video-status .video-status-info .video-status-title {
   margin-top: 12px;
-  font-size: 2.1rem;
+  font-size: 1.125rem;
   font-weight: 500;
 }
 
@@ -12053,7 +12048,7 @@ figure > img {
 .video-status .video-status-info .video-status-text {
   margin-top: 2px;
   color: #8f91ac;
-  font-size: 1.2rem;
+  font-size: 0.875rem;
   line-height: 1.7142857143em;
   font-weight: 500;
 }
