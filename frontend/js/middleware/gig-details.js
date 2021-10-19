@@ -8,7 +8,7 @@ const b2 = document.getElementById("b2");
 var jobDetails = null;
 
 const goBack = async (e) => {
-  window.location.href = "04_Gig_Search.html";
+  window.location.href = "gig-search.html";
 };
 
 const bidGig = async(e) =>{
