@@ -67,38 +67,21 @@ function freelancerMetalogin() {
 
 function hirerMetalogin() {
   ethereum
-    .request({ method: "eth_requestAccounts" })
-    .then(() => {
-      handleAccountsChanged;
-      console.log("connection done");
-      //window.location.href = "dashboard.html";
-    })
-    .catch((err) => {
-      if (err.code === 4001) {
-        // EIP-1193 userRejectedRequest error
-        // If this happens, the user rejected the connection request.
-        alert("Please connect to MetaMask.");
-      } else {
-        alert("Error connecting to MetaMask. Please try again.");
-        console.error(err);
-      }
-    });
-}
+  .request({ method: "eth_requestAccounts" })
+  .then(() => {
+    handleAccountsChanged;
+    console.log("connection done");
 
-const loginFreelancer = async (event) => {
-  event.preventDefault();
 
-  var enteredEmail = emailFreelancerRef.value;
-  const enteredPassword = passFreelancerRef.value;
 
-  const userData = {
-    email: enteredEmail,
-    password: enteredPassword,
-  };
+    var userData = {
+      metamask: currentAccount,
+    };
 
-  try {
-    const res = await fetch(
-      "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/loginFreelancer",
+    console.log(userData);
+
+    fetch(
+      "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/loginHirer",
       {
         method: "POST",
         body: JSON.stringify(userData),
@@ -107,21 +90,37 @@ const loginFreelancer = async (event) => {
           "Content-Type": "application/json",
         },
       }
-    );
+    )
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          let message = res.text();
+          console.log(message);
+          throw "error";
+        }
+      })
+      .then((data) => {
+        console.log(data);
+        window.sessionStorage.setItem("userId", data._id);
+        window.location.href = "newsfeed.html";
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-    if (res.ok) {
-      const data = await res.json();
-      console.log(data);
-      console.log(`Logged in successfully welcome ${enteredEmail}!`);
-      window.sessionStorage.setItem("userId", data._id);
-      window.location.href = "02_Newsfeed.html";
+    //window.location.href = "newsfeed.html";
+  })
+  .catch((err) => {
+    if (err.code === 4001) {
+      // EIP-1193 userRejectedRequest error
+      // If this happens, the user rejected the connection request.
+      alert("Please connect to MetaMask.");
     } else {
-      const message = await res.text();
-      alert(message);
+      alert("Error connecting to MetaMask. Please try again.");
+      console.error(err);
     }
-  } catch (error) {
-    console.log(error);
-  }
+  });
 };
 
 const loginHirer = async (event) => {
