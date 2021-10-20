@@ -10,8 +10,10 @@ const init = async () => {
     const data = await res.json();
     console.log(data);
     data.jobs.forEach((jobs) => {
-      var date = moment(parseInt(jobs.deadline.$date.$numberLong)).format("dddd, MMMM Do YYYY");
+      var date = moment(parseInt(jobs.deadline.$date.$numberLong)).format("DD MMM YYYY");
       console.log(jobs);
+      console.log(jobs._id.$oid);
+      console.log(typeof(jobs._id.$oid));
 
       //Add to element
       elm += `
