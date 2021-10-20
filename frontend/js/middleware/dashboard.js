@@ -1,5 +1,24 @@
 const gigsInProgress = document.getElementById("gigs-in-progress");
+const gigsAppliedFor = document.getElementById("gigs-applied-for")
 const user = window.sessionStorage.getItem("userId");
+
+function loadScript(url) {
+  // Adding the script tag to the head as suggested before
+  var body = document.body;
+  var script = document.createElement("script");
+  script.defer = true;
+  script.type = "text/javascript";
+  script.src = url;
+
+  // Fire the loading
+  body.appendChild(script);
+}
+
+const sessStorage = async (e) => {
+  console.log(e);
+  window.sessionStorage.setItem("gigId", e);
+  window.location.href = "gig-info.html";
+};
 
 const gigsProgress = async () => {
   let url =
@@ -21,13 +40,16 @@ const gigsProgress = async () => {
     const data = await res.json();
     console.log(data);
     data.gigs.forEach((gigs) => {
-      var date = moment(gigs.deadline).format("ddd, MMM  YYYY");
+      var date = moment(gigs.deadline).format("DD MMM YYYY");
+      var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
       var image = Math.floor(Math.random() * 3) + 34;
       var profilePic = "img/avatar/" + image + ".jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
+      console.log(gigs._id);
+      console.log(typeof(gigs._id));
 
       //Add to element
       elm += `<!-- USER PREVIEW -->
@@ -122,7 +144,7 @@ const gigsProgress = async () => {
               <!-- USER STAT -->
               <div class="user-stat">
                 <!-- USER STAT TITLE -->
-                <p class="user-stat-title">12 Oct 2021</p>
+                <p class="user-stat-title">${created}</p>
                 <!-- /USER STAT TITLE -->
 
                 <!-- USER STAT TEXT -->
@@ -210,22 +232,111 @@ const updateStatus = async (e) => {
   window.location.href = "complete-gig-fl.html";
 };
 
+const gigsApplied =async () => {
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/appliedJobs";
+  let elm = "";
+  const freelancer = {
+    applicant: user,
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(freelancer),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    console.log(data);
+    data.gigs.forEach((gigs) => {
+    
+      console.log(gigs);
+      var image = Math.floor(Math.random() * 3) + 17;
+      var profilePic = "img/marketplace/items/" + image + ".jpg";
+      var file = profilePic.toString();
+
+      var image2 = Math.floor(Math.random() * 9) + 1;
+      console.log(image2);
+      console.log(typeof(image2));
+      var profilePic2 = (image2<10) ? "img/avatar/0" + image2 + ".jpg" : "img/avatar/" + image2 + ".jpg";
+      var file2 = profilePic2.toString();
+
+      console.log(file);
+      console.log(typeof file);
+      console.log(file2);
+      console.log(typeof file2);
+
+      //Add to element
+      elm += `<!-- PRODUCT PREVIEW -->
+      <div class="product-preview">
+        <!-- PRODUCT PREVIEW IMAGE -->
+        <a href="marketplace-product.html">
+          <figure class="product-preview-image liquid">
+            <img src="${file}" alt="item-01">
+          </figure>
+        </a>
+        <!-- /PRODUCT PREVIEW IMAGE -->
+
+        <!-- PRODUCT PREVIEW INFO -->
+        <div class="product-preview-info">
+          <!-- TEXT STICKER -->
+          <p class="text-sticker"><span class="highlighted">$</span> ${gigs.budget}</p>
+          <!-- /TEXT STICKER -->
+
+          <!-- PRODUCT PREVIEW TITLE -->
+          <p class="product-preview-title"><a href="marketplace-product.html">${gigs.title}</a></p>
+          <!-- /PRODUCT PREVIEW TITLE -->
+
+          <!-- PRODUCT PREVIEW CATEGORY -->
+          <p class="product-preview-category digital"><a href="marketplace-category.html">${gigs.skills_required}</a></p>
+          <!-- /PRODUCT PREVIEW CATEGORY -->
+
+          <!-- PRODUCT PREVIEW TEXT -->
+          <p class="product-preview-text">${gigs.description}</p>
+          <!-- /PRODUCT PREVIEW TEXT -->
+        </div>
+        <!-- /PRODUCT PREVIEW INFO -->
+
+        <!-- PRODUCT PREVIEW META -->
+        <div class="product-preview-meta">
+          <!-- PRODUCT PREVIEW AUTHOR -->
+          <div class="product-preview-author">
+            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+              <!-- USER AVATAR CONTENT -->
+              <div class="user-avatar-content">
+                <!-- HEXAGON -->
+                <div class="hexagon-image-18-20" data-src="${file2}"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR CONTENT -->
+            </a>
+            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+
+            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+            <p class="product-preview-author-title">Posted By</p>
+            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+
+            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
+            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW AUTHOR -->
+          <!-- /RATING LIST -->
+        </div>
+        <!-- /PRODUCT PREVIEW META -->
+      </div>
+      <!-- /PRODUCT PREVIEW -->` });
+      gigsAppliedFor.innerHTML = elm;
+
+    } catch(error){
+      console.log(error.message);
+    }
+  };
+
 gigsProgress();
+gigsApplied();
 
-function loadScript(url) {
-  // Adding the script tag to the head as suggested before
-  var body = document.body;
-  var script = document.createElement("script");
-  script.defer = true;
-  script.type = "text/javascript";
-  script.src = url;
-
-  // Fire the loading
-  body.appendChild(script);
-}
-
-const sessStorage = async (e) => {
-  console.log(e);
-  window.sessionStorage.setItem("gigId", e);
-  window.location.href = "gig-info.html";
-};
