@@ -15,6 +15,9 @@
     ".yarn"
   ],
   "include": ["js", "includes"],
+  "files":[
+    "js/web3.min.js"
+  ],
   "typeAcquisition": {
     "enable": true,
     "include": ["jquery", "jest"]
