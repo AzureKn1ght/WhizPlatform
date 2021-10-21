@@ -2638,7 +2638,7 @@
 
     <br><br><br>
     <h2>Recommended Gigs</h2>
-    <div class="grid grid-3-3-3-3 centered">
+    <div class="grid grid-3-3-3-3 centered" id="gigs-recommended">
 
       <!-- PRODUCT PREVIEW -->
       <div class="product-preview">
@@ -2979,7 +2979,113 @@
         </div>
         <!-- /USER PREVIEW INFO -->
       </div>
+      </div>
 
+       <!-- REVIEWS SECTION -->
+       <br><br><br>
+       <h2>Received Reviews</h2>
+       <div class="grid" id="reviews-received">
+         <!-- USER PREVIEW -->
+         <div class="user-preview landscape">
+           <!-- USER PREVIEW COVER -->
+           <figure class="user-preview-cover liquid">
+             <img src="img/cover/29.jpg" alt="cover-29">
+           </figure>
+           <!-- /USER PREVIEW COVER -->
+   
+           <!-- USER PREVIEW INFO -->
+           <div class="user-preview-info">
+             <!-- USER SHORT DESCRIPTION -->
+             <div class="user-short-description landscape tiny">
+               <!-- USER SHORT DESCRIPTION AVATAR -->
+               <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
+   
+                 <!-- /USER AVATAR CONTENT -->
+               </a>
+               <!-- /USER SHORT DESCRIPTION AVATAR -->
+   
+               <!-- USER SHORT DESCRIPTION TITLE -->
+               <p class="user-short-description-title"><a href="group-timeline.html">
+                 This is the Job Name
+               </a></p>
+               <!-- /USER SHORT DESCRIPTION TITLE -->
+   
+               <!-- USER SHORT DESCRIPTION TEXT -->
+               <p class="user-short-description-text">EXCEEDS EXPECTATIONS</p>
+               <!-- /USER SHORT DESCRIPTION TEXT -->
+             </div>
+             <!-- /USER SHORT DESCRIPTION -->
+   
+             <!-- USER STATS -->
+             <div class="user-stats">
+               <!-- USER STAT -->
+               <div class="user-stat">
+                 <!-- USER STAT TITLE -->
+                 <p class="user-stat-title">5</p>
+                 <!-- /USER STAT TITLE -->
+   
+                 <!-- USER STAT TEXT -->
+                 <p class="user-stat-text">Overall</p>
+                 <!-- /USER STAT TEXT -->
+               </div>
+               <!-- /USER STAT -->
+   
+               <!-- USER STAT -->
+               <div class="user-stat">
+                 <!-- USER STAT TITLE -->
+                 <p class="user-stat-title">5</p>
+                 <!-- /USER STAT TITLE -->
+   
+                 <!-- USER STAT TEXT -->
+                 <p class="user-stat-text">Quality</p>
+                 <!-- /USER STAT TEXT -->
+               </div>
+               <!-- /USER STAT -->
+   
+               <!-- USER STAT -->
+               <div class="user-stat">
+                 <!-- USER STAT TITLE -->
+                 <p class="user-stat-title">4</p>
+                 <!-- /USER STAT TITLE -->
+   
+                 <!-- USER STAT TEXT -->
+                 <p class="user-stat-text">Communication</p>
+                 <!-- /USER STAT TEXT -->
+               </div>
+               <!-- /USER STAT -->
+   
+               <!-- USER STAT -->
+               <div class="user-stat">
+                 <!-- USER STAT TITLE -->
+                 <p class="user-stat-title">5</p>
+                 <!-- /USER STAT TITLE -->
+   
+                 <!-- USER STAT TEXT -->
+                 <p class="user-stat-text">Timeliness</p>
+                 <!-- /USER STAT TEXT -->
+               </div>
+               <!-- /USER STAT -->
+   
+             </div>
+             <!-- /USER STATS -->
+   
+             <!-- USER PREVIEW ACTIONS -->
+             <div class="user-preview-actions">
+               <!-- BUTTON -->
+               <p class="button secondary">
+                 <!-- ICON INFO -->
+                 <svg class="button-icon icon-info">
+                   <use xlink:href="#svg-info"></use>
+                 </svg>
+                 <!-- /ICON INFO -->
+               </p>
+               <!-- /BUTTON -->
+             </div>
+             <!-- /USER PREVIEW ACTIONS -->
+           </div>
+           <!-- /USER PREVIEW INFO -->
+         </div>
+         <!-- END REVIEWS SECTION -->
 
 
 
@@ -2987,6 +3093,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!--Web3 JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+        <!--Metamask JS-->
+        <script src="js/middleware/metamask.js"></script>
+        <!--Contract ABI JS-->
+        <script src="../contracts/ReviewsABI.js"></script>
       <!--dashboard JS-->
       <script src="js/middleware/dashboard.js"></script>
        <!-- XM_Plugins -->

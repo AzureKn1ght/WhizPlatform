@@ -77,6 +77,13 @@ const reviewAdd = async (e) => {
   console.log("Mark as complete: processing...");
 };
 
+const getReview = async (e)=>{
+  let result = await contract.methods.getAllReceivedReviews(currentAccount).call();
+  console.log(result);
+  
+};
+
+getReview(currentAccount);
 //Add event listener for buttons
 submitReviewFreelancer.addEventListener("click", reviewAdd);
 /* document.getElementById("b2").onclick = function () {
