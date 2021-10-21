@@ -696,7 +696,7 @@ const getReview = async () => {
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text">${text}</p>
+          <p class="user-short-description-text">Grade: ${text}</p>
           <!-- /USER SHORT DESCRIPTION TEXT -->
         </div>
         <!-- /USER SHORT DESCRIPTION -->
