@@ -1,5 +1,6 @@
 const gigsInProgress = document.getElementById("gigs-in-progress");
-const gigsAppliedFor = document.getElementById("gigs-applied-for")
+const gigsAppliedFor = document.getElementById("gigs-applied-for");
+const gigsCompletedCard = document.getElementById("gigs-completed");
 const user = window.sessionStorage.getItem("userId");
 
 function loadScript(url) {
@@ -337,6 +338,134 @@ const gigsApplied =async () => {
     }
   };
 
+
+  const gigsCompleted =async () => {
+    let url =
+      "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/completedJobs";
+    let elm = "";
+    const freelancer = {
+      applicant: user,
+    };
+  
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(freelancer),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log(data);
+      data.gigs.forEach((gigs) => {
+      
+        console.log(gigs);
+        var date = moment(gigs.deadline).format("DD MMM YYYY");
+        /* var image = Math.floor(Math.random() * 3) + 17;
+        var profilePic = "img/marketplace/items/" + image + ".jpg";
+        var file = profilePic.toString(); */
+  
+       
+  
+       
+  
+        //Add to element
+        elm += `<div class="user-preview landscape">
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="img/cover/29.jpg" alt="cover-29">
+        </figure>
+        <!-- /USER PREVIEW COVER -->
+
+        <!-- USER PREVIEW INFO -->
+        <div class="user-preview-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description landscape tiny">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
+
+              <!-- /USER AVATAR CONTENT -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title"><a href="group-timeline.html">${gigs.title}</a></p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
+
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text">${gigs.description}</p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- USER STATS -->
+          <div class="user-stats">
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${date}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Deadline</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">10 Oct 2021</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Date Completed</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${gigs.payment_status}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Payment Status</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+          </div>
+          <!-- /USER STATS -->
+
+          <!-- USER PREVIEW ACTIONS -->
+          <div class="user-preview-actions">
+
+
+            <!-- BUTTON -->
+            <p class="button secondary">
+              <!-- BUTTON ICON -->
+              <svg class="button-icon icon-join-group">
+                <use xlink:href="#svg-status"></use>
+              </svg>
+              <!-- /BUTTON ICON -->
+            </p>
+            <!-- /BUTTON -->
+          </div>
+          <!-- /USER PREVIEW ACTIONS -->
+        </div>
+        <!-- /USER PREVIEW INFO -->
+      </div>` });
+        gigsCompletedCard.innerHTML = elm;
+  
+      } catch(error){
+        console.log(error.message);
+      }
+    };
+
+
 gigsProgress();
 gigsApplied();
+gigsCompleted();
 
