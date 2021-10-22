@@ -3,45 +3,49 @@ pragma solidity ^0.8.7;
 import "./ReviewsContract.sol";
 import "./WhizToken.sol";
 
+
 contract GigsContract {
     
     //VARIABLES
     address admin;
+    uint whizBalanceAmt;
     uint public whizRewards;
-    uint256 public totalValueLocked;
+    uint public totalValueLocked;
     enum Status { AWAITING_PAYMENT, AWAITING_DELIVERY, COMPLETED, RESOLVED }
 
-    //References to external contract addresses
+    //References to the external contract addresses
     address USDCaddress;
     address WHIZaddress;
     address REVIEWSaddress;
 
 
-    //Create the object for storing all Gig details
+    //This is the object for storing all Gig details
     struct Gig {
-        address payable hirer;
-        address payable freelancer;
-        ReviewsContract.Job jobDetails; //Job Obj
+        address hirer;
+        address freelancer;
+        ReviewsContract.Job jobDetails; 
         uint amountDeposited;
         Status status;
     }
 
 
-    //Every gig is mapped to a gigID string
-    mapping (string => Gig) public gig;
-    mapping(address => mapping(string => Gig)) public myGigs; //ideal state: mapping of mappings
+    //Every hirer has a mapping of gigs by the gigID string
+    mapping(address => mapping(string => Gig)) public myGigs; 
     
     //Events log
     event CreateGig(string gigID, Gig gig, string msg);
     event ResolveGig(string gigID, Gig gig, string msg);
     event CompleteGig(string gigID, Gig gig, string msg);
 
-    //Initialize contract admin
+    //Initialize smart contract
     constructor() {
         admin = msg.sender;
+        USDCaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
+        WHIZaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
+        REVIEWSaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
     }
     
-    //Modifier - Secure admin functions
+    //Security for admin functions
     modifier onlyAdmin() {
         require(msg.sender == admin, "Only the admin can access this feature.");
         _;
@@ -50,71 +54,109 @@ contract GigsContract {
     
     
     ///// ----- CONTRACT FUNCTIONS ----- /////
-    
-    //Hirer deposits funds and initilizes the Gig contract
-    function initGigContract(string memory gigID, Gig memory gigDetails) public payable returns (Status)
-    {
-        gig[gigID] = gigDetails;
-        require(msg.sender == gig[gigID].hirer, "Only hirer can initialize a gig contract.");
-        require(gig[gigID].status == Status.AWAITING_PAYMENT, "Gig is already initialized.");
 
-        //Gig is created and awaiting delivery
-        gig[gigID].status = Status.AWAITING_DELIVERY;
-        totalValueLocked += gig[gigID].amountDeposited;
-        emit CreateGig(gigID, gig[gigID], "Gig created successfully.");
-        return gig[gigID].status;
+    //Hirer creates a new gig contract
+    //ERC20 tokens get moved to the escrow (this contract)
+    function createGigContract(string memory gigID, Gig memory gigDetails, uint amount) 
+    public returns (Gig memory) 
+    {
+        //transfer USDC from hirer wallet to this contract
+        ERC20 usdc = ERC20(USDCaddress);
+        usdc.transferFrom(msg.sender, address(this), amount);
+        totalValueLocked += amount;
+        
+        //initialize new Gig object by hirer address and gigID
+        myGigs[msg.sender][gigID] = gigDetails;
+        myGigs[msg.sender][gigID].amountDeposited = amount;
+        myGigs[msg.sender][gigID].status = Status.AWAITING_DELIVERY;
+
+        //cleanup - gig contract has been created successfully
+        emit CreateGig(gigID, myGigs[msg.sender][gigID], "Gig created successfully.");
+        return myGigs[msg.sender][gigID];
     }
     
-    
-    //Hirer can confirm delivery when gig is completed
-    function confirmDelivery(string memory gigID) public returns (bool)
+  
+    //Hirer confirms a gig delivery 
+    //ERC20 tokens transferred to freelancer from this contract
+    function confirmGigDelivery(string memory gigID) public returns (Gig memory)
     {
-        Gig storage myGig = gig[gigID];
-        address payable freelancer = myGig.freelancer;
-        
-        //check details of the gig
-        require(msg.sender == myGig.hirer, "Only hirer can confirm delivery.");
-        require(myGig.status == Status.AWAITING_DELIVERY, "Gig status error.");
-        
-        //complete the gig anf payout
-        totalValueLocked -= myGig.amountDeposited;
-        freelancer.transfer(myGig.amountDeposited);
-        myGig.status = Status.RESOLVED;
+        Gig storage gig = myGigs[msg.sender][gigID];
 
-        emit CompleteGig(gigID, myGig, "Gig completed successfully.");
-        return true;
+        //check if details of the gig qualify for payment
+        require(msg.sender == gig.hirer, "Only hirer can confirm delivery.");
+        require(gig.status == Status.AWAITING_DELIVERY, "Gig status error.");
+        
+        //transfer the deposited funds to the freelancer 
+        ERC20 usdc = ERC20(USDCaddress);
+        usdc.transfer(gig.freelancer, gig.amountDeposited);
+        totalValueLocked -= gig.amountDeposited;
+        
+        //cleanup - gig contract is completed successfully
+        gig.status = Status.COMPLETED;
+        emit CompleteGig(gigID, gig, "Gig completed successfully.");
+        return gig;
     }
    
    
     //Admin can send funds to hirer if dispute is in hirer's favor
-    function resolveToHirer(string memory gigID) public onlyAdmin returns (bool)
+    function resolveFundsToHirer(address hirer, string memory gigID) public onlyAdmin returns (Gig memory)
     {
-        Gig storage myGig = gig[gigID];
-        address payable hirer = myGig.hirer;
-        
-        require(myGig.status == Status.AWAITING_DELIVERY, "Gig status error.");
-        totalValueLocked -= myGig.amountDeposited;
-        hirer.transfer(myGig.amountDeposited);
-        myGig.status = Status.RESOLVED;
+        //Get the gig details from the hirer's records
+        Gig storage gig = myGigs[hirer][gigID];
 
-        emit ResolveGig(gigID, myGig, "Resolved to Hirer.");
-        return true;
+        //check if details of the gig qualify to resolve
+        require(gig.status == Status.AWAITING_DELIVERY, "Gig status error.");
+        
+        //transfer the deposited funds back to the hirer 
+        ERC20 usdc = ERC20(USDCaddress);
+        usdc.transfer(gig.hirer, gig.amountDeposited);
+        totalValueLocked -= gig.amountDeposited;
+        
+        //cleanup - gig dispute is resolved successfully
+        gig.status = Status.RESOLVED;
+        emit ResolveGig(gigID, gig, "Resolved to Hirer.");
+        return gig;
     }
    
    
+   
     //Admin can send funds to freelancer if dispute is in freelancer's favor
-    function resolveToFreelancer(string memory gigID) public onlyAdmin returns (bool)
+    function resolveFundsToFrelancer(address hirer, string memory gigID) public onlyAdmin returns (Gig memory)
     {
-        Gig storage myGig = gig[gigID];
-        address payable freelancer = myGig.freelancer;
-        
-        require(myGig.status == Status.AWAITING_DELIVERY, "Gig status error.");
-        totalValueLocked -= myGig.amountDeposited;
-        freelancer.transfer(myGig.amountDeposited);
-        myGig.status = Status.COMPLETED;
+        //Get the gig details from the hirer's records
+        Gig storage gig = myGigs[hirer][gigID];
 
-        emit ResolveGig(gigID, myGig, "Resolved to Freelancer.");
-        return true;
+        //check if details of the gig qualify to resolve
+        require(gig.status == Status.AWAITING_DELIVERY, "Gig status error.");
+        
+        //transfer the deposited funds to the freelancer 
+        ERC20 usdc = ERC20(USDCaddress);
+        usdc.transfer(gig.freelancer, gig.amountDeposited);
+        totalValueLocked -= gig.amountDeposited;
+        
+        //cleanup - gig dispute is resolved successfully
+        gig.status = Status.RESOLVED;
+        emit ResolveGig(gigID, gig, "Resolved to Freelancer.");
+        return gig;
+    }
+   
+   
+    
+    ///// ----- REWARDS FUNCTIONS ----- /////
+    
+    function issueWhizRewards() private returns (uint)
+    {
+        return 0;
+    }
+    
+    function depositWhiz() public onlyAdmin returns (uint)
+    {
+        return 0; 
+    }
+    
+    function withdrawWhiz() public onlyAdmin returns (uint)
+    {
+        return 0;
     }
     
     
@@ -122,37 +164,38 @@ contract GigsContract {
     ///// ----- GETTER/SETTER FUNCTIONS ----- /////
 
     //Get the details of a particular Gig contract 
-    function getGigDetails(address hirer, string memory gigID) public view returns (Gig memory)
+    function getGigDetails(address hirer, string memory gigID) public 
+    view returns (Gig memory)
     {
         return myGigs[hirer][gigID];
     }
     
     //Update the USDC/stablecoin token contract address 
-    function setUSDCaddress(address a) public onlyAdmin returns (bool)
+    function setUSDCaddress(address a) public onlyAdmin returns (address)
     {
         USDCaddress = a;
-        return true;
+        return USDCaddress;
     }
     
     //Update the WHIZ token contract address 
-    function setWHIZaddress(address a) public onlyAdmin returns (bool)
+    function setWHIZaddress(address a) public onlyAdmin returns (address)
     {
         WHIZaddress = a;
-        return true;
+        return WHIZaddress;
     }
 
     //Update the ReviewsContract address 
-    function setREVIEWSaddress(address a) public onlyAdmin returns (bool)
+    function setREVIEWSaddress(address a) public onlyAdmin returns (address)
     {
         REVIEWSaddress = a;
-        return true;
+        return REVIEWSaddress;
     }
     
     //Update the amount of WHIZ rewards to be issued 
-    function setWHIZrewards(uint amt) public onlyAdmin returns (bool)
+    function setWHIZrewards(uint amt) public onlyAdmin returns (uint)
     {
         whizRewards = amt;
-        return true;
+        return whizRewards;
     }
    
 }
