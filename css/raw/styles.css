@@ -16081,4 +16081,33 @@ figure > img {
     width: 100%;
   }
 }
+
+ul.banner {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.jtaCarousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {  width: calc(100% * 5); }
+
+.banner-item {
+  float: left;
+  width: calc(100% / 5);
+}
+
+.banner-item > div {
+  /* OPTIONAL */
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 450px;
+  line-height: 450px;
+  font-size: 2em;
+  color: #fff;
+}
 /*# sourceMappingURL=styles.css.map */
