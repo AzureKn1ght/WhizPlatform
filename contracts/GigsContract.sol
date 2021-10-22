@@ -8,7 +8,6 @@ contract GigsContract {
     
     //VARIABLES
     address admin;
-    uint whizBalanceAmt;
     uint public whizRewards;
     uint public totalValueLocked;
     enum Status { AWAITING_PAYMENT, AWAITING_DELIVERY, COMPLETED, RESOLVED }
@@ -91,6 +90,10 @@ contract GigsContract {
         usdc.transfer(gig.freelancer, gig.amountDeposited);
         totalValueLocked -= gig.amountDeposited;
         
+        //send WHIZ rewards for completion of the gig
+        issueWhizRewards(gig.freelancer, whizRewards); 
+        issueWhizRewards(gig.hirer, whizRewards); 
+
         //cleanup - gig contract is completed successfully
         gig.status = Status.COMPLETED;
         emit CompleteGig(gigID, gig, "Gig completed successfully.");
@@ -119,7 +122,6 @@ contract GigsContract {
     }
    
    
-   
     //Admin can send funds to freelancer if dispute is in freelancer's favor
     function resolveFundsToFrelancer(address hirer, string memory gigID) public onlyAdmin returns (Gig memory)
     {
@@ -144,19 +146,37 @@ contract GigsContract {
     
     ///// ----- REWARDS FUNCTIONS ----- /////
     
-    function issueWhizRewards() private returns (uint)
+    //Private function, can only be accessed internally
+    //Sends WHIZ token rewards to the specified address
+    function issueWhizRewards(address recipient, uint amount) private 
     {
-        return 0;
+        //get amount of WHIZ held in contract
+        ERC20 whiz = ERC20(WHIZaddress);
+        uint256 whizBalanceAmt = whiz.balanceOf(address(this));
+        
+        //only issues rewards if sufficient
+        if(whizBalanceAmt >= amount)
+        {
+            whiz.transfer(recipient, amount);
+            whizBalanceAmt -= amount;
+        }
     }
     
-    function depositWhiz() public onlyAdmin returns (uint)
+    //Allows admin to top up the available WHIZ balance 
+    function depositWhiz(uint amt) public onlyAdmin returns (uint256)
     {
-        return 0; 
+        ERC20 whiz = ERC20(WHIZaddress);
+        whiz.transferFrom(msg.sender, address(this), amt);
+        return whiz.balanceOf(address(this)); 
     }
     
-    function withdrawWhiz() public onlyAdmin returns (uint)
+    //Allows admin to withdraw the available WHIZ balance
+    function withdrawWhiz(uint amt) public onlyAdmin returns (uint256)
     {
-        return 0;
+        //Withdraws ONLY to the admin wallet
+        ERC20 whiz = ERC20(WHIZaddress);
+        whiz.transfer(admin, amt);
+        return whiz.balanceOf(address(this)); 
     }
     
     
