@@ -7,5 +7,5 @@ $('#slideshow :first-child')
 .fadeIn(1000)
 .end()
 .appendTo('#slideshow');
-}, 6000);
+}, 7000);
 });
