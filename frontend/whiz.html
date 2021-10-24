@@ -1,600 +1,801 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- bootstrap 4.3.1 -->
-  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
-  <!-- styles -->
-  <link rel="stylesheet" href="css/styles.min.css">
-  <!-- simplebar styles -->
-  <link rel="stylesheet" href="css/vendor/simplebar.css">
-  <link href="css/banner.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<!-- favicon -->
+	<link rel="icon" href="img/favicon.ico" />
+	<title>Whiz &#8211; Next Generation Freelancing</title>
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<link rel="alternate" type="application/rss+xml" title="Vikinger &raquo; Feed"
+		href="https://odindesignthemes.com/vikinger-theme/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Vikinger &raquo; Comments Feed"
+		href="https://odindesignthemes.com/vikinger-theme/comments/feed/" />
+	<link rel='stylesheet' id='dashicons-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-includes/css/dashicons.min.css?ver=5.8.1' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='bp-verified-member-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/css/style.css?ver=1.2.2'
+		type='text/css' media='all' />
 
-  <!-- favicon -->
-  <link rel="icon" href="img/favicon.ico">
-  <title>why whiz</title>
-  
+	<link rel='stylesheet' id='wp-block-library-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-login-form-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/css/blocks/login-form.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-member-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/member.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-members-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/members.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-dynamic-members-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/dynamic-members.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-latest-activities-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-activity/css/blocks/latest-activities.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-friends-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-friends/css/blocks/friends.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-group-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/group.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-groups-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/groups.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-dynamic-groups-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/dynamic-groups.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-sitewide-notices-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-messages/css/blocks/sitewide-notices.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wc-blocks-vendors-style-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=5.7.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wc-blocks-style-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=5.7.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bbp-default-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bbpress/templates/default/css/bbpress.min.css?ver=2.6.6'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='pmpro_frontend-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/paid-memberships-pro/css/frontend.css?ver=2.6.2'
+		type='text/css' media='screen' />
+	<link rel='stylesheet' id='pmpro_print-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/paid-memberships-pro/css/print.css?ver=2.6.2'
+		type='text/css' media='print' />
+	<link rel='stylesheet' id='woocommerce-layout-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.7.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='woocommerce-smallscreen-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.7.1'
+		type='text/css' media='only screen and (max-width: 768px)' />
+	<link rel='stylesheet' id='woocommerce-general-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.7.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-fonts-css'
+		href='https://fonts.googleapis.com/css?family=Rajdhani%3A400%2C500%2C600%2C700%7CTitillium+Web%3A400%2C900&#038;display=swap&#038;ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-simplebar-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/css/vendor/simplebar.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-swiper-slider-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/css/vendor/swiper.min.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/style.css?ver=3.8.6'
+		type='text/css' media='all' />
+	<style id='vikinger-styles-inline-css' type='text/css'>
+		:root {
+			--font-primary: Rajdhani, sans-serif;
+			--font-secondary: Titillium Web, sans-serif;
+		}
+
+		:root {
+			--color-wplogin-body: #fff;
+			--color-wplogin-header-text: #fff;
+			--color-header-background: #615dfa;
+			--color-header-logo-background: #00c7d9;
+			--color-header-text: #fff;
+			--color-header-icon: #8b88ff;
+			--color-header-icon-hover: #fff;
+			--color-header-profile-settings-icon: #fff;
+			--color-header-mobilemenu-trigger-icon: #fff;
+			--color-header-divider: #7a77fd;
+			--color-header-input-background: #4e4ac8;
+			--color-header-input-placeholder: #8b88ff;
+			--color-header-progressbar-line-gradient-start: #41efff;
+			--color-header-progressbar-line-gradient-end: #41efff;
+			--color-header-progressbar-underline: #4a46c8;
+			--color-body: #f8f8fb;
+			--color-box-background: #fff;
+			--color-box-background-alt: #fcfcfd;
+			--color-box-over-box-background: #fff;
+			--color-box-over-box-light-background: #fff;
+			--color-box-highlight-background: #f7f7fb;
+			--color-box-hover-background: #f2f2f9;
+			--color-box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+			--color-overbox-shadow: 3px 5px 20px 0 rgba(94, 92, 154, .12);
+			--color-overbox-dark-shadow: 0 0 40px 0 rgba(94, 92, 154, .12);
+			--color-overbox-big-shadow: 3px 5px 40px 0 rgba(94, 92, 154, .1);
+			--color-text: #3e3f5e;
+			--color-text-alt: #8f91ac;
+			--color-text-alt-2: #adafca;
+			--color-icon: #adafca;
+			--color-icon-highlighted: #3e3f5e;
+			--color-border: #dedeea;
+			--color-divider: #eaeaf5;
+			--color-progressbar-line-gradient-start: #615dfa;
+			--color-progressbar-line-gradient-end: #41efff;
+			--color-progressbar-underline: #e7e8ee;
+			--color-avatar-rank-hexagon: #45437f;
+			--color-primary: #23d2e2;
+			--color-primary-hover: #1bc5d4;
+			--color-primary-light: #41efff;
+			--color-primary-dark: #00c7d9;
+			--color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+			--color-secondary: #615dfa;
+			--color-secondary-hover: #5753e4;
+			--color-secondary-dark: #45437f;
+			--color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+			--color-tertiary: #fd4350;
+			--color-tertiary-hover: #dd343f;
+			--color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+			--color-loading-screen-background: #3e3f5e;
+			--color-loading-bar-1: #615dfa;
+			--color-loading-bar-2: #5d71fb;
+			--color-loading-bar-3: #5983fb;
+			--color-loading-bar-4: #549afc;
+			--color-loading-bar-5: #4eb2fd;
+			--color-loading-bar-6: #49c9fe;
+			--color-loading-bar-7: #45ddfe;
+			--color-loading-bar-8: #41efff;
+			--color-overlay: rgba(21, 21, 31, .96);
+			;
+			--color-notice-overlay-background-primary: rgba(35, 210, 226, .14);
+			--color-notice-overlay-background-secondary: rgba(97, 93, 250, .14);
+			--color-notice-overlay-background-tertiary: rgba(253, 67, 80, .14);
+			--color-avatar-overlay-background: rgba(97, 93, 250, .9);
+			--footer-navigation-display-mobile: none;
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-icons-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-legacy-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<style id='elementor-frontend-inline-css' type='text/css'>
+		@font-face {
+			font-family: eicons;
+			src: url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
+			src: url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+			font-weight: 400;
+			font-style: normal
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-post-875-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/uploads/elementor/css/post-875.css?ver=1632493715'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-global-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/uploads/elementor/css/global.css?ver=1632493715'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-876-css'
+		href='./css/landing.css'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Rajdhani%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CTitillium+Web%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-shared-0-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-solid-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-regular-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-brands-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/js/vendor/popper.min.js?ver=1.14.7'
+		id='popper-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
+		id='jquery-core-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+		id='jquery-migrate-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/js/main.js?ver=1.2.2'
+		id='bp-verified-member-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=9.1.1'
+		id='bp-confirm-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=9.1.1'
+		id='bp-widget-members-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=9.1.1'
+		id='bp-jquery-query-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=9.1.1'
+		id='bp-jquery-cookie-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=9.1.1'
+		id='bp-jquery-scroll-to-js'></script>
+
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=9.1.1'
+		id='bp-legacy-js-js'></script>
+	<link rel="https://api.w.org/" href="https://odindesignthemes.com/vikinger-theme/wp-json/" />
+	<link rel="alternate" type="application/json"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/wp/v2/pages/876" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD"
+		href="https://odindesignthemes.com/vikinger-theme/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+		href="https://odindesignthemes.com/vikinger-theme/wp-includes/wlwmanifest.xml" />
+	<meta name="generator" content="WordPress 5.8.1" />
+	<meta name="generator" content="WooCommerce 5.7.1" />
+	<link rel="canonical" href="https://odindesignthemes.com/vikinger-theme/" />
+	<link rel='shortlink' href='https://odindesignthemes.com/vikinger-theme/' />
+	<link rel="alternate" type="application/json+oembed"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fodindesignthemes.com%2Fvikinger-theme%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fodindesignthemes.com%2Fvikinger-theme%2F&#038;format=xml" />
+
 </head>
 
-<body>
-
-  <!-- PAGE LOADER -->
-  <div class="page-loader">
-    <!-- PAGE LOADER DECORATION -->
-    <div class="page-loader-decoration">
-      <!-- ICON LOGO -->
-      <img class="form-box-decoration" src="img/landing/rocket.png" alt="rocket">
-      <path
-        d="M27.18,24.038c-0.141-0.095-0.244-0.146-0.244-0.146l-0.005-0.049C25.489,22.783,23.103,22,23.103,22c1.542,0,2.582-0.563,3.501-1.334c-0.049-0.055,0.7-0.666,0.7-0.666c0.146-8.251-4.477-12.745-7.001-14.667C18.15,9.564,16.802,14,16.802,14c-0.219-4.426,0.243-8.072,0.7-10.667c-0.85-0.452-1.956-0.698-2.296-1.537C14.865,0.957,14.015,0,14.015,0L14,0.014L13.985,0c0,0-0.85,0.957-1.19,1.796c-0.34,0.839-1.445,1.085-2.295,1.537C10.957,5.928,11.418,9.574,11.2,14c0,0-1.349-4.436-3.501-8.667C5.174,7.255,0.551,11.749,0.697,20c0,0,0.75,0.611,0.701,0.666C2.316,21.437,3.357,22,4.898,22c0,0-2.387,0.783-3.829,1.844l-0.005,0.049c0,0-0.104,0.051-0.244,0.146c-0.48,0.397-0.806,0.828-0.819,1.269c-0.023,0.521,0.263,1.181,1.233,1.973c0,0,0.136,9.259,9.69,11.29c0,0,0.212,0.815,0.975,1.431L14,38l2.102,2c0.763-0.615,0.975-1.431,0.975-1.431c9.555-2.031,9.689-11.29,9.689-11.29c0.971-0.792,1.256-1.451,1.233-1.973C27.986,24.866,27.659,24.436,27.18,24.038z M4.198,26c2.362,0.121,3.517,1.473,5.602,4c0.799,0.969,2.059,0.83,2.059,0.83L11.899,34C5.249,34,4.198,26,4.198,26z M14,28.162l-2.97-2.828l2.101-2.001l-2.101-2l2.101-2l-2.101-2L14,14.505l2.972,2.828l-2.102,2l2.102,2l-2.102,2l2.102,2.001L14,28.162z M16.102,34l0.041-3.17c0,0,1.26,0.139,2.059-0.83c2.085-2.527,3.239-3.879,5.602-4C23.803,26,22.752,34,16.102,34z M13.3,26h1.4v-1.333h-1.4V26z M13.3,22h1.4v-1.334h-1.4V22z M13.3,18h1.4v-1.333h-1.4V18z" />
-      </svg>
-      <!-- /ICON LOGO -->
-    </div>
-    <!-- /PAGE LOADER DECORATION -->
-
-    <!-- PAGE LOADER INFO -->
-    <div class="page-loader-info">
-      <!-- PAGE LOADER INFO TITLE -->
-      <p class="page-loader-info-title">whiz</p>
-      <!-- /PAGE LOADER INFO TITLE -->
-
-      <!-- PAGE LOADER INFO TEXT -->
-      <p class="page-loader-info-text">Loading...</p>
-      <!-- /PAGE LOADER INFO TEXT -->
-    </div>
-    <!-- /PAGE LOADER INFO -->
-
-    <!-- PAGE LOADER INDICATOR -->
-    <div class="page-loader-indicator loader-bars">
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-      <div class="loader-bar"></div>
-    </div>
-    <!-- /PAGE LOADER INDICATOR -->
-  </div>
-  <!-- /PAGE LOADER -->
-
-  <!-- NAVIGATION WIDGET -->
-  <nav id="navigation-widget-mobile" class="navigation-widget navigation-widget-mobile sidebar left hidden"
-    data-simplebar>
-    <!-- NAVIGATION WIDGET CLOSE BUTTON -->
-    <div class="navigation-widget-close-button">
-      <!-- NAVIGATION WIDGET CLOSE BUTTON ICON -->
-      <svg class="navigation-widget-close-button-icon icon-back-arrow">
-        <use xlink:href="#svg-back-arrow"></use>
-      </svg>
-      <!-- NAVIGATION WIDGET CLOSE BUTTON ICON -->
-    </div>
-    <!-- /NAVIGATION WIDGET CLOSE BUTTON -->
-
-    <!-- NAVIGATION WIDGET SECTION TITLE -->
-    <p class="navigation-widget-section-title space-top">Main Links</p>
-    <!-- /NAVIGATION WIDGET SECTION TITLE -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">FAQs</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">About Us</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-    <!-- NAVIGATION WIDGET SECTION LINK -->
-    <a class="navigation-widget-section-link" href="#">Contact Us</a>
-    <!-- /NAVIGATION WIDGET SECTION LINK -->
-
-  </nav>
-  <!-- /NAVIGATION WIDGET -->
-
-  <!-- HEADER -->
-  <header class="header logged-out">
-
-    <!-- HEADER ACTIONS -->
-    <div class="header-actions">
-      <!-- HEADER BRAND -->
-      <div class="header-brand">
-        <!-- LOGO -->
-        <div class="logo">
-          <!-- ICON LOGO VIKINGER -->
-          <use xlink:href="img/favicon.ico"></use>
-          </svg>
-          <!-- /ICON LOGO VIKINGER -->
-        </div>
-        <!-- /LOGO -->
-        <img class="form-box-decoration" src="img/landing/rocket_small.png" alt="rocket">
-
-        <!-- HEADER BRAND TEXT -->
-        <h1 class="header-brand-text">whiz</h1>
-        <!-- /HEADER BRAND TEXT -->
-      </div>
-      <!-- /HEADER BRAND -->
-    </div>
-    <!-- /HEADER ACTIONS -->
-
-    <!-- HEADER ACTIONS -->
-    <div class="header-actions">
-      <!-- MOBILEMENU TRIGGER -->
-      <div class="mobilemenu-trigger navigation-widget-mobile-trigger">
-        <!-- BURGER ICON -->
-        <div class="burger-icon inverted">
-          <!-- BURGER ICON BAR -->
-          <div class="burger-icon-bar"></div>
-          <!-- /BURGER ICON BAR -->
-
-          <!-- BURGER ICON BAR -->
-          <div class="burger-icon-bar"></div>
-          <!-- /BURGER ICON BAR -->
-
-          <!-- BURGER ICON BAR -->
-          <div class="burger-icon-bar"></div>
-          <!-- /BURGER ICON BAR -->
-        </div>
-        <!-- /BURGER ICON -->
-      </div>
-      <!-- /MOBILEMENU TRIGGER -->
-
-      <!-- REGISTER BUTTON -->
-      <a class="register-button button no-shadow" href="index.html">Register</a>
-      <!-- /REGISTER BUTTON -->
-
-      <!-- NAVIGATION -->
-      <nav class="navigation">
-        <!-- MENU MAIN -->
-        <ul class="menu-main">
-
-          <!-- MENU MAIN ITEM -->
-          <li class="menu-main-item">
-            <!-- MENU MAIN ITEM LINK -->
-            <a class="menu-main-item-link" href="#">Contact Us</a>
-            <!-- /MENU MAIN ITEM LINK -->
-          </li>
-          <!-- /MENU MAIN ITEM -->
-
-          <!-- MENU MAIN ITEM -->
-          <li class="menu-main-item">
-            <!-- MENU MAIN ITEM LINK -->
-            <p class="menu-main-item-link">
-              <!-- ICON DOTS -->
-              <svg class="icon-dots">
-                <use xlink:href="#svg-dots"></use>
-              </svg>
-              <!-- /ICON DOTS -->
-            </p>
-            <!-- /MENU MAIN ITEM LINK -->
-
-            <!-- MENU MAIN -->
-            <ul class="menu-main">
-              <!-- MENU MAIN ITEM -->
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link" href="FAQ.html">Faqs</a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <!-- /MENU MAIN ITEM -->
-
-              <!-- MENU MAIN ITEM -->
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link" href="whiz.html">About Us</a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <!-- /MENU MAIN ITEM -->
-
-              <!-- MENU MAIN ITEM -->
-              <li class="menu-main-item">
-                <!-- MENU MAIN ITEM LINK -->
-                <a class="menu-main-item-link" href="#">Contact Us</a>
-                <!-- /MENU MAIN ITEM LINK -->
-              </li>
-              <!-- /MENU MAIN ITEM -->
-
-
-              <!-- /MENU MAIN ITEM -->
-            </ul>
-            <!-- /MENU MAIN -->
-          </li>
-          <!-- /MENU MAIN ITEM -->
-        </ul>
-        <!-- /MENU MAIN -->
-      </nav>
-      <!-- /NAVIGATION -->
-    </div>
-    <!-- /HEADER ACTIONS -->
-
-    <!-- HEADER ACTIONS -->
-    <div class="header-actions search-bar">
-      <!-- INTERACTIVE INPUT -->
-      <div class="interactive-input dark">
-        <input type="text" id="search-main" name="search_main" placeholder="Search here for people or groups">
-        <!-- INTERACTIVE INPUT ICON WRAP -->
-        <div class="interactive-input-icon-wrap">
-          <!-- INTERACTIVE INPUT ICON -->
-          <svg class="interactive-input-icon icon-magnifying-glass">
-            <use xlink:href="#svg-magnifying-glass"></use>
-          </svg>
-          <!-- /INTERACTIVE INPUT ICON -->
-        </div>
-        <!-- /INTERACTIVE INPUT ICON WRAP -->
-
-        <!-- INTERACTIVE INPUT ACTION -->
-        <div class="interactive-input-action">
-          <!-- INTERACTIVE INPUT ACTION ICON -->
-          <svg class="interactive-input-action-icon icon-cross-thin">
-            <use xlink:href="#svg-cross-thin"></use>
-          </svg>
-          <!-- /INTERACTIVE INPUT ACTION ICON -->
-        </div>
-        <!-- /INTERACTIVE INPUT ACTION -->
-      </div>
-      <!-- /INTERACTIVE INPUT -->
-
-      <!-- DROPDOWN BOX -->
-      <div class="dropdown-box padding-bottom-small header-search-dropdown">
-        <!-- DROPDOWN BOX CATEGORY -->
-        <div class="dropdown-box-category">
-          <!-- DROPDOWN BOX CATEGORY TITLE -->
-          <p class="dropdown-box-category-title">Members</p>
-          <!-- /DROPDOWN BOX CATEGORY TITLE -->
-        </div>
-        <!-- /DROPDOWN BOX CATEGORY -->
-
-        <!-- DROPDOWN BOX LIST -->
-        <div class="dropdown-box-list small no-scroll">
-          <!-- DROPDOWN BOX LIST ITEM -->
-          <a class="dropdown-box-list-item" href="profile-timeline.html">
-            <!-- USER STATUS -->
-            <div class="user-status notification">
-              <!-- USER STATUS AVATAR -->
-              <div class="user-status-avatar">
-                <!-- USER AVATAR -->
-                <div class="user-avatar small no-outline">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-30-32" data-src="img/avatar/05.jpg"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-
-                  <!-- USER AVATAR PROGRESS -->
-                  <div class="user-avatar-progress">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-progress-40-44"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR PROGRESS -->
-
-                  <!-- USER AVATAR PROGRESS BORDER -->
-                  <div class="user-avatar-progress-border">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-border-40-44"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR PROGRESS BORDER -->
-
-                  <!-- USER AVATAR BADGE -->
-                  <div class="user-avatar-badge">
-                    <!-- USER AVATAR BADGE BORDER -->
-                    <div class="user-avatar-badge-border">
-                      <!-- HEXAGON -->
-                      <div class="hexagon-22-24"></div>
-                      <!-- /HEXAGON -->
-                    </div>
-                    <!-- /USER AVATAR BADGE BORDER -->
-
-                    <!-- USER AVATAR BADGE CONTENT -->
-                    <div class="user-avatar-badge-content">
-                      <!-- HEXAGON -->
-                      <div class="hexagon-dark-16-18"></div>
-                      <!-- /HEXAGON -->
-                    </div>
-                    <!-- /USER AVATAR BADGE CONTENT -->
-
-                    <!-- USER AVATAR BADGE TEXT -->
-                    <p class="user-avatar-badge-text">12</p>
-                    <!-- /USER AVATAR BADGE TEXT -->
-                  </div>
-                  <!-- /USER AVATAR BADGE -->
-                </div>
-                <!-- /USER AVATAR -->
-              </div>
-              <!-- /USER STATUS AVATAR -->
-
-              <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><span class="bold">Neko Bebop</span></p>
-              <!-- /USER STATUS TITLE -->
-
-              <!-- USER STATUS TEXT -->
-              <p class="user-status-text">1 friends in common</p>
-              <!-- /USER STATUS TEXT -->
-
-              <!-- USER STATUS ICON -->
-              <div class="user-status-icon">
-                <!-- ICON FRIEND -->
-                <svg class="icon-friend">
-                  <use xlink:href="#svg-friend"></use>
-                </svg>
-                <!-- /ICON FRIEND -->
-              </div>
-              <!-- /USER STATUS ICON -->
-            </div>
-            <!-- /USER STATUS -->
-          </a>
-          <!-- /DROPDOWN BOX LIST ITEM -->
-
-          <!-- DROPDOWN BOX LIST ITEM -->
-          <a class="dropdown-box-list-item" href="profile-timeline.html">
-            <!-- USER STATUS -->
-            <div class="user-status notification">
-              <!-- USER STATUS AVATAR -->
-              <div class="user-status-avatar">
-                <!-- USER AVATAR -->
-                <div class="user-avatar small no-outline">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-30-32" data-src="img/avatar/15.jpg"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-
-                  <!-- USER AVATAR PROGRESS -->
-                  <div class="user-avatar-progress">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-progress-40-44"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR PROGRESS -->
-
-                  <!-- USER AVATAR PROGRESS BORDER -->
-                  <div class="user-avatar-progress-border">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-border-40-44"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR PROGRESS BORDER -->
-
-                  <!-- USER AVATAR BADGE -->
-                  <div class="user-avatar-badge">
-                    <!-- USER AVATAR BADGE BORDER -->
-                    <div class="user-avatar-badge-border">
-                      <!-- HEXAGON -->
-                      <div class="hexagon-22-24"></div>
-                      <!-- /HEXAGON -->
-                    </div>
-                    <!-- /USER AVATAR BADGE BORDER -->
-
-                    <!-- USER AVATAR BADGE CONTENT -->
-                    <div class="user-avatar-badge-content">
-                      <!-- HEXAGON -->
-                      <div class="hexagon-dark-16-18"></div>
-                      <!-- /HEXAGON -->
-                    </div>
-                    <!-- /USER AVATAR BADGE CONTENT -->
-
-                    <!-- USER AVATAR BADGE TEXT -->
-                    <p class="user-avatar-badge-text">7</p>
-                    <!-- /USER AVATAR BADGE TEXT -->
-                  </div>
-                  <!-- /USER AVATAR BADGE -->
-                </div>
-                <!-- /USER AVATAR -->
-              </div>
-              <!-- /USER STATUS AVATAR -->
-
-              <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><span class="bold">Tim Rogers</span></p>
-              <!-- /USER STATUS TITLE -->
-
-              <!-- USER STATUS TEXT -->
-              <p class="user-status-text">4 friends in common</p>
-              <!-- /USER STATUS TEXT -->
-
-              <!-- USER STATUS ICON -->
-              <div class="user-status-icon">
-                <!-- ICON FRIEND -->
-                <svg class="icon-friend">
-                  <use xlink:href="#svg-friend"></use>
-                </svg>
-                <!-- /ICON FRIEND -->
-              </div>
-              <!-- /USER STATUS ICON -->
-            </div>
-            <!-- /USER STATUS -->
-          </a>
-          <!-- /DROPDOWN BOX LIST ITEM -->
-        </div>
-        <!-- /DROPDOWN BOX LIST -->
-
-        <!-- DROPDOWN BOX CATEGORY -->
-        <div class="dropdown-box-category">
-          <!-- DROPDOWN BOX CATEGORY TITLE -->
-          <p class="dropdown-box-category-title">Groups</p>
-          <!-- /DROPDOWN BOX CATEGORY TITLE -->
-        </div>
-        <!-- /DROPDOWN BOX CATEGORY -->
-
-        <!-- DROPDOWN BOX LIST -->
-        <div class="dropdown-box-list small no-scroll">
-          <!-- DROPDOWN BOX LIST ITEM -->
-          <a class="dropdown-box-list-item" href="group-timeline.html">
-            <!-- USER STATUS -->
-            <div class="user-status notification">
-              <!-- USER STATUS AVATAR -->
-              <div class="user-status-avatar">
-                <!-- USER AVATAR -->
-                <div class="user-avatar small no-border">
-                  <!-- USER AVATAR CONTENT -->
-                  <div class="user-avatar-content">
-                    <!-- HEXAGON -->
-                    <div class="hexagon-image-40-44" data-src="img/avatar/24.jpg"></div>
-                    <!-- /HEXAGON -->
-                  </div>
-                  <!-- /USER AVATAR CONTENT -->
-                </div>
-                <!-- /USER AVATAR -->
-              </div>
-              <!-- /USER STATUS AVATAR -->
-
-              <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><span class="bold">Cosplayers of the World</span></p>
-              <!-- /USER STATUS TITLE -->
-
-              <!-- USER STATUS TEXT -->
-              <p class="user-status-text">139 members</p>
-              <!-- /USER STATUS TEXT -->
-
-              <!-- USER STATUS ICON -->
-              <div class="user-status-icon">
-                <!-- ICON GROUP -->
-                <svg class="icon-group">
-                  <use xlink:href="#svg-group"></use>
-                </svg>
-                <!-- /ICON GROUP -->
-              </div>
-              <!-- /USER STATUS ICON -->
-            </div>
-            <!-- /USER STATUS -->
-          </a>
-          <!-- /DROPDOWN BOX LIST ITEM -->
-        </div>
-        <!-- /DROPDOWN BOX LIST -->
-
-        <!-- DROPDOWN BOX CATEGORY -->
-        <div class="dropdown-box-category">
-          <!-- DROPDOWN BOX CATEGORY TITLE -->
-          <p class="dropdown-box-category-title">Marketplace</p>
-          <!-- /DROPDOWN BOX CATEGORY TITLE -->
-        </div>
-        <!-- /DROPDOWN BOX CATEGORY -->
-
-        <!-- DROPDOWN BOX LIST -->
-        <div class="dropdown-box-list small no-scroll">
-          <!-- DROPDOWN BOX LIST ITEM -->
-          <a class="dropdown-box-list-item" href="marketplace-product.html">
-            <!-- USER STATUS -->
-            <div class="user-status no-padding-top">
-              <!-- USER STATUS AVATAR -->
-              <div class="user-status-avatar">
-                <!-- PICTURE -->
-                <figure class="picture small round liquid">
-                  <img src="img/marketplace/items/07.jpg" alt="item-07">
-                </figure>
-                <!-- /PICTURE -->
-              </div>
-              <!-- /USER STATUS AVATAR -->
-
-              <!-- USER STATUS TITLE -->
-              <p class="user-status-title"><span class="bold">Mercenaries White Frame</span></p>
-              <!-- /USER STATUS TITLE -->
-
-              <!-- USER STATUS TEXT -->
-              <p class="user-status-text">By Neko Bebop</p>
-              <!-- /USER STATUS TEXT -->
-
-              <!-- USER STATUS ICON -->
-              <div class="user-status-icon">
-                <!-- ICON MARKETPLACE -->
-                <svg class="icon-marketplace">
-                  <use xlink:href="#svg-marketplace"></use>
-                </svg>
-                <!-- /ICON MARKETPLACE -->
-              </div>
-              <!-- /USER STATUS ICON -->
-            </div>
-            <!-- /USER STATUS -->
-          </a>
-          <!-- /DROPDOWN BOX LIST ITEM -->
-        </div>
-        <!-- /DROPDOWN BOX LIST -->
-      </div>
-      <!-- /DROPDOWN BOX -->
-    </div>
-    <!-- /HEADER ACTIONS -->
-
-    <!-- HEADER ACTIONS -->
-    <div class="header-actions">
-      <!-- LOGIN FORM -->
-      <form class="login-form">
-        <!-- FORM ROW -->
-        <div class="form-row split">
-
-
-
-
-          <!-- BUTTON -->
-          <button class="button primary with-only-icon">
-            <!-- ICON LOGIN -->
-            <svg class="icon-login">
-              <use xlink:href="#svg-login"></use>
-            </svg>
-            <!-- /ICON LOGIN -->
-          </button>
-          <!-- /BUTTON -->
-        </div>
-        <!-- /FORM ROW -->
-      </form>
-      <!-- /LOGIN FORM -->
-    </div>
-    <!-- /HEADER ACTIONS -->
-  </header>
-  <!-- /HEADER -->
-
-  <!-- FLOATY BAR -->
-  <aside class="floaty-bar logged-out">
-    <!-- LOGIN BUTTON -->
-    <a class="login-button button small primary" href="index.html">Login &amp; Register</a>
-    <!-- /LOGIN BUTTON -->
-  </aside>
-  <!-- /FLOATY BAR -->
-
-  <!-- CONTENT GRID -->
-  <div class="content-grid">
-
-    <figure id="slideshow">
-        <img src="img/banner/banner1.png" alt="" />
-        <img src="img/banner/banner2.png" alt="" />
-        <img src="img/banner/banner3.png" alt="" />
-        </figure>
-
-  </div>
-  <!-- /CONTENT GRID -->
-
-  <!-- app -->
-  <script src="js/utils/app.js"></script>
-  <!-- page loader -->
-  <script src="js/utils/page-loader.js"></script>
-  <!-- simplebar -->
-  <script src="js/vendor/simplebar.min.js"></script>
-  <!-- liquidify -->
-  <script src="js/utils/liquidify.js"></script>
-  <!-- XM_Plugins -->
-  <script src="js/vendor/xm_plugins.min.js"></script>
-  <!-- global.hexagons -->
-  <script src="js/global/global.hexagons.js"></script>
-  <!-- header -->
-  <script src="js/header/header.js"></script>
-  <!-- sidebar -->
-  <script src="js/sidebar/sidebar.js"></script>
-  <!-- form.utils -->
-  <script src="js/form/form.utils.js"></script>
-  <!-- SVG icons -->
-  <script src="js/utils/svg-loader.js"></script>
-  <!-- demo icons -->
-  <script src="js/utils/demo-icons.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="js/utils/banner.js"></script>
-
-
-
+<body
+	class="home-page bp-legacy home page-template page-template-elementor_canvas page page-id-876 wp-custom-logo theme-vikinger pmpro-body-has-access woocommerce-no-js vikinger-logged-out elementor-default elementor-template-canvas elementor-kit-875 elementor-page elementor-page-876 no-js">
+	<div data-elementor-type="wp-page" data-elementor-id="876" class="elementor elementor-876"
+		data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-7c24e767 elementor-section-full_width elementor-section-height-min-height elementor-section-items-top elementor-section-height-default"
+					data-id="7c24e767" data-element_type="section"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-container elementor-column-gap-no">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-53eb1ded"
+								data-id="53eb1ded" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-2405497c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default"
+											data-id="2405497c" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-4f8a8ea9"
+														data-id="4f8a8ea9" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-560d7169 elementor-widget__width-auto elementor-widget elementor-widget-image"
+																	data-id="560d7169" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img width="40" height="40"
+																				src="./img/landing/rocket.png"
+																				class="attachment-thumbnail size-thumbnail"
+																				alt="" loading="lazy" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-202ceab6 elementor-widget__width-auto elementor-hidden-phone elementor-hidden-tablet elementor-widget elementor-widget-heading"
+																	data-id="202ceab6" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2 class="elementor-heading-title elementor-size-default">Whiz</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-5def8f66 elementor-widget__width-auto elementor-hidden-desktop elementor-widget elementor-widget-vikinger-menu-mobile"
+																	data-id="5def8f66" data-element_type="widget"
+																	data-widget_type="vikinger-menu-mobile.default">
+																	<div class="elementor-widget-container">
+
+																		<!-- /VK EL NAVIGATION MOBILE TRIGGER OPEN -->
+
+																		<!-- VK EL NAVIGATION MOBILE -->
+																		<nav class="vk-el-navigation-mobile vk-el-navigation-mobile-left"
+																			style=background-color:#fff; data-simplebar>
+																			<!-- VK EL NAVIGATION MOBILE HEADER -->
+																			<div class="vk-el-navigation-mobile-header">
+
+																				<!-- VK EL NAVIGATION MOBILE TITLE -->
+																				<p class="vk-el-navigation-mobile-title"
+																					style=color:#3e3f5e;>WHIZ</p>
+																				<!-- /VK EL NAVIGATION MOBILE TITLE -->
+
+																				<!-- VK EL NAVIGATION MOBILE TRIGGER CLOSE -->
+																				<div
+																					class="vk-el-navigation-mobile-trigger-close">
+																					<i aria-hidden="true"
+																						class="fas fa-times fa-solid"
+																						style=color:#3e3f5e;font-size:20px;></i>
+																				</div>
+																				<!-- /VK EL NAVIGATION MOBILE TRIGGER CLOSE -->
+																			</div>
+																			<!-- /VK EL NAVIGATION MOBILE HEADER -->
+
+
+																			<!-- VK EL NAVIGATION MOBILE MENU -->
+																			<ul class="vk-el-navigation-mobile-menu">
+																				<!-- VK EL NAVIGATION MOBILE MENU ITEM -->
+																				<li
+																					class="vk-el-navigation-mobile-menu-item">
+																					<!-- VK EL NAVIGATION MOBILE MENU ITEM LINK -->
+																					<a class="vk-el-navigation-mobile-menu-item-link"
+																						href="dashboard-freelancer.html"
+																						style=color:#3e3f5e;>Home</a>
+																					<!-- /VK EL NAVIGATION MOBILE MENU ITEM LINK -->
+
+																				</li>
+																				<!-- /VK EL NAVIGATION MOBILE MENU ITEM -->
+																				<!-- VK EL NAVIGATION MOBILE MENU ITEM -->
+																				<li
+																					class="vk-el-navigation-mobile-menu-item">
+																					<!-- VK EL NAVIGATION MOBILE MENU ITEM LINK -->
+																					<a class="vk-el-navigation-mobile-menu-item-link"
+																						href="FAQ.html"
+																						style=color:#3e3f5e;>Testimonials</a>
+																					<!-- /VK EL NAVIGATION MOBILE MENU ITEM LINK -->
+
+																				</li>
+
+																			</ul>
+																			<!-- /VK EL NAVIGATION MOBILE MENU -->
+																		</nav>
+																		<!-- /VK EL NAVIGATION MOBILE -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-11f41bbf elementor-hidden-tablet elementor-hidden-phone"
+														data-id="11f41bbf" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-32ac4255 elementor-widget__width-auto elementor-widget elementor-widget-vikinger-menu"
+																	data-id="32ac4255" data-element_type="widget"
+																	data-widget_type="vikinger-menu.default">
+																	<div class="elementor-widget-container">
+
+																		<!-- VK EL NAVIGATION -->
+																		<ul class="vk-el-navigation" style=>
+																			<!-- VK EL NAVIGATION ITEM -->
+																			<li class="vk-el-navigation-item">
+																				<!-- VK EL NAVIGATION ITEM LINK -->
+																				<a class="vk-el-navigation-item-link"
+																					href="dashboard-freelancer.html"
+																					style=color:#FFFFFF;>
+																					Home </a>
+																				<!-- /VK EL NAVIGATION ITEM LINK -->
+
+																			</li>
+																			<!-- /VK EL NAVIGATION ITEM -->
+																			<!-- VK EL NAVIGATION ITEM -->
+																			<li class="vk-el-navigation-item">
+																				<!-- VK EL NAVIGATION ITEM LINK -->
+																				<a class="vk-el-navigation-item-link"
+																					href="FAQ.html"
+																					style=color:#FFFFFF;>
+																					FAQs </a>
+																				<!-- /VK EL NAVIGATION ITEM LINK -->
+
+																			</li>
+																			<!-- /VK EL NAVIGATION ITEM -->
+
+																		</ul>
+																		<!-- /VK EL NAVIGATION -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-5cb095ac"
+														data-id="5cb095ac" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-27da351a elementor-align-right elementor-widget elementor-widget-button"
+																	data-id="27da351a" data-element_type="widget"
+																	data-widget_type="button.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-button-wrapper">
+																			<a href="https://odindesignthemes.com/vikinger-theme/activity/"
+																				target="_blank"
+																				class="elementor-button-link elementor-button elementor-size-sm"
+																				role="button">
+																				<span
+																					class="elementor-button-content-wrapper">
+																					<span
+																						class="elementor-button-text">Sign
+																						In!</span>
+																				</span>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-48b0131f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="48b0131f" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7516b03e"
+														data-id="7516b03e" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-6ad7552a elementor-widget elementor-widget-heading"
+																	data-id="6ad7552a" data-element_type="widget"
+																	data-widget_type="heading.default">
+																		<img width="280" height="280"
+																			className="login-icon-logo"
+																			src="./img/whiz/whiz_logo_square.png"
+																			alt="Whiz Logo" />
+																		<h2 class="elementor-heading-title elementor-size-default">Whiz</h2>
+																</div>
+																<div class="elementor-element elementor-element-5aaf8760 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-text-editor">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p><strong>The next generation social
+																					network & community! Connect with
+																					jobs and play with our quests and
+																					badges gamification system!</strong>
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-3a8785bd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="3a8785bd" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-67a0682f"
+														data-id="67a0682f" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-6ac1621e elementor-align-center elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-button"
+																	data-id="6ac1621e" data-element_type="widget"
+																	data-widget_type="button.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-button-wrapper">
+																			<a href="#why-vikinger"
+																				class="elementor-button-link elementor-button elementor-size-sm"
+																				role="button">
+																				<span
+																					class="elementor-button-content-wrapper">
+																					<span
+																						class="elementor-button-text">Sign
+																						In / Register</span>
+																				</span>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-2564d300 elementor-align-center elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-button"
+																	data-id="2564d300" data-element_type="widget"
+																	data-widget_type="button.default">
+
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-30fc45f6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="30fc45f6" data-element_type="section"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-container elementor-column-gap-no">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-59bf3225"
+								data-id="59bf3225" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-3f666939 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="3f666939" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-4b7744f8"
+														data-id="4b7744f8" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-647e971a elementor-widget elementor-widget-heading"
+																	data-id="647e971a" data-element_type="widget"
+																	data-widget_type="heading.default">
+
+																</div>
+																<div class="elementor-element elementor-element-7fbbf45f elementor-widget elementor-widget-text-editor"
+																	data-id="7fbbf45f" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Freelancing job portal</p>
+																			<p> using Blockchain</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-15fde512"
+														data-id="15fde512" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-1850f028 elementor-widget elementor-widget-text-editor"
+																	data-id="1850f028" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Secure, traceable, reliable payments
+																				using smart contracts and payments via
+																				the Polygon blockchain.
+																				All your pain points with other
+																				freelancing platforms taken care off!
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-341707ca elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="341707ca" data-element_type="section"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3209709d"
+								data-id="3209709d" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-182f3291 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="182f3291" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e10f39c"
+														data-id="e10f39c" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-75883b09 elementor-widget elementor-widget-image"
+																	data-id="75883b09" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon1.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-465f5b29 elementor-widget elementor-widget-heading"
+																	data-id="465f5b29" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default">
+																			Access to Qualified Freelancers Globally
+																		</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-7ff6214b elementor-widget elementor-widget-text-editor"
+																	data-id="7ff6214b" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Transactions on Whiz are recorded on the
+																				blockchain, therefore users can be
+																				assured work records and reviews are
+																				authentic.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-15fa6803"
+														data-id="15fa6803" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-3ee40594 elementor-widget elementor-widget-image"
+																	data-id="3ee40594" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon2.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-50e835b8 elementor-widget elementor-widget-heading"
+																	data-id="50e835b8" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default">
+																			Use Smart Contracts ensure Well-Defined
+																			Scopes & Payments</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-e6d0e07 elementor-widget elementor-widget-text-editor"
+																	data-id="e6d0e07" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Terms of assignments, including payment
+																				arrangements, are encoded in a smart
+																				contract on Blockchain and cannot be
+																				changed once enforced.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-29a966ef"
+														data-id="29a966ef" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-70b6e3 elementor-widget elementor-widget-image"
+																	data-id="70b6e3" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon3.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-219a8e2b elementor-widget elementor-widget-heading"
+																	data-id="219a8e2b" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default">
+																			Only Pay For What You Need</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-385db577 elementor-widget elementor-widget-text-editor"
+																	data-id="385db577" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Instead of paying potentially hefty
+																				commissions that increase with the value
+																				of jobs, you simply pay a flat fee for
+																				each of the features that you deem
+																				essential for standing out among
+																				competitors.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+		</div>
+	</div>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<link rel='stylesheet' id='e-animations-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/comment-reply.min.js?ver=5.8.1'
+		id='comment-reply-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.7.1'
+		id='wc-cart-fragments-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/swiper.min.js?ver=1.0.0'
+		id='vikinger-swiper-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_accordion.min.js?ver=1.0.0'
+		id='vikinger-xmaccordion-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_dropdown.min.js?ver=1.0.0'
+		id='vikinger-xmdropdown-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_hexagon.min.js?ver=1.0.0'
+		id='vikinger-xmhexagon-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_popup.min.js?ver=1.0.0'
+		id='vikinger-xmpopup-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_progressBar.min.js?ver=1.0.0'
+		id='vikinger-xmprogressBar-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_tab.min.js?ver=1.0.0'
+		id='vikinger-xmtab-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_tooltip.min.js?ver=1.0.0'
+		id='vikinger-xmtooltip-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/app.bundle.min.js?ver=3.8.6'
+		id='vikinger-main-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/wp-embed.min.js?ver=5.8.1'
+		id='wp-embed-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.4'
+		id='elementor-webpack-runtime-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.4'
+		id='elementor-frontend-modules-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
+		id='elementor-waypoints-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1'
+		id='jquery-ui-core-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'
+		id='swiper-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.4.4'
+		id='share-link-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1'
+		id='elementor-dialog-js'></script>
+	<script type='text/javascript' id='elementor-frontend-js-before'>
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.4.4", "is_static": false, "experimentalFeatures": { "e_import_export": true, "landing-pages": true, "elements-color-picker": true, "admin-top-bar": true }, "urls": { "assets": "https:\/\/odindesignthemes.com\/vikinger-theme\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 876, "title": "Vikinger%20%E2%80%93%20BuddyPress%20Social%20Community", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.4'
+		id='elementor-frontend-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.4'
+		id='preloaded-modules-js'></script>
 </body>
-
 
 </html>
