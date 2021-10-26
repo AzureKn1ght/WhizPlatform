@@ -97,8 +97,8 @@ const gigsProgress = async () => {
       var _id= gigs._id
       var assignedFl = gigs.freelancer_name;
 
-      let urlFl =
-        "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+     // let urlFl =
+       // "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
 
     /*   const freelancer = {
         _id: gigs.freelancer,
