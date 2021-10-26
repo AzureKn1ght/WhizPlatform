@@ -94,7 +94,7 @@ const gigDetails = async (e) => {
             <br><br>
             <h3>Hirer</h3>
             <br>
-            <p>${jobs.job_hirer}</p>
+            <p>${jobs.hirer_name}</p>
             <br>
             </div>
             <button class="button secondary" onclick="bidGig()">Bid for Gig</button>
@@ -125,7 +125,7 @@ const gigDetails = async (e) => {
             <br><br>
             <h3>Hirer</h3>
             <br>
-            <p>${jobs.job_hirer}</p>
+            <p>${jobs.hirer_name}</p>
             <br>
             </div>
               <button class="button primary" onclick="goBack()">Go Back</button>
