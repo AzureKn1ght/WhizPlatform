@@ -7,79 +7,79 @@ const communicationRating = document.getElementById("comms_rating");
 const quality = document.getElementById("quality_rating");
 const comments = document.getElementById("comments");
 const timeliness = document.getElementById("timeliness_rating");
-const submitReviewFreelancer = document.getElementById(
-  "submitfreelancerreview"
+const submitReviewHirer = document.getElementById(
+  "submit-hirer-review"
 );
 const web3 = new Web3(window.ethereum);
 const conAddress = "0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8";
 const contract = new web3.eth.Contract(abi, conAddress);
 
+
 const gigDetails = async (e) => {
-  //e.preventDefault();
-
-  let url =
-    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
-  let elm = "";
-  let idJob = data;
-  const gigId = {
-    _id: idJob,
-  };
-
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      body: JSON.stringify(gigId),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const jobs = await res.json();
-    console.log(jobs);
-    jobDetails = {
-      jobID: jobs._id,
-      budget: jobs.budget,
-      title: jobs.title,
-      description: jobs.description,
-      skills: jobs.skills_required,
-      location: jobs.required_location,
-    };
-
-    console.log(jobDetails);
+    //e.preventDefault();
   
-      //Add to element
-      elm += `
-            <h3 class="section-title">${jobs.title}</h3>
-            <br><br>
-            <h3>Description</h3>
-            <br>
-            <p>${jobs.description}</p>
-            <br><br>
-            <h3>Deadline</h3>
-            <br>
-            <p>${jobs.deadline}</p>
-            <br><br>
-            <h3>Skills Required</h3>
-            <br>
-            <p>${jobs.skills_required}</p>
-            <br><br>
-            <h3>Location</h3>
-            <br>
-            <p>${jobs.required_location}</p>
-            <br><br>
-            <h3>Hirer</h3>
-            <br>
-            <p>${jobs.hirer_name}</p>
-            <br>
-            `;
+    let url =
+      "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
+    let elm = "";
+    let idJob = data;
+    const gigId = {
+      _id: idJob,
+    };
+  
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(gigId),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const jobs = await res.json();
+      console.log(jobs);
+      jobDetails = {
+        jobID: jobs._id,
+        budget: jobs.budget,
+        title: jobs.title,
+        description: jobs.description,
+        skills: jobs.skills_required,
+        location: jobs.required_location,
+      };
+  
+      console.log(jobDetails);
     
-
-    gigInfo.innerHTML = elm;
-  } catch (error) {
-    console.log(error.message);
-  }
-};
-
+        //Add to element
+        elm += `
+              <h3 class="section-title">${jobs.title}</h3>
+              <br><br>
+              <h3>Description</h3>
+              <br>
+              <p>${jobs.description}</p>
+              <br><br>
+              <h3>Deadline</h3>
+              <br>
+              <p>${jobs.deadline}</p>
+              <br><br>
+              <h3>Skills Required</h3>
+              <br>
+              <p>${jobs.skills_required}</p>
+              <br><br>
+              <h3>Location</h3>
+              <br>
+              <p>${jobs.required_location}</p>
+              <br><br>
+              <h3>Freelancer</h3>
+              <br>
+              <p>${jobs.freelancer_name}</p>
+              <br>
+              `;
+      
+  
+      gigInfo.innerHTML = elm;
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
 //Goals (goal_id, description, balance, date_created, user_id);
 
 //Add Goal Function
@@ -154,7 +154,7 @@ const getReview = async (e)=>{
 
 getReview(currentAccount);
 //Add event listener for buttons
-submitReviewFreelancer.addEventListener("click", reviewAdd);
+submitReviewHirer.addEventListener("click", reviewAdd);
 /* document.getElementById("b2").onclick = function () {
   location.href = "dashboard.html";
 }; */
