@@ -156,7 +156,7 @@ const gigsProgress = async () => {
           <!-- /USER SHORT DESCRIPTION AVATAR -->
 
           <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
+          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
@@ -353,7 +353,7 @@ const gigsApplied = async () => {
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
+            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
@@ -451,11 +451,11 @@ const gigsRecommeded = async () => {
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">${gigs.title}</a></p>
+          <p class="product-preview-title"><a onclick="sessStorage('${gigs._id}')">${gigs.title}</a></p>
           <!-- /PRODUCT PREVIEW TITLE -->
 
           <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">${gigs.skills_required}</a></p>
+          <p class="product-preview-category digital"><a onclick="sessStorage('${gigs._id}')">${gigs.skills_required}</a></p>
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
@@ -485,7 +485,7 @@ const gigsRecommeded = async () => {
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
+            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
