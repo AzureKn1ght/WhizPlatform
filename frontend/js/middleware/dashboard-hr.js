@@ -7,6 +7,7 @@ const meta = window.sessionStorage.getItem("accountId");
 const web3 = new Web3(window.ethereum);
 const conAddress = "0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8";
 const contract = new web3.eth.Contract(abi, conAddress);
+var assignedFl = "Bob";
 var reviewsData = [
   {
     reviewID: 0,
@@ -53,7 +54,6 @@ const gigsProgress = async () => {
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirerjobsinProgress";
   let elm = "";
-  let assignedFl = "Bob";
   const hirer = {
     hirer: user,
   };
@@ -92,6 +92,9 @@ const gigsProgress = async () => {
           ? "img/cover/0" + image2 + ".jpg"
           : "img/cover/" + image2 + ".jpg";
       var file2 = profilePic2.toString();
+      var title = gigs.title;
+      var budget = gigs.budget;
+      var _id= gigs._id
 
       let urlFl =
         "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
@@ -117,7 +120,8 @@ const gigsProgress = async () => {
           assignedFl = data.full_name;
           console.log("The freelancer is:" + assignedFl);
         });
-
+      
+      console.log("Default is:" + assignedFl);
       //Add to element
       elm += `<!-- USER PREVIEW -->
       <div class="user-preview">
@@ -196,7 +200,7 @@ const gigsProgress = async () => {
             <!-- /USER SHORT DESCRIPTION TITLE -->
 
             <!-- USER SHORT DESCRIPTION TEXT -->
-            <p class="user-short-description-text"><a href="#">${gigs.title}</a></p>
+            <p class="user-short-description-text"><a href="#">${title}</a></p>
             <!-- /USER SHORT DESCRIPTION TEXT -->
           </div>
           <!-- /USER SHORT DESCRIPTION -->
@@ -222,7 +226,7 @@ const gigsProgress = async () => {
                 <!-- USER STAT -->
                 <div class="user-stat">
                   <!-- USER STAT TITLE -->
-                  <p class="user-stat-title">USD ${gigs.budget}</p>
+                  <p class="user-stat-title">USD ${budget}</p>
                   <!-- /USER STAT TITLE -->
 
                   <!-- USER STAT TEXT -->
@@ -251,11 +255,11 @@ const gigsProgress = async () => {
           <!-- USER PREVIEW ACTIONS -->
           <div class="user-preview-actions">
             <!-- BUTTON -->
-            <p class="button secondary" onclick="sessStorage('${gigs._id}')">Gig Details</p>
+            <p class="button secondary" onclick="sessStorage('${_id}')">Gig Details</p>
             <!-- /BUTTON -->
 
             <!-- BUTTON -->
-            <p class="button primary" onclick="updateStatus('${gigs._id}')">Check Status</p>
+            <p class="button primary" onclick="updateStatus('${_id}')">Check Status</p>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
@@ -323,22 +327,11 @@ const gigsOpen = async () => {
       var profilePic = "img/marketplace/items/" + image + ".jpg";
       var file = profilePic.toString();
 
-      var image2 = Math.floor(Math.random() * 9) + 1;
-      console.log(image2);
-      console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
-      var file2 = profilePic2.toString();
-
-      console.log(file);
-      console.log(typeof file);
-      console.log(file2);
-      console.log(typeof file2);
+     
 
       //Add to element
-      elm += `<!-- PRODUCT PREVIEW -->
+      elm += `
+      <!-- PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
         <a href="marketplace-product.html">
@@ -364,42 +357,21 @@ const gigsOpen = async () => {
 
           <!-- PRODUCT PREVIEW TEXT -->
           <p class="product-preview-text">${gigs.description}</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="${file2}"></div>
-                <!-- /HEXAGON -->
+              <!-- /PRODUCT PREVIEW TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW INFO -->
+        
+            <!-- PRODUCT PREVIEW META -->
+            <div class="product-preview-meta">
+        
+                <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+                <p class="product-preview-author-title">${gigs.applicants.length} Freelancers Applied</p>
+                <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
               </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->`;
+              <!-- /PRODUCT PREVIEW AUTHOR -->
+              </div>`;
     });
-    gigsAppliedFor.innerHTML = elm;
+    gigsOpenForApplication.innerHTML = elm;
   } catch (error) {
     console.log(error.message);
   }
@@ -407,16 +379,16 @@ const gigsOpen = async () => {
 
 const gigsCompleted = async () => {
   let url =
-    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/completedJobs";
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirercompletedJobs";
   let elm = "";
-  const freelancer = {
-    applicant: user,
+  const hirer = {
+    hirer: user,
   };
 
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(freelancer),
+      body: JSON.stringify(hirer),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -519,7 +491,7 @@ const gigsCompleted = async () => {
         <!-- /USER PREVIEW INFO -->
       </div>`;
     });
-    gigsCompletedCard.innerHTML = elm;
+    gigsCompletedHirer.innerHTML = elm;
   } catch (error) {
     console.log(error.message);
   }
@@ -678,7 +650,6 @@ const getReview = async () => {
 };
 
 gigsProgress();
-/* gigsApplied();
-gigsRecommeded();
+gigsOpen();
 gigsCompleted();
-getReview(); */
+getReview();
