@@ -119,7 +119,7 @@ const reviewAdd = async (e) => {
   var input = {
     reviewID: 0,
     reviewer: "0x4b7d0309042Be687F432B6fB73BCbcd405CD25e5",
-    reviewee: "0x4b7d0309042Be687F432B6fB73BCbcd405CD25e5",
+    reviewee: "0xb88d7171a62a0c62e22f62af811c9c859fce4618",
     ratings: ratings,
     comments: c,
     job: jobDetails,
