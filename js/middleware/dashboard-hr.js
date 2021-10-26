@@ -7,7 +7,7 @@ const meta = window.sessionStorage.getItem("accountId");
 const web3 = new Web3(window.ethereum);
 const conAddress = "0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8";
 const contract = new web3.eth.Contract(abi, conAddress);
-var assignedFl = "Bob";
+
 var reviewsData = [
   {
     reviewID: 0,
@@ -95,11 +95,12 @@ const gigsProgress = async () => {
       var title = gigs.title;
       var budget = gigs.budget;
       var _id= gigs._id
+      var assignedFl = gigs.freelancer_name;
 
       let urlFl =
         "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
 
-      const freelancer = {
+    /*   const freelancer = {
         _id: gigs.freelancer,
       };
       console.log("fetch request for freelancer details not sent");
@@ -119,7 +120,7 @@ const gigsProgress = async () => {
           console.log(data);
           assignedFl = data.full_name;
           console.log("The freelancer is:" + assignedFl);
-        });
+        }); */
       
       console.log("Default is:" + assignedFl);
       //Add to element
