@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- bootstrap 4.3.1 -->
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- simplebar styles -->
+    <link rel="stylesheet" href="css/vendor/simplebar.css">
+    <!-- tiny-slider styles -->
+    <link rel="stylesheet" href="css/vendor/tiny-slider.css">
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.ico">
+    <title>whiz - Hirer Registration</title>
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader">
+        <!-- PAGE LOADER DECORATION -->
+        <div class="page-loader-decoration">
+            <!-- ICON LOGO -->
+            <img class="form-box-decoration" src="img/landing/rocket.png" alt="rocket">
+            <!-- /ICON LOGO -->
+        </div>
+        <!-- /PAGE LOADER DECORATION -->
+
+        <!-- PAGE LOADER INFO -->
+        <div class="page-loader-info">
+            <!-- PAGE LOADER INFO TITLE -->
+            <br>
+            <p class="page-loader-info-title">whiz</p>
+            <!-- /PAGE LOADER INFO TITLE -->
+
+            <!-- PAGE LOADER INFO TEXT -->
+            <p class="page-loader-info-text">Loading...</p>
+            <!-- /PAGE LOADER INFO TEXT -->
+        </div>
+        <!-- /PAGE LOADER INFO -->
+
+        <!-- PAGE LOADER INDICATOR -->
+        <div class="page-loader-indicator loader-bars">
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+            <div class="loader-bar"></div>
+        </div>
+        <!-- /PAGE LOADER INDICATOR -->
+    </div>
+    <!-- /PAGE LOADER -->
+
+    <!-- HEADER -->
+    <header class="header">
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+            <!-- HEADER BRAND -->
+            <div class="header-brand">
+
+                <!-- LOGO -->
+                <div class="logo">
+                    <!-- ICON LOGO VIKINGER -->
+                    <use xlink:href="#svg-logo-vikinger"></use>
+                    </svg>
+                    <!-- /ICON LOGO VIKINGER -->
+                </div>
+                <!-- /LOGO -->
+                <a href="whiz.html">
+                    <img class="form-box-decoration" src="img/landing/rocket_small.png" alt="rocket">
+                </a>
+
+                <!-- HEADER BRAND TEXT -->
+                <a href="whiz.html">
+                    <h1 class="header-brand-text">whiz</h1>
+                </a>
+                <!-- /HEADER BRAND TEXT -->
+            </div>
+            <!-- /HEADER BRAND -->
+        </div>
+      <!-- NAVIGATION -->
+      <nav class="navigation">
+        <!-- MENU MAIN -->
+        <ul class="menu-main">
+          <!-- MENU MAIN ITEM -->
+          <li class="menu-main-item">
+            <!-- MENU MAIN ITEM LINK -->
+            <a class="menu-main-item-link" href="faq.html">FAQs</a>
+            <!-- /MENU MAIN ITEM LINK -->
+          </li>
+          <!-- /MENU MAIN ITEM -->
+
+          <!-- /MENU MAIN ITEM -->
+        </ul>
+        <!-- /MENU MAIN -->
+      </nav>
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions search-bar">
+            <!-- INTERACTIVE INPUT -->
+            <div class="interactive-input dark">
+                <input type="text" id="search-main" name="search_main" placeholder="Search here for people or groups">
+                <!-- INTERACTIVE INPUT ICON WRAP -->
+                <div class="interactive-input-icon-wrap">
+                    <!-- INTERACTIVE INPUT ICON -->
+                    <svg class="interactive-input-icon icon-magnifying-glass">
+                        <use xlink:href="#svg-magnifying-glass"></use>
+                    </svg>
+                    <!-- /INTERACTIVE INPUT ICON -->
+                </div>
+                <!-- /INTERACTIVE INPUT ICON WRAP -->
+
+                <!-- INTERACTIVE INPUT ACTION -->
+                <div class="interactive-input-action">
+
+                </div>
+                <!-- /INTERACTIVE INPUT ACTION -->
+            </div>
+            <!-- /INTERACTIVE INPUT -->
+
+            <!-- DROPDOWN BOX -->
+            <div class="dropdown-box padding-bottom-small header-search-dropdown">
+               </div>
+        </div>
+        <!-- /HEADER ACTIONS -->
+
+
+
+        <!-- HEADER ACTIONS -->
+        <div class="header-actions">
+            <!-- ACTION LIST -->
+            <div class="action-list dark">
+                <!-- ACTION LIST ITEM WRAP -->
+                <div class="action-list-item-wrap">
+                    <!-- ACTION LIST ITEM -->
+                    <div class="action-list-item header-dropdown-trigger">
+                        <!-- ACTION LIST ITEM ICON -->
+                        <svg class="action-list-item-icon icon-friend">
+                            <use xlink:href="#svg-friend"></use>
+                        </svg>
+                        <!-- /ACTION LIST ITEM ICON -->
+                    </div>
+                    <!-- /ACTION LIST ITEM -->
+
+                    <!-- DROPDOWN BOX -->
+                    <div class="dropdown-box header-dropdown">
+                        <!-- DROPDOWN BOX HEADER -->
+                        <div class="dropdown-box-header">
+                            <!-- DROPDOWN BOX HEADER TITLE -->
+                            <p class="dropdown-box-header-title">Friend Requests</p>
+                            <!-- /DROPDOWN BOX HEADER TITLE -->
+
+                            <!-- DROPDOWN BOX HEADER ACTIONS -->
+                            <div class="dropdown-box-header-actions">
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Find Friends</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Settings</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+                            </div>
+                            <!-- /DROPDOWN BOX HEADER ACTIONS -->
+                        </div>
+                        <!-- /DROPDOWN BOX HEADER -->
+
+                        <!-- DROPDOWN BOX LIST -->
+                        <div class="dropdown-box-list no-hover" data-simplebar>
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status request">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/16.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">14</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Ginny
+                                            Danvers</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">6 friends in common</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- ACTION REQUEST LIST -->
+                                    <div class="action-request-list">
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request accept">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-add-friend">
+                                                <use xlink:href="#svg-add-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request decline">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-remove-friend">
+                                                <use xlink:href="#svg-remove-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+                                    </div>
+                                    <!-- ACTION REQUEST LIST -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status request">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/14.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">3</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Paul
+                                            Lang</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">2 friends in common</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- ACTION REQUEST LIST -->
+                                    <div class="action-request-list">
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request accept">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-add-friend">
+                                                <use xlink:href="#svg-add-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request decline">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-remove-friend">
+                                                <use xlink:href="#svg-remove-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+                                    </div>
+                                    <!-- ACTION REQUEST LIST -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status request">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/11.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">9</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Cassie
+                                            May</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">4 friends in common</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- ACTION REQUEST LIST -->
+                                    <div class="action-request-list">
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request accept">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-add-friend">
+                                                <use xlink:href="#svg-add-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+
+                                        <!-- ACTION REQUEST -->
+                                        <div class="action-request decline">
+                                            <!-- ACTION REQUEST ICON -->
+                                            <svg class="action-request-icon icon-remove-friend">
+                                                <use xlink:href="#svg-remove-friend"></use>
+                                            </svg>
+                                            <!-- /ACTION REQUEST ICON -->
+                                        </div>
+                                        <!-- /ACTION REQUEST -->
+                                    </div>
+                                    <!-- ACTION REQUEST LIST -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+                        </div>
+                        <!-- /DROPDOWN BOX LIST -->
+
+                        <!-- DROPDOWN BOX BUTTON -->
+                        <a class="dropdown-box-button secondary" href="#">View all Requests</a>
+                        <!-- /DROPDOWN BOX BUTTON -->
+                    </div>
+                    <!-- /DROPDOWN BOX -->
+                </div>
+                <!-- /ACTION LIST ITEM WRAP -->
+
+                <!-- ACTION LIST ITEM WRAP -->
+                <div class="action-list-item-wrap">
+                    <!-- ACTION LIST ITEM -->
+                    <div class="action-list-item header-dropdown-trigger">
+                        <!-- ACTION LIST ITEM ICON -->
+                        <svg class="action-list-item-icon icon-messages">
+                            <use xlink:href="#svg-messages"></use>
+                        </svg>
+                        <!-- /ACTION LIST ITEM ICON -->
+                    </div>
+                    <!-- /ACTION LIST ITEM -->
+
+                    <!-- DROPDOWN BOX -->
+                    <div class="dropdown-box header-dropdown">
+                        <!-- DROPDOWN BOX HEADER -->
+                        <div class="dropdown-box-header">
+                            <!-- DROPDOWN BOX HEADER TITLE -->
+                            <p class="dropdown-box-header-title">Messages</p>
+                            <!-- /DROPDOWN BOX HEADER TITLE -->
+
+                            <!-- DROPDOWN BOX HEADER ACTIONS -->
+                            <div class="dropdown-box-header-actions">
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Mark all as Read</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Settings</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+                            </div>
+                            <!-- /DROPDOWN BOX HEADER ACTIONS -->
+                        </div>
+                        <!-- /DROPDOWN BOX HEADER -->
+
+                        <!-- DROPDOWN BOX LIST -->
+                        <div class="dropdown-box-list medium" data-simplebar>
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/04.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">6</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">Bearded Wonder</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">Great! Then will meet with them at the party...</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">29 mins ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/05.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">12</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">Neko Bebop</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">Awesome! I'll see you there!</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">54 mins ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/03.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">16</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">Nick Grissom</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">Can you stream that new game?</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">2 hours ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/07.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">26</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">Sarah Diamond</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">I'm sending you the latest news of the release...</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">16 hours ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/12.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">10</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">James Murdock</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">Great! Then will meet with them at the party...</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">7 days ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <a class="dropdown-box-list-item" href="#">
+                                <!-- USER STATUS -->
+                                <div class="user-status">
+                                    <!-- USER STATUS AVATAR -->
+                                    <div class="user-status-avatar">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/10.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">5</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </div>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><span class="bold">The Green Goo</span></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TEXT -->
+                                    <p class="user-status-text">Can you stream that new game?</p>
+                                    <!-- /USER STATUS TEXT -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp floaty">10 days ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </a>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+                        </div>
+                        <!-- /DROPDOWN BOX LIST -->
+
+                        <!-- DROPDOWN BOX BUTTON -->
+                        <a class="dropdown-box-button primary" href="#">View all Messages</a>
+                        <!-- /DROPDOWN BOX BUTTON -->
+                    </div>
+                    <!-- /DROPDOWN BOX -->
+                </div>
+                <!-- /ACTION LIST ITEM WRAP -->
+
+                <!-- ACTION LIST ITEM WRAP -->
+                <div class="action-list-item-wrap">
+                    <!-- ACTION LIST ITEM -->
+                    <div class="action-list-item unread header-dropdown-trigger">
+                        <!-- ACTION LIST ITEM ICON -->
+                        <svg class="action-list-item-icon icon-notification">
+                            <use xlink:href="#svg-notification"></use>
+                        </svg>
+                        <!-- /ACTION LIST ITEM ICON -->
+                    </div>
+                    <!-- /ACTION LIST ITEM -->
+
+                    <!-- DROPDOWN BOX -->
+                    <div class="dropdown-box header-dropdown">
+                        <!-- DROPDOWN BOX HEADER -->
+                        <div class="dropdown-box-header">
+                            <!-- DROPDOWN BOX HEADER TITLE -->
+                            <p class="dropdown-box-header-title">Notifications</p>
+                            <!-- /DROPDOWN BOX HEADER TITLE -->
+
+                            <!-- DROPDOWN BOX HEADER ACTIONS -->
+                            <div class="dropdown-box-header-actions">
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Mark all as Read</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+
+                                <!-- DROPDOWN BOX HEADER ACTION -->
+                                <p class="dropdown-box-header-action">Settings</p>
+                                <!-- /DROPDOWN BOX HEADER ACTION -->
+                            </div>
+                            <!-- /DROPDOWN BOX HEADER ACTIONS -->
+                        </div>
+                        <!-- /DROPDOWN BOX HEADER -->
+
+                        <!-- DROPDOWN BOX LIST -->
+                        <div class="dropdown-box-list" data-simplebar>
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item unread">
+                                <!-- USER STATUS -->
+                                <div class="user-status notification">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/03.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">16</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Nick
+                                            Grissom</a> posted a
+                                        comment on your <a class="highlighted" href="freelancer-profile.html">status
+                                            update</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp">2 minutes ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+
+                                    <!-- USER STATUS ICON -->
+                                    <div class="user-status-icon">
+                                        <!-- ICON COMMENT -->
+                                        <svg class="icon-comment">
+                                            <use xlink:href="#svg-comment"></use>
+                                        </svg>
+                                        <!-- /ICON COMMENT -->
+                                    </div>
+                                    <!-- /USER STATUS ICON -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status notification">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/07.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">26</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Sarah
+                                            Diamond</a> left a
+                                        like <img class="reaction" src="img/reaction/like.png" alt="reaction-like">
+                                        reaction on your <a class="highlighted" href="freelancer-profile.html">status
+                                            update</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp">17 minutes ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+
+                                    <!-- USER STATUS ICON -->
+                                    <div class="user-status-icon">
+                                        <!-- ICON THUMBS UP -->
+                                        <svg class="icon-thumbs-up">
+                                            <use xlink:href="#svg-thumbs-up"></use>
+                                        </svg>
+                                        <!-- /ICON THUMBS UP -->
+                                    </div>
+                                    <!-- /USER STATUS ICON -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status notification">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/02.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">13</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Destroy
+                                            Dex</a> posted a
+                                        comment on your <a class="highlighted" href="profile-photos.html">photo</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp">31 minutes ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+
+                                    <!-- USER STATUS ICON -->
+                                    <div class="user-status-icon">
+                                        <!-- ICON COMMENT -->
+                                        <svg class="icon-comment">
+                                            <use xlink:href="#svg-comment"></use>
+                                        </svg>
+                                        <!-- /ICON COMMENT -->
+                                    </div>
+                                    <!-- /USER STATUS ICON -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status notification">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/10.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">5</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">The
+                                            Green Goo</a> left a
+                                        love <img class="reaction" src="img/reaction/love.png" alt="reaction-love">
+                                        reaction on your <a class="highlighted" href="freelancer-profile.html">status
+                                            update</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp">2 hours ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+
+                                    <!-- USER STATUS ICON -->
+                                    <div class="user-status-icon">
+                                        <!-- ICON THUMBS UP -->
+                                        <svg class="icon-thumbs-up">
+                                            <use xlink:href="#svg-thumbs-up"></use>
+                                        </svg>
+                                        <!-- /ICON THUMBS UP -->
+                                    </div>
+                                    <!-- /USER STATUS ICON -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+
+                            <!-- DROPDOWN BOX LIST ITEM -->
+                            <div class="dropdown-box-list-item">
+                                <!-- USER STATUS -->
+                                <div class="user-status notification">
+                                    <!-- USER STATUS AVATAR -->
+                                    <a class="user-status-avatar" href="freelancer-profile.html">
+                                        <!-- USER AVATAR -->
+                                        <div class="user-avatar small no-outline">
+                                            <!-- USER AVATAR CONTENT -->
+                                            <div class="user-avatar-content">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-image-30-32" data-src="img/avatar/05.jpg"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR CONTENT -->
+
+                                            <!-- USER AVATAR PROGRESS -->
+                                            <div class="user-avatar-progress">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-progress-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS -->
+
+                                            <!-- USER AVATAR PROGRESS BORDER -->
+                                            <div class="user-avatar-progress-border">
+                                                <!-- HEXAGON -->
+                                                <div class="hexagon-border-40-44"></div>
+                                                <!-- /HEXAGON -->
+                                            </div>
+                                            <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                            <!-- USER AVATAR BADGE -->
+                                            <div class="user-avatar-badge">
+                                                <!-- USER AVATAR BADGE BORDER -->
+                                                <div class="user-avatar-badge-border">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-22-24"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE BORDER -->
+
+                                                <!-- USER AVATAR BADGE CONTENT -->
+                                                <div class="user-avatar-badge-content">
+                                                    <!-- HEXAGON -->
+                                                    <div class="hexagon-dark-16-18"></div>
+                                                    <!-- /HEXAGON -->
+                                                </div>
+                                                <!-- /USER AVATAR BADGE CONTENT -->
+
+                                                <!-- USER AVATAR BADGE TEXT -->
+                                                <p class="user-avatar-badge-text">12</p>
+                                                <!-- /USER AVATAR BADGE TEXT -->
+                                            </div>
+                                            <!-- /USER AVATAR BADGE -->
+                                        </div>
+                                        <!-- /USER AVATAR -->
+                                    </a>
+                                    <!-- /USER STATUS AVATAR -->
+
+                                    <!-- USER STATUS TITLE -->
+                                    <p class="user-status-title"><a class="bold" href="freelancer-profile.html">Neko
+                                            Bebop</a> posted a
+                                        comment on your <a class="highlighted" href="freelancer-profile.html">status
+                                            update</a></p>
+                                    <!-- /USER STATUS TITLE -->
+
+                                    <!-- USER STATUS TIMESTAMP -->
+                                    <p class="user-status-timestamp">3 hours ago</p>
+                                    <!-- /USER STATUS TIMESTAMP -->
+
+                                    <!-- USER STATUS ICON -->
+                                    <div class="user-status-icon">
+                                        <!-- ICON COMMENT -->
+                                        <svg class="icon-comment">
+                                            <use xlink:href="#svg-comment"></use>
+                                        </svg>
+                                        <!-- /ICON COMMENT -->
+                                    </div>
+                                    <!-- /USER STATUS ICON -->
+                                </div>
+                                <!-- /USER STATUS -->
+                            </div>
+                            <!-- /DROPDOWN BOX LIST ITEM -->
+                        </div>
+                        <!-- /DROPDOWN BOX LIST -->
+
+                        <!-- DROPDOWN BOX BUTTON -->
+                        <a class="dropdown-box-button secondary" href="#">View all Notifications</a>
+                        <!-- /DROPDOWN BOX BUTTON -->
+                    </div>
+                    <!-- /DROPDOWN BOX -->
+                </div>
+                <!-- /ACTION LIST ITEM WRAP -->
+            </div>
+            <!-- /ACTION LIST -->
+
+            <!-- ACTION ITEM WRAP -->
+            <div class="action-item-wrap">
+                <!-- ACTION ITEM -->
+                <div class="action-item dark header-settings-dropdown-trigger">
+                    <!-- ACTION ITEM ICON -->
+                    <svg class="action-item-icon icon-settings">
+                        <use xlink:href="#svg-settings"></use>
+                    </svg>
+                    <!-- /ACTION ITEM ICON -->
+                </div>
+                <!-- /ACTION ITEM -->
+
+                <!-- DROPDOWN NAVIGATION -->
+                <div class="dropdown-navigation header-settings-dropdown">
+                    <!-- DROPDOWN NAVIGATION HEADER -->
+                    <div class="dropdown-navigation-header">
+                        <!-- USER STATUS -->
+                        <div class="user-status">
+                            <!-- USER STATUS AVATAR -->
+                            <a class="user-status-avatar" href="freelancer-profile.html">
+                                <!-- USER AVATAR -->
+                                <div class="user-avatar small no-outline">
+                                    <!-- USER AVATAR CONTENT -->
+                                    <div class="user-avatar-content">
+                                        <!-- HEXAGON -->
+                                        <div class="hexagon-image-30-32" data-src="img/avatar/01.jpg"></div>
+                                        <!-- /HEXAGON -->
+                                    </div>
+                                    <!-- /USER AVATAR CONTENT -->
+
+                                    <!-- USER AVATAR PROGRESS -->
+                                    <div class="user-avatar-progress">
+                                        <!-- HEXAGON -->
+                                        <div class="hexagon-progress-40-44"></div>
+                                        <!-- /HEXAGON -->
+                                    </div>
+                                    <!-- /USER AVATAR PROGRESS -->
+
+                                    <!-- USER AVATAR PROGRESS BORDER -->
+                                    <div class="user-avatar-progress-border">
+                                        <!-- HEXAGON -->
+                                        <div class="hexagon-border-40-44"></div>
+                                        <!-- /HEXAGON -->
+                                    </div>
+                                    <!-- /USER AVATAR PROGRESS BORDER -->
+
+                                    <!-- USER AVATAR BADGE -->
+                                    <div class="user-avatar-badge">
+                                        <!-- USER AVATAR BADGE BORDER -->
+                                        <div class="user-avatar-badge-border">
+                                            <!-- HEXAGON -->
+                                            <div class="hexagon-22-24"></div>
+                                            <!-- /HEXAGON -->
+                                        </div>
+                                        <!-- /USER AVATAR BADGE BORDER -->
+
+                                        <!-- USER AVATAR BADGE CONTENT -->
+                                        <div class="user-avatar-badge-content">
+                                            <!-- HEXAGON -->
+                                            <div class="hexagon-dark-16-18"></div>
+                                            <!-- /HEXAGON -->
+                                        </div>
+                                        <!-- /USER AVATAR BADGE CONTENT -->
+
+                                        <!-- USER AVATAR BADGE TEXT -->
+                                        <p class="user-avatar-badge-text">24</p>
+                                        <!-- /USER AVATAR BADGE TEXT -->
+                                    </div>
+                                    <!-- /USER AVATAR BADGE -->
+                                </div>
+                                <!-- /USER AVATAR -->
+                            </a>
+                            <!-- /USER STATUS AVATAR -->
+
+                            <!-- USER STATUS TITLE -->
+                            <p class="user-status-title"><span class="bold">Hi Kenneth!</span></p>
+                            <!-- /USER STATUS TITLE -->
+
+                            <!-- USER STATUS TEXT -->
+                            <p class="user-status-text small"><a href="freelancer-profile.html">@kennethcheong</a></p>
+                            <!-- /USER STATUS TEXT -->
+                        </div>
+                        <!-- /USER STATUS -->
+                    </div>
+                    <!-- /DROPDOWN NAVIGATION HEADER -->
+
+                    <!-- DROPDOWN NAVIGATION CATEGORY -->
+                    <p class="dropdown-navigation-category">My Profile</p>
+                    <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="freelancer-profile">Profile Info</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">Notifications</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">Messages</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">Friend Requests</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION CATEGORY -->
+                    <p class="dropdown-navigation-category">Account</p>
+                    <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">General Settings</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+
+                    <!-- DROPDOWN NAVIGATION CATEGORY -->
+                    <p class="dropdown-navigation-category">Billing</p>
+                    <!-- /DROPDOWN NAVIGATION CATEGORY -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">My Account <span class="highlighted">24.1189</span></a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION LINK -->
+                    <a class="dropdown-navigation-link" href="#">Payments</a>
+                    <!-- /DROPDOWN NAVIGATION LINK -->
+
+                    <!-- DROPDOWN NAVIGATION BUTTON -->
+                    <p class="dropdown-navigation-button button small secondary">Logout</p>
+                    <!-- /DROPDOWN NAVIGATION BUTTON -->
+                </div>
+                <!-- /DROPDOWN NAVIGATION -->
+            </div>
+            <!-- /ACTION ITEM WRAP -->
+        </div>
+        <!-- /HEADER ACTIONS -->
+    </header>
+    <!-- /HEADER -->
+
+    <!-- FLOATY BAR -->
+    <aside class="floaty-bar">
+        <!-- BAR ACTIONS -->
+        <div class="bar-actions">
+            <!-- ACTION LIST -->
+            <div class="action-list dark">
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item" href="#">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-friend">
+                        <use xlink:href="#svg-friend"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item" href="#">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-messages">
+                        <use xlink:href="#svg-messages"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+
+                <!-- ACTION LIST ITEM -->
+                <a class="action-list-item unread" href="#">
+                    <!-- ACTION LIST ITEM ICON -->
+                    <svg class="action-list-item-icon icon-notification">
+                        <use xlink:href="#svg-notification"></use>
+                    </svg>
+                    <!-- /ACTION LIST ITEM ICON -->
+                </a>
+                <!-- /ACTION LIST ITEM -->
+            </div>
+            <!-- /ACTION LIST -->
+
+            <!-- ACTION ITEM WRAP -->
+            <a class="action-item-wrap" href="#">
+                <!-- ACTION ITEM -->
+                <div class="action-item dark">
+                    <!-- ACTION ITEM ICON -->
+                    <svg class="action-item-icon icon-settings">
+                        <use xlink:href="#svg-settings"></use>
+                    </svg>
+                    <!-- /ACTION ITEM ICON -->
+                </div>
+                <!-- /ACTION ITEM -->
+            </a>
+            <!-- /ACTION ITEM WRAP -->
+        </div>
+        <!-- /BAR ACTIONS -->
+    </aside>
+    <!-- /FLOATY BAR -->
+
+    <!--CONTENT GRID -->
+    <div class="content-grid">
+        <!-- SECTION BANNER -->
+        <div class="section-banner">
+            <!-- SECTION BANNER ICON -->
+            <img class="section-banner-icon" src="img/banner/groups-icon.png" alt="newsfeed-icon">
+            <!-- /SECTION BANNER ICON -->
+
+            <!-- SECTION BANNER TITLE -->
+            <p class="section-banner-title">Hirer Registration</p>
+            <!-- /SECTION BANNER TITLE -->
+            <p class="section-banner-text">Register now to join our community today!</p>
+        </div>
+        <!-- GRID -->
+        <div class="grid grid mobile-prefer-content">
+            <div class="grid grid-half">
+                <!-- GRID COLUMN -->
+                <div class="grid-column">
+                    <!-- WIDGET BOX -->
+                    <div class="widget-box">
+
+                        <form action="/" method="post">
+                            <h2>The Basics</h2><br>
+                            <label for="email"><b>Email</b></label><br>
+                            <input type="text" placeholder="Enter Email" name="email" id="email" required><br><br>
+
+                            <label for="psw"><b>Password</b></label><br>
+                            <input type="password" placeholder="Enter Password" name="password" id="password"
+                                required><br><br>
+
+                            <label for="psw-repeat"><b>Repeat Password</b></label><br>
+                            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat"
+                                required><br><br>
+
+                            <label for="country"><b>Current Country of Operation</b></label><br>
+                            <select id="country" name="country_operation" required>
+                                <option value="select">Select Country</option>
+                                <option value="Afganistan">Afghanistan</option>
+                                <option value="Albania">Albania</option>
+                                <option value="Algeria">Algeria</option>
+                                <option value="American Samoa">American Samoa</option>
+                                <option value="Andorra">Andorra</option>
+                                <option value="Angola">Angola</option>
+                                <option value="Anguilla">Anguilla</option>
+                                <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                                <option value="Argentina">Argentina</option>
+                                <option value="Armenia">Armenia</option>
+                                <option value="Aruba">Aruba</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Austria">Austria</option>
+                                <option value="Azerbaijan">Azerbaijan</option>
+                                <option value="Bahamas">Bahamas</option>
+                                <option value="Bahrain">Bahrain</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                                <option value="Barbados">Barbados</option>
+                                <option value="Belarus">Belarus</option>
+                                <option value="Belgium">Belgium</option>
+                                <option value="Belize">Belize</option>
+                                <option value="Benin">Benin</option>
+                                <option value="Bermuda">Bermuda</option>
+                                <option value="Bhutan">Bhutan</option>
+                                <option value="Bolivia">Bolivia</option>
+                                <option value="Bonaire">Bonaire</option>
+                                <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                                <option value="Botswana">Botswana</option>
+                                <option value="Brazil">Brazil</option>
+                                <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                                <option value="Brunei">Brunei</option>
+                                <option value="Bulgaria">Bulgaria</option>
+                                <option value="Burkina Faso">Burkina Faso</option>
+                                <option value="Burundi">Burundi</option>
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Cameroon">Cameroon</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Canary Islands">Canary Islands</option>
+                                <option value="Cape Verde">Cape Verde</option>
+                                <option value="Cayman Islands">Cayman Islands</option>
+                                <option value="Central African Republic">Central African Republic</option>
+                                <option value="Chad">Chad</option>
+                                <option value="Channel Islands">Channel Islands</option>
+                                <option value="Chile">Chile</option>
+                                <option value="China">China</option>
+                                <option value="Christmas Island">Christmas Island</option>
+                                <option value="Cocos Island">Cocos Island</option>
+                                <option value="Colombia">Colombia</option>
+                                <option value="Comoros">Comoros</option>
+                                <option value="Congo">Congo</option>
+                                <option value="Cook Islands">Cook Islands</option>
+                                <option value="Costa Rica">Costa Rica</option>
+                                <option value="Cote DIvoire">Cote DIvoire</option>
+                                <option value="Croatia">Croatia</option>
+                                <option value="Cuba">Cuba</option>
+                                <option value="Curaco">Curacao</option>
+                                <option value="Cyprus">Cyprus</option>
+                                <option value="Czech Republic">Czech Republic</option>
+                                <option value="Denmark">Denmark</option>
+                                <option value="Djibouti">Djibouti</option>
+                                <option value="Dominica">Dominica</option>
+                                <option value="Dominican Republic">Dominican Republic</option>
+                                <option value="East Timor">East Timor</option>
+                                <option value="Ecuador">Ecuador</option>
+                                <option value="Egypt">Egypt</option>
+                                <option value="El Salvador">El Salvador</option>
+                                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                                <option value="Eritrea">Eritrea</option>
+                                <option value="Estonia">Estonia</option>
+                                <option value="Ethiopia">Ethiopia</option>
+                                <option value="Falkland Islands">Falkland Islands</option>
+                                <option value="Faroe Islands">Faroe Islands</option>
+                                <option value="Fiji">Fiji</option>
+                                <option value="Finland">Finland</option>
+                                <option value="France">France</option>
+                                <option value="French Guiana">French Guiana</option>
+                                <option value="French Polynesia">French Polynesia</option>
+                                <option value="French Southern Ter">French Southern Ter</option>
+                                <option value="Gabon">Gabon</option>
+                                <option value="Gambia">Gambia</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Gibraltar">Gibraltar</option>
+                                <option value="Great Britain">Great Britain</option>
+                                <option value="Greece">Greece</option>
+                                <option value="Greenland">Greenland</option>
+                                <option value="Grenada">Grenada</option>
+                                <option value="Guadeloupe">Guadeloupe</option>
+                                <option value="Guam">Guam</option>
+                                <option value="Guatemala">Guatemala</option>
+                                <option value="Guinea">Guinea</option>
+                                <option value="Guyana">Guyana</option>
+                                <option value="Haiti">Haiti</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Honduras">Honduras</option>
+                                <option value="Hong Kong">Hong Kong</option>
+                                <option value="Hungary">Hungary</option>
+                                <option value="Iceland">Iceland</option>
+                                <option value="Indonesia">Indonesia</option>
+                                <option value="India">India</option>
+                                <option value="Iran">Iran</option>
+                                <option value="Iraq">Iraq</option>
+                                <option value="Ireland">Ireland</option>
+                                <option value="Isle of Man">Isle of Man</option>
+                                <option value="Israel">Israel</option>
+                                <option value="Italy">Italy</option>
+                                <option value="Jamaica">Jamaica</option>
+                                <option value="Japan">Japan</option>
+                                <option value="Jordan">Jordan</option>
+                                <option value="Kazakhstan">Kazakhstan</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Kiribati">Kiribati</option>
+                                <option value="Korea North">Korea North</option>
+                                <option value="Korea Sout">Korea South</option>
+                                <option value="Kuwait">Kuwait</option>
+                                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                                <option value="Laos">Laos</option>
+                                <option value="Latvia">Latvia</option>
+                                <option value="Lebanon">Lebanon</option>
+                                <option value="Lesotho">Lesotho</option>
+                                <option value="Liberia">Liberia</option>
+                                <option value="Libya">Libya</option>
+                                <option value="Liechtenstein">Liechtenstein</option>
+                                <option value="Lithuania">Lithuania</option>
+                                <option value="Luxembourg">Luxembourg</option>
+                                <option value="Macau">Macau</option>
+                                <option value="Macedonia">Macedonia</option>
+                                <option value="Madagascar">Madagascar</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Malawi">Malawi</option>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Mali">Mali</option>
+                                <option value="Malta">Malta</option>
+                                <option value="Marshall Islands">Marshall Islands</option>
+                                <option value="Martinique">Martinique</option>
+                                <option value="Mauritania">Mauritania</option>
+                                <option value="Mauritius">Mauritius</option>
+                                <option value="Mayotte">Mayotte</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Midway Islands">Midway Islands</option>
+                                <option value="Moldova">Moldova</option>
+                                <option value="Monaco">Monaco</option>
+                                <option value="Mongolia">Mongolia</option>
+                                <option value="Montserrat">Montserrat</option>
+                                <option value="Morocco">Morocco</option>
+                                <option value="Mozambique">Mozambique</option>
+                                <option value="Myanmar">Myanmar</option>
+                                <option value="Nambia">Nambia</option>
+                                <option value="Nauru">Nauru</option>
+                                <option value="Nepal">Nepal</option>
+                                <option value="Netherland Antilles">Netherland Antilles</option>
+                                <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                                <option value="Nevis">Nevis</option>
+                                <option value="New Caledonia">New Caledonia</option>
+                                <option value="New Zealand">New Zealand</option>
+                                <option value="Nicaragua">Nicaragua</option>
+                                <option value="Niger">Niger</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="Niue">Niue</option>
+                                <option value="Norfolk Island">Norfolk Island</option>
+                                <option value="Norway">Norway</option>
+                                <option value="Oman">Oman</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="Palau Island">Palau Island</option>
+                                <option value="Palestine">Palestine</option>
+                                <option value="Panama">Panama</option>
+                                <option value="Papua New Guinea">Papua New Guinea</option>
+                                <option value="Paraguay">Paraguay</option>
+                                <option value="Peru">Peru</option>
+                                <option value="Phillipines">Philippines</option>
+                                <option value="Pitcairn Island">Pitcairn Island</option>
+                                <option value="Poland">Poland</option>
+                                <option value="Portugal">Portugal</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Qatar">Qatar</option>
+                                <option value="Republic of Montenegro">Republic of Montenegro</option>
+                                <option value="Republic of Serbia">Republic of Serbia</option>
+                                <option value="Reunion">Reunion</option>
+                                <option value="Romania">Romania</option>
+                                <option value="Russia">Russia</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="St Barthelemy">St Barthelemy</option>
+                                <option value="St Eustatius">St Eustatius</option>
+                                <option value="St Helena">St Helena</option>
+                                <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                                <option value="St Lucia">St Lucia</option>
+                                <option value="St Maarten">St Maarten</option>
+                                <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                                <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                                <option value="Saipan">Saipan</option>
+                                <option value="Samoa">Samoa</option>
+                                <option value="Samoa American">Samoa American</option>
+                                <option value="San Marino">San Marino</option>
+                                <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                                <option value="Saudi Arabia">Saudi Arabia</option>
+                                <option value="Senegal">Senegal</option>
+                                <option value="Seychelles">Seychelles</option>
+                                <option value="Sierra Leone">Sierra Leone</option>
+                                <option value="Singapore">Singapore</option>
+                                <option value="Slovakia">Slovakia</option>
+                                <option value="Slovenia">Slovenia</option>
+                                <option value="Solomon Islands">Solomon Islands</option>
+                                <option value="Somalia">Somalia</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Spain">Spain</option>
+                                <option value="Sri Lanka">Sri Lanka</option>
+                                <option value="Sudan">Sudan</option>
+                                <option value="Suriname">Suriname</option>
+                                <option value="Swaziland">Swaziland</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Switzerland">Switzerland</option>
+                                <option value="Syria">Syria</option>
+                                <option value="Tahiti">Tahiti</option>
+                                <option value="Taiwan">Taiwan</option>
+                                <option value="Tajikistan">Tajikistan</option>
+                                <option value="Tanzania">Tanzania</option>
+                                <option value="Thailand">Thailand</option>
+                                <option value="Togo">Togo</option>
+                                <option value="Tokelau">Tokelau</option>
+                                <option value="Tonga">Tonga</option>
+                                <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                                <option value="Tunisia">Tunisia</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="Turkmenistan">Turkmenistan</option>
+                                <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                                <option value="Tuvalu">Tuvalu</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Ukraine">Ukraine</option>
+                                <option value="United Arab Erimates">United Arab Emirates</option>
+                                <option value="United States of America">United States of America</option>
+                                <option value="Uraguay">Uruguay</option>
+                                <option value="Uzbekistan">Uzbekistan</option>
+                                <option value="Vanuatu">Vanuatu</option>
+                                <option value="Vatican City State">Vatican City State</option>
+                                <option value="Venezuela">Venezuela</option>
+                                <option value="Vietnam">Vietnam</option>
+                                <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                                <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                                <option value="Wake Island">Wake Island</option>
+                                <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                                <option value="Yemen">Yemen</option>
+                                <option value="Zaire">Zaire</option>
+                                <option value="Zambia">Zambia</option>
+                                <option value="Zimbabwe">Zimbabwe</option>
+                            </select>
+                            <br>
+                    </div>
+
+                    <div class="widget-box">
+
+                        <h2>Personal Identity</h2><br>
+                        <label for="full_name"><b>Full Name as per ID/Passport</b></label><br>
+                        <input type="text" placeholder="Full Name" name="full_name" id="full_name" required><br><br>
+                        <label for="country"><b>Country of Issued ID/Passport</b></label><br>
+                        <select id="country" name="country_id" required>
+                            <option value="select">Select Country</option>
+                            <option value="Afganistan">Afghanistan</option>
+                            <option value="Albania">Albania</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="American Samoa">American Samoa</option>
+                            <option value="Andorra">Andorra</option>
+                            <option value="Angola">Angola</option>
+                            <option value="Anguilla">Anguilla</option>
+                            <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Armenia">Armenia</option>
+                            <option value="Aruba">Aruba</option>
+                            <option value="Australia">Australia</option>
+                            <option value="Austria">Austria</option>
+                            <option value="Azerbaijan">Azerbaijan</option>
+                            <option value="Bahamas">Bahamas</option>
+                            <option value="Bahrain">Bahrain</option>
+                            <option value="Bangladesh">Bangladesh</option>
+                            <option value="Barbados">Barbados</option>
+                            <option value="Belarus">Belarus</option>
+                            <option value="Belgium">Belgium</option>
+                            <option value="Belize">Belize</option>
+                            <option value="Benin">Benin</option>
+                            <option value="Bermuda">Bermuda</option>
+                            <option value="Bhutan">Bhutan</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Bonaire">Bonaire</option>
+                            <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                            <option value="Botswana">Botswana</option>
+                            <option value="Brazil">Brazil</option>
+                            <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                            <option value="Brunei">Brunei</option>
+                            <option value="Bulgaria">Bulgaria</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Burundi">Burundi</option>
+                            <option value="Cambodia">Cambodia</option>
+                            <option value="Cameroon">Cameroon</option>
+                            <option value="Canada">Canada</option>
+                            <option value="Canary Islands">Canary Islands</option>
+                            <option value="Cape Verde">Cape Verde</option>
+                            <option value="Cayman Islands">Cayman Islands</option>
+                            <option value="Central African Republic">Central African Republic</option>
+                            <option value="Chad">Chad</option>
+                            <option value="Channel Islands">Channel Islands</option>
+                            <option value="Chile">Chile</option>
+                            <option value="China">China</option>
+                            <option value="Christmas Island">Christmas Island</option>
+                            <option value="Cocos Island">Cocos Island</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Comoros">Comoros</option>
+                            <option value="Congo">Congo</option>
+                            <option value="Cook Islands">Cook Islands</option>
+                            <option value="Costa Rica">Costa Rica</option>
+                            <option value="Cote DIvoire">Cote DIvoire</option>
+                            <option value="Croatia">Croatia</option>
+                            <option value="Cuba">Cuba</option>
+                            <option value="Curaco">Curacao</option>
+                            <option value="Cyprus">Cyprus</option>
+                            <option value="Czech Republic">Czech Republic</option>
+                            <option value="Denmark">Denmark</option>
+                            <option value="Djibouti">Djibouti</option>
+                            <option value="Dominica">Dominica</option>
+                            <option value="Dominican Republic">Dominican Republic</option>
+                            <option value="East Timor">East Timor</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="El Salvador">El Salvador</option>
+                            <option value="Equatorial Guinea">Equatorial Guinea</option>
+                            <option value="Eritrea">Eritrea</option>
+                            <option value="Estonia">Estonia</option>
+                            <option value="Ethiopia">Ethiopia</option>
+                            <option value="Falkland Islands">Falkland Islands</option>
+                            <option value="Faroe Islands">Faroe Islands</option>
+                            <option value="Fiji">Fiji</option>
+                            <option value="Finland">Finland</option>
+                            <option value="France">France</option>
+                            <option value="French Guiana">French Guiana</option>
+                            <option value="French Polynesia">French Polynesia</option>
+                            <option value="French Southern Ter">French Southern Ter</option>
+                            <option value="Gabon">Gabon</option>
+                            <option value="Gambia">Gambia</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Ghana">Ghana</option>
+                            <option value="Gibraltar">Gibraltar</option>
+                            <option value="Great Britain">Great Britain</option>
+                            <option value="Greece">Greece</option>
+                            <option value="Greenland">Greenland</option>
+                            <option value="Grenada">Grenada</option>
+                            <option value="Guadeloupe">Guadeloupe</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Guatemala">Guatemala</option>
+                            <option value="Guinea">Guinea</option>
+                            <option value="Guyana">Guyana</option>
+                            <option value="Haiti">Haiti</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Honduras">Honduras</option>
+                            <option value="Hong Kong">Hong Kong</option>
+                            <option value="Hungary">Hungary</option>
+                            <option value="Iceland">Iceland</option>
+                            <option value="Indonesia">Indonesia</option>
+                            <option value="India">India</option>
+                            <option value="Iran">Iran</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Ireland">Ireland</option>
+                            <option value="Isle of Man">Isle of Man</option>
+                            <option value="Israel">Israel</option>
+                            <option value="Italy">Italy</option>
+                            <option value="Jamaica">Jamaica</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Kazakhstan">Kazakhstan</option>
+                            <option value="Kenya">Kenya</option>
+                            <option value="Kiribati">Kiribati</option>
+                            <option value="Korea North">Korea North</option>
+                            <option value="Korea Sout">Korea South</option>
+                            <option value="Kuwait">Kuwait</option>
+                            <option value="Kyrgyzstan">Kyrgyzstan</option>
+                            <option value="Laos">Laos</option>
+                            <option value="Latvia">Latvia</option>
+                            <option value="Lebanon">Lebanon</option>
+                            <option value="Lesotho">Lesotho</option>
+                            <option value="Liberia">Liberia</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Liechtenstein">Liechtenstein</option>
+                            <option value="Lithuania">Lithuania</option>
+                            <option value="Luxembourg">Luxembourg</option>
+                            <option value="Macau">Macau</option>
+                            <option value="Macedonia">Macedonia</option>
+                            <option value="Madagascar">Madagascar</option>
+                            <option value="Malaysia">Malaysia</option>
+                            <option value="Malawi">Malawi</option>
+                            <option value="Maldives">Maldives</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Malta">Malta</option>
+                            <option value="Marshall Islands">Marshall Islands</option>
+                            <option value="Martinique">Martinique</option>
+                            <option value="Mauritania">Mauritania</option>
+                            <option value="Mauritius">Mauritius</option>
+                            <option value="Mayotte">Mayotte</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Midway Islands">Midway Islands</option>
+                            <option value="Moldova">Moldova</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Mongolia">Mongolia</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Mozambique">Mozambique</option>
+                            <option value="Myanmar">Myanmar</option>
+                            <option value="Nambia">Nambia</option>
+                            <option value="Nauru">Nauru</option>
+                            <option value="Nepal">Nepal</option>
+                            <option value="Netherland Antilles">Netherland Antilles</option>
+                            <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                            <option value="Nevis">Nevis</option>
+                            <option value="New Caledonia">New Caledonia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="Niger">Niger</option>
+                            <option value="Nigeria">Nigeria</option>
+                            <option value="Niue">Niue</option>
+                            <option value="Norfolk Island">Norfolk Island</option>
+                            <option value="Norway">Norway</option>
+                            <option value="Oman">Oman</option>
+                            <option value="Pakistan">Pakistan</option>
+                            <option value="Palau Island">Palau Island</option>
+                            <option value="Palestine">Palestine</option>
+                            <option value="Panama">Panama</option>
+                            <option value="Papua New Guinea">Papua New Guinea</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Phillipines">Philippines</option>
+                            <option value="Pitcairn Island">Pitcairn Island</option>
+                            <option value="Poland">Poland</option>
+                            <option value="Portugal">Portugal</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Qatar">Qatar</option>
+                            <option value="Republic of Montenegro">Republic of Montenegro</option>
+                            <option value="Republic of Serbia">Republic of Serbia</option>
+                            <option value="Reunion">Reunion</option>
+                            <option value="Romania">Romania</option>
+                            <option value="Russia">Russia</option>
+                            <option value="Rwanda">Rwanda</option>
+                            <option value="St Barthelemy">St Barthelemy</option>
+                            <option value="St Eustatius">St Eustatius</option>
+                            <option value="St Helena">St Helena</option>
+                            <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                            <option value="St Lucia">St Lucia</option>
+                            <option value="St Maarten">St Maarten</option>
+                            <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                            <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                            <option value="Saipan">Saipan</option>
+                            <option value="Samoa">Samoa</option>
+                            <option value="Samoa American">Samoa American</option>
+                            <option value="San Marino">San Marino</option>
+                            <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="Senegal">Senegal</option>
+                            <option value="Seychelles">Seychelles</option>
+                            <option value="Sierra Leone">Sierra Leone</option>
+                            <option value="Singapore">Singapore</option>
+                            <option value="Slovakia">Slovakia</option>
+                            <option value="Slovenia">Slovenia</option>
+                            <option value="Solomon Islands">Solomon Islands</option>
+                            <option value="Somalia">Somalia</option>
+                            <option value="South Africa">South Africa</option>
+                            <option value="Spain">Spain</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Suriname">Suriname</option>
+                            <option value="Swaziland">Swaziland</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Switzerland">Switzerland</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Tahiti">Tahiti</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tajikistan">Tajikistan</option>
+                            <option value="Tanzania">Tanzania</option>
+                            <option value="Thailand">Thailand</option>
+                            <option value="Togo">Togo</option>
+                            <option value="Tokelau">Tokelau</option>
+                            <option value="Tonga">Tonga</option>
+                            <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Turkey">Turkey</option>
+                            <option value="Turkmenistan">Turkmenistan</option>
+                            <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                            <option value="Tuvalu">Tuvalu</option>
+                            <option value="Uganda">Uganda</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="United Arab Erimates">United Arab Emirates</option>
+                            <option value="United States of America">United States of America</option>
+                            <option value="Uraguay">Uruguay</option>
+                            <option value="Uzbekistan">Uzbekistan</option>
+                            <option value="Vanuatu">Vanuatu</option>
+                            <option value="Vatican City State">Vatican City State</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                            <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                            <option value="Wake Island">Wake Island</option>
+                            <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                            <option value="Yemen">Yemen</option>
+                            <option value="Zaire">Zaire</option>
+                            <option value="Zambia">Zambia</option>
+                            <option value="Zimbabwe">Zimbabwe</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="grid-column">
+                    <div class="widget-box">
+
+                        <h2>Company Details</h2><br>
+                        <label for="name"><b>Company Name</b></label><br>
+                        <input type="text" placeholder="Enter Company Name" name="name"
+                            id="name" required><br><br>
+
+                        <label for="industry"><b>Industry</b></label><br>
+                        <input type="text" placeholder="Enter Industry" name="industry"
+                            id="industry" required><br><br>
+
+                        <label for="skills_required"><b>Skills Required</b></label><br>
+                        <input type="text" placeholder="Skills Required (input multiple separated by a comma)" name="skill_requiredr"
+                            id="skills_required" required><br><br>
+
+                        <label for="languages"><b>Languages</b></label><br>
+                        <input type="text" placeholder="Languages (input multiple separated by a comma)" name="coding"
+                            id="languages" required><br>
+
+                    </div>
+                    <div class="widget-box">
+
+                        <h2>Metamask Wallet (Auto-fill)</h2><br>
+                        <input type="text" id="metamask" name="metamask" placeholder="0xb88D7171A62A0C62E22f62aF811C9C859FcE4618" disabled><br>
+
+
+                    </div>
+                </div>
+            </div>
+            <button class="button secondary" id="b2">Register!</button>
+            <button class="button primary" id="b1">Clear Form</button>
+        </div>
+    </div>
+    </form>
+
+
+    <!--momentJS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- gig-details JS  -->
+    <script src="js/middleware/gig-details.js"></script>
+    <!-- app -->
+    <script src="js/utils/app.js"></script>
+    <!-- page loader -->
+    <script src="js/utils/page-loader.js"></script>
+    <!-- simplebar -->
+    <script src="js/vendor/simplebar.min.js"></script>
+    <!-- liquidify -->
+    <script src="js/utils/liquidify.js"></script>
+    <!-- XM_Plugins -->
+    <script src="js/vendor/xm_plugins.min.js"></script>
+    <!-- tiny-slider -->
+    <script src="js/vendor/tiny-slider.min.js"></script>
+    <!-- chartJS -->
+    <script src="js/vendor/Chart.bundle.min.js"></script>
+    <!-- global.hexagons -->
+    <script src="js/global/global.hexagons.js"></script>
+    <!-- global.tooltips -->
+    <script src="js/global/global.tooltips.js"></script>
+    <!-- global.popups -->
+    <script src="js/global/global.popups.js"></script>
+    <!-- global.charts -->
+    <script src="js/global/global.charts.js"></script>
+    <!-- header -->
+    <script src="js/header/header.js"></script>
+    <!-- sidebar -->
+    <script src="js/sidebar/sidebar.js"></script>
+    <!-- content -->
+    <script src="js/content/content.js"></script>
+    <!-- form.utils -->
+    <script src="js/form/form.utils.js"></script>
+    <!-- SVG icons -->
+    <script src="js/utils/svg-loader.js"></script>
+    <!-- MongoDB -->
+    <script src="js/utils/db.js"></script>
+</body>
+
+</html>
