@@ -1,7 +1,6 @@
-const gigsInProgress = document.getElementById("gigs-in-progress");
-const gigsAppliedFor = document.getElementById("gigs-applied-for");
-const gigsRecommendedTo = document.getElementById("gigs-recommended")
-const gigsCompletedCard = document.getElementById("gigs-completed");
+const hirerGigsInProgress = document.getElementById("gigs-in-progress");
+const gigsOpenForApplication = document.getElementById("gigs-open");
+const gigsCompletedHirer = document.getElementById("gigs-completed");
 const receivedReviews = document.getElementById("reviews-received");
 const user = window.sessionStorage.getItem("userId");
 const meta = window.sessionStorage.getItem("accountId");
@@ -52,16 +51,17 @@ const sessStorage = async (e) => {
 
 const gigsProgress = async () => {
   let url =
-    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobsinProgress";
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirerjobsinProgress";
   let elm = "";
-  const freelancer = {
-    applicant: user,
+  let assignedFl = "Bob";
+  const hirer = {
+    hirer: user,
   };
 
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(freelancer),
+      body: JSON.stringify(hirer),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -73,163 +73,199 @@ const gigsProgress = async () => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
       var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 34;
-      var profilePic = "img/avatar/" + image + ".jpg";
+      var image = Math.floor(Math.random() * 24) + 1;
+      var profilePic =
+        image < 10
+          ? "img/avatar/0" + image + ".jpg"
+          : "img/avatar/" + image + ".jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
       console.log(gigs._id);
       console.log(typeof gigs._id);
 
+      var image2 = Math.floor(Math.random() * 9) + 1;
+      console.log(image2);
+      console.log(typeof image2);
+      var profilePic2 =
+        image2 < 10
+          ? "img/cover/0" + image2 + ".jpg"
+          : "img/cover/" + image2 + ".jpg";
+      var file2 = profilePic2.toString();
+
+      let urlFl =
+        "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+
+      const freelancer = {
+        _id: gigs.freelancer,
+      };
+      console.log("fetch request for freelancer details not sent");
+      fetch(urlFl, {
+        method: "POST",
+        body: JSON.stringify(freelancer),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((res) => {
+          return res.json();
+        })
+        .then((data) => {
+          console.log("fetch request successfully sent: date below");
+          console.log(data);
+          assignedFl = data.full_name;
+          console.log("The freelancer is:" + assignedFl);
+        });
+
       //Add to element
       elm += `<!-- USER PREVIEW -->
       <div class="user-preview">
         <!-- USER PREVIEW COVER -->
         <figure class="user-preview-cover liquid">
-          <img src="img/cover/57.jpg" alt="cover-01">
-      </figure>
-      <!-- /USER PREVIEW COVER -->
+          <img src="${file2}" alt="cover-01">
+        </figure>
+        <!-- /USER PREVIEW COVER -->
 
-      <!-- USER PREVIEW INFO -->
-      <div class="user-preview-info">
-        <!-- USER SHORT DESCRIPTION -->
-
-        <div class="user-short-description">
-          <!-- USER SHORT DESCRIPTION AVATAR -->
-          <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
-            <!-- USER AVATAR BORDER -->
-            <div class="user-avatar-border">
-              <!-- HEXAGON -->
-              <div class="hexagon-120-132"></div>
-              <!-- /HEXAGON -->
-            </div>
-            <!-- /USER AVATAR BORDER -->
-
-            <!-- USER AVATAR CONTENT -->
-            <div class="user-avatar-content">
-              <!-- HEXAGON -->
-              <div class="hexagon-image-82-90" data-src="${file}"></div>
-              <!-- /HEXAGON -->
-            </div>
-            <!-- /USER AVATAR CONTENT -->
-
-            <!-- USER AVATAR PROGRESS -->
-            <div class="user-avatar-progress">
-              <!-- HEXAGON -->
-              <div class="hexagon-progress-100-110"></div>
-              <!-- /HEXAGON -->
-            </div>
-            <!-- /USER AVATAR PROGRESS -->
-
-            <!-- USER AVATAR PROGRESS BORDER -->
-            <div class="user-avatar-progress-border">
-              <!-- HEXAGON -->
-              <div class="hexagon-border-100-110"></div>
-              <!-- /HEXAGON -->
-            </div>
-            <!-- /USER AVATAR PROGRESS BORDER -->
-
-            <!-- USER AVATAR BADGE -->
-            <div class="user-avatar-badge">
-              <!-- USER AVATAR BADGE BORDER -->
-              <div class="user-avatar-badge-border">
+        <!-- USER PREVIEW INFO -->
+        <div class="user-preview-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+              <!-- USER AVATAR BORDER -->
+              <div class="user-avatar-border">
                 <!-- HEXAGON -->
-                <div class="hexagon-32-36"></div>
+                <div class="hexagon-120-132"></div>
                 <!-- /HEXAGON -->
               </div>
-              <!-- /USER AVATAR BADGE BORDER -->
+              <!-- /USER AVATAR BORDER -->
 
-              <!-- USER AVATAR BADGE CONTENT -->
-              <div class="user-avatar-badge-content">
+              <!-- USER AVATAR CONTENT -->
+              <div class="user-avatar-content">
                 <!-- HEXAGON -->
-                <div class="hexagon-dark-26-28"></div>
+                <div class="hexagon-image-82-90" data-src="${file}"></div>
                 <!-- /HEXAGON -->
               </div>
-              <!-- /USER AVATAR BADGE CONTENT -->
+              <!-- /USER AVATAR CONTENT -->
 
-              <!-- USER AVATAR BADGE TEXT -->
-              <p class="user-avatar-badge-text">✓</p>
-              <!-- /USER AVATAR BADGE TEXT -->
+              <!-- USER AVATAR PROGRESS -->
+              <div class="user-avatar-progress">
+                <!-- HEXAGON -->
+                <div class="hexagon-progress-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS -->
+
+              <!-- USER AVATAR PROGRESS BORDER -->
+              <div class="user-avatar-progress-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-border-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS BORDER -->
+
+              <!-- USER AVATAR BADGE -->
+              <div class="user-avatar-badge">
+                <!-- USER AVATAR BADGE BORDER -->
+                <div class="user-avatar-badge-border">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-32-36"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE BORDER -->
+
+                <!-- USER AVATAR BADGE CONTENT -->
+                <div class="user-avatar-badge-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-dark-26-28"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE CONTENT -->
+
+                <!-- USER AVATAR BADGE TEXT -->
+                <p class="user-avatar-badge-text">12</p>
+                <!-- /USER AVATAR BADGE TEXT -->
+              </div>
+              <!-- /USER AVATAR BADGE -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title"><a href="profile-timeline.html">${assignedFl}</a></p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
+
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text"><a href="#">${gigs.title}</a></p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- USER PREVIEW STATS SLIDES -->
+          <div id="user-preview-stats-slides-01" class="user-preview-stats-slides">
+            <!-- USER PREVIEW STATS SLIDE -->
+            <div class="user-preview-stats-slide">
+              <!-- USER STATS -->
+              <div class="user-stats">
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">${created}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Accepted</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">USD ${gigs.budget}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Budget</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">${date}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Deadline</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+              </div>
+              <!-- /USER STATS -->
             </div>
-            <!-- /USER AVATAR BADGE -->
-          </a>
-          <!-- /USER SHORT DESCRIPTION AVATAR -->
 
-          <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
-          <!-- /USER SHORT DESCRIPTION TITLE -->
-
-          <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text"><a href="#">${gigs.title}</a></p>
-          <!-- /USER SHORT DESCRIPTION TEXT -->
-        </div>
-        <!-- /USER SHORT DESCRIPTION -->
-
-        <!-- USER PREVIEW STATS SLIDES -->
-        <div id="user-preview-stats-slides-01" class="user-preview-stats-slides">
-          <!-- USER PREVIEW STATS SLIDE -->
-          <div class="user-preview-stats-slide">
-            <!-- USER STATS -->
-            <div class="user-stats">
-              <!-- USER STAT -->
-              <div class="user-stat">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">${created}</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- USER STAT TEXT -->
-                <p class="user-stat-text">Accepted</p>
-                <!-- /USER STAT TEXT -->
-              </div>
-              <!-- /USER STAT -->
-
-              <!-- USER STAT -->
-              <div class="user-stat">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">USD ${gigs.budget}</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- USER STAT TEXT -->
-                <p class="user-stat-text">Budget</p>
-                <!-- /USER STAT TEXT -->
-              </div>
-              <!-- /USER STAT -->
-
-              <!-- USER STAT -->
-              <div class="user-stat">
-                <!-- USER STAT TITLE -->
-                <p class="user-stat-title">${date}</p>
-                <!-- /USER STAT TITLE -->
-
-                <!-- USER STAT TEXT -->
-                <p class="user-stat-text">Deadline</p>
-                <!-- /USER STAT TEXT -->
-              </div>
-              <!-- /USER STAT -->
-            </div>
-            <!-- /USER STATS -->
           </div>
 
-        </div>
+          <!-- USER PREVIEW ACTIONS -->
+          <div class="user-preview-actions">
+            <!-- BUTTON -->
+            <p class="button secondary" onclick="sessStorage('${gigs._id}')">Gig Details</p>
+            <!-- /BUTTON -->
 
-        <!-- USER PREVIEW ACTIONS -->
-        <div class="user-preview-actions">
-          <!-- BUTTON -->
-          <p class="button secondary" onclick="sessStorage('${gigs._id}')">Gig Details</p>
-          <!-- /BUTTON -->
-
-          <!-- BUTTON -->
-          <p class="button primary" onclick="updateStatus('${gigs._id}')">Update Status</p>
-          <!-- /BUTTON -->
+            <!-- BUTTON -->
+            <p class="button primary" onclick="updateStatus('${gigs._id}')">Check Status</p>
+            <!-- /BUTTON -->
+          </div>
+          <!-- /USER PREVIEW ACTIONS -->
         </div>
-        <!-- /USER PREVIEW ACTIONS -->
-      </div>
-      <!-- /USER PREVIEW INFO -->
+        <!-- /USER PREVIEW INFO -->
       </div>
       <!-- /USER PREVIEW -->`;
     });
 
-    gigsInProgress.innerHTML = elm;
+    hirerGigsInProgress.innerHTML = elm;
 
     var scripts = [
       "js/vendor/simplebar.min.js",
@@ -259,21 +295,21 @@ const gigsProgress = async () => {
 const updateStatus = async (e) => {
   console.log(e);
   window.sessionStorage.setItem("gigId", e);
-  window.location.href = "complete-gig-fl.html";
+  window.location.href = "complete-gig-hr.html";
 };
 
-const gigsApplied = async () => {
+const gigsOpen = async () => {
   let url =
-    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/appliedJobs";
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirerjobsopenforapplication";
   let elm = "";
-  const freelancer = {
-    applicant: user,
+  const hirer = {
+    hirer: user,
   };
 
   try {
     const res = await fetch(url, {
       method: "POST",
-      body: JSON.stringify(freelancer),
+      body: JSON.stringify(hirer),
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
@@ -368,143 +404,6 @@ const gigsApplied = async () => {
     console.log(error.message);
   }
 };
-
-
-
-const gigsRecommeded = async () => {
-  let urlFlSkills =
-    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
-  let elm = "";
-  const freelancer = {
-    _id: user,
-  };
-
-  try {
-    const res = await fetch(urlFlSkills, {
-      method: "POST",
-      body: JSON.stringify(freelancer),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    console.log(data);
-    let skills = data.skills;
-    let skills_required = {
-      skills: skills,
-    };
-    
-    console.log(skills);
-    console.log(skills_required);
-
-    
-
-  let urlRecommendedJobs =
-  "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/recommendedJobs"
-  
-    const res2 = await fetch(urlRecommendedJobs, {
-      method: "POST",
-      body: JSON.stringify(skills_required),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data2 = await res2.json();
-    console.log(data2);
-    data2.gigs.forEach((gigs) => {
-      console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 17;
-      var profilePic = "img/marketplace/items/" + image + ".jpg";
-      var file = profilePic.toString();
-
-      var image2 = Math.floor(Math.random() * 9) + 1;
-      console.log(image2);
-      console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
-      var file2 = profilePic2.toString();
-
-      console.log(file);
-      console.log(typeof file);
-      console.log(file2);
-      console.log(typeof file2);
-
-      //Add to element
-      elm += `<!-- PRODUCT PREVIEW -->
-      <div class="product-preview">
-        <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
-          <figure class="product-preview-image liquid">
-            <img src="${file}" alt="item-01">
-          </figure>
-        </a>
-        <!-- /PRODUCT PREVIEW IMAGE -->
-
-        <!-- PRODUCT PREVIEW INFO -->
-        <div class="product-preview-info">
-          <!-- TEXT STICKER -->
-          <p class="text-sticker"><span class="highlighted">$</span> ${gigs.budget}</p>
-          <!-- /TEXT STICKER -->
-
-          <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">${gigs.title}</a></p>
-          <!-- /PRODUCT PREVIEW TITLE -->
-
-          <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">${gigs.skills_required}</a></p>
-          <!-- /PRODUCT PREVIEW CATEGORY -->
-
-          <!-- PRODUCT PREVIEW TEXT -->
-          <p class="product-preview-text">${gigs.description}</p>
-          <!-- /PRODUCT PREVIEW TEXT -->
-        </div>
-        <!-- /PRODUCT PREVIEW INFO -->
-
-        <!-- PRODUCT PREVIEW META -->
-        <div class="product-preview-meta">
-          <!-- PRODUCT PREVIEW AUTHOR -->
-          <div class="product-preview-author">
-            <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
-              <!-- USER AVATAR CONTENT -->
-              <div class="user-avatar-content">
-                <!-- HEXAGON -->
-                <div class="hexagon-image-18-20" data-src="${file2}"></div>
-                <!-- /HEXAGON -->
-              </div>
-              <!-- /USER AVATAR CONTENT -->
-            </a>
-            <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TITLE -->
-            <p class="product-preview-author-title">Posted By</p>
-            <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
-
-            <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.job_hirer}</a></p>
-            <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
-          </div>
-          <!-- /PRODUCT PREVIEW AUTHOR -->
-          <!-- /RATING LIST -->
-        </div>
-        <!-- /PRODUCT PREVIEW META -->
-      </div>
-      <!-- /PRODUCT PREVIEW -->`;
-    });
-    gigsRecommendedTo.innerHTML = elm;
-
-  } catch (error) {
-    console.log(error.message);
-  }
-};
-
-
-
-
 
 const gigsCompleted = async () => {
   let url =
@@ -629,14 +528,13 @@ const gigsCompleted = async () => {
 const getReview = async () => {
   console.log("Current account is:" + meta);
   let elm = "";
-  
+
   try {
     const result = await contract.methods.getAllReceivedReviews(meta).call();
     console.log(result);
     const data = await result;
     reviewsData = data;
     console.log(reviewsData);
-    
 
     reviewsData.forEach((reviews) => {
       let jobName = reviews.job.title;
@@ -654,17 +552,17 @@ const getReview = async () => {
         case 2:
           text = "Meets Expectations";
           console.log("switch worked case 0 activated");
-      };
-     /*  if(grading=0){
+      }
+      /*  if(grading=0){
         text = "Nil";
       }else if(grading=1){
         text = "Exceeds Expectations";
       } else{
         text = "Meets Expectations";
       } */
-    
+
       console.log("grading is:" + grading);
-      console.log("text is " + text)
+      console.log("text is " + text);
       let overall = reviews.ratings.overall;
       let quality = reviews.ratings.quality;
       let communication = reviews.ratings.communication;
@@ -780,7 +678,7 @@ const getReview = async () => {
 };
 
 gigsProgress();
-gigsApplied();
+/* gigsApplied();
 gigsRecommeded();
 gigsCompleted();
-getReview();
+getReview(); */
