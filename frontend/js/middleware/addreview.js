@@ -1,5 +1,10 @@
 // (c) AzureKn1ght
-const gigInfo = document.getElementById("gigInfo");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const deadline = document.getElementById("deadline");
+const skills = document.getElementById("skills");
+const jobLocation = document.getElementById("location");
+const hirer = document.getElementById("hirer");
 let data = sessionStorage.getItem("gigId");
 var jobDetails = null;
 const overallHirerRating = document.getElementById("overall_rating");
@@ -19,7 +24,7 @@ const gigDetails = async (e) => {
 
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
-  let elm = "";
+  
   let idJob = data;
   const gigId = {
     _id: idJob,
@@ -45,36 +50,19 @@ const gigDetails = async (e) => {
       location: jobs.required_location,
     };
 
+    var date = moment(jobs.deadline).format("DD MMM YYYY");
     console.log(jobDetails);
+
+    //Add to element
+    title.innerHTML = `${jobs.title}`;
+    description.innerHTML = `${jobs.description}`;
+    deadline.innerHTML = `${date}`;
+    skills.innerHTML = `${jobs.skills_required}`;
+    jobLocation.innerHTML = `${jobs.required_location}`;
+    hirer.innerHTML = `${jobs.hirer_name}`;
   
       //Add to element
-      elm += `
-            <h3 class="section-title">${jobs.title}</h3>
-            <br><br>
-            <h3>Description</h3>
-            <br>
-            <p>${jobs.description}</p>
-            <br><br>
-            <h3>Deadline</h3>
-            <br>
-            <p>${jobs.deadline}</p>
-            <br><br>
-            <h3>Skills Required</h3>
-            <br>
-            <p>${jobs.skills_required}</p>
-            <br><br>
-            <h3>Location</h3>
-            <br>
-            <p>${jobs.required_location}</p>
-            <br><br>
-            <h3>Hirer</h3>
-            <br>
-            <p>${jobs.hirer_name}</p>
-            <br>
-            `;
-    
-
-    gigInfo.innerHTML = elm;
+     
   } catch (error) {
     console.log(error.message);
   }
