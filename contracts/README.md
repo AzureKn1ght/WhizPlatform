@@ -44,6 +44,9 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 <br>
 <br>
 
+<br>
+<br>
+
 # **Connecting to Mumbai Testnet**
 
 Please refer to the following guide: [Connect to Polygon's Testnet](https://docs.mobius.finance/guides/connect-to-polygons-testnet).  
