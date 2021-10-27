@@ -31,8 +31,9 @@ const bidGig = async (e) => {
     if (res.ok) {
       alert("Gig successfully bid for!");
     } else {
-      const message = await res.text();
-      alert(message);
+      const message = await res.json();
+      console.log(message);
+      alert(message.error);
     }
   } catch (error) {
     console.log(error);
@@ -71,68 +72,13 @@ const gigDetails = async (e) => {
     };
 
     console.log(jobDetails);
-    if (jobs.freelancer === "") {
+   
       //Add to element
       elm += `
-            <h3 class="section-title">${jobs.title}</h3>
-            <br><br>
-            <h3>Description</h3>
-            <br>
-            <p>${jobs.description}</p>
-            <br><br>
-            <h3>Deadline</h3>
-            <br>
-            <p>${jobs.deadline}</p>
-            <br><br>
-            <h3>Skills Required</h3>
-            <br>
-            <p>${jobs.skills_required}</p>
-            <br><br>
-            <h3>Location</h3>
-            <br>
-            <p>${jobs.required_location}</p>
-            <br><br>
-            <h3>Hirer</h3>
-            <br>
-            <p>${jobs.hirer_name}</p>
-            <br>
-            </div>
-            <button class="button secondary" onclick="bidGig()">Bid for Gig</button>
-              <br><br>
-              <button class="button primary" onclick="goBack()">Go Back</button>
-            <!-- /SECTION TITLE -->
-          </div>
+           
+            
             `;
-    } else {
-      elm += `
-            <h3 class="section-title">${jobs.title}</h3>
-            <br><br>
-            <h3>Description</h3>
-            <br>
-            <p>${jobs.description}</p>
-            <br><br>
-            <h3>Deadline</h3>
-            <br>
-            <p>${jobs.deadline}</p>
-            <br><br>
-            <h3>Skills Required</h3>
-            <br>
-            <p>${jobs.skills_required}</p>
-            <br><br>
-            <h3>Location</h3>
-            <br>
-            <p>${jobs.required_location}</p>
-            <br><br>
-            <h3>Hirer</h3>
-            <br>
-            <p>${jobs.hirer_name}</p>
-            <br>
-            </div>
-              <button class="button primary" onclick="goBack()">Go Back</button>
-            <!-- /SECTION TITLE -->
-          </div>
-            `;
-    }
+    
 
     gigInfo.innerHTML = elm;
   } catch (error) {
