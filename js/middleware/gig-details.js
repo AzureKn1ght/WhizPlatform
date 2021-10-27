@@ -1,5 +1,9 @@
-const gigInfo = document.getElementById("gigInfo");
-
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const deadline = document.getElementById("deadline");
+const skills = document.getElementById("skills");
+const jobLocation = document.getElementById("location");
+const hirer = document.getElementById("hirer");
 //const input = document.getElementById("input");
 let data = sessionStorage.getItem("gigId");
 let idFreelancer = sessionStorage.getItem("userId");
@@ -45,7 +49,7 @@ const gigDetails = async (e) => {
 
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
-  let elm = "";
+
   let idJob = data;
   const gigId = {
     _id: idJob,
@@ -70,22 +74,20 @@ const gigDetails = async (e) => {
       skills: jobs.skills_required,
       location: jobs.required_location,
     };
-
+    var date = moment(jobs.deadline).format("DD MMM YYYY");
     console.log(jobDetails);
-   
-      //Add to element
-      elm += `
-           
-            
-            `;
-    
 
-    gigInfo.innerHTML = elm;
+    //Add to element
+    title.innerHTML = `${jobs.title}`;
+    description.innerHTML = `${jobs.description}`;
+    deadline.innerHTML = `${date}`;
+    skills.innerHTML = `${jobs.skills_required}`;
+    jobLocation.innerHTML = `${jobs.required_location}`;
+    hirer.innerHTML = `${jobs.hirer_name}`;
+
   } catch (error) {
     console.log(error.message);
   }
 };
 
 gigDetails();
-
-
