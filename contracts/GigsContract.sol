@@ -39,9 +39,9 @@ contract GigsContract {
     //Initialize smart contract
     constructor() {
         admin = msg.sender;
-        USDCaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
-        WHIZaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
-        REVIEWSaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
+        USDCaddress = 0xFAFD46f3671b1fcfd7906CAe158C3008c2fFc358;
+        WHIZaddress = 0xD2B44b2FF2D07F2b6fad9a728adf176B5639F87B;
+        REVIEWSaddress = 0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8;
         totalValueLocked = 0;
         whizRewards = 100;
     }
