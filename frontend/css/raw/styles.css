@@ -15830,6 +15830,14 @@ figure > img {
   position: relative;
 }
 
+.whizard-banner {
+  min-height: 160px;
+  padding: 52px 60px 0 200px;
+  border-radius: 12px;
+  background: url("../img/banner/whizard.png") no-repeat center;
+  position: relative;
+}
+
 .section-banner .section-banner-icon {
   position: absolute;
   bottom: 0;
