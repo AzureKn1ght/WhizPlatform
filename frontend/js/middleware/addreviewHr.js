@@ -1,5 +1,10 @@
 // (c) AzureKn1ght
-const gigInfo = document.getElementById("gigInfo");
+const title = document.getElementById("title");
+const description = document.getElementById("description");
+const deadline = document.getElementById("deadline");
+const skills = document.getElementById("skills");
+const jobLocation = document.getElementById("location");
+const freelancer = document.getElementById("freelancer");
 let data = sessionStorage.getItem("gigId");
 var jobDetails = null;
 const overallHirerRating = document.getElementById("overall_rating");
@@ -46,36 +51,16 @@ const gigDetails = async (e) => {
         location: jobs.required_location,
       };
   
-      console.log(jobDetails);
-    
-        //Add to element
-        elm += `
-              <h3 class="section-title">${jobs.title}</h3>
-              <br><br>
-              <h3>Description</h3>
-              <br>
-              <p>${jobs.description}</p>
-              <br><br>
-              <h3>Deadline</h3>
-              <br>
-              <p>${jobs.deadline}</p>
-              <br><br>
-              <h3>Skills Required</h3>
-              <br>
-              <p>${jobs.skills_required}</p>
-              <br><br>
-              <h3>Location</h3>
-              <br>
-              <p>${jobs.required_location}</p>
-              <br><br>
-              <h3>Freelancer</h3>
-              <br>
-              <p>${jobs.freelancer_name}</p>
-              <br>
-              `;
-      
-  
-      gigInfo.innerHTML = elm;
+      var date = moment(jobs.deadline).format("DD MMM YYYY");
+    console.log(jobDetails);
+
+    //Add to element
+    title.innerHTML = `${jobs.title}`;
+    description.innerHTML = `${jobs.description}`;
+    deadline.innerHTML = `${date}`;
+    skills.innerHTML = `${jobs.skills_required}`;
+    jobLocation.innerHTML = `${jobs.required_location}`;
+    freelancer.innerHTML = `${jobs.freelancer_name}`;
     } catch (error) {
       console.log(error.message);
     }
