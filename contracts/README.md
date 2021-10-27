@@ -43,3 +43,11 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 **Deployed Address:** [0xefe959e84b1a4b7dd4bf6962a25ffb3e1191be4d](https://mumbai.polygonscan.com/address/0xefe959e84b1a4b7dd4bf6962a25ffb3e1191be4d)
 <br>
 <br>
+
+# **Connecting to Mumbai Testnet**
+
+Please refer to the following guide: [Connect to Polygon's Testnet](https://docs.mobius.finance/guides/connect-to-polygons-testnet).  
+<br>
+<br>
+
+
