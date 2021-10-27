@@ -49,7 +49,7 @@ const init = async () => {
                 <!-- /TEXT STICKER -->
               </div>
               <!-- /TABLE COLUMN -->
-              <div class="table-column padded-left">
+              <div class="table-column centered">
                 <!-- PROGRESS STAT WRAP -->
                 <p class="text-sticker void">
                 ${date}
