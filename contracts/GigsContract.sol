@@ -42,6 +42,8 @@ contract GigsContract {
         USDCaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
         WHIZaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
         REVIEWSaddress = 0x769c4342baC4559cd32C9d5B0F9109131C934a0F;
+        totalValueLocked = 0;
+        whizRewards = 100;
     }
     
     //Security for admin functions
