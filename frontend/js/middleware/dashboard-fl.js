@@ -44,10 +44,10 @@ function loadScript(url) {
   body.appendChild(script);
 }
 
-const sessStorage = async (e) => {
+const gigInProgressDetails = async (e) => {
   console.log(e);
-  window.sessionStorage.setItem("gigId", e);
-  window.location.href = "gig-info.html";
+  
+  window.location.href=`gig-info.html?gigId=${e}`;
 };
 
 const gigsProgress = async () => {
@@ -215,7 +215,7 @@ const gigsProgress = async () => {
         <!-- USER PREVIEW ACTIONS -->
         <div class="user-preview-actions">
           <!-- BUTTON -->
-          <p class="button secondary" onclick="sessStorage('${gigs._id}')">Gig Details</p>
+          <p class="button secondary" onclick="gigInProgressDetails('${gigs._id}')">Gig Details</p>
           <!-- /BUTTON -->
 
           <!-- BUTTON -->
@@ -305,7 +305,7 @@ const gigsApplied = async () => {
       elm += `<!-- PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
+        <a href="gig-info.html?gigId=${gigs._id}">
           <figure class="product-preview-image liquid">
             <img src="${file}" alt="item-01">
           </figure>
@@ -319,11 +319,11 @@ const gigsApplied = async () => {
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a href="marketplace-product.html">${gigs.title}</a></p>
+          <p class="product-preview-title"><a href="gig-info.html?gigId=${gigs._id}">${gigs.title}</a></p>
           <!-- /PRODUCT PREVIEW TITLE -->
 
           <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a href="marketplace-category.html">${gigs.skills_required}</a></p>
+          <p class="product-preview-category digital"><a href="gig-info.html?gigId=${gigs._id}">${gigs.skills_required}</a></p>
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
@@ -337,7 +337,7 @@ const gigsApplied = async () => {
           <!-- PRODUCT PREVIEW AUTHOR -->
           <div class="product-preview-author">
             <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+            <a class="product-preview-author-image user-avatar micro no-border" href="gig-info.html?gigId=${gigs._id}">
               <!-- USER AVATAR CONTENT -->
               <div class="user-avatar-content">
                 <!-- HEXAGON -->
@@ -437,7 +437,7 @@ const gigsRecommeded = async () => {
       elm += `<!-- PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="marketplace-product.html">
+        <a href="gig-info.html?gigId=${gigs._id}">
           <figure class="product-preview-image liquid">
             <img src="${file}" alt="item-01">
           </figure>
@@ -451,11 +451,11 @@ const gigsRecommeded = async () => {
           <!-- /TEXT STICKER -->
 
           <!-- PRODUCT PREVIEW TITLE -->
-          <p class="product-preview-title"><a onclick="sessStorage('${gigs._id}')">${gigs.title}</a></p>
+          <p class="product-preview-title"><a href="gig-info.html?gigId=${gigs._id}&bidding=true">${gigs.title}</a></p>
           <!-- /PRODUCT PREVIEW TITLE -->
 
           <!-- PRODUCT PREVIEW CATEGORY -->
-          <p class="product-preview-category digital"><a onclick="sessStorage('${gigs._id}')">${gigs.skills_required}</a></p>
+          <p class="product-preview-category digital"><a >${gigs.skills_required}</a></p>
           <!-- /PRODUCT PREVIEW CATEGORY -->
 
           <!-- PRODUCT PREVIEW TEXT -->
