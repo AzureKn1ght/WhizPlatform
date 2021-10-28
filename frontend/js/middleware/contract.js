@@ -20,7 +20,7 @@ var approveStatus = false;
 var budget = 0;
 
 var Gig = {
-  hirer: currentAccount,
+  hirer: meta,
   freelancer: "freelancermetamask",
   jobDetails: {
     jobID: "12345",
@@ -90,7 +90,7 @@ const gigDetails = async () => {
     };
 
     Gig.jobDetails = jobDetails;
-    budget = jobs.budget;
+    budget = web3.utils.toWei(jobs.budget.toString(), 'ether');
     var date = moment(jobs.deadline).format("DD MMM YYYY");
     console.log(jobDetails);
 
@@ -107,7 +107,9 @@ const gigDetails = async () => {
 };
 
 const approveUSDC = async () => {
+  
   try {
+    console.log("clicked");
     let approved = await usdcContract.methods
       .approve(gigsAddress,budget)
       .send({
@@ -127,6 +129,9 @@ const approveUSDC = async () => {
 };
 
 const createGigContract = async () => {
+  console.log(jobId);
+  console.log(Gig);
+  console.log(budget);
   try {
     let confirmedGig = await gigsContract.methods
       .createGigContract(jobId, Gig, budget)
@@ -134,14 +139,15 @@ const createGigContract = async () => {
         from: currentAccount,
       });
     console.log(confirmedGig);
-    window.location.href = "/dashboard-hirer";
+    window.location.href = "dashboard-hirer.html";
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 };
 
 const processClick = async () => {
   if (approveStatus) {
+    createGigContract();
   } else {
     approveUSDC();
   }
