@@ -45,7 +45,7 @@ function freelancerMetalogin() {
         .then((data) => {
           console.log(data);
           window.sessionStorage.setItem("userId", data._id);
-          window.location.href = "dashboard-fl.html";
+          window.location.href = "dashboard-freelancer.html";
         })
         .catch((error) => {
           console.log(error);
@@ -103,7 +103,7 @@ function hirerMetalogin() {
       .then((data) => {
         console.log(data);
         window.sessionStorage.setItem("userId", data._id);
-        window.location.href = "dashboard-hr.html";
+        window.location.href = "dashboard-hirer.html";
       })
       .catch((error) => {
         console.log(error);
@@ -153,7 +153,7 @@ const loginHirer = async (event) => {
       console.log(data._id);
       console.log(`Logged in successfully welcome ${enteredEmail}!`);
       window.sessionStorage.setItem("userId", data._id);
-      window.location.href = "dashboard-hr.html";
+      window.location.href = "dashboard-hirer.html";
     } else {
       const message = await res.text();
       alert(message);
