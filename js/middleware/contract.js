@@ -3,8 +3,10 @@ const description = document.getElementById("description");
 const deadline = document.getElementById("deadline");
 const skills = document.getElementById("skills");
 const jobLocation = document.getElementById("location");
-const hirer = document.getElementById("hirer");
-const jobId = window.sessionStorage.getItem("gigId");
+const jobBudget = document.getElementById("budget");
+const urlParams = new URLSearchParams(window.location.search);
+const jobId = urlParams.get("gigId");
+const freelancer = urlParams.get("freelancer");
 const gigInfo = document.getElementById("gigInfo");
 const user = window.sessionStorage.getItem("userId");
 const meta = window.sessionStorage.getItem("accountId");
@@ -32,13 +34,37 @@ var Gig = {
   status: 0,
 };
 
+const freelancerDetails = async () => {
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+
+  const flData = {
+    _id: freelancer,
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(flData),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    Gig.freelancer = data.metamask;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const gigDetails = async () => {
   //e.preventDefault();
 
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
-  
-  
+
   const gigId = {
     _id: jobId,
   };
@@ -74,7 +100,7 @@ const gigDetails = async () => {
     deadline.innerHTML = `${date}`;
     skills.innerHTML = `${jobs.skills_required}`;
     jobLocation.innerHTML = `${jobs.required_location}`;
-    hirer.innerHTML = `${jobs.hirer_name}`;
+    jobBudget.innerHTML = `$${jobs.budget}`;
   } catch (error) {
     console.log(error.message);
   }
@@ -83,7 +109,7 @@ const gigDetails = async () => {
 const approveUSDC = async () => {
   try {
     let approved = await usdcContract.methods
-      .approve("0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8")
+      .approve("0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8",)
       .send({
         from: currentAccount,
       });
@@ -124,3 +150,4 @@ const processClick = async () => {
 approveButton.addEventListener("click", processClick);
 
 gigDetails();
+freelancerDetails();

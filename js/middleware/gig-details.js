@@ -3,6 +3,7 @@ const description = document.getElementById("description");
 const deadline = document.getElementById("deadline");
 const skills = document.getElementById("skills");
 const jobLocation = document.getElementById("location");
+const budget = document.getElementById("budget");
 const hirer = document.getElementById("hirer");
 //const input = document.getElementById("input");
 const urlParams = new URLSearchParams(window.location.search);
@@ -88,6 +89,7 @@ const gigDetails = async (e) => {
     skills.innerHTML = `${jobs.skills_required}`;
     jobLocation.innerHTML = `${jobs.required_location}`;
     hirer.innerHTML = `${jobs.hirer_name}`;
+    budget.innerHTML = `$${jobs.budget}`
 
   } catch (error) {
     console.log(error.message);
