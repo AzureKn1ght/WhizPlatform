@@ -190,9 +190,10 @@ const showFreelancer = async (freelancer) =>{
 
 
 const getEachApplicant = async (applicants) => {
-    console.log(applicants)
+    console.log(applicants);
     applicants.forEach((freelancer)=>{
         console.log(freelancer);
+        if(!freelancer) return; 
         showFreelancer(freelancer);
     })
     
