@@ -5,7 +5,11 @@ const skills = document.getElementById("skills");
 const jobLocation = document.getElementById("location");
 const hirer = document.getElementById("hirer");
 //const input = document.getElementById("input");
-let data = sessionStorage.getItem("gigId");
+const urlParams = new URLSearchParams(window.location.search);
+const data = urlParams.get('gigId');
+const bidding = urlParams.get('bidding');
+const bidButton = document.getElementById('bid-button');
+//let data = sessionStorage.getItem("gigId");
 let idFreelancer = sessionStorage.getItem("userId");
 var jobDetails = null;
 
@@ -90,4 +94,16 @@ const gigDetails = async (e) => {
   }
 };
 
+const hideBidButton = ()=>{
+  if (bidding)
+    {
+      bidButton.style.display = "block";
+    } else {
+      bidButton.style.display = "none";
+    }
+  
+  }
+
+
 gigDetails();
+hideBidButton();

@@ -24,7 +24,7 @@ const init = async () => {
                 <!-- TABLE INFORMATION -->
                 <div class="table-information">
                   <!-- TABLE TITLE -->
-                  <p class="table-title"><a href="#" onclick="sessStorage('${jobs._id.$oid}')">${jobs.title}</p></a>
+                  <p class="table-title"><a href="gig-info.html?gigId=${jobs._id.$oid}&bidding=true" >${jobs.title}</p></a>
                   <!-- /TABLE TITLE -->
                 </div>
                 <!-- /TABLE INFORMATION -->
@@ -66,10 +66,11 @@ const init = async () => {
   }
 };
 
-const sessStorage = async (e) => {
+/* const sessStorage = async (e) => {
   console.log(e);
+  onclick="sessStorage('${jobs._id.$oid}')"
   window.sessionStorage.setItem("gigId", e);
   window.location.href = "gig-info.html";
-};
+}; */
 
 init();
