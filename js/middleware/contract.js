@@ -109,7 +109,7 @@ const gigDetails = async () => {
 const approveUSDC = async () => {
   try {
     let approved = await usdcContract.methods
-      .approve("0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8",)
+      .approve(gigsAddress,budget)
       .send({
         from: currentAccount,
       });
