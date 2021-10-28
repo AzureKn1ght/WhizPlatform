@@ -2508,13 +2508,35 @@
                         <!-- SECTION TITLE -->
 
                         <div id="gigInfo">
+                            <h3 class="section-title" id="title"></h3>
+                            <br><br>
+                            <h3>Description</h3>
+                            <br>
+                            <p id="description"></p>
+                            <br><br>
+                            <h3>Deadline</h3>
+                            <br>
+                            <p id="deadline"></p>
+                            <br><br>
+                            <h3>Skills Required</h3>
+                            <br>
+                            <p id="skills"></p>
+                            <br><br>
+                            <h3>Location</h3>
+                            <br>
+                            <p id="location"></p>
+                            <br><br>
+                            <h3>Budget</h3>
+                            <br>
+                            <p id="budget"></p>
+                            <br>
                         </div>
                     </div>
                 </div>
 
                 <!-- GRID COLUMN -->
 
-                <div class="grid grid-3-3-3-3 top-space centered">
+                <div class="grid grid-3-3-3-3 top-space centered" id="applicant-card">
                     <!-- WIDGET BOX -->
                     <!-- USER PREVIEW -->
                     <div class="user-preview">
@@ -2988,46 +3010,24 @@
             <!-- /SECTION HEADER -->
 
 
-            <!--momentJS  -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
-                integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
-                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-            <!-- gig-details JS  -->
-            <script src="js/middleware/gig-details.js"></script>
-            <!-- app -->
-            <script src="js/utils/app.js"></script>
-            <!-- page loader -->
-            <script src="js/utils/page-loader.js"></script>
-            <!-- simplebar -->
-            <script src="js/vendor/simplebar.min.js"></script>
-            <!-- liquidify -->
-            <script src="js/utils/liquidify.js"></script>
-            <!-- XM_Plugins -->
-            <script src="js/vendor/xm_plugins.min.js"></script>
-            <!-- tiny-slider -->
-            <script src="js/vendor/tiny-slider.min.js"></script>
-            <!-- chartJS -->
-            <script src="js/vendor/Chart.bundle.min.js"></script>
-            <!-- global.hexagons -->
-            <script src="js/global/global.hexagons.js"></script>
-            <!-- global.tooltips -->
-            <script src="js/global/global.tooltips.js"></script>
-            <!-- global.popups -->
-            <script src="js/global/global.popups.js"></script>
-            <!-- global.charts -->
-            <script src="js/global/global.charts.js"></script>
-            <!-- header -->
-            <script src="js/header/header.js"></script>
-            <!-- sidebar -->
-            <script src="js/sidebar/sidebar.js"></script>
-            <!-- content -->
-            <script src="js/content/content.js"></script>
-            <!-- form.utils -->
-            <script src="js/form/form.utils.js"></script>
-            <!-- SVG icons -->
-            <script src="js/utils/svg-loader.js"></script>
-            <!-- MongoDB -->
-            <script src="js/utils/db.js"></script>
+              <!--momentJS  -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--Web3 JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js"></script>
+    <!--Metamask JS-->
+    <script src="js/middleware/metamask.js"></script>
+    <!--Contract ABI JS-->
+    <script src="js/ABI/ReviewsABI.js"></script>
+    <!--dashboard JS-->
+    <script src="js/middleware/select-freelancer.js"></script>
+    <!-- XM_Plugins -->
+    <script src="js/vendor/xm_plugins.min.js" defer></script>
+    <!-- app -->
+    <script src="js/utils/app.js" defer></script>
+    <!-- page loader -->
+    <script src="js/utils/page-loader.js" defer></script>
 </body>
 
 </html>
