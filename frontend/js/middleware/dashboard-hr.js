@@ -260,7 +260,7 @@ const gigsProgress = async () => {
             <!-- /BUTTON -->
 
             <!-- BUTTON -->
-            <p class="button primary" onclick="updateStatus('${_id}')">Check Status</p>
+            <p class="button primary" onclick="updateStatus('${_id}','${freelancer}')">Confirm Delivery</p>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
@@ -272,35 +272,35 @@ const gigsProgress = async () => {
 
     hirerGigsInProgress.innerHTML = elm;
 
-    var scripts = [
-      "js/vendor/simplebar.min.js",
-      "js/utils/liquidify.js",
-      "js/vendor/Chart.bundle.min.js",
-      "js/global/global.hexagons.js",
-      "js/global/global.tooltips.js",
-      "js/global/global.popups.js",
-      "js/global/global.charts.js",
-      "js/header/header.js",
-      "js/sidebar/sidebar.js",
-      "js/content/content.js",
-      "js/form/form.utils.js",
-      "js/utils/svg-loader.js",
-      "js/utils/db.js",
-      "js/utils/page-loader.js",
-    ];
-
-    scripts.forEach((element) => {
-      loadScript(element);
-    });
+   
   } catch (error) {
     console.log(error.message);
   }
+  var scripts = [
+    "js/vendor/simplebar.min.js",
+    "js/utils/liquidify.js",
+    "js/vendor/Chart.bundle.min.js",
+    "js/global/global.hexagons.js",
+    "js/global/global.tooltips.js",
+    "js/global/global.popups.js",
+    "js/global/global.charts.js",
+    "js/header/header.js",
+    "js/sidebar/sidebar.js",
+    "js/content/content.js",
+    "js/form/form.utils.js",
+    "js/utils/svg-loader.js",
+    "js/utils/db.js",
+    "js/utils/page-loader.js",
+  ];
+
+  scripts.forEach((element) => {
+    loadScript(element);
+  });
 };
 
-const updateStatus = async (e) => {
-  console.log(e);
-  window.sessionStorage.setItem("gigId", e);
-  window.location.href = "complete-gig-hr.html";
+const updateStatus = async (gigId,freelancerId) => {
+  
+  window.location.href = `complete-gig-hr.html?gigId=${gigId}&freelancer=${freelancerId}`;
 };
 
 const gigsOpen = async () => {
