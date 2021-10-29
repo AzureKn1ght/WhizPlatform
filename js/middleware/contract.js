@@ -11,10 +11,8 @@ const gigInfo = document.getElementById("gigInfo");
 const user = window.sessionStorage.getItem("userId");
 const meta = window.sessionStorage.getItem("accountId");
 const web3 = new Web3(window.ethereum);
-const gigsAddress = "0xEfE959E84B1A4B7Dd4BF6962a25FFB3e1191BE4d";
-const gigsContract = new web3.eth.Contract(GigsABI, gigsAddress);
-const usdcAddress = "0xFAFD46f3671b1fcfd7906CAe158C3008c2fFc358";
-const usdcContract = new web3.eth.Contract(usdcABI, usdcAddress);
+const gigsContract = new web3.eth.Contract(GigsABI, GigsAddress);
+const usdcContract = new web3.eth.Contract(usdcABI, USDCaddress);
 const approveButton = document.getElementById("approve-button");
 var approveStatus = false;
 var budget = 0;
@@ -111,7 +109,7 @@ const approveUSDC = async () => {
   try {
     console.log("clicked");
     let approved = await usdcContract.methods
-      .approve(gigsAddress,budget)
+      .approve(GigsAddress,budget)
       .send({
         from: currentAccount,
       });
@@ -140,6 +138,7 @@ const createGigContract = async () => {
       });
     console.log(confirmedGig);
     window.location.href = "dashboard-hirer.html";
+    //updateMongo();
   } catch (error) {
     console.log(error);
   }

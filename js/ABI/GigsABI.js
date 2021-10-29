@@ -1,4 +1,4 @@
-//GigsAddress = 0x4f4bFe0458b119DC764f38Ac9418579500D135A1;
+var GigsAddress = "0x4f4bFe0458b119DC764f38Ac9418579500D135A1";
 
 var GigsABI = [
   {

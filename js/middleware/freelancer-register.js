@@ -1,23 +1,23 @@
-const refEmail = useRef(null);
-const refPwd = useRef(null);
-const refPswRepeat = useRef(null);
-const refCountry = useRef(null);
-const refCoding = useRef(null);
-const refDesign = useRef(null);
-const refName = useRef(null);
-const refCountryID = useRef(null);
-const refOtherSkills = useRef(null);
-const refLanguages = useRef(null);
+const refEmail = document.getElementById("email");
+const meta = window.sessionStorage.getItem("accountId");
+
+const refCountry = document.getElementById("country");
+const refCoding = document.getElementById("coding");
+const refDesign = document.getElementById("design");
+const refName = document.getElementById("name");
+const refCountryID = document.getElementById("country-id");
+const refOtherSkills = document.getElementById("other-skills");
+const refLanguages = document.getElementById("languages");
 
 const handleSubmit = async (event) => {
   event.preventDefault();
 
-  const enteredEmail = refEmail.current.value;
-  const enteredPwd = refPwd.current.value;
-  const enteredPswRepeat = refPswRepeat.current.value;
-  const enteredCountry = refCountry.current.value ;
-  const enteredName = refName.current.value;
-  const enteredCountryID = refCountryID.current.value;
+  const enteredEmail = refEmail.value;
+  const enteredPwd = refPwd.value;
+  const enteredPswRepeat = refPswRepeat.value;
+  const enteredCountry = refCountry.value ;
+  const enteredName = refName.value;
+  const enteredCountryID = refCountryID.value;
   const str = `${refCoding.current.value}, ${refDesign.current.value}, ${refOtherSkills.current.value}`;
   const langs = refLanguages.current.value;
   const  enteredLanguages= langs.split(",").map(item=>item.trim());
