@@ -20,7 +20,6 @@ contract GigsContract {
 
     //This is the object for storing all Gig details
     struct Gig {
-        string id;
         address hirer;
         address freelancer;
         ReviewsContract.Job jobDetails; 
