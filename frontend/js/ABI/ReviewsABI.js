@@ -1,4 +1,4 @@
-//REVIEWSaddress = 0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8;
+var REVIEWSaddress = "0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8";
 
 var abi = [
   {

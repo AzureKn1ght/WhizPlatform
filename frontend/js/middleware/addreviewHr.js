@@ -5,53 +5,80 @@ const deadline = document.getElementById("deadline");
 const skills = document.getElementById("skills");
 const jobLocation = document.getElementById("location");
 const freelancer = document.getElementById("freelancer");
-let data = sessionStorage.getItem("gigId");
+const urlParams = new URLSearchParams(window.location.search);
+const jobId = urlParams.get("gigId");
+const reviewee = urlParams.get("freelancer");
 var jobDetails = null;
 const overallHirerRating = document.getElementById("overall_rating");
 const communicationRating = document.getElementById("comms_rating");
 const quality = document.getElementById("quality_rating");
 const comments = document.getElementById("comments");
 const timeliness = document.getElementById("timeliness_rating");
-const submitReviewHirer = document.getElementById(
-  "submit-hirer-review"
-);
+const submitReviewHirer = document.getElementById("submit-hirer-review");
 const web3 = new Web3(window.ethereum);
 const conAddress = "0xfb8362626ddE20BC9b8f4e323d49b52D89dD98c8";
 const contract = new web3.eth.Contract(abi, conAddress);
+const meta = window.sessionStorage.getItem("accountId");
+const gigsContract = new web3.eth.Contract(GigsABI, GigsAddress);
+var revieweeMeta = "";
 
+const freelancerDetails = async () => {
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+
+  const flData = {
+    _id: reviewee,
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(flData),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    revieweeMeta = data.metamask;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 const gigDetails = async (e) => {
-    //e.preventDefault();
-  
-    let url =
-      "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
-    let elm = "";
-    let idJob = data;
-    const gigId = {
-      _id: idJob,
+  //e.preventDefault();
+
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo";
+  let elm = "";
+  let idJob = jobId;
+  const gigId = {
+    _id: idJob,
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(gigId),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const jobs = await res.json();
+    console.log(jobs);
+    jobDetails = {
+      jobID: jobs._id,
+      budget: jobs.budget,
+      title: jobs.title,
+      description: jobs.description,
+      skills: jobs.skills_required,
+      location: jobs.required_location,
     };
-  
-    try {
-      const res = await fetch(url, {
-        method: "POST",
-        body: JSON.stringify(gigId),
-        mode: "cors",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const jobs = await res.json();
-      console.log(jobs);
-      jobDetails = {
-        jobID: jobs._id,
-        budget: jobs.budget,
-        title: jobs.title,
-        description: jobs.description,
-        skills: jobs.skills_required,
-        location: jobs.required_location,
-      };
-  
-      var date = moment(jobs.deadline).format("DD MMM YYYY");
+
+    var date = moment(jobs.deadline).format("DD MMM YYYY");
     console.log(jobDetails);
 
     //Add to element
@@ -61,16 +88,16 @@ const gigDetails = async (e) => {
     skills.innerHTML = `${jobs.skills_required}`;
     jobLocation.innerHTML = `${jobs.required_location}`;
     freelancer.innerHTML = `${jobs.freelancer_name}`;
-    } catch (error) {
-      console.log(error.message);
-    }
-  };
+  } catch (error) {
+    console.log(error.message);
+  }
+};
 //Goals (goal_id, description, balance, date_created, user_id);
 
 //Add Goal Function
 
 //Create Contract instance
-const reviewAdd = async (e) => {
+/* const reviewAdd = async (e) => {
   e.preventDefault(); //to prevent form from submitting and refreshing the page
 
   //to prevent empty input from submitting
@@ -103,8 +130,8 @@ const reviewAdd = async (e) => {
 
   var input = {
     reviewID: 0,
-    reviewer: "0x4b7d0309042Be687F432B6fB73BCbcd405CD25e5",
-    reviewee: "0xb88d7171a62a0c62e22f62af811c9c859fce4618",
+    reviewer: meta,
+    reviewee: revieweeMeta,
     ratings: ratings,
     comments: c,
     job: jobDetails,
@@ -129,19 +156,33 @@ const reviewAdd = async (e) => {
   //Alert user to wait for transactions
   alert("Processing: sending your request");
   console.log("Mark as complete: processing...");
+}; */
+
+const getReview = async (e) => {
+  let result = await contract.methods
+    .getAllReceivedReviews(currentAccount)
+    .call();
+  console.log(result);
 };
 
-const getReview = async (e)=>{
-  let result = await contract.methods.getAllReceivedReviews(currentAccount).call();
-  console.log(result);
-  
+const confirmGigDelivery = async (e) => {
+  e.preventDefault();
+  try {
+    let receipt = await gigsContract.methods
+      .confirmGigDelivery(jobId)
+      .send({ from: currentAccount });
+    console.log(receipt);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 getReview(currentAccount);
 //Add event listener for buttons
-submitReviewHirer.addEventListener("click", reviewAdd);
+submitReviewHirer.addEventListener("click", confirmGigDelivery);
 /* document.getElementById("b2").onclick = function () {
   location.href = "dashboard.html";
 }; */
 
 gigDetails();
+freelancerDetails();

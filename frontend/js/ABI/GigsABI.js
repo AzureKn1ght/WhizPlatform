@@ -1,4 +1,4 @@
-//GigsAddress = 0xefe959e84b1a4b7dd4bf6962a25ffb3e1191be4d;
+var GigsAddress = "0x4f4bFe0458b119DC764f38Ac9418579500D135A1";
 
 var GigsABI = [
   {
@@ -506,9 +506,184 @@ var GigsABI = [
     inputs: [
       {
         internalType: "address",
-        name: "hirer",
+        name: "",
         type: "address",
       },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "flGigIDs",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "fl",
+        type: "address",
+      },
+    ],
+    name: "getAllFreelancerGigs",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "address",
+            name: "hirer",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "freelancer",
+            type: "address",
+          },
+          {
+            components: [
+              {
+                internalType: "string",
+                name: "jobID",
+                type: "string",
+              },
+              {
+                internalType: "uint256",
+                name: "budget",
+                type: "uint256",
+              },
+              {
+                internalType: "string",
+                name: "title",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "description",
+                type: "string",
+              },
+              {
+                internalType: "string[]",
+                name: "skills",
+                type: "string[]",
+              },
+              {
+                internalType: "string",
+                name: "location",
+                type: "string",
+              },
+            ],
+            internalType: "struct ReviewsContract.Job",
+            name: "jobDetails",
+            type: "tuple",
+          },
+          {
+            internalType: "uint256",
+            name: "amountDeposited",
+            type: "uint256",
+          },
+          {
+            internalType: "enum GigsContract.Status",
+            name: "status",
+            type: "uint8",
+          },
+        ],
+        internalType: "struct GigsContract.Gig[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "hr",
+        type: "address",
+      },
+    ],
+    name: "getAllHirerGigs",
+    outputs: [
+      {
+        components: [
+          {
+            internalType: "address",
+            name: "hirer",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "freelancer",
+            type: "address",
+          },
+          {
+            components: [
+              {
+                internalType: "string",
+                name: "jobID",
+                type: "string",
+              },
+              {
+                internalType: "uint256",
+                name: "budget",
+                type: "uint256",
+              },
+              {
+                internalType: "string",
+                name: "title",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "description",
+                type: "string",
+              },
+              {
+                internalType: "string[]",
+                name: "skills",
+                type: "string[]",
+              },
+              {
+                internalType: "string",
+                name: "location",
+                type: "string",
+              },
+            ],
+            internalType: "struct ReviewsContract.Job",
+            name: "jobDetails",
+            type: "tuple",
+          },
+          {
+            internalType: "uint256",
+            name: "amountDeposited",
+            type: "uint256",
+          },
+          {
+            internalType: "enum GigsContract.Status",
+            name: "status",
+            type: "uint8",
+          },
+        ],
+        internalType: "struct GigsContract.Gig[]",
+        name: "",
+        type: "tuple[]",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
       {
         internalType: "string",
         name: "gigID",
@@ -588,17 +763,12 @@ var GigsABI = [
   {
     inputs: [
       {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-      {
         internalType: "string",
         name: "",
         type: "string",
       },
     ],
-    name: "myGigs",
+    name: "gig",
     outputs: [
       {
         internalType: "address",
@@ -665,9 +835,28 @@ var GigsABI = [
     inputs: [
       {
         internalType: "address",
-        name: "hirer",
+        name: "",
         type: "address",
       },
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "hrGigIDs",
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
       {
         internalType: "string",
         name: "gigID",
@@ -746,11 +935,6 @@ var GigsABI = [
   },
   {
     inputs: [
-      {
-        internalType: "address",
-        name: "hirer",
-        type: "address",
-      },
       {
         internalType: "string",
         name: "gigID",

@@ -1,4 +1,4 @@
-//USDCaddress = 0xFAFD46f3671b1fcfd7906CAe158C3008c2fFc358;
+var USDCaddress = "0xFAFD46f3671b1fcfd7906CAe158C3008c2fFc358";
 
 var usdcABI = [
     {

@@ -231,29 +231,31 @@ const gigsProgress = async () => {
 
     gigsInProgress.innerHTML = elm;
 
-    var scripts = [
-      "js/vendor/simplebar.min.js",
-      "js/utils/liquidify.js",
-      "js/vendor/Chart.bundle.min.js",
-      "js/global/global.hexagons.js",
-      "js/global/global.tooltips.js",
-      "js/global/global.popups.js",
-      "js/global/global.charts.js",
-      "js/header/header.js",
-      "js/sidebar/sidebar.js",
-      "js/content/content.js",
-      "js/form/form.utils.js",
-      "js/utils/svg-loader.js",
-      "js/utils/db.js",
-      "js/utils/page-loader.js",
-    ];
-
-    scripts.forEach((element) => {
-      loadScript(element);
-    });
+  
   } catch (error) {
     console.log(error.message);
   }
+
+  var scripts = [
+    "js/vendor/simplebar.min.js",
+    "js/utils/liquidify.js",
+    "js/vendor/Chart.bundle.min.js",
+    "js/global/global.hexagons.js",
+    "js/global/global.tooltips.js",
+    "js/global/global.popups.js",
+    "js/global/global.charts.js",
+    "js/header/header.js",
+    "js/sidebar/sidebar.js",
+    "js/content/content.js",
+    "js/form/form.utils.js",
+    "js/utils/svg-loader.js",
+    "js/utils/db.js",
+    "js/utils/page-loader.js",
+  ];
+
+  scripts.forEach((element) => {
+    loadScript(element);
+  });
 };
 
 const updateStatus = async (e) => {
