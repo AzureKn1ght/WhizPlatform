@@ -39,6 +39,7 @@ function freelancerMetalogin() {
           } else {
             let message = res.text();
             console.log(message);
+            window.location.href = "register-freelancer.html"
             throw "error";
           }
         })
@@ -97,6 +98,7 @@ function hirerMetalogin() {
         } else {
           let message = res.text();
           console.log(message);
+          window.location.href = "register-hirer.html"
           throw "error";
         }
       })
