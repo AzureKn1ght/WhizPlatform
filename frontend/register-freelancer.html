@@ -84,22 +84,22 @@
             </div>
             <!-- /HEADER BRAND -->
         </div>
-      <!-- NAVIGATION -->
-      <nav class="navigation">
-        <!-- MENU MAIN -->
-        <ul class="menu-main">
-          <!-- MENU MAIN ITEM -->
-          <li class="menu-main-item">
-            <!-- MENU MAIN ITEM LINK -->
-            <a class="menu-main-item-link" href="FAQ.html">FAQs</a>
-            <!-- /MENU MAIN ITEM LINK -->
-          </li>
-          <!-- /MENU MAIN ITEM -->
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+            <!-- MENU MAIN -->
+            <ul class="menu-main">
+                <!-- MENU MAIN ITEM -->
+                <li class="menu-main-item">
+                    <!-- MENU MAIN ITEM LINK -->
+                    <a class="menu-main-item-link" href="FAQ.html">FAQs</a>
+                    <!-- /MENU MAIN ITEM LINK -->
+                </li>
+                <!-- /MENU MAIN ITEM -->
 
-          <!-- /MENU MAIN ITEM -->
-        </ul>
-        <!-- /MENU MAIN -->
-      </nav>
+                <!-- /MENU MAIN ITEM -->
+            </ul>
+            <!-- /MENU MAIN -->
+        </nav>
 
 
         <!-- HEADER ACTIONS -->
@@ -127,7 +127,7 @@
 
             <!-- DROPDOWN BOX -->
             <div class="dropdown-box padding-bottom-small header-search-dropdown">
-               </div>
+            </div>
         </div>
         <!-- /HEADER ACTIONS -->
 
@@ -1930,7 +1930,7 @@
                         <label for="full_name"><b>Full Name as per ID/Passport</b></label><br>
                         <input type="text" placeholder="Full Name" name="full_name" id="full_name" required><br><br>
                         <label for="country"><b>Country of Issued ID/Passport</b></label><br>
-                        <select id="country" name="country_id" required>
+                        <select id="country-id" name="country_id" required>
                             <option value="select">Select Country</option>
                             <option value="Afganistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
@@ -2185,13 +2185,14 @@
                     <div class="widget-box">
 
                         <h2>Metamask Wallet (Auto-fill)</h2><br>
-                        <input type="text" id="metamask" name="metamask" placeholder="0xb88D7171A62A0C62E22f62aF811C9C859FcE4618" disabled><br>
+                        <input type="text" id="metamask" name="metamask"
+                            placeholder="0xb88D7171A62A0C62E22f62aF811C9C859FcE4618" disabled><br>
 
                     </div>
 
                 </div>
 
-                
+
                 <div class="grid-column">
                     <div class="widget-box">
 
@@ -2287,8 +2288,8 @@
                             <option value="Data entry"> Data entry</option>
                         </select><br><br>
 
-                            <label for="languages"><b>Languages</b></label><br>
-                            <select id="languages" name="languages" required multiple>
+                        <label for="languages"><b>Languages</b></label><br>
+                        <select id="languages" name="languages" required multiple>
                             <option value="Afrikaans"> Afrikaans</option>
                             <option value="Albanian"> Albanian</option>
                             <option value="Arabic"> Arabic</option>
@@ -2361,13 +2362,13 @@
                             <option value="Vietnamese"> Vietnamese</option>
                             <option value="Welsh"> Welsh</option>
                             <option value="Xhosa"> Xhosa</option>
-                            </select>
-    
-                        </div>
+                        </select>
+
+                    </div>
 
                 </div>
             </div>
-            <button class="button secondary" id="b2">Register!</button>
+            <button class="button secondary" id="register-button">Register!</button>
             <button class="button primary" id="b1">Clear Form</button>
         </div>
     </div>
@@ -2378,8 +2379,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+    <script src="js/middleware/metamask.js"></script>
     <!-- gig-details JS  -->
-    <script src="js/middleware/gig-details.js"></script>
+    <script src="js/middleware/freelancer-register.js"></script>
     <!-- app -->
     <script src="js/utils/app.js"></script>
     <!-- page loader -->
