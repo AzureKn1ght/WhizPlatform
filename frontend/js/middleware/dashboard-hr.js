@@ -261,7 +261,7 @@ const gigsProgress = async () => {
             <!-- /BUTTON -->
 
             <!-- BUTTON -->
-            <p class="button primary" onclick="updateStatus('${_id}','${assignedFl}')">Confirm Delivery</p>
+            <p class="button primary" onclick="updateStatus('${_id}','${gigs.freelancer}')">Confirm Delivery</p>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
