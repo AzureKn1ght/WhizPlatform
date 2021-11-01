@@ -51,12 +51,15 @@ const gigInProgressDetails = async (e) => {
 };
 
 const gigsProgress = async () => {
+  console.log("gigs in progress ran")
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobsinProgress";
   let elm = "";
   const freelancer = {
     applicant: user,
   };
+
+  if(user){
 
   try {
     const res = await fetch(url, {
@@ -219,7 +222,7 @@ const gigsProgress = async () => {
           <!-- /BUTTON -->
 
           <!-- BUTTON -->
-          <p class="button primary" onclick="updateStatus('${gigs._id}')">Update Status</p>
+          <p class="button primary" onclick="updateStatus('${gigs._id}','${gigs.job_hirer}')">Update Status</p>
           <!-- /BUTTON -->
         </div>
         <!-- /USER PREVIEW ACTIONS -->
@@ -235,6 +238,7 @@ const gigsProgress = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 
   var scripts = [
     "js/vendor/simplebar.min.js",
@@ -258,10 +262,9 @@ const gigsProgress = async () => {
   });
 };
 
-const updateStatus = async (e) => {
-  console.log(e);
-  window.sessionStorage.setItem("gigId", e);
-  window.location.href = "complete-gig-fl.html";
+const updateStatus = async (gigId,hirerId) => {
+  console.log("clicked")
+  window.location.href = `complete-gig-fl.html?gigId=${gigId}&hirer=${hirerId}`;
 };
 
 const gigsApplied = async () => {
@@ -271,6 +274,9 @@ const gigsApplied = async () => {
   const freelancer = {
     applicant: user,
   };
+
+  if(user){
+
 
   try {
     const res = await fetch(url, {
@@ -369,6 +375,7 @@ const gigsApplied = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 
@@ -380,6 +387,7 @@ const gigsRecommeded = async () => {
   const freelancer = {
     _id: user,
   };
+  if(user){
 
   try {
     const res = await fetch(urlFlSkills, {
@@ -502,6 +510,7 @@ const gigsRecommeded = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 
@@ -515,6 +524,8 @@ const gigsCompleted = async () => {
   const freelancer = {
     applicant: user,
   };
+  if(user){
+
 
   try {
     const res = await fetch(url, {
@@ -627,11 +638,13 @@ const gigsCompleted = async () => {
     console.log(error.message);
   }
 };
+};
 
 const getReview = async () => {
   console.log("Current account is:" + meta);
   let elm = "";
-  
+  if(user){
+
   try {
     const result = await contract.methods.getAllReceivedReviews(meta).call();
     console.log(result);
@@ -693,12 +706,12 @@ const getReview = async () => {
 
           <!-- USER SHORT DESCRIPTION TITLE -->
           <p class="user-short-description-title"><a href="group-timeline.html">
-            ${jobName}
+          Grade: ${text}
           </a></p>
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text">Grade: ${text}</p>
+          <p class="user-short-description-text">${jobName}</p>
           <!-- /USER SHORT DESCRIPTION TEXT -->
         </div>
         <!-- /USER SHORT DESCRIPTION -->
@@ -779,6 +792,7 @@ const getReview = async () => {
   } catch (error) {
     console.log("No reviews found:" + error);
   }
+}
 };
 
 gigsProgress();
