@@ -51,12 +51,15 @@ const gigInProgressDetails = async (e) => {
 };
 
 const gigsProgress = async () => {
+  console.log("gigs in progress ran")
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobsinProgress";
   let elm = "";
   const freelancer = {
     applicant: user,
   };
+
+  if(user){
 
   try {
     const res = await fetch(url, {
@@ -219,7 +222,7 @@ const gigsProgress = async () => {
           <!-- /BUTTON -->
 
           <!-- BUTTON -->
-          <p class="button primary" onclick="updateStatus('${gigs._id}')">Update Status</p>
+          <p class="button primary" onclick="updateStatus('${gigs._id}','${gigs.job_hirer}')">Update Status</p>
           <!-- /BUTTON -->
         </div>
         <!-- /USER PREVIEW ACTIONS -->
@@ -235,6 +238,7 @@ const gigsProgress = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 
   var scripts = [
     "js/vendor/simplebar.min.js",
@@ -258,10 +262,9 @@ const gigsProgress = async () => {
   });
 };
 
-const updateStatus = async (e) => {
-  console.log(e);
-  window.sessionStorage.setItem("gigId", e);
-  window.location.href = "complete-gig-fl.html";
+const updateStatus = async (gigId,hirerId) => {
+  console.log("clicked")
+  window.location.href = `complete-gig-fl.html?gigId=${gigId}&hirer=${hirerId}`;
 };
 
 const gigsApplied = async () => {
@@ -271,6 +274,9 @@ const gigsApplied = async () => {
   const freelancer = {
     applicant: user,
   };
+
+  if(user){
+
 
   try {
     const res = await fetch(url, {
@@ -369,6 +375,7 @@ const gigsApplied = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 
@@ -380,6 +387,7 @@ const gigsRecommeded = async () => {
   const freelancer = {
     _id: user,
   };
+  if(user){
 
   try {
     const res = await fetch(urlFlSkills, {
@@ -502,6 +510,7 @@ const gigsRecommeded = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 
@@ -515,6 +524,8 @@ const gigsCompleted = async () => {
   const freelancer = {
     applicant: user,
   };
+  if(user){
+
 
   try {
     const res = await fetch(url, {
@@ -627,11 +638,13 @@ const gigsCompleted = async () => {
     console.log(error.message);
   }
 };
+};
 
 const getReview = async () => {
   console.log("Current account is:" + meta);
   let elm = "";
-  
+  if(user){
+
   try {
     const result = await contract.methods.getAllReceivedReviews(meta).call();
     console.log(result);
@@ -673,105 +686,106 @@ const getReview = async () => {
       let timeliness = reviews.ratings.timeliness;
 
       elm += `
+      <!-- USER PREVIEW -->
       <div class="user-preview landscape">
-      <!-- USER PREVIEW COVER -->
-      <figure class="user-preview-cover liquid">
-        <img src="img/cover/29.jpg" alt="cover-29">
-      </figure>
-      <!-- /USER PREVIEW COVER -->
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="img/cover/36.jpg" alt="cover-29">
+        </figure>
+        <!-- /USER PREVIEW COVER -->
 
-      <!-- USER PREVIEW INFO -->
-      <div class="user-preview-info">
-        <!-- USER SHORT DESCRIPTION -->
-        <div class="user-short-description landscape tiny">
-          <!-- USER SHORT DESCRIPTION AVATAR -->
-          <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
+        <!-- USER PREVIEW INFO -->
+        <div class="user-preview-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description landscape tiny">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
 
-            <!-- /USER AVATAR CONTENT -->
-          </a>
-          <!-- /USER SHORT DESCRIPTION AVATAR -->
+              <!-- /USER AVATAR CONTENT -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
 
-          <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="group-timeline.html">
-            ${jobName}
-          </a></p>
-          <!-- /USER SHORT DESCRIPTION TITLE -->
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title"><a href="#">
+                ${jobName}
+              </a></p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
 
-          <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text">Grade: ${text}</p>
-          <!-- /USER SHORT DESCRIPTION TEXT -->
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text">${text}</p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- USER STATS -->
+          <div class="user-stats">
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${overall}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Overall</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${quality}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Quality</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${communication}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Communication</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${timeliness}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Timeliness</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+          </div>
+          <!-- /USER STATS -->
+
+          <!-- USER PREVIEW ACTIONS -->
+          <div class="user-preview-actions">
+            <!-- BUTTON -->
+            <p class="button secondary">
+              <!-- ICON INFO -->
+              <svg class="button-icon icon-info">
+                <use xlink:href="#svg-info"></use>
+              </svg>
+              <!-- /ICON INFO -->
+            </p>
+            <!-- /BUTTON -->
+          </div>
+          <!-- /USER PREVIEW ACTIONS -->
         </div>
-        <!-- /USER SHORT DESCRIPTION -->
-
-        <!-- USER STATS -->
-        <div class="user-stats">
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${overall}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Overall</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${quality}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Quality</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${communication}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Communication</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${timeliness}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Timeliness</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
+        <!-- /USER PREVIEW INFO -->
         </div>
-        <!-- /USER STATS -->
-
-        <!-- USER PREVIEW ACTIONS -->
-        <div class="user-preview-actions">
-          <!-- BUTTON -->
-          <p class="button secondary">
-            <!-- ICON INFO -->
-            <svg class="button-icon icon-info">
-              <use xlink:href="#svg-info"></use>
-            </svg>
-            <!-- /ICON INFO -->
-          </p>
-          <!-- /BUTTON -->
-        </div>
-        <!-- /USER PREVIEW ACTIONS -->
-      </div>
-      <!-- /USER PREVIEW INFO -->
-    </div>
       `;
     });
 
@@ -779,6 +793,7 @@ const getReview = async () => {
   } catch (error) {
     console.log("No reviews found:" + error);
   }
+}
 };
 
 gigsProgress();

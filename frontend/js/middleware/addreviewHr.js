@@ -22,6 +22,39 @@ const meta = window.sessionStorage.getItem("accountId");
 const gigsContract = new web3.eth.Contract(GigsABI, GigsAddress);
 var revieweeMeta = "";
 
+
+const getReview = async (e) => {
+  let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/getReview";
+  
+  const reviewData = {
+    id: jobId,
+  };
+  try{
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(reviewData),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    console.log(data);
+   /*  if(data.reviews.length > 0){
+      var review = data.reviews[0];
+      console.log(review);
+      overallHirerRating.value = review.overall_rating;
+      communicationRating.value = review.communication_rating;
+      quality.value = review.quality_rating;
+      comments.value = review.comments;
+      timeliness.value = review.timeliness_rating;
+    } */
+  }
+  catch(error){
+    console.log(error);
+  }
+};
+
 const freelancerDetails = async () => {
   let url =
     "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
@@ -158,12 +191,7 @@ const gigDetails = async (e) => {
   console.log("Mark as complete: processing...");
 }; */
 
-const getReview = async (e) => {
-  let result = await contract.methods
-    .getAllReceivedReviews(currentAccount)
-    .call();
-  console.log(result);
-};
+
 
 const confirmGigDelivery = async (e) => {
   e.preventDefault();
@@ -186,3 +214,4 @@ submitReviewHirer.addEventListener("click", confirmGigDelivery);
 
 gigDetails();
 freelancerDetails();
+getReview();

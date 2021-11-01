@@ -57,7 +57,7 @@ const gigsProgress = async () => {
   const hirer = {
     hirer: user,
   };
-
+  console.log("Gigs in progress pending")
   try {
     const res = await fetch(url, {
       method: "POST",
@@ -68,6 +68,7 @@ const gigsProgress = async () => {
       },
     });
     const data = await res.json();
+    console.log("Gigs in progress data received")
     console.log(data);
     data.gigs.forEach((gigs) => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
@@ -260,7 +261,7 @@ const gigsProgress = async () => {
             <!-- /BUTTON -->
 
             <!-- BUTTON -->
-            <p class="button primary" onclick="updateStatus('${_id}','${freelancer}')">Confirm Delivery</p>
+            <p class="button primary" onclick="updateStatus('${_id}','${gigs.freelancer}')">Confirm Delivery</p>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
