@@ -40,7 +40,7 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 
 **Source File:** [GigsContract.sol](GigsContract.sol)
 
-**Deployed Address:** [0xefe959e84b1a4b7dd4bf6962a25ffb3e1191be4d](https://mumbai.polygonscan.com/address/0xefe959e84b1a4b7dd4bf6962a25ffb3e1191be4d)
+**Deployed Address:** [0x4f4bFe0458b119DC764f38Ac9418579500D135A1](https://mumbai.polygonscan.com/address/0x4f4bFe0458b119DC764f38Ac9418579500D135A1)
 <br>
 <br>
 
