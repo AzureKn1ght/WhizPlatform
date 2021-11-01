@@ -1673,7 +1673,7 @@
 
                             <label for="country"><b>Current Country of Operation</b></label><br>
                             <p>Hold Ctrl or ⌘ key to select multiple skills on desktop</p><br>
-                            <select id="country" name="country_operation" required multiple>
+                            <select id="country-operation" name="country_operation" required multiple>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
                                 <option value="Algeria">Algeria</option>
@@ -1928,9 +1928,9 @@
 
                         <h2>Personal Identity</h2><br>
                         <label for="full_name"><b>Full Name as per ID/Passport</b></label><br>
-                        <input type="text" placeholder="Full Name" name="full_name" id="full_name" required><br><br>
+                        <input type="text" placeholder="Full Name" name="full_name" id="full-name" required><br><br>
                         <label for="country"><b>Country of Issued ID/Passport</b></label><br>
-                        <select id="country" name="country_id" required>
+                        <select id="country-id" name="country_id" required>
                             <option value="select">Select Country</option>
                             <option value="Afganistan">Afghanistan</option>
                             <option value="Albania">Albania</option>
@@ -2196,7 +2196,7 @@
                         <h2>Company Details</h2><br>
                         <p>Hold Ctrl or ⌘ key to select multiple skills on desktop</p><br>
                         <label for="name"><b>Company Name</b></label><br>
-                        <input type="text" placeholder="Enter Company Name" name="name" id="name" required><br><br>
+                        <input type="text" placeholder="Enter Company Name" name="name" id="company-name" required><br><br>
 
                         <label for="industry"><b>Industry</b></label><br>
                         <input type="text" placeholder="Enter Industry" name="industry" id="industry" required><br><br>
@@ -2362,7 +2362,7 @@
 
                 </div>
             </div>
-            <button class="button secondary" id="b2">Register!</button>
+            <button class="button secondary" id="register-button">Register!</button>
             <button class="button primary" id="b1">Clear Form</button>
         </div>
     </div>
@@ -2373,8 +2373,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- gig-details JS  -->
-    <script src="js/middleware/gig-details.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
+        <script src="js/middleware/metamask.js"></script>
+        <!-- register JS  -->
+        <script src="js/middleware/hirer-register.js"></script>
     <!-- app -->
     <script src="js/utils/app.js"></script>
     <!-- page loader -->

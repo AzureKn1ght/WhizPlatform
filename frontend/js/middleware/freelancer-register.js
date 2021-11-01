@@ -66,8 +66,8 @@ const handleSubmit = async (event) => {
     window.location.href='index.html'
     
     }else {
-    const message = await res.text();
-    alert(message);
+    const message = await res.json();
+    alert(message.error);
     }
   
 

@@ -1,33 +1,41 @@
-const refEmail = useRef(null);
-const refPwd = useRef(null);
-const refPswRepeat = useRef(null);
-const refCountryOperations = useRef(null);
-const refCompanyName = useRef(null);
-const refOwnerName = useRef(null);
-const refCountryID = useRef(null);
-const refSkills = useRef(null);
-const refIndustry = useRef(null);
-const refLanguages = useRef(null);
+const refEmail = document.getElementById("email");
+const metamaskField = document.getElementById("metamask");
+const meta = window.sessionStorage.getItem("accountId");
+const register = document.getElementById("register-button");
+const refCountryOperations = document.getElementById("country-operation");
+const refCompanyName = document.getElementById("company-name");
+const refOwnerName = document.getElementById("full-name");
+const refCountryID = document.getElementById("country-id");
+const refSkills = document.getElementById("skills");
+const refIndustry = document.getElementById("industry");
+const refLanguages = document.getElementById("languages");
+
+
+const metaMaskValue = () => {
+  
+  metamaskField.placeholder = `${meta}`;
+
+};
+
 
 const handleSubmit = async (event) => {
   event.preventDefault();
 
-  const enteredEmail = refEmail.current.value;
-  const enteredPwd = refPwd.current.value;
-  const enteredPswRepeat = refPswRepeat.current.value;
-  const enteredCountryOperations = refCountryOperations.current.value ;
-  const enteredCompanyName = refCompanyName.current.value;
-  const enteredOwnerName = refOwnerName.current.value;
-  const enteredCountryID = refCountryID.current.value;
-  const enteredSkills = refSkills.current.value;
-  const enteredIndustry = refIndustry.current.value;
-  const enteredLanguages = refLanguages.current.value
+  const enteredEmail = refEmail.value;
+
+  const enteredCountryOperations = [...refCountryOperations.selectedOptions].map(option => option.value);
+  const enteredCompanyName = refCompanyName.value;
+  const enteredOwnerName = refOwnerName.value;
+  const enteredCountryID = refCountryID.value;
+  const enteredSkills = [...refSkills.selectedOptions].map((option) => option.value);
+  const enteredIndustry = refIndustry.value;
+  const enteredLanguages = [...refLanguages.selectedOptions].map((option) => option.value);
 
   
-  if(enteredPwd !="" && enteredPwd == enteredPswRepeat){
+  
   const userData = {
     email: enteredEmail,
-    password: enteredPwd,
+    meta: meta,
     country_operations: enteredCountryOperations,
     company_name: enteredCompanyName,
     full_name: enteredOwnerName,
@@ -40,7 +48,7 @@ const handleSubmit = async (event) => {
   console.log(userData);
 
   try{
-    const res = await fetch("https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/webhook0", {
+    const res = await fetch("https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/createHirer", {
       method: "POST",
       body: JSON.stringify(userData),
       mode: "cors",
@@ -53,13 +61,13 @@ const handleSubmit = async (event) => {
       const data = await res.json();
     console.log(data);
     alert(
-      `Account successfully created ${enteredOwnerName}!`
+      `Account successfully created ${enteredOwnerName}! Redirecting you to login page!`
       )
-      window.location.href= "/"
+      window.location.href= "index.html"
     
     }else {
-    const message = await res.text();
-    alert(message);
+    const message = await res.json();
+    alert(message.error);
     }
   
 
@@ -67,9 +75,8 @@ const handleSubmit = async (event) => {
   console.log(error);
 
 }
-  } else{
-    alert(
-      "Error: Please check that you've entered and confirmed your password!"
-    ); 
-  }
-}
+ 
+};
+
+metaMaskValue();
+register.addEventListener("click", handleSubmit);
