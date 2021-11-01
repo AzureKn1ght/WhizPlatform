@@ -686,105 +686,106 @@ const getReview = async () => {
       let timeliness = reviews.ratings.timeliness;
 
       elm += `
+      <!-- USER PREVIEW -->
       <div class="user-preview landscape">
-      <!-- USER PREVIEW COVER -->
-      <figure class="user-preview-cover liquid">
-        <img src="img/cover/29.jpg" alt="cover-29">
-      </figure>
-      <!-- /USER PREVIEW COVER -->
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="img/cover/36.jpg" alt="cover-29">
+        </figure>
+        <!-- /USER PREVIEW COVER -->
 
-      <!-- USER PREVIEW INFO -->
-      <div class="user-preview-info">
-        <!-- USER SHORT DESCRIPTION -->
-        <div class="user-short-description landscape tiny">
-          <!-- USER SHORT DESCRIPTION AVATAR -->
-          <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
+        <!-- USER PREVIEW INFO -->
+        <div class="user-preview-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description landscape tiny">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a class="user-short-description-avatar user-avatar small no-stats" href="group-timeline.html">
 
-            <!-- /USER AVATAR CONTENT -->
-          </a>
-          <!-- /USER SHORT DESCRIPTION AVATAR -->
+              <!-- /USER AVATAR CONTENT -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
 
-          <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="group-timeline.html">
-          Grade: ${text}
-          </a></p>
-          <!-- /USER SHORT DESCRIPTION TITLE -->
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title"><a href="#">
+                ${jobName}
+              </a></p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
 
-          <!-- USER SHORT DESCRIPTION TEXT -->
-          <p class="user-short-description-text">${jobName}</p>
-          <!-- /USER SHORT DESCRIPTION TEXT -->
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text">${text}</p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- USER STATS -->
+          <div class="user-stats">
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${overall}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Overall</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${quality}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Quality</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${communication}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Communication</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+            <!-- USER STAT -->
+            <div class="user-stat">
+              <!-- USER STAT TITLE -->
+              <p class="user-stat-title">${timeliness}</p>
+              <!-- /USER STAT TITLE -->
+
+              <!-- USER STAT TEXT -->
+              <p class="user-stat-text">Timeliness</p>
+              <!-- /USER STAT TEXT -->
+            </div>
+            <!-- /USER STAT -->
+
+          </div>
+          <!-- /USER STATS -->
+
+          <!-- USER PREVIEW ACTIONS -->
+          <div class="user-preview-actions">
+            <!-- BUTTON -->
+            <p class="button secondary">
+              <!-- ICON INFO -->
+              <svg class="button-icon icon-info">
+                <use xlink:href="#svg-info"></use>
+              </svg>
+              <!-- /ICON INFO -->
+            </p>
+            <!-- /BUTTON -->
+          </div>
+          <!-- /USER PREVIEW ACTIONS -->
         </div>
-        <!-- /USER SHORT DESCRIPTION -->
-
-        <!-- USER STATS -->
-        <div class="user-stats">
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${overall}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Overall</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${quality}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Quality</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${communication}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Communication</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
-          <!-- USER STAT -->
-          <div class="user-stat">
-            <!-- USER STAT TITLE -->
-            <p class="user-stat-title">${timeliness}</p>
-            <!-- /USER STAT TITLE -->
-
-            <!-- USER STAT TEXT -->
-            <p class="user-stat-text">Timeliness</p>
-            <!-- /USER STAT TEXT -->
-          </div>
-          <!-- /USER STAT -->
-
+        <!-- /USER PREVIEW INFO -->
         </div>
-        <!-- /USER STATS -->
-
-        <!-- USER PREVIEW ACTIONS -->
-        <div class="user-preview-actions">
-          <!-- BUTTON -->
-          <p class="button secondary">
-            <!-- ICON INFO -->
-            <svg class="button-icon icon-info">
-              <use xlink:href="#svg-info"></use>
-            </svg>
-            <!-- /ICON INFO -->
-          </p>
-          <!-- /BUTTON -->
-        </div>
-        <!-- /USER PREVIEW ACTIONS -->
-      </div>
-      <!-- /USER PREVIEW INFO -->
-    </div>
       `;
     });
 
