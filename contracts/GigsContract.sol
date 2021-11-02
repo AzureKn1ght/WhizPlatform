@@ -10,7 +10,7 @@ contract GigsContract {
     address admin;
     uint public whizRewards;
     uint public totalValueLocked;
-    enum Status { AWAITING_PAYMENT, AWAITING_DELIVERY, COMPLETED, RESOLVED }
+    enum Status { AWAITING_ESCROW, AWAITING_DELIVERY, COMPLETED, RESOLVED }
 
     //References to the external contract addresses
     address USDCaddress;
