@@ -90,6 +90,10 @@ const gigDetails = async (e) => {
     jobLocation.innerHTML = `${jobs.required_location}`;
     hirer.innerHTML = `${jobs.hirer_name}`;
 
+    if(jobs.gig_status == "PENDING"){
+      submitReviewFreelancer.style.display = "none";
+    }     
+
     //Add to element
   } catch (error) {
     console.log(error.message);
