@@ -2517,12 +2517,16 @@
 
                         <form action="/" method="post">
                             <h2>The Basics</h2><br>
-                            <label for="company_name"><b>Company Name</b></label><br>
-                            <input type="text" placeholder="Enter Company Name" name="company_name" id="company_name"
+                            <label for="gig_title"><b>Gig Title</b></label><br>
+                            <input type="text" name="gig_title" id="title" class="form-control" placeholder="Gig Title" required><br>
+                            <label for="gig_budget"><b>Gig Budget</b></label><br>
+                            <input type="text" name="gig_budget" id="budget" class="form-control" placeholder="Gig Budget" required><br>
+                            <label for="gig_deadline"><b>Gig Deadline</b></label><br>
+                            <input type="date" name="gig_deadline" id="deadline" class="form-control" placeholder="Gig Deadline" required><br>
                                 required><br><br>
                             <br>
-                            <label for="country"><b>Country of Operations</b></label><br>
-                            <select id="country" name="country" required multiple>
+                            <label for="country"><b>Location Required for Gig</b></label><br>
+                            <select id="location" name="country" required>
                                 <option value="select">Select Country</option>
                                 <option value="Afganistan">Afghanistan</option>
                                 <option value="Albania">Albania</option>
@@ -2776,6 +2780,7 @@
                         <div class="widget-box-content">
 
                             <h2>Gig Description</h2><br>
+                            
                             <label for="gig_requirement"><b>Gig Requirements</b></label><br>
                             <div class="form-input small full">
                                 <textarea id="gig_requirement" name="gig_requirement"
@@ -2793,7 +2798,7 @@
                         <h2>Skills Required for Gig</h2><br>
                         <p>Hold Ctrl or ⌘ key to select multiple skills on desktop</p><br>
                         <label for="skills_coding"><b>Coding</b></label><br>
-                        <select id="skills_coding" name="skills_coding" multiple>
+                        <select id="coding" name="skills_coding" multiple>
                             <option value="Artificial Intelligence">Artificial Intelligence</option>
                             <option value="Machine Learning"> Machine Learning</label>
                             <option value="Deep Learning"> Deep Learning</option>
@@ -2819,7 +2824,7 @@
                         </select><br><br>
 
                         <label for="skills_design"><b>Design</b></label><br>
-                        <select id="skills_design" name="skills_design" required multiple>
+                        <select id="design" name="skills_design" required multiple>
                             <option value="3D Modelling"> 3D Modelling</option>
                             <option value="3D Rendering"> 3D Rendering</option>
                             <option value="3D Animation"> 3D Animation</option>
@@ -2865,7 +2870,7 @@
                         </select><br><br>
 
                         <label for="skills_others"><b>Others</b></label><br>
-                        <select id="skills_others" name="skills_others" multiple>
+                        <select id="other" name="skills_others" multiple>
                             <option value="Brand Strategy"> Brand Strategy</option>
                             <option value="Campaign Management"> Campaign Management</option>
                             <option value="Community Management"> Community Management</option>
@@ -2882,87 +2887,87 @@
                             <option value="Data entry"> Data entry</option>
                         </select><br><br>
 
-                        <label for="languages"><b>Languages (Optional)</b></label><br>
-                        <select id="languages" name="languages" multiple>
-                            <option value="Afrikaans"> Afrikaans</option>
-                            <option value="Albanian"> Albanian</option>
-                            <option value="Arabic"> Arabic</option>
-                            <option value="Armenian"> Armenian</option>
-                            <option value="Basque"> Basque</option>
-                            <option value="Bengali"> Bengali</option>
-                            <option value="Bulgarian"> Bulgarian</option>
-                            <option value="Catalan"> Catalan</option>
-                            <option value="Cambodian"> Cambodian</option>
-                            <option value="Chinese (Mandarin)"> Chinese (Mandarin)</option>
-                            <option value="Croatian"> Croatian</option>
-                            <option value="Czech"> Czech</option>
-                            <option value="Danish"> Danish</option>
-                            <option value="Dutch"> Dutch</option>
-                            <option value="English"> English</option>
-                            <option value="Estonian"> Estonian</option>
-                            <option value="Fiji"> Fiji</option>
-                            <option value="Finnish"> Finnish</option>
-                            <option value="French"> French</option>
-                            <option value="Georgian"> Georgian</option>
-                            <option value="German"> German</option>
-                            <option value="Greek"> Greek</option>
-                            <option value="Gujarati"> Gujarati</option>
-                            <option value="Hebrew"> Hebrew</option>
-                            <option value="Hindi"> Hindi</option>
-                            <option value="Hungarian"> Hungarian</option>
-                            <option value="Icelandic"> Icelandic</option>
-                            <option value="Indonesian"> Indonesian</option>
-                            <option value="Irish"> Irish</option>
-                            <option value="Italian"> Italian</option>
-                            <option value="Japanese"> Japanese</option>
-                            <option value="Javanese"> Javanese</option>
-                            <option value="Korean"> Korean</option>
-                            <option value="Latin"> Latin</option>
-                            <option value="Latvian"> Latvian</option>
-                            <option value="Lithuanian"> Lithuanian</option>
-                            <option value="Macedonian"> Macedonian</option>
-                            <option value="Malay"> Malay</option>
-                            <option value="Malayalam"> Malayalam</option>
-                            <option value="Maltese"> Maltese</option>
-                            <option value="Maori"> Maori</option>
-                            <option value="Marathi"> Marathi</option>
-                            <option value="Mongolian"> Mongolian</option>
-                            <option value="Nepali"> Nepali</option>
-                            <option value="Norwegian"> Norwegian</option>
-                            <option value="Persian"> Persian</option>
-                            <option value="Polish"> Polish</option>
-                            <option value="Portuguese">Portuguese</option>
-                            <option value="Punjabi"> Punjabi</option>
-                            <option value="Quechua">Quechua</option>
-                            <option value="Romanian"> Romanian</option>
-                            <option value="Russian"> Russian</option>
-                            <option value="Samoan"> Samoan</option>
-                            <option value="Serbian"> Serbian</option>
-                            <option value="Slovak"> Slovak</option>
-                            <option value="Slovenian"> Slovenian</option>
-                            <option value="Spanish"> Spanish</option>
-                            <option value="Swahili"> Swahili</option>
-                            <option value="Swedish "> Swedish </option>
-                            <option value="Tamil"> Tamil</option>
-                            <option value="Tatar"> Tatar</option>
-                            <option value="Telugu"> Telugu</option>
-                            <option value="Thai"> Thai</option>
-                            <option value="Tibetan"> Tibetan</option>
-                            <option value="Tonga"> Tonga</option>
-                            <option value="Turkish"> Turkish</option>
-                            <option value="Ukrainian"> Ukrainian</option>
-                            <option value="Urdu"> Urdu</option>
-                            <option value="Uzbek"> Uzbek</option>
-                            <option value="Vietnamese"> Vietnamese</option>
-                            <option value="Welsh"> Welsh</option>
-                            <option value="Xhosa"> Xhosa</option>
-                        </select>
+                            <!-- <label for="languages"><b>Languages (Optional)</b></label><br>
+                            <select id="languages" name="languages" multiple>
+                                <option value="Afrikaans"> Afrikaans</option>
+                                <option value="Albanian"> Albanian</option>
+                                <option value="Arabic"> Arabic</option>
+                                <option value="Armenian"> Armenian</option>
+                                <option value="Basque"> Basque</option>
+                                <option value="Bengali"> Bengali</option>
+                                <option value="Bulgarian"> Bulgarian</option>
+                                <option value="Catalan"> Catalan</option>
+                                <option value="Cambodian"> Cambodian</option>
+                                <option value="Chinese (Mandarin)"> Chinese (Mandarin)</option>
+                                <option value="Croatian"> Croatian</option>
+                                <option value="Czech"> Czech</option>
+                                <option value="Danish"> Danish</option>
+                                <option value="Dutch"> Dutch</option>
+                                <option value="English"> English</option>
+                                <option value="Estonian"> Estonian</option>
+                                <option value="Fiji"> Fiji</option>
+                                <option value="Finnish"> Finnish</option>
+                                <option value="French"> French</option>
+                                <option value="Georgian"> Georgian</option>
+                                <option value="German"> German</option>
+                                <option value="Greek"> Greek</option>
+                                <option value="Gujarati"> Gujarati</option>
+                                <option value="Hebrew"> Hebrew</option>
+                                <option value="Hindi"> Hindi</option>
+                                <option value="Hungarian"> Hungarian</option>
+                                <option value="Icelandic"> Icelandic</option>
+                                <option value="Indonesian"> Indonesian</option>
+                                <option value="Irish"> Irish</option>
+                                <option value="Italian"> Italian</option>
+                                <option value="Japanese"> Japanese</option>
+                                <option value="Javanese"> Javanese</option>
+                                <option value="Korean"> Korean</option>
+                                <option value="Latin"> Latin</option>
+                                <option value="Latvian"> Latvian</option>
+                                <option value="Lithuanian"> Lithuanian</option>
+                                <option value="Macedonian"> Macedonian</option>
+                                <option value="Malay"> Malay</option>
+                                <option value="Malayalam"> Malayalam</option>
+                                <option value="Maltese"> Maltese</option>
+                                <option value="Maori"> Maori</option>
+                                <option value="Marathi"> Marathi</option>
+                                <option value="Mongolian"> Mongolian</option>
+                                <option value="Nepali"> Nepali</option>
+                                <option value="Norwegian"> Norwegian</option>
+                                <option value="Persian"> Persian</option>
+                                <option value="Polish"> Polish</option>
+                                <option value="Portuguese">Portuguese</option>
+                                <option value="Punjabi"> Punjabi</option>
+                                <option value="Quechua">Quechua</option>
+                                <option value="Romanian"> Romanian</option>
+                                <option value="Russian"> Russian</option>
+                                <option value="Samoan"> Samoan</option>
+                                <option value="Serbian"> Serbian</option>
+                                <option value="Slovak"> Slovak</option>
+                                <option value="Slovenian"> Slovenian</option>
+                                <option value="Spanish"> Spanish</option>
+                                <option value="Swahili"> Swahili</option>
+                                <option value="Swedish "> Swedish </option>
+                                <option value="Tamil"> Tamil</option>
+                                <option value="Tatar"> Tatar</option>
+                                <option value="Telugu"> Telugu</option>
+                                <option value="Thai"> Thai</option>
+                                <option value="Tibetan"> Tibetan</option>
+                                <option value="Tonga"> Tonga</option>
+                                <option value="Turkish"> Turkish</option>
+                                <option value="Ukrainian"> Ukrainian</option>
+                                <option value="Urdu"> Urdu</option>
+                                <option value="Uzbek"> Uzbek</option>
+                                <option value="Vietnamese"> Vietnamese</option>
+                                <option value="Welsh"> Welsh</option>
+                                <option value="Xhosa"> Xhosa</option>
+                            </select> -->
 
                     </div>
 
                 </div>
             </div>
-            <button class="button secondary" id="b2">Create Gig!</button>
+            <button class="button secondary" id="createGig">Create Gig!</button>
             <button class="button primary" id="b1">Back</button>
         </div>
     </div>
@@ -2975,7 +2980,7 @@
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- gig-details JS  -->
-    <script src="js/middleware/gig-details.js"></script>
+    <script src="js/middleware/createGig.js"></script>
     <!-- app -->
     <script src="js/utils/app.js"></script>
     <!-- page loader -->

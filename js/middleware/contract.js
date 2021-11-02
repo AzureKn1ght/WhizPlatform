@@ -18,6 +18,7 @@ var approveStatus = false;
 var budget = 0;
 const buyer = document.getElementById("buyer");
 const seller = document.getElementById("seller"); 
+var freelancerName = "";
 
 var Gig = {
   hirer: meta,
@@ -54,6 +55,7 @@ const freelancerDetails = async () => {
     const data = await res.json();
     Gig.freelancer = data.metamask;
     console.log(data);
+    freelancerName = data.full_name;
     seller.innerHTML = `${data.full_name}`;
   } catch (error) {
     console.log(error);
@@ -187,6 +189,7 @@ const updateMongo = async () => {
   const gigId = {
     _id: jobId,
     freelancer: freelancer,
+    freelancerName: freelancerName,
   };
   try {
     const res = await fetch(url, {
