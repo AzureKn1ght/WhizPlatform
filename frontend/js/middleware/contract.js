@@ -152,6 +152,31 @@ const processClick = async () => {
   }
 };
 
+
+const updateMongo = async () => {
+  //send to mongodb a json object with the jobId and the freelancer as a post fetch request
+  let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/confirmJob";
+
+  const gigId = {
+    _id: jobId,
+    freelancer: freelancer,
+  };
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(gigId),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const job = await res.json();
+    console.log(job);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 approveButton.addEventListener("click", processClick);
 
 gigDetails();
