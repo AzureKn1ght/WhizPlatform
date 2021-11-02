@@ -16,6 +16,8 @@ const usdcContract = new web3.eth.Contract(usdcABI, USDCaddress);
 const approveButton = document.getElementById("approve-button");
 var approveStatus = false;
 var budget = 0;
+const buyer = document.getElementById("buyer");
+const seller = document.getElementById("seller"); 
 
 var Gig = {
   hirer: meta,
@@ -52,6 +54,31 @@ const freelancerDetails = async () => {
     const data = await res.json();
     Gig.freelancer = data.metamask;
     console.log(data);
+    seller.innerHTML = `${data.full_name}`;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const hirerDetails = async () => {
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/viewHirer";
+
+  const hrData = {
+    _id: user,
+  };
+
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(hrData),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await res.json();
+    buyer.innerHTML = `${data.full_name}`;
   } catch (error) {
     console.log(error);
   }
@@ -137,8 +164,8 @@ const createGigContract = async () => {
         from: currentAccount,
       });
     console.log(confirmedGig);
+    updateMongo();
     window.location.href = "dashboard-hirer.html";
-    //updateMongo();
   } catch (error) {
     console.log(error);
   }
@@ -181,3 +208,4 @@ approveButton.addEventListener("click", processClick);
 
 gigDetails();
 freelancerDetails();
+hirerDetails();

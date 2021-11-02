@@ -125,6 +125,8 @@ const gigsProgress = async () => {
       
       console.log("Default is:" + assignedFl);
       //Add to element
+      
+      if(gigs.gig_status === "DELIVERED"){
       elm += `<!-- USER PREVIEW -->
       <div class="user-preview">
         <!-- USER PREVIEW COVER -->
@@ -269,6 +271,151 @@ const gigsProgress = async () => {
         <!-- /USER PREVIEW INFO -->
       </div>
       <!-- /USER PREVIEW -->`;
+      }
+      else{
+        elm += `<!-- USER PREVIEW -->
+      <div class="user-preview">
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="${file2}" alt="cover-01">
+        </figure>
+        <!-- /USER PREVIEW COVER -->
+
+        <!-- USER PREVIEW INFO -->
+        <div class="user-preview-info">
+          <!-- USER SHORT DESCRIPTION -->
+          <div class="user-short-description">
+            <!-- USER SHORT DESCRIPTION AVATAR -->
+            <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+              <!-- USER AVATAR BORDER -->
+              <div class="user-avatar-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-120-132"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR BORDER -->
+
+              <!-- USER AVATAR CONTENT -->
+              <div class="user-avatar-content">
+                <!-- HEXAGON -->
+                <div class="hexagon-image-82-90" data-src="${file}"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR CONTENT -->
+
+              <!-- USER AVATAR PROGRESS -->
+              <div class="user-avatar-progress">
+                <!-- HEXAGON -->
+                <div class="hexagon-progress-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS -->
+
+              <!-- USER AVATAR PROGRESS BORDER -->
+              <div class="user-avatar-progress-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-border-100-110"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR PROGRESS BORDER -->
+
+              <!-- USER AVATAR BADGE -->
+              <div class="user-avatar-badge">
+                <!-- USER AVATAR BADGE BORDER -->
+                <div class="user-avatar-badge-border">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-32-36"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE BORDER -->
+
+                <!-- USER AVATAR BADGE CONTENT -->
+                <div class="user-avatar-badge-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-dark-26-28"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR BADGE CONTENT -->
+
+                <!-- USER AVATAR BADGE TEXT -->
+                <p class="user-avatar-badge-text">12</p>
+                <!-- /USER AVATAR BADGE TEXT -->
+              </div>
+              <!-- /USER AVATAR BADGE -->
+            </a>
+            <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+            <!-- USER SHORT DESCRIPTION TITLE -->
+            <p class="user-short-description-title"><a href="profile-timeline.html">${assignedFl}</a></p>
+            <!-- /USER SHORT DESCRIPTION TITLE -->
+
+            <!-- USER SHORT DESCRIPTION TEXT -->
+            <p class="user-short-description-text"><a href="#">${title}</a></p>
+            <!-- /USER SHORT DESCRIPTION TEXT -->
+          </div>
+          <!-- /USER SHORT DESCRIPTION -->
+
+          <!-- USER PREVIEW STATS SLIDES -->
+          <div id="user-preview-stats-slides-01" class="user-preview-stats-slides">
+            <!-- USER PREVIEW STATS SLIDE -->
+            <div class="user-preview-stats-slide">
+              <!-- USER STATS -->
+              <div class="user-stats">
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">${created}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Accepted</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">USD ${budget}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Budget</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+
+                <!-- USER STAT -->
+                <div class="user-stat">
+                  <!-- USER STAT TITLE -->
+                  <p class="user-stat-title">${date}</p>
+                  <!-- /USER STAT TITLE -->
+
+                  <!-- USER STAT TEXT -->
+                  <p class="user-stat-text">Deadline</p>
+                  <!-- /USER STAT TEXT -->
+                </div>
+                <!-- /USER STAT -->
+              </div>
+              <!-- /USER STATS -->
+            </div>
+
+          </div>
+
+          <!-- USER PREVIEW ACTIONS -->
+          <div class="user-preview-actions">
+            <!-- BUTTON -->
+            <p class="button secondary" onclick="gigInProgressDetails('${_id}')">Gig Details</p>
+            <!-- /BUTTON -->
+
+           
+          </div>
+          <!-- /USER PREVIEW ACTIONS -->
+        </div>
+        <!-- /USER PREVIEW INFO -->
+      </div>
+      <!-- /USER PREVIEW -->`;
+      }
     });
 
     hirerGigsInProgress.innerHTML = elm;
