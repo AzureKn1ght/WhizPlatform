@@ -76,8 +76,7 @@ const gigsProgress = async () => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
       var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 34;
-      var profilePic = "img/avatar/" + image + ".jpg";
+      var profilePic = "img/avatar/28.jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
@@ -444,13 +443,10 @@ const gigsApplied = async () => {
       var profilePic = "img/marketplace/items/" + image + ".jpg";
       var file = profilePic.toString();
 
-      var image2 = Math.floor(Math.random() * 9) + 1;
+      //var image2 = Math.floor(Math.random() * 9) + 1;
       console.log(image2);
       console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
+      var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
       console.log(file);
@@ -581,10 +577,7 @@ const gigsRecommeded = async () => {
       var image2 = Math.floor(Math.random() * 9) + 1;
       console.log(image2);
       console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
+      var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
       console.log(file);

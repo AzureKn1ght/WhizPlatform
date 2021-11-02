@@ -74,11 +74,7 @@ const gigsProgress = async () => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
       var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
-      var image = Math.floor(Math.random() * 24) + 1;
-      var profilePic =
-        image < 10
-          ? "img/avatar/0" + image + ".jpg"
-          : "img/avatar/" + image + ".jpg";
+      var profilePic2 ="img/avatar/28.jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
