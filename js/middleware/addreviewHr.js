@@ -21,7 +21,8 @@ const contract = new web3.eth.Contract(abi, conAddress);
 const meta = window.sessionStorage.getItem("accountId");
 const gigsContract = new web3.eth.Contract(GigsABI, GigsAddress);
 var revieweeMeta = "";
-
+var reviewFromFL ;
+var reviewFromHR ; 
 
 const getReview = async (e) => {
   let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/getReview";
@@ -39,16 +40,12 @@ const getReview = async (e) => {
       },
     });
     const data = await res.json();
+    delete data._id;
+    data.reviewID = 0;
+    console.log("FL review is:" + data);
     console.log(data);
-   /*  if(data.reviews.length > 0){
-      var review = data.reviews[0];
-      console.log(review);
-      overallHirerRating.value = review.overall_rating;
-      communicationRating.value = review.communication_rating;
-      quality.value = review.quality_rating;
-      comments.value = review.comments;
-      timeliness.value = review.timeliness_rating;
-    } */
+    reviewFromFL = data;
+
   }
   catch(error){
     console.log(error);
@@ -74,7 +71,8 @@ const freelancerDetails = async () => {
     });
     const data = await res.json();
     revieweeMeta = data.metamask;
-    console.log(data);
+    freelancer.innerHTML = `${data.full_name}`;
+    //console.log(data);
   } catch (error) {
     console.log(error);
   }
@@ -101,7 +99,7 @@ const gigDetails = async (e) => {
       },
     });
     const jobs = await res.json();
-    console.log(jobs);
+    //console.log(jobs);
     jobDetails = {
       jobID: jobs._id,
       budget: jobs.budget,
@@ -112,7 +110,7 @@ const gigDetails = async (e) => {
     };
 
     var date = moment(jobs.deadline).format("DD MMM YYYY");
-    console.log(jobDetails);
+    //console.log(jobDetails);
 
     //Add to element
     title.innerHTML = `${jobs.title}`;
@@ -120,18 +118,16 @@ const gigDetails = async (e) => {
     deadline.innerHTML = `${date}`;
     skills.innerHTML = `${jobs.skills_required}`;
     jobLocation.innerHTML = `${jobs.required_location}`;
-    freelancer.innerHTML = `${jobs.freelancer_name}`;
+  
   } catch (error) {
     console.log(error.message);
   }
 };
-//Goals (goal_id, description, balance, date_created, user_id);
 
-//Add Goal Function
 
 //Create Contract instance
-/* const reviewAdd = async (e) => {
-  e.preventDefault(); //to prevent form from submitting and refreshing the page
+const reviewAdd =  (e) => {
+  //e.preventDefault(); //to prevent form from submitting and refreshing the page
 
   //to prevent empty input from submitting
   
@@ -159,7 +155,7 @@ const gigDetails = async (e) => {
 
   };
 
-  console.log(ratings);
+  //console.log(ratings);
 
   var input = {
     reviewID: 0,
@@ -170,36 +166,46 @@ const gigDetails = async (e) => {
     job: jobDetails,
   };
 
-  console.log(input);
-  //Step 2: Send transaction to smart contract
+  //console.log(input);
+  reviewFromHR = input;
 
-  contract.methods
-    .addReview(input)
-    .send({
-      from: currentAccount,
-    })
-    .then((receipt) => {
-      console.log(receipt);
-      //window.location.href = "dashboard.html";
-    })
-    .catch((error) => {
-      console.log(error);
+ 
+};
+
+const updateMongoComplete = async () => {
+  //send to mongodb a json object with the jobId and the freelancer as a post fetch request
+  let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/completeJob";
+
+  const gigId = {
+    _id: jobId,
+    freelancer: freelancer,
+  };
+  try {
+    const res = await fetch(url, {
+      method: "POST",
+      body: JSON.stringify(gigId),
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
-
-  //Alert user to wait for transactions
-  alert("Processing: sending your request");
-  console.log("Mark as complete: processing...");
-}; */
-
-
+    const job = await res.json();
+    console.log(job);
+    window.location.href = "dashboard-hirer.html"
+  } catch (error) {
+    console.log(error);
+  }
+}
 
 const confirmGigDelivery = async (e) => {
   e.preventDefault();
+  reviewAdd();
   try {
     let receipt = await gigsContract.methods
-      .confirmGigDelivery(jobId)
+      .confirmGigDelivery(jobId,reviewFromFL,reviewFromHR)
       .send({ from: currentAccount });
     console.log(receipt);
+    updateMongoComplete();
   } catch (error) {
     console.log(error);
   }
