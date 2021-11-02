@@ -1,4 +1,4 @@
-var GigsAddress = "0x4f4bFe0458b119DC764f38Ac9418579500D135A1";
+var GigsAddress = "0x9383fB4D8302a17044D34ffbA924a15d9C6Db292";
 
 var GigsABI = [
   {
@@ -264,6 +264,198 @@ var GigsABI = [
         internalType: "string",
         name: "gigID",
         type: "string",
+      },
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "reviewID",
+            type: "uint256",
+          },
+          {
+            internalType: "address",
+            name: "reviewer",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "reviewee",
+            type: "address",
+          },
+          {
+            components: [
+              {
+                internalType: "enum ReviewsContract.Grade",
+                name: "grading",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "overall",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "quality",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "communication",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "timeliness",
+                type: "uint8",
+              },
+            ],
+            internalType: "struct ReviewsContract.Rating",
+            name: "ratings",
+            type: "tuple",
+          },
+          {
+            internalType: "string",
+            name: "comments",
+            type: "string",
+          },
+          {
+            components: [
+              {
+                internalType: "string",
+                name: "jobID",
+                type: "string",
+              },
+              {
+                internalType: "uint256",
+                name: "budget",
+                type: "uint256",
+              },
+              {
+                internalType: "string",
+                name: "title",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "description",
+                type: "string",
+              },
+              {
+                internalType: "string[]",
+                name: "skills",
+                type: "string[]",
+              },
+              {
+                internalType: "string",
+                name: "location",
+                type: "string",
+              },
+            ],
+            internalType: "struct ReviewsContract.Job",
+            name: "job",
+            type: "tuple",
+          },
+        ],
+        internalType: "struct ReviewsContract.Review",
+        name: "reviewFromFL",
+        type: "tuple",
+      },
+      {
+        components: [
+          {
+            internalType: "uint256",
+            name: "reviewID",
+            type: "uint256",
+          },
+          {
+            internalType: "address",
+            name: "reviewer",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "reviewee",
+            type: "address",
+          },
+          {
+            components: [
+              {
+                internalType: "enum ReviewsContract.Grade",
+                name: "grading",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "overall",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "quality",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "communication",
+                type: "uint8",
+              },
+              {
+                internalType: "enum ReviewsContract.Score",
+                name: "timeliness",
+                type: "uint8",
+              },
+            ],
+            internalType: "struct ReviewsContract.Rating",
+            name: "ratings",
+            type: "tuple",
+          },
+          {
+            internalType: "string",
+            name: "comments",
+            type: "string",
+          },
+          {
+            components: [
+              {
+                internalType: "string",
+                name: "jobID",
+                type: "string",
+              },
+              {
+                internalType: "uint256",
+                name: "budget",
+                type: "uint256",
+              },
+              {
+                internalType: "string",
+                name: "title",
+                type: "string",
+              },
+              {
+                internalType: "string",
+                name: "description",
+                type: "string",
+              },
+              {
+                internalType: "string[]",
+                name: "skills",
+                type: "string[]",
+              },
+              {
+                internalType: "string",
+                name: "location",
+                type: "string",
+              },
+            ],
+            internalType: "struct ReviewsContract.Job",
+            name: "job",
+            type: "tuple",
+          },
+        ],
+        internalType: "struct ReviewsContract.Review",
+        name: "reviewFromHR",
+        type: "tuple",
       },
     ],
     name: "confirmGigDelivery",
