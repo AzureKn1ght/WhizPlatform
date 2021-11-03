@@ -7,9 +7,9 @@ const budget = document.getElementById("budget");
 const hirer = document.getElementById("hirer");
 //const input = document.getElementById("input");
 const urlParams = new URLSearchParams(window.location.search);
-const data = urlParams.get('gigId');
-const bidding = urlParams.get('bidding');
-const bidButton = document.getElementById('bid-button');
+const data = urlParams.get("gigId");
+const bidding = urlParams.get("bidding");
+const bidButton = document.getElementById("bid-button");
 let idFreelancer = sessionStorage.getItem("userId");
 var jobDetails = null;
 const userType = sessionStorage.getItem("userType");
@@ -21,28 +21,29 @@ const dashboardTopBar = document.getElementById("dashboardTopBar");
 
 //create function to change the href depending on user type
 const changeHref = () => {
-    if (userType == "freelancer") {
-        newGigSideBar.href = "gig-search.html";
-        newGigSideBar.title = "Gig Search";
-        dashboardSideBar.href = "dashboard-freelancer.html";
-        dashboardSideBar.title = "Dashboard";
-        newGigMenu.href = "gig-search.html";
-        newGigMenu.innerHTML = "Gig Search";
-        dashboardMenu.href = "dashboard-freelancer.html";
-        dashboardTopBar.href = "dashboard-freelancer.html";
-    } else if (userType == "hirer") {
-        newGigSideBar.href = "create-gig.html";
-        newGigSideBar.title = "Create Gig";
-        dashboardSideBar.href = "dashboard-hirer.html";
-        dashboardSideBar.title = "Dashboard";
-        newGigMenu.href = "create-gig.html";
-        newGigMenu.innerHTML = "Create Gig";
-        dashboardMenu.href = "dashboard-hirer.html";
-        dashboardTopBar.href = "dashboard-hirer.html";
-    }
-  };
-
-
+  if (userType == "freelancer") {
+    newGigSideBar.href = "gig-search.html";
+    newGigSideBar.setAttribute("data-title", "Gig Search");
+    dashboardSideBar.href = "dashboard-freelancer.html";
+    newGigMenu.href = "gig-search.html";
+    newGigMenu.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+        </svg>Gig Search`;
+    dashboardMenu.href = "dashboard-freelancer.html";
+    dashboardTopBar.href = "dashboard-freelancer.html";
+  } else if (userType == "hirer") {
+    newGigSideBar.href = "create-gig.html";
+    newGigSideBar.setAttribute("data-title", "Create Gig");
+    dashboardSideBar.href = "dashboard-hirer.html";
+    dashboardSideBar.title = "Dashboard";
+    newGigMenu.href = "create-gig.html";
+    newGigMenu.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+      </svg>Create Gig`;
+    dashboardMenu.href = "dashboard-hirer.html";
+    dashboardTopBar.href = "dashboard-hirer.html";
+  }
+};
 
 const goBack = (e) => {
   window.history.back();
@@ -119,23 +120,19 @@ const gigDetails = async (e) => {
     skills.innerHTML = `${jobs.skills_required}`;
     jobLocation.innerHTML = `${jobs.required_location}`;
     hirer.innerHTML = `${jobs.hirer_name}`;
-    budget.innerHTML = `$${jobs.budget}`
-
+    budget.innerHTML = `$${jobs.budget}`;
   } catch (error) {
     console.log(error.message);
   }
 };
 
-const hideBidButton = ()=>{
-  if (bidding)
-    {
-      bidButton.style.display = "block";
-    } else {
-      bidButton.style.display = "none";
-    }
-  
+const hideBidButton = () => {
+  if (bidding) {
+    bidButton.style.display = "block";
+  } else {
+    bidButton.style.display = "none";
   }
-
+};
 
 gigDetails();
 hideBidButton();

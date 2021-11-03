@@ -56,3 +56,9 @@ function handleAccountsDisconnected() {
   alert("Please connect to MetaMask.");
   if (!on_index) window.location.href = "index.html";
 }
+
+//Create function to log out user and clear session storage
+function logOut() {
+  sessionStorage.clear();
+  window.location.href = "index.html";
+}
