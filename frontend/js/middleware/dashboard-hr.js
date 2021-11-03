@@ -624,13 +624,14 @@ const gigsCompleted = async () => {
 
 
             <!-- BUTTON -->
+            <a href="gig-info.html?gigId=${gigs._id}">
             <p class="button secondary">
               <!-- BUTTON ICON -->
               <svg class="button-icon icon-join-group">
                 <use xlink:href="#svg-status"></use>
               </svg>
               <!-- /BUTTON ICON -->
-            </p>
+            </p></a>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
@@ -661,6 +662,7 @@ const getReview = async () => {
     reviewsData.forEach((reviews) => {
       let jobName = reviews.job.title;
       let grading = reviews.ratings.grading;
+      let comments =reviews.comments;
       let text = "";
       switch (parseInt(grading)) {
         case 0:
@@ -669,11 +671,11 @@ const getReview = async () => {
           break;
         case 1:
           text = "Exceeds Expectations";
-          console.log("switch worked case 0 activated");
+          console.log("switch worked case 1 activated");
           break;
         case 2:
           text = "Meets Expectations";
-          console.log("switch worked case 0 activated");
+          console.log("switch worked case 2 activated");
       }
       /*  if(grading=0){
         text = "Nil";
@@ -777,7 +779,7 @@ const getReview = async () => {
         <!-- USER PREVIEW ACTIONS -->
         <div class="user-preview-actions">
           <!-- BUTTON -->
-          <p class="button secondary">
+          <p class="button secondary" onclick="alert('${comments}')">
             <!-- ICON INFO -->
             <svg class="button-icon icon-info">
               <use xlink:href="#svg-info"></use>

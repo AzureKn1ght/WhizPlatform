@@ -53,6 +53,7 @@ const postGig = async (gig) => {
     });
     const data = await res.json();
     console.log(data);
+    window.location.href = "dashboard-hirer.html";
   } catch (err) {
     console.log(err);
   }

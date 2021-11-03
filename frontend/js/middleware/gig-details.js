@@ -70,6 +70,7 @@ const bidGig = async (e) => {
 
     if (res.ok) {
       alert("Gig successfully bid for!");
+      window.location.href = "dashboard-freelancer.html";
     } else {
       const message = await res.json();
       console.log(message);

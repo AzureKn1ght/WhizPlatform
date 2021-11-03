@@ -776,13 +776,13 @@ const gigsCompleted = async () => {
 
 
             <!-- BUTTON -->
-            <p class="button secondary">
+            <a href="gig-info.html?gigId=${gigs._id}"><p class="button secondary">
               <!-- BUTTON ICON -->
               <svg class="button-icon icon-join-group">
                 <use xlink:href="#svg-status"></use>
               </svg>
               <!-- /BUTTON ICON -->
-            </p>
+            </p></a>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
@@ -841,6 +841,7 @@ const getReview = async () => {
       let quality = reviews.ratings.quality;
       let communication = reviews.ratings.communication;
       let timeliness = reviews.ratings.timeliness;
+      let comments = reviews.comments;
 
       elm += `
       <!-- USER PREVIEW -->
@@ -930,7 +931,7 @@ const getReview = async () => {
           <!-- USER PREVIEW ACTIONS -->
           <div class="user-preview-actions">
             <!-- BUTTON -->
-            <p class="button secondary">
+            <p class="button secondary" onclick="alert('${comments}')">
               <!-- ICON INFO -->
               <svg class="button-icon icon-info">
                 <use xlink:href="#svg-info"></use>
