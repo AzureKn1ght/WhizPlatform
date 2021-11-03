@@ -76,13 +76,160 @@ const gigsProgress = async () => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
       var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 34;
-      var profilePic = "img/avatar/" + image + ".jpg";
+      var profilePic = "img/avatar/28.jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
       console.log(gigs._id);
       console.log(typeof gigs._id);
+
+      if(gigs.gig_status == "DELIVERED"){
+
+         //Add to element
+      elm += `<!-- USER PREVIEW -->
+      <div class="user-preview">
+        <!-- USER PREVIEW COVER -->
+        <figure class="user-preview-cover liquid">
+          <img src="img/cover/57.jpg" alt="cover-01">
+      </figure>
+      <!-- /USER PREVIEW COVER -->
+
+      <!-- USER PREVIEW INFO -->
+      <div class="user-preview-info">
+        <!-- USER SHORT DESCRIPTION -->
+
+        <div class="user-short-description">
+          <!-- USER SHORT DESCRIPTION AVATAR -->
+          <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+            <!-- USER AVATAR BORDER -->
+            <div class="user-avatar-border">
+              <!-- HEXAGON -->
+              <div class="hexagon-120-132"></div>
+              <!-- /HEXAGON -->
+            </div>
+            <!-- /USER AVATAR BORDER -->
+
+            <!-- USER AVATAR CONTENT -->
+            <div class="user-avatar-content">
+              <!-- HEXAGON -->
+              <div class="hexagon-image-82-90" data-src="${file}"></div>
+              <!-- /HEXAGON -->
+            </div>
+            <!-- /USER AVATAR CONTENT -->
+
+            <!-- USER AVATAR PROGRESS -->
+            <div class="user-avatar-progress">
+              <!-- HEXAGON -->
+              <div class="hexagon-progress-100-110"></div>
+              <!-- /HEXAGON -->
+            </div>
+            <!-- /USER AVATAR PROGRESS -->
+
+            <!-- USER AVATAR PROGRESS BORDER -->
+            <div class="user-avatar-progress-border">
+              <!-- HEXAGON -->
+              <div class="hexagon-border-100-110"></div>
+              <!-- /HEXAGON -->
+            </div>
+            <!-- /USER AVATAR PROGRESS BORDER -->
+
+            <!-- USER AVATAR BADGE -->
+            <div class="user-avatar-badge">
+              <!-- USER AVATAR BADGE BORDER -->
+              <div class="user-avatar-badge-border">
+                <!-- HEXAGON -->
+                <div class="hexagon-32-36"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR BADGE BORDER -->
+
+              <!-- USER AVATAR BADGE CONTENT -->
+              <div class="user-avatar-badge-content">
+                <!-- HEXAGON -->
+                <div class="hexagon-dark-26-28"></div>
+                <!-- /HEXAGON -->
+              </div>
+              <!-- /USER AVATAR BADGE CONTENT -->
+
+              <!-- USER AVATAR BADGE TEXT -->
+              <p class="user-avatar-badge-text">✓</p>
+              <!-- /USER AVATAR BADGE TEXT -->
+            </div>
+            <!-- /USER AVATAR BADGE -->
+          </a>
+          <!-- /USER SHORT DESCRIPTION AVATAR -->
+
+          <!-- USER SHORT DESCRIPTION TITLE -->
+          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
+          <!-- /USER SHORT DESCRIPTION TITLE -->
+
+          <!-- USER SHORT DESCRIPTION TEXT -->
+          <p class="user-short-description-text"><a href="#">${gigs.title}</a></p>
+          <!-- /USER SHORT DESCRIPTION TEXT -->
+        </div>
+        <!-- /USER SHORT DESCRIPTION -->
+
+        <!-- USER PREVIEW STATS SLIDES -->
+        <div id="user-preview-stats-slides-01" class="user-preview-stats-slides">
+          <!-- USER PREVIEW STATS SLIDE -->
+          <div class="user-preview-stats-slide">
+            <!-- USER STATS -->
+            <div class="user-stats">
+              <!-- USER STAT -->
+              <div class="user-stat">
+                <!-- USER STAT TITLE -->
+                <p class="user-stat-title">${created}</p>
+                <!-- /USER STAT TITLE -->
+
+                <!-- USER STAT TEXT -->
+                <p class="user-stat-text">Accepted</p>
+                <!-- /USER STAT TEXT -->
+              </div>
+              <!-- /USER STAT -->
+
+              <!-- USER STAT -->
+              <div class="user-stat">
+                <!-- USER STAT TITLE -->
+                <p class="user-stat-title">USD ${gigs.budget}</p>
+                <!-- /USER STAT TITLE -->
+
+                <!-- USER STAT TEXT -->
+                <p class="user-stat-text">Budget</p>
+                <!-- /USER STAT TEXT -->
+              </div>
+              <!-- /USER STAT -->
+
+              <!-- USER STAT -->
+              <div class="user-stat">
+                <!-- USER STAT TITLE -->
+                <p class="user-stat-title">${date}</p>
+                <!-- /USER STAT TITLE -->
+
+                <!-- USER STAT TEXT -->
+                <p class="user-stat-text">Deadline</p>
+                <!-- /USER STAT TEXT -->
+              </div>
+              <!-- /USER STAT -->
+            </div>
+            <!-- /USER STATS -->
+          </div>
+
+        </div>
+
+        <!-- USER PREVIEW ACTIONS -->
+        <div class="user-preview-actions">
+          <!-- BUTTON -->
+          <p class="button secondary" onclick="gigInProgressDetails('${gigs._id}')">Gig Details</p>
+          <!-- /BUTTON -->
+
+        </div>
+        <!-- /USER PREVIEW ACTIONS -->
+      </div>
+      <!-- /USER PREVIEW INFO -->
+      </div>
+      <!-- /USER PREVIEW -->`;
+
+      }else{  
 
       //Add to element
       elm += `<!-- USER PREVIEW -->
@@ -222,7 +369,7 @@ const gigsProgress = async () => {
           <!-- /BUTTON -->
 
           <!-- BUTTON -->
-          <p class="button primary" onclick="updateStatus('${gigs._id}','${gigs.job_hirer}')">Update Status</p>
+          <p class="button primary" onclick="updateStatus('${gigs._id}','${gigs.job_hirer}')">Complete</p>
           <!-- /BUTTON -->
         </div>
         <!-- /USER PREVIEW ACTIONS -->
@@ -230,6 +377,7 @@ const gigsProgress = async () => {
       <!-- /USER PREVIEW INFO -->
       </div>
       <!-- /USER PREVIEW -->`;
+      }
     });
 
     gigsInProgress.innerHTML = elm;
@@ -295,13 +443,10 @@ const gigsApplied = async () => {
       var profilePic = "img/marketplace/items/" + image + ".jpg";
       var file = profilePic.toString();
 
-      var image2 = Math.floor(Math.random() * 9) + 1;
+      //var image2 = Math.floor(Math.random() * 9) + 1;
       console.log(image2);
       console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
+      var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
       console.log(file);
@@ -432,10 +577,7 @@ const gigsRecommeded = async () => {
       var image2 = Math.floor(Math.random() * 9) + 1;
       console.log(image2);
       console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/avatar/0" + image2 + ".jpg"
-          : "img/avatar/" + image2 + ".jpg";
+      var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
       console.log(file);

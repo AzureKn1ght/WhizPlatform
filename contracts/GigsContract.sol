@@ -10,7 +10,7 @@ contract GigsContract {
     address admin;
     uint public whizRewards;
     uint public totalValueLocked;
-    enum Status { AWAITING_PAYMENT, AWAITING_DELIVERY, COMPLETED, RESOLVED }
+    enum Status { AWAITING_ESCROW, AWAITING_DELIVERY, COMPLETED, RESOLVED }
 
     //References to the external contract addresses
     address USDCaddress;
@@ -94,9 +94,10 @@ contract GigsContract {
     }
     
   
-    //Hirer confirms a gig delivery 
+    //Hirer confirms a gig delivery, Reviews get added to BC 
     //ERC20 tokens transferred to freelancer from this contract
-    function confirmGigDelivery(string memory gigID) public returns (Gig memory)
+    function confirmGigDelivery(string memory gigID, ReviewsContract.Review memory reviewFromFL, 
+    ReviewsContract.Review memory reviewFromHR) public returns (Gig memory)
     {
         Gig storage myGig = gig[gigID];
 
@@ -113,9 +114,14 @@ contract GigsContract {
         issueWhizRewards(myGig.freelancer, whizRewards); 
         issueWhizRewards(myGig.hirer, whizRewards); 
 
-        //cleanup - gig contract is completed successfully
+        //cleanup - gig contract is completed 
         myGig.status = Status.COMPLETED;
         gig[gigID] = myGig;
+        
+        //add the reviews to the blockchain
+        ReviewsContract reviews = ReviewsContract(REVIEWSaddress);
+        reviews.addReview(reviewFromFL);
+        reviews.addReview(reviewFromHR);
         
         emit CompleteGig(gigID, gig[gigID], "Gig completed successfully.");
         return gig[gigID];
