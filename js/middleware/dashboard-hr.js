@@ -46,8 +46,8 @@ function loadScript(url) {
 
 const gigInProgressDetails = async (e) => {
   console.log(e);
-  
-  window.location.href=`gig-info.html?gigId=${e}`;
+
+  window.location.href = `gig-info.html?gigId=${e}`;
 };
 
 const gigsProgress = async () => {
@@ -57,47 +57,49 @@ const gigsProgress = async () => {
   const hirer = {
     hirer: user,
   };
-  console.log("Gigs in progress pending")
-  try {
-    const res = await fetch(url, {
-      method: "POST",
-      body: JSON.stringify(hirer),
-      mode: "cors",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const data = await res.json();
-    console.log("Gigs in progress data received")
-    console.log(data);
-    data.gigs.forEach((gigs) => {
-      var date = moment(gigs.deadline).format("DD MMM YYYY");
-      var created = moment(gigs.created).format("DD MMM YYYY");
-      console.log(gigs);
-      var profilePic2 ="img/avatar/28.jpg";
-      var file = profilePic.toString();
-      console.log(file);
-      console.log(typeof file);
-      console.log(gigs._id);
-      console.log(typeof gigs._id);
+  console.log("Gigs in progress pending");
 
-      var image2 = Math.floor(Math.random() * 9) + 1;
-      console.log(image2);
-      console.log(typeof image2);
-      var profilePic2 =
-        image2 < 10
-          ? "img/cover/0" + image2 + ".jpg"
-          : "img/cover/" + image2 + ".jpg";
-      var file2 = profilePic2.toString();
-      var title = gigs.title;
-      var budget = gigs.budget;
-      var _id= gigs._id
-      var assignedFl = gigs.freelancer_name;
+  if (user) {
+    try {
+      const res = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify(hirer),
+        mode: "cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      console.log("Gigs in progress data received");
+      console.log(data);
+      data.gigs.forEach((gigs) => {
+        var date = moment(gigs.deadline).format("DD MMM YYYY");
+        var created = moment(gigs.created).format("DD MMM YYYY");
+        console.log(gigs);
+        var profilePic = "img/avatar/28.jpg";
+        var file = profilePic.toString();
+        console.log(file);
+        console.log(typeof file);
+        console.log(gigs._id);
+        console.log(typeof gigs._id);
 
-     // let urlFl =
-       // "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+        var image2 = Math.floor(Math.random() * 9) + 1;
+        console.log(image2);
+        console.log(typeof image2);
+        var profilePic2 =
+          image2 < 10
+            ? "img/cover/0" + image2 + ".jpg"
+            : "img/cover/" + image2 + ".jpg";
+        var file2 = profilePic2.toString();
+        var title = gigs.title;
+        var budget = gigs.budget;
+        var _id = gigs._id;
+        var assignedFl = gigs.freelancer_name;
 
-    /*   const freelancer = {
+        // let urlFl =
+        // "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills";
+
+        /*   const freelancer = {
         _id: gigs.freelancer,
       };
       console.log("fetch request for freelancer details not sent");
@@ -118,12 +120,12 @@ const gigsProgress = async () => {
           assignedFl = data.full_name;
           console.log("The freelancer is:" + assignedFl);
         }); */
-      
-      console.log("Default is:" + assignedFl);
-      //Add to element
-      
-      if(gigs.gig_status === "DELIVERED"){
-      elm += `<!-- USER PREVIEW -->
+
+        console.log("Default is:" + assignedFl);
+        //Add to element
+
+        if (gigs.gig_status === "DELIVERED") {
+          elm += `<!-- USER PREVIEW -->
       <div class="user-preview">
         <!-- USER PREVIEW COVER -->
         <figure class="user-preview-cover liquid">
@@ -267,9 +269,8 @@ const gigsProgress = async () => {
         <!-- /USER PREVIEW INFO -->
       </div>
       <!-- /USER PREVIEW -->`;
-      }
-      else{
-        elm += `<!-- USER PREVIEW -->
+        } else {
+          elm += `<!-- USER PREVIEW -->
       <div class="user-preview">
         <!-- USER PREVIEW COVER -->
         <figure class="user-preview-cover liquid">
@@ -411,14 +412,13 @@ const gigsProgress = async () => {
         <!-- /USER PREVIEW INFO -->
       </div>
       <!-- /USER PREVIEW -->`;
-      }
-    });
+        }
+      });
 
-    hirerGigsInProgress.innerHTML = elm;
-
-   
-  } catch (error) {
-    console.log(error.message);
+      hirerGigsInProgress.innerHTML = elm;
+    } catch (error) {
+      console.log(error.message);
+    }
   }
   var scripts = [
     "js/vendor/simplebar.min.js",
@@ -442,8 +442,7 @@ const gigsProgress = async () => {
   });
 };
 
-const updateStatus = async (gigId,freelancerId) => {
-  
+const updateStatus = async (gigId, freelancerId) => {
   window.location.href = `complete-gig-hr.html?gigId=${gigId}&freelancer=${freelancerId}`;
 };
 
@@ -454,6 +453,8 @@ const gigsOpen = async () => {
   const hirer = {
     hirer: user,
   };
+
+  if(user){
 
   try {
     const res = await fetch(url, {
@@ -471,8 +472,6 @@ const gigsOpen = async () => {
       var image = Math.floor(Math.random() * 3) + 17;
       var profilePic = "img/marketplace/items/" + image + ".jpg";
       var file = profilePic.toString();
-
-     
 
       //Add to element
       elm += `
@@ -520,6 +519,7 @@ const gigsOpen = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 const gigsCompleted = async () => {
@@ -529,6 +529,8 @@ const gigsCompleted = async () => {
   const hirer = {
     hirer: user,
   };
+
+  if(user){
 
   try {
     const res = await fetch(url, {
@@ -640,11 +642,14 @@ const gigsCompleted = async () => {
   } catch (error) {
     console.log(error.message);
   }
+}
 };
 
 const getReview = async () => {
   console.log("Current account is:" + meta);
   let elm = "";
+
+  if(user){
 
   try {
     const result = await contract.methods.getAllReceivedReviews(meta).call();
@@ -792,6 +797,7 @@ const getReview = async () => {
   } catch (error) {
     console.log("No reviews found:" + error);
   }
+}
 };
 
 gigsProgress();
