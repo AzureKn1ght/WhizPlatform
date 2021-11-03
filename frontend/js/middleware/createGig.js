@@ -65,7 +65,7 @@ function getInput(e) {
   //get the title input
   var titleInput = title.value;
   //get the budget input
-  var budgetInput = budget.value;
+  var budgetInput = parseInt(budget.value);
   //get the description input
   var descriptionInput = description.value;
   //get the deadline input
