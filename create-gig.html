@@ -427,7 +427,7 @@
             <!-- /NAVIGATION WIDGET INFO -->
 
             <!-- NAVIGATION WIDGET BUTTON -->
-            <p class="navigation-widget-info-button button small secondary">Logout</p>
+            <p class="navigation-widget-info-button button small secondary" onclick="logOut()">Logout</p>
             <!-- /NAVIGATION WIDGET BUTTON -->
         </div>
         <!-- /NAVIGATION WIDGET INFO WRAP -->
@@ -2407,7 +2407,7 @@
                     <!-- /DROPDOWN NAVIGATION LINK -->
 
                     <!-- DROPDOWN NAVIGATION BUTTON -->
-                    <p class="dropdown-navigation-button button small secondary">Logout</p>
+                    <p class="dropdown-navigation-button button small secondary" onclick="logOut()">Logout</p>
                     <!-- /DROPDOWN NAVIGATION BUTTON -->
                 </div>
                 <!-- /DROPDOWN NAVIGATION -->
@@ -2523,7 +2523,7 @@
                             <input type="text" name="gig_budget" id="budget" class="form-control" placeholder="Gig Budget" required><br>
                             <label for="gig_deadline"><b>Gig Deadline</b></label><br>
                             <input type="date" name="gig_deadline" id="deadline" class="form-control" placeholder="Gig Deadline" required><br>
-                                required><br><br>
+                            <br><br>
                             <br>
                             <label for="country"><b>Location Required for Gig</b></label><br>
                             <select id="location" name="country" required>
@@ -2968,7 +2968,7 @@
                 </div>
             </div>
             <button class="button secondary" id="createGig">Create Gig!</button>
-            <button class="button primary" id="b1">Back</button>
+            <button class="button primary" >Back</button>
         </div>
     </div>
     </form>
@@ -2979,7 +2979,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- gig-details JS  -->
+        <script src="js/middleware/metamask.js"></script>
+        <!-- gig-details JS  -->
     <script src="js/middleware/createGig.js"></script>
     <!-- app -->
     <script src="js/utils/app.js"></script>

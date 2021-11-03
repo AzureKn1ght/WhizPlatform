@@ -9,11 +9,10 @@ const init = async () => {
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
-    data.jobs.forEach((jobs) => {
-      var date = moment(parseInt(jobs.deadline.$date.$numberLong)).format("DD MMM YYYY");
+    data.forEach((jobs) => {
+      var date = moment(jobs.deadline).format("DD MMM YYYY");
       console.log(jobs);
-      console.log(jobs._id.$oid);
-      console.log(typeof(jobs._id.$oid));
+    
 
       //Add to element
       elm += `
@@ -24,7 +23,7 @@ const init = async () => {
                 <!-- TABLE INFORMATION -->
                 <div class="table-information">
                   <!-- TABLE TITLE -->
-                  <p class="table-title"><a href="gig-info.html?gigId=${jobs._id.$oid}&bidding=true" >${jobs.title}</p></a>
+                  <p class="table-title"><a href="gig-info.html?gigId=${jobs._id}&bidding=true" >${jobs.title}</p></a>
                   <!-- /TABLE TITLE -->
                 </div>
                 <!-- /TABLE INFORMATION -->
@@ -44,7 +43,7 @@ const init = async () => {
                 <!-- TEXT STICKER -->
                 <p class="text-sticker void">
                   <!-- TEXT STICKER ICON -->
-                  $${jobs.budget.$numberInt}
+                  $${jobs.budget}
                 </p>
                 <!-- /TEXT STICKER -->
               </div>

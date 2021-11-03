@@ -152,7 +152,7 @@ const showFreelancer = async (freelancer) =>{
                       <!-- /USER STAT -->
                   </div>
                   <br><button class="button secondary" onclick="selectFreelancer('${data._id}')">Select Freelancer</button><br><br>
-                  <button class="button primary" id="b1">View Profile</button>
+                  <a href="freelancer-profile.html" target="_blank"><button class="button primary" id="b1" >View Profile</button></a>
                   <!-- /USER STATS -->
               </div>
           </div>`;
