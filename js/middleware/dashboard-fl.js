@@ -443,9 +443,7 @@ const gigsApplied = async () => {
       var profilePic = "img/marketplace/items/" + image + ".jpg";
       var file = profilePic.toString();
 
-      //var image2 = Math.floor(Math.random() * 9) + 1;
-      console.log(image2);
-      console.log(typeof image2);
+    
       var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
@@ -567,16 +565,33 @@ const gigsRecommeded = async () => {
       },
     });
     const data2 = await res2.json();
+    let gigCount = 0;
     console.log(data2);
     data2.gigs.forEach((gigs) => {
       console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 17;
-      var profilePic = "img/marketplace/items/" + image + ".jpg";
-      var file = profilePic.toString();
+      if(gigCount==5) {  
+        gigCount = 0;
+    }
+      console.log(gigCount);
+      switch(gigCount) {
+        case 0:
+          var image = "img/marketplace/items/01.jpg";
+          break;
+        case 1:
+          var image = "img/marketplace/items/13.jpg";
+          break;
+        case 2:
+          var image = "img/marketplace/items/03.jpg";
+          break;
+        case 3:
+          var image = "img/marketplace/items/05.jpg";
+          break;
+        case 4:
+          var image = "img/marketplace/items/10.jpg";
+      }
+      gigCount++;
 
-      var image2 = Math.floor(Math.random() * 9) + 1;
-      console.log(image2);
-      console.log(typeof image2);
+    
       var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
@@ -591,7 +606,7 @@ const gigsRecommeded = async () => {
         <!-- PRODUCT PREVIEW IMAGE -->
         <a href="gig-info.html?gigId=${gigs._id}">
           <figure class="product-preview-image liquid">
-            <img src="${file}" alt="item-01">
+            <img src="${image}" alt="item-01">
           </figure>
         </a>
         <!-- /PRODUCT PREVIEW IMAGE -->
