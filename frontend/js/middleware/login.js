@@ -39,6 +39,8 @@ function freelancerMetalogin() {
           } else {
             let message = res.text();
             console.log(message);
+            //alert the user to confirm redirecting to register page
+            alert("Account not found, please register to continue! Redirecting to registration page now!");
             window.location.href = "register-freelancer.html"
             throw "error";
           }
@@ -98,6 +100,7 @@ function hirerMetalogin() {
         } else {
           let message = res.text();
           console.log(message);
+          alert("Account not found, please register to continue! Redirecting to registration page now!");
           window.location.href = "register-hirer.html"
           throw "error";
         }
@@ -125,7 +128,7 @@ function hirerMetalogin() {
   });
 };
 
-const loginHirer = async (event) => {
+/* const loginHirer = async (event) => {
   event.preventDefault();
 
   const enteredEmail = emailHirerRef.value;
@@ -171,7 +174,7 @@ const clientId =
 //Google login handler to verify
 const handleCredentialResponseFreelancer = async (response) => {
   console.log("Encoded JWT ID token: " + response.credential);
-  /* try {
+  try {
     const res = await fetch(
       "http://localhost:4000/freelancer/api/v1/auth/google",
       {
@@ -203,7 +206,7 @@ const handleCredentialResponseFreelancer = async (response) => {
     // store returned user somehow
   } catch (error) {
     console.log(error.message);
-  } */
+  } 
 };
 
 const handleCredentialResponseHirer = async (googleData) => {
@@ -248,7 +251,7 @@ const hirerRegisterRedirect = (e) => {
 const freelancerRegisterRedirect = (e) => {
   e.preventDefault();
   window.location.href = "/registerfreelancer";
-};
+}; */
 
 /* freelancerLoginButton.addEventListener("click", loginFreelancer);
 hirerLoginButton.addEventListener("click", loginHirer); */
