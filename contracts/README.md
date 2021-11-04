@@ -43,14 +43,14 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 **Deployed Address:** [0x9383fB4D8302a17044D34ffbA924a15d9C6Db292](https://mumbai.polygonscan.com/address/0x9383fB4D8302a17044D34ffbA924a15d9C6Db292)
 <br>
 <br>
-
+<br>
 
 # **Connecting to Mumbai Testnet**
 
 Please refer to the following guide: [Connect to Polygon's Testnet](https://docs.mobius.finance/guides/connect-to-polygons-testnet).  
 <br>
 <br>
-
+<br>
 
 # **Adding Custom Tokens to MetaMask**
 
