@@ -95,8 +95,14 @@ function getInput(e) {
   var locationInput = requiredLocation.value;
 
   var image = Math.floor(Math.random() * 20) + 1;
+  if(image <10){
+  var profilePic = "img/marketplace/items/0" + image + ".jpg";
+  var file = profilePic.toString();
+  }
+  else{
   var profilePic = "img/marketplace/items/" + image + ".jpg";
   var file = profilePic.toString();
+  }
 
   //store the variables in an object
   var gig = {
