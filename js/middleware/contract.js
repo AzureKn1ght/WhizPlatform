@@ -167,6 +167,7 @@ const createGigContract = async () => {
       });
     console.log(confirmedGig);
     updateMongo();
+    alert("Gig contract created!");
     window.location.href = "dashboard-hirer.html";
   } catch (error) {
     console.log(error);

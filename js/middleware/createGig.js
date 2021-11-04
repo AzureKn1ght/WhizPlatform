@@ -94,6 +94,10 @@ function getInput(e) {
   //get the location input
   var locationInput = requiredLocation.value;
 
+  var image = Math.floor(Math.random() * 3) + 17;
+  var profilePic = "img/marketplace/items/" + image + ".jpg";
+  var file = profilePic.toString();
+
   //store the variables in an object
   var gig = {
     title: titleInput,
@@ -104,6 +108,7 @@ function getInput(e) {
     location: locationInput,
     hirer: hirer,
     hirerName: hirerName,
+    background: file,
   };
 
   //display the object in the console
