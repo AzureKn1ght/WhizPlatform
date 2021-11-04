@@ -44,8 +44,6 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 <br>
 <br>
 
-<br>
-<br>
 
 # **Connecting to Mumbai Testnet**
 
@@ -53,4 +51,10 @@ Please refer to the following guide: [Connect to Polygon's Testnet](https://docs
 <br>
 <br>
 
+
+# **Adding Custom Tokens to MetaMask**
+
+Please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask).  
+<br>
+<br>
 
