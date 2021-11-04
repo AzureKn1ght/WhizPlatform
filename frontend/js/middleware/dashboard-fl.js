@@ -439,9 +439,7 @@ const gigsApplied = async () => {
     console.log(data);
     data.gigs.forEach((gigs) => {
       console.log(gigs);
-     /*  var image = Math.floor(Math.random() * 3) + 17;
-      var profilePic = "img/marketplace/items/" + image + ".jpg";
-      var file = profilePic.toString(); */
+     var file = gigs.background;
 
     
       var profilePic2 ="img/avatar/28.jpg";
