@@ -469,9 +469,8 @@ const gigsOpen = async () => {
     console.log(data);
     data.gigs.forEach((gigs) => {
       console.log(gigs);
-      var image = Math.floor(Math.random() * 3) + 17;
-      var profilePic = "img/marketplace/items/" + image + ".jpg";
-      var file = profilePic.toString();
+      
+      var file = gigs.background;
 
       //Add to element
       elm += `

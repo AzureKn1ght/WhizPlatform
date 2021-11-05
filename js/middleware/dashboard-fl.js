@@ -563,40 +563,17 @@ const gigsRecommeded = async () => {
       },
     });
     const data2 = await res2.json();
-    let gigCount = 0;
+    
     console.log(data2);
     data2.gigs.forEach((gigs) => {
       console.log(gigs);
-      if(gigCount==5) {  
-        gigCount = 0;
-    }
-      console.log(gigCount);
-      switch(gigCount) {
-        case 0:
-          var image = "img/marketplace/items/01.jpg";
-          break;
-        case 1:
-          var image = "img/marketplace/items/13.jpg";
-          break;
-        case 2:
-          var image = "img/marketplace/items/03.jpg";
-          break;
-        case 3:
-          var image = "img/marketplace/items/05.jpg";
-          break;
-        case 4:
-          var image = "img/marketplace/items/10.jpg";
-      }
-      gigCount++;
+      var image = gigs.background;
 
     
       var profilePic2 ="img/avatar/28.jpg";
       var file2 = profilePic2.toString();
 
-      console.log(file);
-      console.log(typeof file);
-      console.log(file2);
-      console.log(typeof file2);
+      
 
       //Add to element
       elm += `<!-- PRODUCT PREVIEW -->
