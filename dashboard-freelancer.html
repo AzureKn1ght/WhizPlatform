@@ -2511,7 +2511,7 @@
         <!-- FILTER TAB -->
         <div class="filter-tab active">
           <!-- FILTER TAB TEXT -->
-          <p class="filter-tab-text">Recommended Gigs</p>
+          <p class="filter-tab-text"><a href="#Recommended Gigs">Recommended Gigs</p></a>
           <!-- /FILTER TAB TEXT -->
         </div>
         <!-- /FILTER TAB -->
@@ -2519,7 +2519,7 @@
         <!-- FILTER TAB -->
         <div class="filter-tab">
           <!-- FILTER TAB TEXT -->
-          <p class="filter-tab-text">Gigs In Progress</p>
+          <p class="filter-tab-text"><a href="#Gigs in Progress">Gigs In Progress</p></a>
           <!-- /FILTER TAB TEXT -->
         </div>
         <!-- /FILTER TAB -->
@@ -2527,7 +2527,7 @@
         <!-- FILTER TAB -->
         <div class="filter-tab">
           <!-- FILTER TAB TEXT -->
-          <p class="filter-tab-text">Gigs Applied For</p>
+          <p class="filter-tab-text"><a href="#Gigs Applied For">Gigs Applied For</p></a>
           <!-- /FILTER TAB TEXT -->
         </div>
         <!-- /FILTER TAB -->
@@ -2535,10 +2535,19 @@
         <!-- FILTER TAB -->
         <div class="filter-tab">
           <!-- FILTER TAB TEXT -->
-          <p class="filter-tab-text">Completed Gigs</p>
+          <p class="filter-tab-text"><a href="#Completed Gigs">Completed Gigs</p></a>
           <!-- /FILTER TAB TEXT -->
         </div>
         <!-- /FILTER TAB -->
+
+        <!-- FILTER TAB -->
+        <div class="filter-tab">
+          <!-- FILTER TAB TEXT -->
+          <p class="filter-tab-text"><a href="#Received Reviews">Received Reviews</p></a>
+          <!-- /FILTER TAB TEXT -->
+        </div>
+        <!-- /FILTER TAB -->
+
       </div>
       <!-- /FILTER TABS -->
 
@@ -2552,14 +2561,11 @@
             <option value="1">Gigs in Progress</option>
             <option value="2">Gigs Applied For</option>
             <option value="3">Completed Gigs</option>
+            <option value="4">Received Reviews</option>
           </select>
-          <!-- FORM SELECT ICON -->
-          <svg class="form-select-icon icon-small-arrow">
-            <use xlink:href="#svg-small-arrow"></use>
-          </svg>
-          <!-- /FORM SELECT ICON -->
         </div>
         <!-- /FORM SELECT -->
+        <div id="Recommended Gigs"></div>
       </form>
       <!-- /FORM -->
     </div>
@@ -2813,11 +2819,15 @@
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
           <!-- /RATING LIST -->
+          <div id="Gigs in Progress"></div>
         </div>
         <!-- /PRODUCT PREVIEW META -->
       </div>
       <!-- /PRODUCT PREVIEW -->
-    </div><br><br>
+    </div>
+
+
+    <br><br>
 
     <br>
     <h2>Gigs in Progress</h2><br>
@@ -2958,7 +2968,7 @@
               <!-- /BUTTON -->
   
               <!-- BUTTON -->
-              <p class="button primary">Update Status</p>
+              <p class="button primary">Complete Gig</p>
               <!-- /BUTTON -->
             </div>
             <!-- /USER PREVIEW ACTIONS -->
@@ -3103,7 +3113,7 @@
               <!-- /BUTTON -->
   
               <!-- BUTTON -->
-              <p class="button primary">Update Status</p>
+              <p class="button primary">Complete Gig</p>
               <!-- /BUTTON -->
             </div>
             <!-- /USER PREVIEW ACTIONS -->
@@ -3248,7 +3258,7 @@
               <!-- /BUTTON -->
   
               <!-- BUTTON -->
-              <p class="button primary">Update Status</p>
+              <p class="button primary">Complete Gig</p>
               <!-- /BUTTON -->
             </div>
             <!-- /USER PREVIEW ACTIONS -->
@@ -3393,10 +3403,11 @@
               <!-- /BUTTON -->
   
               <!-- BUTTON -->
-              <p class="button primary">Update Status</p>
+              <p class="button primary">Complete Gig</p>
               <!-- /BUTTON -->
             </div>
             <!-- /USER PREVIEW ACTIONS -->
+            <div id="Gigs Applied For"></div>
           </div>
           <!-- /USER PREVIEW INFO -->
         </div>
@@ -3647,6 +3658,7 @@
             <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
+          <div id="Completed Gigs"></div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
           <!-- /RATING LIST -->
         </div>
@@ -3656,11 +3668,6 @@
 
 
     </div>
-
-    
-
-
-    
 
 
     <br><br><br>
@@ -3751,12 +3758,14 @@
           </div>
           <!-- /USER PREVIEW ACTIONS -->
         </div>
+
+        <div id="Received Reviews"></div>
         <!-- /USER PREVIEW INFO -->
       </div>
     </div>
     <!-- REVIEWS SECTION -->
     <br><br><br>
-    <h2>Received Reviews</h2><br>
+    <h2 id = "Received Reviews">Received Reviews</h2><br>
     <div class="grid" id="reviews-received">
       <!-- USER PREVIEW -->
       <div class="user-preview landscape">
