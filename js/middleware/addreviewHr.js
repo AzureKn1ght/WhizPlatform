@@ -209,6 +209,7 @@ const confirmGigDelivery = async (e) => {
       .send({ from: currentAccount });
     console.log(receipt);
     updateMongoComplete();
+    alert("Job has been marked as complete and payment released!");
   } catch (error) {
     console.log(error);
   }
