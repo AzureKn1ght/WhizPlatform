@@ -32,7 +32,7 @@ const init = async () => {
       elm += `
       <div class="product-preview">
       <!-- PRODUCT PREVIEW IMAGE -->
-      <a href="marketplace-product.html">
+      <a href="gig-info.html?gigId=${jobs._id}&bidding=true">
         <figure class="product-preview-image liquid">
           <img src="${image}" alt="item-01">
         </figure>
