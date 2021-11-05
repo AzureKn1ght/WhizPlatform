@@ -206,6 +206,12 @@ const getReview = async (e) => {
   console.log(result);
 };
 
+const goBack = (e) => {
+  e.preventDefault();
+  alert("You are being redirected to the previous page");
+  window.history.go(-1);
+};
+
 //getReview(currentAccount);
 //Add event listener for buttons
 submitReviewFreelancer.addEventListener("click", reviewAdd);

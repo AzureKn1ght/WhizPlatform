@@ -62,15 +62,3 @@ function logOut() {
   sessionStorage.clear();
   window.location.href = "index.html";
 }
-
-
-//create a const for getting the element id backButton
-const backButton = document.getElementById("backButton");
-
-//create a function to handle the back button
-function backButtonClick() {
-  window.history.back();
-};
-
-//add event listener to the back button
-backButton.addEventListener("click", backButtonClick);
