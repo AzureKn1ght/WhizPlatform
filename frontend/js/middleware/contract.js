@@ -15,9 +15,10 @@ const gigsContract = new web3.eth.Contract(GigsABI, GigsAddress);
 const usdcContract = new web3.eth.Contract(usdcABI, USDCaddress);
 const approveButton = document.getElementById("approve-button");
 var approveStatus = false;
+var confirmBudget = 0;
 var budget = 0;
 const buyer = document.getElementById("buyer");
-const seller = document.getElementById("seller"); 
+const seller = document.getElementById("seller");
 var freelancerName = "";
 
 var Gig = {
@@ -117,7 +118,8 @@ const gigDetails = async () => {
     };
 
     Gig.jobDetails = jobDetails;
-    budget = web3.utils.toWei(jobs.budget.toString(), 'ether');
+    confirmBudget = jobs.budget;
+    budget = web3.utils.toWei(jobs.budget.toString(), "ether");
     var date = moment(jobs.deadline).format("DD MMM YYYY");
     console.log(jobDetails);
 
@@ -134,24 +136,31 @@ const gigDetails = async () => {
 };
 
 const approveUSDC = async () => {
-  
-  try {
-    console.log("clicked");
-    let approved = await usdcContract.methods
-      .approve(GigsAddress,budget)
-      .send({
-        from: currentAccount,
-      });
-    console.log(approved);
-    approveStatus = approved.status;
-    if (approveStatus === true) {
-      console.log("Success");
-      approveButton.innerText = "Create Gigs Contract";
-    } else {
-      console.log("Failed");
+  let confirmTransaction = confirm(
+    `USDC ${confirmBudget} will be deducted from your Metamask wallet and escrowed once you approve and create the Gigs Contract. Do you want to continue with this transaction?`
+  );
+
+  if (confirmTransaction) {
+    try {
+      console.log("clicked");
+      let approved = await usdcContract.methods
+        .approve(GigsAddress, budget)
+        .send({
+          from: currentAccount,
+        });
+      console.log(approved);
+      approveStatus = approved.status;
+      if (approveStatus === true) {
+        console.log("Success");
+        approveButton.innerText = "Create Gigs Contract";
+      } else {
+        console.log("Failed");
+      }
+    } catch (error) {
+      console.log(error);
     }
-  } catch (error) {
-    console.log(error);
+  } else {
+    alert("Transaction cancelled!");
   }
 };
 
@@ -182,10 +191,10 @@ const processClick = async () => {
   }
 };
 
-
 const updateMongo = async () => {
   //send to mongodb a json object with the jobId and the freelancer as a post fetch request
-  let url = "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/confirmJob";
+  let url =
+    "https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/confirmJob";
 
   const gigId = {
     _id: jobId,
@@ -206,7 +215,7 @@ const updateMongo = async () => {
   } catch (error) {
     console.log(error);
   }
-}
+};
 
 approveButton.addEventListener("click", processClick);
 
