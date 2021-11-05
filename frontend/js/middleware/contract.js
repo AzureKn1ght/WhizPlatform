@@ -156,6 +156,7 @@ const approveUSDC = async () => {
       }
     } catch (error) {
       console.log(error);
+      approveButton.disabled = false;
     }
   
 };
@@ -182,6 +183,7 @@ const createGigContract = async () => {
     window.location.href = "dashboard-hirer.html";
   } catch (error) {
     console.log(error);
+    approveButton.disabled = false;
   }
 } else {
   alert("Transaction cancelled!");
