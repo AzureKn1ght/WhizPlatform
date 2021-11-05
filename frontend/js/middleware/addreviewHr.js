@@ -200,6 +200,9 @@ const updateMongoComplete = async () => {
 const confirmGigDelivery = async (e) => {
   e.preventDefault();
   reviewAdd();
+  let confirmation = confirm("Are you sure you want to mark this job as complete and release payment?");
+
+  if (confirmation == true) {
   try {
     let receipt = await gigsContract.methods
       .confirmGigDelivery(jobId,reviewFromFL,reviewFromHR)
@@ -209,6 +212,9 @@ const confirmGigDelivery = async (e) => {
   } catch (error) {
     console.log(error);
   }
+}else{
+  alert("You have cancelled the job completion");
+}
 };
 
 getReview(currentAccount);
