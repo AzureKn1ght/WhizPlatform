@@ -10,33 +10,12 @@ const init = async () => {
     const res = await fetch(url);
     const data = await res.json();
     console.log(data);
-    data.jobs.forEach((jobs) => {
-      var date = moment(parseInt(jobs.deadline.$date.$numberLong)).format("DD MMM YYYY");
+    data.forEach((jobs) => {
+      //var date = moment(parseInt(jobs.deadline.$date.$numberLong)).format("DD MMM YYYY");
       console.log(jobs);
       console.log(jobs._id.$oid);
       console.log(typeof(jobs._id.$oid));
-      if(gigCount==5) {  
-        gigCount = 0;
-    }
-      console.log(gigCount);
-      switch(gigCount) {
-        case 0:
-          var image = "img/marketplace/items/01.jpg";
-          break;
-        case 1:
-          var image = "img/marketplace/items/13.jpg";
-          break;
-        case 2:
-          var image = "img/marketplace/items/03.jpg";
-          break;
-        case 3:
-          var image = "img/marketplace/items/05.jpg";
-          break;
-        case 4:
-          var image = "img/marketplace/items/10.jpg";
-      }
-      gigCount++;
-      console.log(gigCount);
+      var image = jobs.background;
 
       //Add to element
       elm += `
@@ -52,15 +31,15 @@ const init = async () => {
       <!-- PRODUCT PREVIEW INFO -->
       <div class="product-preview-info">
         <!-- TEXT STICKER -->
-        <p class="text-sticker"><span class="highlighted">$</span> ${jobs.budget.$numberInt}</p>
+        <p class="text-sticker"><span class="highlighted">$</span> ${jobs.budget}</p>
         <!-- /TEXT STICKER -->
   
         <!-- PRODUCT PREVIEW TITLE -->
-        <p class="product-preview-title"><a href="marketplace-product.html">${jobs.title}</a></p>
+        <p class="product-preview-title"><a href="gig-info.html?gigId=${jobs._id}&bidding=true">${jobs.title}</a></p>
         <!-- /PRODUCT PREVIEW TITLE -->
   
         <!-- PRODUCT PREVIEW CATEGORY -->
-        <p class="product-preview-category digital"><a href="marketplace-category.html">${jobs.skills_required}</a></p>
+        <p class="product-preview-category digital"><a href="gig-info.html?gigId=${jobs._id}&bidding=true">${jobs.skills_required}</a></p>
         <!-- /PRODUCT PREVIEW CATEGORY -->
   
         <!-- PRODUCT PREVIEW TEXT -->
@@ -74,11 +53,11 @@ const init = async () => {
         <!-- PRODUCT PREVIEW AUTHOR -->
         <div class="product-preview-author">
           <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-          <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+          <a class="product-preview-author-image user-avatar micro no-border" href="gig-info.html?gigId=${jobs._id}&bidding=true">
             <!-- USER AVATAR CONTENT -->
             <div class="user-avatar-content">
               <!-- HEXAGON -->
-              <div class="hexagon-image-18-20" data-src="img/avatar/34.jpg"></div>
+              <div class="hexagon-image-18-20" data-src="img/avatar/28.jpg"></div>
               <!-- /HEXAGON -->
             </div>
             <!-- /USER AVATAR CONTENT -->
@@ -90,7 +69,7 @@ const init = async () => {
           <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
   
           <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-          <p class="product-preview-author-text"><a href="profile-timeline.html">${jobs.hirer_name}</a></p>
+          <p class="product-preview-author-text"><a href="gig-info.html?gigId=${jobs._id}&bidding=true">${jobs.hirer_name}</a></p>
           <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
         </div>
         <!-- /PRODUCT PREVIEW AUTHOR -->
