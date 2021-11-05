@@ -72,7 +72,7 @@ const gigsProgress = async () => {
     });
     const data = await res.json();
 
-    if(data.length > 0){
+    if(data.gigs.length > 0){
 
     console.log(data);
     data.gigs.forEach((gigs) => {
@@ -442,7 +442,7 @@ const gigsApplied = async () => {
     const data = await res.json();
     console.log(data);
 
-    if (data.length > 0) {
+    if (data.gigs.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
      var file = gigs.background;
@@ -573,7 +573,7 @@ const gigsRecommeded = async () => {
     
     console.log(data2);
 
-    if (data2.length > 0) {
+    if (data2.gigs.length > 0) {
     data2.gigs.forEach((gigs) => {
       console.log(gigs);
       var image = gigs.background;
@@ -680,7 +680,7 @@ const gigsCompleted = async () => {
     });
     const data = await res.json();
     console.log(data);
-    if (data.length > 0) {
+    if (data.gigs.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       var date = moment(gigs.deadline).format("DD MMM YYYY");

@@ -139,6 +139,7 @@ const approveUSDC = async () => {
  
     try {
       console.log("clicked");
+      approveButton.disabled = true;
       let approved = await usdcContract.methods
         .approve(GigsAddress, budget)
         .send({
@@ -148,6 +149,7 @@ const approveUSDC = async () => {
       approveStatus = approved.status;
       if (approveStatus === true) {
         console.log("Success");
+        approveButton.disabled = false;
         approveButton.innerText = "Create Gigs Contract";
       } else {
         console.log("Failed");
@@ -168,6 +170,7 @@ const createGigContract = async () => {
 
   if (confirmTransaction) {
   try {
+    approveButton.disabled = true;
     let confirmedGig = await gigsContract.methods
       .createGigContract(jobId, Gig, budget)
       .send({

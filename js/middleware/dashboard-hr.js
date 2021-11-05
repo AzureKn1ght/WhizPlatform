@@ -73,7 +73,7 @@ const gigsProgress = async () => {
       console.log("Gigs in progress data received");
       console.log(data);
 
-      if(data.length>0){
+      if(data.gigs.length>0){
       data.gigs.forEach((gigs) => {
         var date = moment(gigs.deadline).format("DD MMM YYYY");
         var created = moment(gigs.created).format("DD MMM YYYY");
@@ -85,14 +85,7 @@ const gigsProgress = async () => {
         console.log(gigs._id);
         console.log(typeof gigs._id);
 
-        var image2 = Math.floor(Math.random() * 9) + 1;
-        console.log(image2);
-        console.log(typeof image2);
-        var profilePic2 =
-          image2 < 10
-            ? "img/cover/0" + image2 + ".jpg"
-            : "img/cover/" + image2 + ".jpg";
-        var file2 = profilePic2.toString();
+        var file2 = gigs.background;
         var title = gigs.title;
         var budget = gigs.budget;
         var _id = gigs._id;
@@ -263,7 +256,7 @@ const gigsProgress = async () => {
             <!-- /BUTTON -->
 
             <!-- BUTTON -->
-            <p class="button primary" onclick="updateStatus('${_id}','${gigs.freelancer}')">Confirm Delivery</p>
+            <p class="button primary" onclick="updateStatus('${_id}','${gigs.freelancer}')">Confirm</p>
             <!-- /BUTTON -->
           </div>
           <!-- /USER PREVIEW ACTIONS -->
@@ -471,7 +464,7 @@ const gigsOpen = async () => {
     const data = await res.json();
     console.log(data);
 
-    if (data.length > 0) {
+    if (data.gigs.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       
@@ -549,7 +542,7 @@ const gigsCompleted = async () => {
     const data = await res.json();
     console.log(data);
 
-    if(data.length > 0){
+    if(data.gigs.length > 0){
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       var date = moment(gigs.deadline).format("DD MMM YYYY");
