@@ -45,9 +45,6 @@ const changeHref = () => {
   }
 };
 
-const goBack = (e) => {
-  window.history.back();
-};
 
 const bidGig = async (e) => {
   let url =

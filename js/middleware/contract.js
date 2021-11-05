@@ -136,11 +136,7 @@ const gigDetails = async () => {
 };
 
 const approveUSDC = async () => {
-  let confirmTransaction = confirm(
-    `USDC ${confirmBudget} will be deducted from your Metamask wallet and escrowed once you approve and create the Gigs Contract. Do you want to continue with this transaction?`
-  );
-
-  if (confirmTransaction) {
+ 
     try {
       console.log("clicked");
       let approved = await usdcContract.methods
@@ -159,15 +155,18 @@ const approveUSDC = async () => {
     } catch (error) {
       console.log(error);
     }
-  } else {
-    alert("Transaction cancelled!");
-  }
+  
 };
 
 const createGigContract = async () => {
   console.log(jobId);
   console.log(Gig);
   console.log(budget);
+  let confirmTransaction = confirm(
+    `USDC ${confirmBudget} will be deducted from your Metamask wallet and escrowed once you create the Gigs Contract. Do you want to continue with this transaction?`
+  );
+
+  if (confirmTransaction) {
   try {
     let confirmedGig = await gigsContract.methods
       .createGigContract(jobId, Gig, budget)
@@ -181,6 +180,9 @@ const createGigContract = async () => {
   } catch (error) {
     console.log(error);
   }
+} else {
+  alert("Transaction cancelled!");
+}
 };
 
 const processClick = async () => {
