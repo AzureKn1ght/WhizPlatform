@@ -72,6 +72,8 @@ const gigsProgress = async () => {
       const data = await res.json();
       console.log("Gigs in progress data received");
       console.log(data);
+
+      if(data.length>0){
       data.gigs.forEach((gigs) => {
         var date = moment(gigs.deadline).format("DD MMM YYYY");
         var created = moment(gigs.created).format("DD MMM YYYY");
@@ -416,6 +418,7 @@ const gigsProgress = async () => {
       });
 
       hirerGigsInProgress.innerHTML = elm;
+    }
     } catch (error) {
       console.log(error.message);
     }
@@ -467,6 +470,8 @@ const gigsOpen = async () => {
     });
     const data = await res.json();
     console.log(data);
+
+    if (data.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       
@@ -515,6 +520,7 @@ const gigsOpen = async () => {
               </div>`;
     });
     gigsOpenForApplication.innerHTML = elm;
+  }
   } catch (error) {
     console.log(error.message);
   }
@@ -542,6 +548,8 @@ const gigsCompleted = async () => {
     });
     const data = await res.json();
     console.log(data);
+
+    if(data.length > 0){
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       var date = moment(gigs.deadline).format("DD MMM YYYY");
@@ -639,6 +647,7 @@ const gigsCompleted = async () => {
       </div>`;
     });
     gigsCompletedHirer.innerHTML = elm;
+  }
   } catch (error) {
     console.log(error.message);
   }
@@ -657,6 +666,8 @@ const getReview = async () => {
     const data = await result;
     reviewsData = data;
     console.log(reviewsData);
+
+    if (data.length > 0) {
 
     reviewsData.forEach((reviews) => {
       let jobName = reviews.job.title;
@@ -795,6 +806,7 @@ const getReview = async () => {
     });
 
     receivedReviews.innerHTML = elm;
+  }
   } catch (error) {
     console.log("No reviews found:" + error);
   }

@@ -71,6 +71,9 @@ const gigsProgress = async () => {
       },
     });
     const data = await res.json();
+
+    if(data.length > 0){
+
     console.log(data);
     data.gigs.forEach((gigs) => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
@@ -381,6 +384,7 @@ const gigsProgress = async () => {
     });
 
     gigsInProgress.innerHTML = elm;
+  }
 
   
   } catch (error) {
@@ -437,6 +441,8 @@ const gigsApplied = async () => {
     });
     const data = await res.json();
     console.log(data);
+
+    if (data.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
      var file = gigs.background;
@@ -513,6 +519,7 @@ const gigsApplied = async () => {
       <!-- /PRODUCT PREVIEW -->`;
     });
     gigsAppliedFor.innerHTML = elm;
+  }
   } catch (error) {
     console.log(error.message);
   }
@@ -565,6 +572,8 @@ const gigsRecommeded = async () => {
     const data2 = await res2.json();
     
     console.log(data2);
+
+    if (data2.length > 0) {
     data2.gigs.forEach((gigs) => {
       console.log(gigs);
       var image = gigs.background;
@@ -638,6 +647,7 @@ const gigsRecommeded = async () => {
       <!-- /PRODUCT PREVIEW -->`;
     });
     gigsRecommendedTo.innerHTML = elm;
+  }
 
   } catch (error) {
     console.log(error.message);
@@ -670,6 +680,7 @@ const gigsCompleted = async () => {
     });
     const data = await res.json();
     console.log(data);
+    if (data.length > 0) {
     data.gigs.forEach((gigs) => {
       console.log(gigs);
       var date = moment(gigs.deadline).format("DD MMM YYYY");
@@ -700,9 +711,7 @@ const gigsCompleted = async () => {
             <p class="user-short-description-title"><a href="group-timeline.html">${gigs.title}</a></p>
             <!-- /USER SHORT DESCRIPTION TITLE -->
 
-            <!-- USER SHORT DESCRIPTION TEXT -->
-            <p class="user-short-description-text">${gigs.description}</p>
-            <!-- /USER SHORT DESCRIPTION TEXT -->
+            
           </div>
           <!-- /USER SHORT DESCRIPTION -->
 
@@ -766,6 +775,7 @@ const gigsCompleted = async () => {
       </div>`;
     });
     gigsCompletedCard.innerHTML = elm;
+  }
   } catch (error) {
     console.log(error.message);
   }
@@ -784,7 +794,7 @@ const getReview = async () => {
     reviewsData = data;
     console.log(reviewsData);
     
-
+    if (data.length > 0) {
     reviewsData.forEach((reviews) => {
       let jobName = reviews.job.title;
       let grading = reviews.ratings.grading;
@@ -923,6 +933,7 @@ const getReview = async () => {
     });
 
     receivedReviews.innerHTML = elm;
+  }
   } catch (error) {
     console.log("No reviews found:" + error);
   }
