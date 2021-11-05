@@ -1,157 +1,2222 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1"
-    />
-    <!-- bootstrap 4.3.1 -->
-    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
-    <!-- styles -->
-    <link rel="stylesheet" href="css/styles.min.css" />
-    
-    <!-- favicon -->
-    <link rel="icon" href="img/favicon.ico" />
-    <title>Whiz | Home</title>
-  </head>
-  <body>
-    <!-- LANDING -->
-    <div class="landing">
-      <!-- LANDING DECORATION -->
-      <div class="landing-decoration"></div>
-      <!-- /LANDING DECORATION -->
+<html lang="en-US">
 
-      <!-- LANDING INFO -->
-      <div class="landing-info">
-        <!-- LOGO -->
-        <div class="logo">
-          <!-- ICON LOGO VIKINGER -->
-          <div>
-            <img
-              className="login-icon-logo"
-              src="./img/whiz/hat_coin_icon.png"
-              alt="Whiz Logo"
-            />
-          </div>
-          <!-- /ICON LOGO VIKINGER -->
-        </div>
-        <!-- /LOGO -->
+<head>
+	<meta charset="UTF-8">
+	<!-- favicon -->
+	<link rel="icon" href="img/favicon.ico" />
+	<title>Whiz &#8211; Next Generation Freelancing</title>
+	<meta name='robots' content='max-image-preview:large' />
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<link rel="alternate" type="application/rss+xml" title="Vikinger &raquo; Feed"
+		href="https://odindesignthemes.com/vikinger-theme/feed/" />
+	<link rel="alternate" type="application/rss+xml" title="Vikinger &raquo; Comments Feed"
+		href="https://odindesignthemes.com/vikinger-theme/comments/feed/" />
+	<link rel='stylesheet' id='dashicons-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-includes/css/dashicons.min.css?ver=5.8.1' type='text/css'
+		media='all' />
+	<link rel='stylesheet' id='bp-verified-member-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/css/style.css?ver=1.2.2'
+		type='text/css' media='all' />
 
-        <!-- LANDING INFO PRETITLE -->
-        <h2 class="landing-info-pretitle">Welcome to</h2>
-        <!-- /LANDING INFO PRETITLE -->
+	<link rel='stylesheet' id='wp-block-library-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-includes/css/dist/block-library/style.min.css?ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-login-form-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/css/blocks/login-form.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-member-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/member.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-members-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/members.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-dynamic-members-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-members/css/blocks/dynamic-members.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-latest-activities-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-activity/css/blocks/latest-activities.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-friends-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-friends/css/blocks/friends.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-group-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/group.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-groups-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/groups.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-dynamic-groups-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-groups/css/blocks/dynamic-groups.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bp-sitewide-notices-block-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-messages/css/blocks/sitewide-notices.min.css?ver=9.1.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wc-blocks-vendors-style-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=5.7.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wc-blocks-style-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=5.7.2'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='bbp-default-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bbpress/templates/default/css/bbpress.min.css?ver=2.6.6'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='pmpro_frontend-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/paid-memberships-pro/css/frontend.css?ver=2.6.2'
+		type='text/css' media='screen' />
+	<link rel='stylesheet' id='pmpro_print-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/paid-memberships-pro/css/print.css?ver=2.6.2'
+		type='text/css' media='print' />
+	<link rel='stylesheet' id='woocommerce-layout-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=5.7.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='woocommerce-smallscreen-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=5.7.1'
+		type='text/css' media='only screen and (max-width: 768px)' />
+	<link rel='stylesheet' id='woocommerce-general-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=5.7.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-fonts-css'
+		href='https://fonts.googleapis.com/css?family=Rajdhani%3A400%2C500%2C600%2C700%7CTitillium+Web%3A400%2C900&#038;display=swap&#038;ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-simplebar-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/css/vendor/simplebar.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-swiper-slider-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/css/vendor/swiper.min.css?ver=1.0.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='vikinger-styles-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/style.css?ver=3.8.6'
+		type='text/css' media='all' />
+	<style id='vikinger-styles-inline-css' type='text/css'>
+		:root {
+			--font-primary: Rajdhani, sans-serif;
+			--font-secondary: Titillium Web, sans-serif;
+		}
 
-        <!-- LANDING INFO TITLE -->
-        <h1 class="landing-info-title">Whiz</h1>
-        <!-- /LANDING INFO TITLE -->
+		:root {
+			--color-wplogin-body: #fff;
+			--color-wplogin-header-text: #fff;
+			--color-header-background: #615dfa;
+			--color-header-logo-background: #00c7d9;
+			--color-header-text: #fff;
+			--color-header-icon: #8b88ff;
+			--color-header-icon-hover: #fff;
+			--color-header-profile-settings-icon: #fff;
+			--color-header-mobilemenu-trigger-icon: #fff;
+			--color-header-divider: #7a77fd;
+			--color-header-input-background: #4e4ac8;
+			--color-header-input-placeholder: #8b88ff;
+			--color-header-progressbar-line-gradient-start: #41efff;
+			--color-header-progressbar-line-gradient-end: #41efff;
+			--color-header-progressbar-underline: #4a46c8;
+			--color-body: #f8f8fb;
+			--color-box-background: #fff;
+			--color-box-background-alt: #fcfcfd;
+			--color-box-over-box-background: #fff;
+			--color-box-over-box-light-background: #fff;
+			--color-box-highlight-background: #f7f7fb;
+			--color-box-hover-background: #f2f2f9;
+			--color-box-shadow: 0 0 40px 0 rgba(94, 92, 154, .06);
+			--color-overbox-shadow: 3px 5px 20px 0 rgba(94, 92, 154, .12);
+			--color-overbox-dark-shadow: 0 0 40px 0 rgba(94, 92, 154, .12);
+			--color-overbox-big-shadow: 3px 5px 40px 0 rgba(94, 92, 154, .1);
+			--color-text: #3e3f5e;
+			--color-text-alt: #8f91ac;
+			--color-text-alt-2: #adafca;
+			--color-icon: #adafca;
+			--color-icon-highlighted: #3e3f5e;
+			--color-border: #dedeea;
+			--color-divider: #eaeaf5;
+			--color-progressbar-line-gradient-start: #615dfa;
+			--color-progressbar-line-gradient-end: #41efff;
+			--color-progressbar-underline: #e7e8ee;
+			--color-avatar-rank-hexagon: #45437f;
+			--color-primary: #23d2e2;
+			--color-primary-hover: #1bc5d4;
+			--color-primary-light: #41efff;
+			--color-primary-dark: #00c7d9;
+			--color-primary-shadow: 4px 7px 12px 0 rgba(35, 210, 226, .2);
+			--color-secondary: #615dfa;
+			--color-secondary-hover: #5753e4;
+			--color-secondary-dark: #45437f;
+			--color-secondary-shadow: 4px 7px 12px 0 rgba(97, 93, 250, .2);
+			--color-tertiary: #fd4350;
+			--color-tertiary-hover: #dd343f;
+			--color-tertiary-shadow: 4px 7px 12px 0 rgba(253, 67, 80, .2);
+			--color-loading-screen-background: #3e3f5e;
+			--color-loading-bar-1: #615dfa;
+			--color-loading-bar-2: #5d71fb;
+			--color-loading-bar-3: #5983fb;
+			--color-loading-bar-4: #549afc;
+			--color-loading-bar-5: #4eb2fd;
+			--color-loading-bar-6: #49c9fe;
+			--color-loading-bar-7: #45ddfe;
+			--color-loading-bar-8: #41efff;
+			--color-overlay: rgba(21, 21, 31, .96);
+			;
+			--color-notice-overlay-background-primary: rgba(35, 210, 226, .14);
+			--color-notice-overlay-background-secondary: rgba(97, 93, 250, .14);
+			--color-notice-overlay-background-tertiary: rgba(253, 67, 80, .14);
+			--color-avatar-overlay-background: rgba(97, 93, 250, .9);
+			--footer-navigation-display-mobile: none;
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-icons-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.12.0'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-legacy-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-frontend-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<style id='elementor-frontend-inline-css' type='text/css'>
+		@font-face {
+			font-family: eicons;
+			src: url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);
+			src: url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"), url(https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");
+			font-weight: 400;
+			font-style: normal
+		}
+	</style>
+	<link rel='stylesheet' id='elementor-post-875-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/uploads/elementor/css/post-875.css?ver=1632493715'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-global-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/uploads/elementor/css/global.css?ver=1632493715'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-post-876-css'
+		href='./css/landing.css'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='google-fonts-1-css'
+		href='https://fonts.googleapis.com/css?family=Rajdhani%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CTitillium+Web%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.1'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-shared-0-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-solid-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-regular-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='elementor-icons-fa-brands-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3'
+		type='text/css' media='all' />
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/js/vendor/popper.min.js?ver=1.14.7'
+		id='popper-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
+		id='jquery-core-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2'
+		id='jquery-migrate-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/bp-verified-member/assets/js/main.js?ver=1.2.2'
+		id='bp-verified-member-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/confirm.min.js?ver=9.1.1'
+		id='bp-confirm-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/widget-members.min.js?ver=9.1.1'
+		id='bp-widget-members-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/jquery-query.min.js?ver=9.1.1'
+		id='bp-jquery-query-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.min.js?ver=9.1.1'
+		id='bp-jquery-cookie-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.min.js?ver=9.1.1'
+		id='bp-jquery-scroll-to-js'></script>
 
-        <!-- LANDING INFO TEXT -->
-        <p class="landing-info-text">
-          The next generation social network &amp; community! Connect with jobs
-          and play with our quests and badges gamification system!
-        </p>
-        <!-- /LANDING INFO TEXT -->
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.min.js?ver=9.1.1'
+		id='bp-legacy-js-js'></script>
+	<link rel="https://api.w.org/" href="https://odindesignthemes.com/vikinger-theme/wp-json/" />
+	<link rel="alternate" type="application/json"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/wp/v2/pages/876" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD"
+		href="https://odindesignthemes.com/vikinger-theme/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+		href="https://odindesignthemes.com/vikinger-theme/wp-includes/wlwmanifest.xml" />
+	<meta name="generator" content="WordPress 5.8.1" />
+	<meta name="generator" content="WooCommerce 5.7.1" />
+	<link rel="canonical" href="https://odindesignthemes.com/vikinger-theme/" />
+	<link rel='shortlink' href='https://odindesignthemes.com/vikinger-theme/' />
+	<link rel="alternate" type="application/json+oembed"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fodindesignthemes.com%2Fvikinger-theme%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://odindesignthemes.com/vikinger-theme/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fodindesignthemes.com%2Fvikinger-theme%2F&#038;format=xml" />
 
-        <!-- TAB SWITCH -->
-        <div class="tab-switch">
-          <!-- TAB SWITCH BUTTON -->
-          <p class="tab-switch-button login-register-form-trigger">
-            Freelancer
-          </p>
-          <!-- /TAB SWITCH BUTTON -->
+</head>
 
-          <!-- TAB SWITCH BUTTON -->
-          <p class="tab-switch-button login-register-form-trigger">Hirer</p>
-          <!-- /TAB SWITCH BUTTON -->
-        </div>
-        <!-- /TAB SWITCH -->
-      </div>
-      <!-- /LANDING INFO -->
+<body
+	class="home-page bp-legacy home page-template page-template-elementor_canvas page page-id-876 wp-custom-logo theme-vikinger pmpro-body-has-access woocommerce-no-js vikinger-logged-out elementor-default elementor-template-canvas elementor-kit-875 elementor-page elementor-page-876 no-js">
+	<div data-elementor-type="wp-page" data-elementor-id="876" class="elementor elementor-876"
+		data-elementor-settings="[]">
+		<div class="elementor-inner">
+			<div class="elementor-section-wrap">
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-7c24e767 elementor-section-full_width elementor-section-height-min-height elementor-section-items-top elementor-section-height-default"
+					data-id="7c24e767" data-element_type="section"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-container elementor-column-gap-no">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-53eb1ded"
+								data-id="53eb1ded" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-2405497c elementor-section-height-min-height elementor-section-boxed elementor-section-height-default"
+											data-id="2405497c" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-25 elementor-inner-column elementor-element-4f8a8ea9 "
+														data-id="4f8a8ea9" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-5def8f66 elementor-widget__width-auto elementor-hidden-desktop elementor-widget elementor-widget-vikinger-menu-mobile"
+																	data-id="5def8f66" data-element_type="widget"
+																	data-widget_type="vikinger-menu-mobile.default">
+																	<div class="elementor-widget-container">
 
-      <!-- LANDING FORM -->
-      <div class="landing-form">
-        <!-- FORM BOX -->
-        <div class="form-box login-register-form-element">
+																		<!-- /VK EL NAVIGATION MOBILE TRIGGER OPEN -->
+
+																		<!-- /VK EL NAVIGATION MOBILE -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-11f41bbf"
+														data-id="11f41bbf" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-32ac4255 elementor-widget__width-auto elementor-widget elementor-widget-vikinger-menu"
+																	data-id="32ac4255" data-element_type="widget"
+																	data-widget_type="vikinger-menu.default">
+																	<div class="elementor-widget-container">
+
+																		<!-- VK EL NAVIGATION -->
+																		<ul class="vk-el-navigation" style=>
+																			<!-- VK EL NAVIGATION ITEM -->
+																			<li class="vk-el-navigation-item">
+																				<!-- VK EL NAVIGATION ITEM LINK -->
+																				<a class="vk-el-navigation-item-link"
+																					href="dashboard-freelancer.html"
+																					style=color:#FFFFFF;>
+																					Home </a>
+																				<!-- /VK EL NAVIGATION ITEM LINK -->
+
+																			</li>
+																			<!-- /VK EL NAVIGATION ITEM -->
+																			<!-- VK EL NAVIGATION ITEM -->
+																			<li class="vk-el-navigation-item">
+																				<!-- VK EL NAVIGATION ITEM LINK -->
+																				<a class="vk-el-navigation-item-link"
+																					href="FAQ.html"
+																					style=color:#FFFFFF;>
+																					FAQs </a>
+																				<!-- /VK EL NAVIGATION ITEM LINK -->
+
+																			</li>
+																			<!-- /VK EL NAVIGATION ITEM -->
+
+																		</ul>
+																		<!-- /VK EL NAVIGATION -->
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col elementor-inner-column elementor-element elementor-element-11f41bbf elementor-hidden-tablet elementor-hidden-phone"
+														data-id="11f41bbf" data-element_type="column" >
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-27da351a elementor-align-center elementor-widget elementor-widget-button"
+																	data-id="27da351a" data-element_type="widget"
+																	data-widget_type="button.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-button-wrapper">
+																			<a href="index.html"
+																				target="_blank"
+																				class="elementor-button-link elementor-button elementor-size-sm"
+																				role="button">
+																				<span
+																					class="elementor-button-content-wrapper">
+																					<span
+																						class="elementor-button-text">Sign
+																						In!</span>
+																				</span>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-48b0131f elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="48b0131f" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7516b03e"
+														data-id="7516b03e" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-6ad7552a elementor-widget elementor-widget-heading"
+																	data-id="6ad7552a" data-element_type="widget"
+																	data-widget_type="heading.default">
+																		<img width="280" height="280"
+																			className="login-icon-logo"
+																			src="./img/whiz/whiz_logo_square.png"
+																			alt="Whiz Logo" />
+																		<h2 class="elementor-heading-title elementor-size-default">Whiz</h2>
+																</div>
+																<div class="elementor-element elementor-element-5aaf8760 elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-widget elementor-widget-text-editor">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p><strong>The next generation social
+																					network & community! Connect with
+																					freelancers and buyers whle obtaining
+																					badges on our gamification system!</strong>
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-3a8785bd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="3a8785bd" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-67a0682f"
+														data-id="67a0682f" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-6ac1621e elementor-align-center elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-button"
+																	data-id="6ac1621e" data-element_type="widget"
+																	data-widget_type="button.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-button-wrapper">
+																			<a href="index.html"
+																				class="elementor-button-link elementor-button elementor-size-sm"
+																				role="button">
+																				<span
+																					class="elementor-button-content-wrapper">
+																					<span
+																						class="elementor-button-text">Sign
+																						In / Register</span>
+																				</span>
+																			</a>
+																			
+																		</div>
+
+																		<br>
+
+																		<div class="elementor-button-wrapper">
+																			<a href="gig-search.html"
+																				class="elementor-button-link elementor-button elementor-size-sm"
+																				role="button">
+																				<span
+																					class="elementor-button-content-wrapper">
+																					<span
+																						class="elementor-button-text">View Available Gigs</span>
+																				</span>
+																			</a>
+																			
+																		</div>
 
 
-          <!-- FORM BOX TITLE -->
-                    <!-- FORM BOX DECORATION -->
-          <img
-            class="form-box-decoration overflowing"
-            src="./img/landing/rocket.png"
-            alt="rocket"
-          />
-          <!-- /FORM BOX DECORATION -->
-          <h2 class="form-box-title">Freelancer Login</h2>
-          <!-- /FORM BOX TITLE -->
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-2564d300 elementor-align-center elementor-widget__width-auto elementor-widget-mobile__width-auto elementor-widget elementor-widget-button"
+																	data-id="2564d300" data-element_type="widget"
+																	data-widget_type="button.default">
 
-         
-          <!-- LINED TEXT -->
-          <p class="lined-text">Login / Create Account with Metamask Account</p><br>
-          <!-- /LINED TEXT -->
-            <a class="button medium secondary btn-block" id="meta-freelancer" href="#" role="button">
-              <img
-                src="./img/metamask.png"
-                height="25"
-                alt="Connect to Metamask"
-              />
-              &nbsp; Connect with Metamask
-            </a>
-        </div>
-          <!-- /FORM BOX -->
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-30fc45f6 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="30fc45f6" data-element_type="section" style="padding-top:60px; padding-bottom:60px"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="elementor-container elementor-column-gap-no">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-59bf3225"
+								data-id="59bf3225" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-3f666939 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="3f666939" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-default">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-66 elementor-inner-column elementor-element elementor-element-4b7744f8"
+														data-id="4b7744f8" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-647e971a elementor-widget elementor-widget-heading"
+																	data-id="647e971a" data-element_type="widget"
+																	data-widget_type="heading.default">
+
+																</div>
+																<div class="elementor-element elementor-element-7fbbf45f elementor-widget elementor-widget-text-editor"
+																	data-id="7fbbf45f" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Freelance job portal</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-15fde512"
+														data-id="15fde512" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-1850f028 elementor-widget elementor-widget-text-editor"
+																	data-id="1850f028" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Secure, traceable, reliable payments
+																				using smart contracts and payments via
+																				the Polygon blockchain.
+																				All your pain points with other
+																				freelancing platforms taken care off!
+																			</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					class="elementor-section elementor-top-section elementor-element elementor-element-341707ca elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+					data-id="341707ca" data-element_type="section"
+					data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="padding-bottom:70px">
+					<div class="elementor-container elementor-column-gap-default">
+						<div class="elementor-row">
+							<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3209709d"
+								data-id="3209709d" data-element_type="column">
+								<div class="elementor-column-wrap elementor-element-populated">
+									<div class="elementor-widget-wrap">
+										<section
+											class="elementor-section elementor-inner-section elementor-element elementor-element-182f3291 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+											data-id="182f3291" data-element_type="section">
+											<div class="elementor-container elementor-column-gap-no">
+												<div class="elementor-row">
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e10f39c"
+														data-id="e10f39c" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-75883b09 elementor-widget elementor-widget-image"
+																	data-id="75883b09" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon1.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-465f5b29 elementor-widget elementor-widget-heading"
+																	data-id="465f5b29" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default" style="color: #529df9">
+																			Access to Qualified Freelancers Globally
+																		</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-7ff6214b elementor-widget elementor-widget-text-editor"
+																	data-id="7ff6214b" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Transactions on Whiz are recorded on the
+																				blockchain, therefore users can be
+																				assured work records and reviews are
+																				authentic.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-15fa6803"
+														data-id="15fa6803" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-3ee40594 elementor-widget elementor-widget-image"
+																	data-id="3ee40594" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon2.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-50e835b8 elementor-widget elementor-widget-heading"
+																	data-id="50e835b8" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default" style="color: #529df9">
+																			Use Smart Contracts ensure Well-Defined
+																			Scopes & Payments</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-e6d0e07 elementor-widget elementor-widget-text-editor"
+																	data-id="e6d0e07" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Terms of assignments, including payment
+																				arrangements, are encoded in a smart
+																				contract on Blockchain and cannot be
+																				changed once enforced.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-29a966ef"
+														data-id="29a966ef" data-element_type="column">
+														<div class="elementor-column-wrap elementor-element-populated">
+															<div class="elementor-widget-wrap">
+																<div class="elementor-element elementor-element-70b6e3 elementor-widget elementor-widget-image"
+																	data-id="70b6e3" data-element_type="widget"
+																	data-widget_type="image.default">
+																	<div class="elementor-widget-container">
+																		<div class="elementor-image">
+																			<img srcset="./img/banner/icon3.png" />
+																		</div>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-219a8e2b elementor-widget elementor-widget-heading"
+																	data-id="219a8e2b" data-element_type="widget"
+																	data-widget_type="heading.default">
+																	<div class="elementor-widget-container">
+																		<h2
+																			class="elementor-heading-title elementor-size-default" style="color: #529df9">
+																			Enjoy Zero Commission Fees & Only Pay For What You Need</h2>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-385db577 elementor-widget elementor-widget-text-editor"
+																	data-id="385db577" data-element_type="widget"
+																	data-widget_type="text-editor.default">
+																	<div class="elementor-widget-container">
+																		<div
+																			class="elementor-text-editor elementor-clearfix">
+																			<p>Instead of paying potentially hefty
+																				commissions that increase with the value
+																				of jobs, you simply pay a flat fee for
+																				each of the features that you deem
+																				essential for standing out among
+																				competitors.</p>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</section>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!--CONTENT GRID -->
+  <div class="content-grid" style="padding-top:60px">
 
 
-          <!-- FORM BOX -->
-          <div class="form-box login-register-form-element">
-            <!-- FORM BOX DECORATION -->
-            <img
-              class="form-box-decoration overflowing"
-              src="./img/landing/rocket.png"
-              alt="rocket"
-            />
-            <!-- /FORM BOX DECORATION -->
-          
-            <!-- FORM BOX TITLE -->
-            <h2 class="form-box-title">Hirer Login</h2>
-            <!-- /FORM BOX TITLE -->
-            <!-- LINED TEXT -->
-            <p class="lined-text">Login / Create Account with Metamask Account</p>
-            <br>
-            <!-- /LINED TEXT -->
-            <a
-              class="button medium secondary btn-block"
-              id="meta-hirer"
-              href="#"
-              role="button"
-            >
-              <img src="./img/metamask.png" height="25" alt="Connect to Metamask" />
-              &nbsp; Connect with Metamask
-            </a>
-          </div>
-          <!-- /FORM BOX -->
-      </div>
-      <!-- /LANDING FORM -->
+      <!-- SECTION BANNER TITLE -->
+	  <div class="elementor-element elementor-element-7fbbf45f elementor-widget elementor-widget-text-editor"
+	  data-id="7fbbf45f" data-element_type="widget"
+	  data-widget_type="text-editor.default">
+	  <div class="elementor-widget-container">
+      <p class="elementor-text-editor elementor-clearfix">Gigs for Freelancers</p>
+	  </div>
+
+      
+      <!-- /SECTION BANNER TITLE -->
     </div>
-    <!-- /LANDING -->
+    <!-- GRID -->
+    <div class="grid grid mobile-prefer-content">
+      <!-- SECTION FILTERS BAR -->
+      <div class="section-filters-bar centered v3">
+        <!-- FILTER TABS -->
+        <div class="filter-tabs">
+          <!-- FILTER TAB -->
+          <div class="filter-tab">
+            <!-- FILTER TAB TEXT -->
+            <p class="filter-tab-text">Most Bidders</p>
+            <!-- /FILTER TAB TEXT -->
+          </div>
+          <!-- /FILTER TAB -->
+    
+          <!-- FILTER TAB -->
+          <div class="filter-tab active">
+            <!-- FILTER TAB TEXT -->
+            <p class="filter-tab-text">Recently Added</p>
+            <!-- /FILTER TAB TEXT -->
+          </div>
+          <!-- /FILTER TAB -->
+    
+          <!-- FILTER TAB -->
+          <div class="filter-tab">
+            <!-- FILTER TAB TEXT -->
+            <p class="filter-tab-text">Best Rated Hirer</p>
+            <!-- /FILTER TAB TEXT -->
+          </div>
+          <!-- /FILTER TAB -->
+    
+          <!-- FILTER TAB -->
+          <div class="filter-tab">
+            <!-- FILTER TAB TEXT -->
+            <p class="filter-tab-text">Lowest Budget</p>
+            <!-- /FILTER TAB TEXT -->
+          </div>
+          <!-- /FILTER TAB -->
+    
+          <!-- FILTER TAB -->
+          <div class="filter-tab">
+            <!-- FILTER TAB TEXT -->
+            <p class="filter-tab-text">Highest Budget</p>
+            <!-- /FILTER TAB TEXT -->
+          </div>
+          <!-- /FILTER TAB -->
+        </div>
+        <!-- /FILTER TABS -->
+    
+        <!-- FORM -->
+        <form class="form">
+          <!-- FORM SELECT -->
+          <div class="form-select">
+            <label for="store-filter-category">Filter By</label>
+            <select id="store-filter-category" name="store_filter_category">
+              <option value="0">Most Bidders</option>
+              <option value="1">Recently Added</option>
+              <option value="2">Best Rated Hirer</option>
+              <option value="3">Lowest Budget</option>
+              <option value="4">Highest Budget</option>
+            </select>
+          </div>
+          <!-- /FORM SELECT -->
+        </form>
+        <!-- /FORM -->
+      </div>
+      <!-- /SECTION FILTERS BAR -->
 
-   
-    <script type="text/javascript">
-      on_index = true;
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/web3@1.5.2/dist/web3.min.js"></script>
-    <script src="js/middleware/metamask.js"></script>
-     <!--Login JS-->
-     <script src="./js/middleware/login.js"></script>
-    <!-- app -->
-    <script src="js/utils/app.js" defer></script>
-    <!-- XM_Plugins -->
-    <script src="js/vendor/xm_plugins.min.js" defer></script>
-    <!-- form.utils -->
-    <script src="js/form/form.utils.js" defer></script>
-    <!-- landing.tabs -->
-    <script src="js/landing/landing.tabs.js" defer></script>
-    <!-- SVG icons -->
-    <script src="js/utils/svg-loader.js" defer></script>
-  </body>
+      <!-- GRID -->
+      <div class="grid grid-3-3-3-3 centered">
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+          <!-- PRODUCT PREVIEW IMAGE -->
+          <a href="#">
+            <figure class="product-preview-image liquid">
+              <img src="img/marketplace/items/01.jpg" alt="item-01">
+            </figure>
+          </a>
+          <!-- /PRODUCT PREVIEW IMAGE -->
+      
+          <!-- PRODUCT PREVIEW INFO -->
+          <div class="product-preview-info">
+            <!-- TEXT STICKER -->
+            <p class="text-sticker"><span class="highlighted">$</span> 1,000</p>
+            <!-- /TEXT STICKER -->
+      
+            <!-- PRODUCT PREVIEW TITLE -->
+            <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation for Marketing Brochure</a></p>
+            <!-- /PRODUCT PREVIEW TITLE -->
+      
+            <!-- PRODUCT PREVIEW CATEGORY -->
+            <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation</a></p>
+            <!-- /PRODUCT PREVIEW CATEGORY -->
+      
+            <!-- PRODUCT PREVIEW TEXT -->
+            <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Translate from English to Japanese</p>
+            <!-- /PRODUCT PREVIEW TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW INFO -->
+      
+          <!-- PRODUCT PREVIEW META -->
+          <div class="product-preview-meta">
+            <!-- PRODUCT PREVIEW AUTHOR -->
+            <div class="product-preview-author">
+              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+              <a class="product-preview-author-image user-avatar micro no-border" href="#">
+                <!-- USER AVATAR CONTENT -->
+                <div class="user-avatar-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-image-18-20" data-src="img/avatar/34.jpg"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR CONTENT -->
+              </a>
+              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+              <p class="product-preview-author-title">Posted By</p>
+              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+              <p class="product-preview-author-text"><a href="#">ABC Company</a></p>
+              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW AUTHOR -->
+      
+            <!-- RATING LIST -->
+            <div class="rating-list">
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+            </div>
+            <!-- /RATING LIST -->
+          </div>
+          <!-- /PRODUCT PREVIEW META -->
+        </div>
+        <!-- /PRODUCT PREVIEW -->
+
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+          <!-- PRODUCT PREVIEW IMAGE -->
+          <a href="#">
+            <figure class="product-preview-image liquid">
+              <img src="img/marketplace/items/03.jpg" alt="item-03">
+            </figure>
+          </a>
+          <!-- /PRODUCT PREVIEW IMAGE -->
+      
+          <!-- PRODUCT PREVIEW INFO -->
+          <div class="product-preview-info">
+            <!-- TEXT STICKER -->
+            <p class="text-sticker"><span class="highlighted">$</span> 2,000</p>
+            <!-- /TEXT STICKER -->
+      
+            <!-- PRODUCT PREVIEW TITLE -->
+            <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Coding for Machine Learning</a></p>
+            <!-- /PRODUCT PREVIEW TITLE -->
+      
+            <!-- PRODUCT PREVIEW CATEGORY -->
+            <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Python, Machine Learning</a></p>
+            <!-- /PRODUCT PREVIEW CATEGORY -->
+      
+            <!-- PRODUCT PREVIEW TEXT -->
+            <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">ML to study patterns in exam results based on student parameters</p>
+            <!-- /PRODUCT PREVIEW TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW INFO -->
+      
+          <!-- PRODUCT PREVIEW META -->
+          <div class="product-preview-meta">
+            <!-- PRODUCT PREVIEW AUTHOR -->
+            <div class="product-preview-author">
+              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+              <a class="product-preview-author-image user-avatar micro no-border" href="#">
+                <!-- USER AVATAR CONTENT -->
+                <div class="user-avatar-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-image-18-20" data-src="img/avatar/20.jpg"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR CONTENT -->
+              </a>
+              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+              <p class="product-preview-author-title">Posted By</p>
+              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+              <p class="product-preview-author-text"><a href="#">Sunny Days Pte Ltd</a></p>
+              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW AUTHOR -->
+      
+            <!-- RATING LIST -->
+            <div class="rating-list">
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+            </div>
+            <!-- /RATING LIST -->
+          </div>
+          <!-- /PRODUCT PREVIEW META -->
+        </div>
+        <!-- /PRODUCT PREVIEW -->
+
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+          <!-- PRODUCT PREVIEW IMAGE -->
+          <a href="marketplace-product.html">
+            <figure class="product-preview-image liquid">
+              <img src="img/marketplace/items/13.jpg" alt="item-13">
+            </figure>
+          </a>
+          <!-- /PRODUCT PREVIEW IMAGE -->
+      
+          <!-- PRODUCT PREVIEW INFO -->
+          <div class="product-preview-info">
+            <!-- TEXT STICKER -->
+            <p class="text-sticker"><span class="highlighted">$</span> 2,400</p>
+            <!-- /TEXT STICKER -->
+      
+            <!-- PRODUCT PREVIEW TITLE -->
+            <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Create a website</a></p>
+            <!-- /PRODUCT PREVIEW TITLE -->
+      
+            <!-- PRODUCT PREVIEW CATEGORY -->
+            <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">HTML, Javascript</a></p>
+            <!-- /PRODUCT PREVIEW CATEGORY -->
+      
+            <!-- PRODUCT PREVIEW TEXT -->
+            <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Create a website for online presence for a hawker centre stall in Singapore</p>
+            <!-- /PRODUCT PREVIEW TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW INFO -->
+      
+          <!-- PRODUCT PREVIEW META -->
+          <div class="product-preview-meta">
+            <!-- PRODUCT PREVIEW AUTHOR -->
+            <div class="product-preview-author">
+              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+                <!-- USER AVATAR CONTENT -->
+                <div class="user-avatar-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-image-18-20" data-src="img/avatar/18.jpg"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR CONTENT -->
+              </a>
+              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+              <p class="product-preview-author-title">Posted By</p>
+              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+              <p class="product-preview-author-text"><a href="profile-timeline.html">Heavy Monsoon Corp</a></p>
+              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW AUTHOR -->
+      
+            <!-- RATING LIST -->
+            <div class="rating-list">
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+            </div>
+            <!-- /RATING LIST -->
+          </div>
+          <!-- /PRODUCT PREVIEW META -->
+        </div>
+        <!-- /PRODUCT PREVIEW -->
+
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+          <!-- PRODUCT PREVIEW IMAGE -->
+          <a href="marketplace-product.html">
+            <figure class="product-preview-image liquid">
+              <img src="img/marketplace/items/05.jpg" alt="item-05">
+            </figure>
+          </a>
+          <!-- /PRODUCT PREVIEW IMAGE -->
+      
+          <!-- PRODUCT PREVIEW INFO -->
+          <div class="product-preview-info">
+            <!-- TEXT STICKER -->
+            <p class="text-sticker"><span class="highlighted">$</span> 1,500</p>
+            <!-- /TEXT STICKER -->
+      
+            <!-- PRODUCT PREVIEW TITLE -->
+            <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Create Social Media Campaign</a></p>
+            <!-- /PRODUCT PREVIEW TITLE -->
+      
+            <!-- PRODUCT PREVIEW CATEGORY -->
+            <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">Brand Strategy,Social Media Maketing
+
+            </a></p>
+            <!-- /PRODUCT PREVIEW CATEGORY -->
+      
+            <!-- PRODUCT PREVIEW TEXT -->
+            <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Need to launch a new product using social media</p>
+            <!-- /PRODUCT PREVIEW TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW INFO -->
+      
+          <!-- PRODUCT PREVIEW META -->
+          <div class="product-preview-meta">
+            <!-- PRODUCT PREVIEW AUTHOR -->
+            <div class="product-preview-author">
+              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+                <!-- USER AVATAR CONTENT -->
+                <div class="user-avatar-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-image-18-20" data-src="img/avatar/17.jpg"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR CONTENT -->
+              </a>
+              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+              <p class="product-preview-author-title">Posted By</p>
+              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+              <p class="product-preview-author-text"><a href="profile-timeline.html">Milano Italiano</a></p>
+              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW AUTHOR -->
+      
+            <!-- RATING LIST -->
+            <div class="rating-list">
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+            </div>
+            <!-- /RATING LIST -->
+          </div>
+          <!-- /PRODUCT PREVIEW META -->
+        </div>
+        <!-- /PRODUCT PREVIEW -->
+
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+          <!-- PRODUCT PREVIEW IMAGE -->
+          <a href="marketplace-product.html">
+            <figure class="product-preview-image liquid">
+              <img src="img/marketplace/items/10.jpg" alt="item-10">
+            </figure>
+          </a>
+          <!-- /PRODUCT PREVIEW IMAGE -->
+      
+          <!-- PRODUCT PREVIEW INFO -->
+          <div class="product-preview-info">
+            <!-- TEXT STICKER -->
+            <p class="text-sticker"><span class="highlighted">$</span> 5,000</p>
+            <!-- /TEXT STICKER -->
+      
+            <!-- PRODUCT PREVIEW TITLE -->
+            <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Perform at A Wedding</a></p>
+            <!-- /PRODUCT PREVIEW TITLE -->
+      
+            <!-- PRODUCT PREVIEW CATEGORY -->
+            <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">Music Performance</a></p>
+            <!-- /PRODUCT PREVIEW CATEGORY -->
+      
+            <!-- PRODUCT PREVIEW TEXT -->
+            <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">String Quintet performance required at a hotel ballroom, 2 sets of 30 mins performance over a 3 hour 
+                period on 20 September 2021. Please note that the performers must be in formal wear (black) and should arrive 30 mins prior 
+                to guests arriving.</p>
+            <!-- /PRODUCT PREVIEW TEXT -->
+          </div>
+          <!-- /PRODUCT PREVIEW INFO -->
+      
+          <!-- PRODUCT PREVIEW META -->
+          <div class="product-preview-meta">
+            <!-- PRODUCT PREVIEW AUTHOR -->
+            <div class="product-preview-author">
+              <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+              <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+                <!-- USER AVATAR CONTENT -->
+                <div class="user-avatar-content">
+                  <!-- HEXAGON -->
+                  <div class="hexagon-image-18-20" data-src="img/avatar/15 .jpg"></div>
+                  <!-- /HEXAGON -->
+                </div>
+                <!-- /USER AVATAR CONTENT -->
+              </a>
+              <!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TITLE -->
+              <p class="product-preview-author-title">Posted By</p>
+              <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+      
+              <!-- PRODUCT PREVIEW AUTHOR TEXT -->
+              <p class="product-preview-author-text"><a href="profile-timeline.html">Let's Get Married</a></p>
+              <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+            </div>
+            <!-- /PRODUCT PREVIEW AUTHOR -->
+      
+            <!-- RATING LIST -->
+            <div class="rating-list">
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating filled">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+      
+              <!-- RATING -->
+              <div class="rating">
+                <!-- RATING ICON -->
+                <svg class="rating-icon icon-star">
+                  <use xlink:href="#svg-star"></use>
+                </svg>
+                <!-- /RATING ICON -->
+              </div>
+              <!-- /RATING -->
+            </div>
+            <!-- /RATING LIST -->
+          </div>
+          <!-- /PRODUCT PREVIEW META -->
+        </div>
+        <!-- /PRODUCT PREVIEW -->
+
+        <!-- PRODUCT PREVIEW -->
+        <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="#">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/25.jpg" alt="item-01">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 1,000</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation for Marketing Brochure</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Translate from English to Japanese</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="#">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/34.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="#">ABC Company</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+  
+		  <!-- PRODUCT PREVIEW -->
+		  <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="#">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/24.jpg" alt="item-03">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 2,000</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Coding for Machine Learning</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Python, Machine Learning</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">ML to study patterns in exam results based on student parameters</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="#">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/20.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="#">Sunny Days Pte Ltd</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+  
+		  <!-- PRODUCT PREVIEW -->
+		  <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="marketplace-product.html">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/23.jpg" alt="item-13">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 2,400</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Create a website</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">HTML, Javascript</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Create a website for online presence for a hawker centre stall in Singapore</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/18.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="profile-timeline.html">Heavy Monsoon Corp</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+  
+		  <!-- PRODUCT PREVIEW -->
+		  <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="marketplace-product.html">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/22.jpg" alt="item-05">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 1,500</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Create Social Media Campaign</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">Brand Strategy,Social Media Maketing
+  
+			  </a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Need to launch a new product using social media</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/17.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="profile-timeline.html">Milano Italiano</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+  
+		  <!-- PRODUCT PREVIEW -->
+		  <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="marketplace-product.html">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/21.jpg" alt="item-10">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 5,000</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-product.html">Perform at A Wedding</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="marketplace-category.html">Music Performance</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">String Quintet performance required at a hotel ballroom, 2 sets of 30 mins performance over a 3 hour 
+				  period on 20 September 2021. Please note that the performers must be in formal wear (black) and should arrive 30 mins prior 
+				  to guests arriving.</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/15 .jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="profile-timeline.html">Let's Get Married</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+
+		   <!-- PRODUCT PREVIEW -->
+		   <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="#">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/20.jpg" alt="item-01">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 1,000</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation for Marketing Brochure</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Translation</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">Translate from English to Japanese</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="#">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/34.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="#">ABC Company</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+  
+		  <!-- PRODUCT PREVIEW -->
+		  <div class="product-preview">
+			<!-- PRODUCT PREVIEW IMAGE -->
+			<a href="#">
+			  <figure class="product-preview-image liquid">
+				<img src="img/marketplace/items/19.jpg" alt="item-03">
+			  </figure>
+			</a>
+			<!-- /PRODUCT PREVIEW IMAGE -->
+		
+			<!-- PRODUCT PREVIEW INFO -->
+			<div class="product-preview-info">
+			  <!-- TEXT STICKER -->
+			  <p class="text-sticker"><span class="highlighted">$</span> 2,000</p>
+			  <!-- /TEXT STICKER -->
+		
+			  <!-- PRODUCT PREVIEW TITLE -->
+			  <p class="product-preview-title" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+				<a href="#">Coding for Machine Learning</a></p>
+			  <!-- /PRODUCT PREVIEW TITLE -->
+		
+			  <!-- PRODUCT PREVIEW CATEGORY -->
+			  <p class="product-preview-category digital" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap"><a href="#">Python, Machine Learning</a></p>
+			  <!-- /PRODUCT PREVIEW CATEGORY -->
+		
+			  <!-- PRODUCT PREVIEW TEXT -->
+			  <p class="product-preview-text" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap" style="margin-top:20px;color:#8f91ac;font-size:1.1rem;font-weight:500;line-height:1.4285714286em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+				ML to study patterns in exam results based on student parameters</p>
+			  <!-- /PRODUCT PREVIEW TEXT -->
+			</div>
+			<!-- /PRODUCT PREVIEW INFO -->
+		
+			<!-- PRODUCT PREVIEW META -->
+			<div class="product-preview-meta">
+			  <!-- PRODUCT PREVIEW AUTHOR -->
+			  <div class="product-preview-author">
+				<!-- PRODUCT PREVIEW AUTHOR IMAGE -->
+				<a class="product-preview-author-image user-avatar micro no-border" href="#">
+				  <!-- USER AVATAR CONTENT -->
+				  <div class="user-avatar-content">
+					<!-- HEXAGON -->
+					<div class="hexagon-image-18-20" data-src="img/avatar/20.jpg"></div>
+					<!-- /HEXAGON -->
+				  </div>
+				  <!-- /USER AVATAR CONTENT -->
+				</a>
+				<!-- /PRODUCT PREVIEW AUTHOR IMAGE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TITLE -->
+				<p class="product-preview-author-title">Posted By</p>
+				<!-- /PRODUCT PREVIEW AUTHOR TITLE -->
+		
+				<!-- PRODUCT PREVIEW AUTHOR TEXT -->
+				<p class="product-preview-author-text"><a href="#">Sunny Days Pte Ltd</a></p>
+				<!-- /PRODUCT PREVIEW AUTHOR TEXT -->
+			  </div>
+			  <!-- /PRODUCT PREVIEW AUTHOR -->
+		
+			  <!-- RATING LIST -->
+			  <div class="rating-list">
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating filled">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+		
+				<!-- RATING -->
+				<div class="rating">
+				  <!-- RATING ICON -->
+				  <svg class="rating-icon icon-star">
+					<use xlink:href="#svg-star"></use>
+				  </svg>
+				  <!-- /RATING ICON -->
+				</div>
+				<!-- /RATING -->
+			  </div>
+			  <!-- /RATING LIST -->
+			</div>
+			<!-- /PRODUCT PREVIEW META -->
+		  </div>
+		  <!-- /PRODUCT PREVIEW -->
+
+
+		
+      </div>
+      <!-- /GRID -->
+    </section>
+    <!-- /SECTION -->
+  </div>
+  <!-- /CONTENT GRID -->
+
+			
+
+			</div>
+		</div>
+	</div>
+	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<link rel='stylesheet' id='e-animations-css'
+		href='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.4.4'
+		type='text/css' media='all' />
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/comment-reply.min.js?ver=5.8.1'
+		id='comment-reply-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=5.7.1'
+		id='wc-cart-fragments-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/swiper.min.js?ver=1.0.0'
+		id='vikinger-swiper-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_accordion.min.js?ver=1.0.0'
+		id='vikinger-xmaccordion-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_dropdown.min.js?ver=1.0.0'
+		id='vikinger-xmdropdown-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_hexagon.min.js?ver=1.0.0'
+		id='vikinger-xmhexagon-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_popup.min.js?ver=1.0.0'
+		id='vikinger-xmpopup-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_progressBar.min.js?ver=1.0.0'
+		id='vikinger-xmprogressBar-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_tab.min.js?ver=1.0.0'
+		id='vikinger-xmtab-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/vendor/xm_tooltip.min.js?ver=1.0.0'
+		id='vikinger-xmtooltip-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/themes/vikinger/js/app.bundle.min.js?ver=3.8.6'
+		id='vikinger-main-scripts-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/wp-embed.min.js?ver=5.8.1'
+		id='wp-embed-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.4.4'
+		id='elementor-webpack-runtime-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.4.4'
+		id='elementor-frontend-modules-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2'
+		id='elementor-waypoints-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1'
+		id='jquery-ui-core-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6'
+		id='swiper-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.4.4'
+		id='share-link-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1'
+		id='elementor-dialog-js'></script>
+	<script type='text/javascript' id='elementor-frontend-js-before'>
+		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Extra", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Extra", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.4.4", "is_static": false, "experimentalFeatures": { "e_import_export": true, "landing-pages": true, "elements-color-picker": true, "admin-top-bar": true }, "urls": { "assets": "https:\/\/odindesignthemes.com\/vikinger-theme\/wp-content\/plugins\/elementor\/assets\/" }, "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 876, "title": "Vikinger%20%E2%80%93%20BuddyPress%20Social%20Community", "excerpt": "", "featuredImage": false } };
+	</script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.4.4'
+		id='elementor-frontend-js'></script>
+	<script type='text/javascript'
+		src='https://odindesignthemes.com/vikinger-theme/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.4.4'
+		id='preloaded-modules-js'></script>
+</body>
+
 </html>
