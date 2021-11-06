@@ -73,7 +73,7 @@ const showFreelancer = async (freelancer) =>{
                           <!-- USER AVATAR CONTENT -->
                           <div class="user-avatar-content">
                               <!-- HEXAGON -->
-                              <div class="hexagon-image-82-90" data-src="img/avatar/28.jpg"></div>
+                              <div class="hexagon-image-82-90" data-src="img/avatar/default_profile.jpg"></div>
                               <!-- /HEXAGON -->
                           </div>
                           <!-- /USER AVATAR CONTENT -->
