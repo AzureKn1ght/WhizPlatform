@@ -79,7 +79,7 @@ const gigsProgress = async () => {
       var date = moment(gigs.deadline).format("DD MMM YYYY");
       var created = moment(gigs.created).format("DD MMM YYYY");
       console.log(gigs);
-      var profilePic = "img/avatar/28.jpg";
+      var profilePic = "img/avatar/default_profile.jpg";
       var file = profilePic.toString();
       console.log(file);
       console.log(typeof file);
@@ -448,7 +448,7 @@ const gigsApplied = async () => {
      var file = gigs.background;
 
     
-      var profilePic2 ="img/avatar/28.jpg";
+      var profilePic2 ="img/avatar/default_profile.jpg";
       var file2 = profilePic2.toString();
 
       console.log(file);
@@ -579,7 +579,7 @@ const gigsRecommeded = async () => {
       var image = gigs.background;
 
     
-      var profilePic2 ="img/avatar/28.jpg";
+      var profilePic2 ="img/avatar/default_profile.jpg";
       var file2 = profilePic2.toString();
 
       
