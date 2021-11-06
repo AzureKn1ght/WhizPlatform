@@ -60,5 +60,17 @@ function handleAccountsDisconnected() {
 //Create function to log out user and clear session storage
 function logOut() {
   sessionStorage.clear();
-  window.location.href = "index.html";
+  window.location.href = "login.html";
 }
+
+//create function to get user's name from session storage
+function getUserName() {
+  var name = sessionStorage.getItem("userName");
+  if (name) {
+    document.getElementById("username_1").innerHTML = name;
+    document.getElementById("username_2").innerHTML = name;
+    document.getElementById("username_3").innerHTML = `Hi ${name}!`;
+  }
+}
+
+getUserName();
