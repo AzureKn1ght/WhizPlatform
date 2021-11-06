@@ -63,7 +63,7 @@ const handleSubmit = async (event) => {
     alert(
       `Account successfully created ${enteredOwnerName}! Redirecting you to login page!`
       )
-      window.location.href= "index.html"
+      window.location.href= "login.html"
     
     }else {
     const message = await res.json();

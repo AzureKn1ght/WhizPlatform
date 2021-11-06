@@ -49,6 +49,7 @@ function freelancerMetalogin() {
           console.log(data);
           window.sessionStorage.setItem("userId", data._id);
           window.sessionStorage.setItem("userType", "freelancer");
+          window.sessionStorage.setItem("userName", data.full_name);
           window.location.href = "dashboard-freelancer.html";
         })
         .catch((error) => {
@@ -110,6 +111,7 @@ function hirerMetalogin() {
         console.log(data);
         window.sessionStorage.setItem("userId", data._id);
         window.sessionStorage.setItem("userType", "hirer");
+        window.sessionStorage.setItem("userName", data.full_name);
         window.location.href = "dashboard-hirer.html";
       })
       .catch((error) => {
