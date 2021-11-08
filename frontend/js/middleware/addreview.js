@@ -166,8 +166,8 @@ const reviewAdd = async (e) => {
     console.log(data);
     alert(
       `Review submitted successfully!`
-      )
-      window.location.href= "dashboard-freelancer.html"
+      );
+      window.location.href= "dashboard-freelancer.html";
     
     }else {
     console.log(res);
