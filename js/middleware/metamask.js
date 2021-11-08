@@ -73,4 +73,51 @@ function getUserName() {
   }
 }
 
+//create function to change the href depending on user type
+const changeHref = () => {
+  const userType = sessionStorage.getItem("userType");
+  const newGigSideBar = document.getElementById("newGigSideBar");
+  const dashboardSideBar = document.getElementById("dashboardSideBar");
+  const newGigMenu = document.getElementById("newGigMenu");
+  const dashboardMenu = document.getElementById("dashboardMenu");
+  const dashboardTopBar = document.getElementById("dashboardTopBar");
+  const newGigNavBar = document.getElementById("newGigNavBar");
+  const dashboardNavBar = document.getElementById("dashboardNavBar");
+
+  if (userType == "freelancer") {
+    newGigSideBar.href = "gig-search.html";
+    newGigSideBar.setAttribute("data-title", "Gig Search");
+    dashboardSideBar.href = "dashboard-freelancer.html";
+    newGigMenu.href = "gig-search.html";
+    newGigMenu.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+        </svg>Gig Search`;
+    dashboardMenu.href = "dashboard-freelancer.html";
+    dashboardTopBar.href = "dashboard-freelancer.html";
+    newGigNavBar.href = "gig-search.html";
+    newGigNavBar.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+        </svg>Gig Search`;
+    dashboardNavBar.href = "dashboard-freelancer.html";
+
+  } else if (userType == "hirer") {
+    
+    newGigSideBar.href = "create-gig.html";
+    newGigSideBar.setAttribute("data-title", "Create Gig");
+    dashboardSideBar.href = "dashboard-hirer.html";
+    dashboardSideBar.title = "Dashboard";
+    newGigMenu.href = "create-gig.html";
+    newGigMenu.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+      </svg>Create Gig`;
+    dashboardMenu.href = "dashboard-hirer.html";
+    dashboardTopBar.href = "dashboard-hirer.html";
+    newGigNavBar.href = "create-gig.html";
+    newGigNavBar.innerHTML = `<svg class="menu-item-link-icon icon-overview">
+        <use xlink:href="#svg-revenue"></use>
+        </svg>Create Gig`;
+    dashboardNavBar.href = "dashboard-hirer.html";
+  }
+};
 getUserName();
+changeHref();
