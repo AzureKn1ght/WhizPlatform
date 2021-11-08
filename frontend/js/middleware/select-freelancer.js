@@ -257,7 +257,8 @@ const gigDetails = async (e) => {
       console.log(error.message);
     }
 
-    /* var scripts = [
+    if(!applicants){
+    var scripts = [
       "js/vendor/simplebar.min.js",
       "js/utils/liquidify.js",
       "js/vendor/Chart.bundle.min.js",
@@ -276,7 +277,8 @@ const gigDetails = async (e) => {
 
     scripts.forEach((element) => {
       loadScript(element);
-    }); */
+    });
+  };
 
   };
 
