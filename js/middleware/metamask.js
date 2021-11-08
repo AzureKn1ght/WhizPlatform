@@ -101,7 +101,7 @@ const changeHref = () => {
     dashboardNavBar.href = "dashboard-freelancer.html";
 
   } else if (userType == "hirer") {
-    
+
     newGigSideBar.href = "create-gig.html";
     newGigSideBar.setAttribute("data-title", "Create Gig");
     dashboardSideBar.href = "dashboard-hirer.html";
