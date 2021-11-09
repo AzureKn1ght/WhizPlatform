@@ -1,4 +1,4 @@
-//WHIZaddress = 0xD2B44b2FF2D07F2b6fad9a728adf176B5639F87B;
+var WHIZaddress = "0xD2B44b2FF2D07F2b6fad9a728adf176B5639F87B";
 
 var WhizABI = [
   {
