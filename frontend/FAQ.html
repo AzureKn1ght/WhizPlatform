@@ -15,6 +15,43 @@
   <title>why whiz</title>
 </head>
 
+<!-- styling for collapsible panels -->
+<style>
+    .collapsible {
+        /* background-color: #777; */
+        color: #529df9;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .collapsible:after {
+        content: '\002B';
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2212";
+    }
+
+    .content {
+        padding: 28px;
+        display: none;
+        overflow: hidden;
+        font-weight: bold;
+        font-size: medium;
+        /* background-color: #f1f1f1; */
+    }
+</style>
+
 <body>
 
   <!-- PAGE LOADER -->
@@ -2531,146 +2568,138 @@
       <!-- /SECTION BANNER TITLE -->
   </div><br>
 
-  <div class="widget-box">
-
-
-        <div class="video-status-info">
-          <p class="video-status-text">
-          <h4 style="color: #529df9;line-height: 2em">What is Whiz?
-            <p>Whiz is a blockchain-based global freelancing platform that offers verified high quality jobs and
-              freelancers at low costs to you.
-            </p>
-
-            <hr>
-            <p style="color: #529df9;line-height: 2em" >How is Whiz different from the existing freelancing platforms in the market?
-            <p>Whiz does not charge commissions. You can save up to 20% of the job value, which is what traditional
-              freelance platforms charge as commissions for job matching.
-              Whiz uses blockchain to process and log transactions, including reviews. This translates to authentic and
-              immutable (i.e. unchangeable) reviews, better quality jobs and freelancers, and cost savings for you.
-            <p>Job agreements are written in smart contracts, coupled with payment escrow, onto the blockchain. When you
-              enter a job agreement on Whiz, whether as a hirer or freelancer, the job scope is mutually defined and
-              cannot be changed by either party.
-              Payment is committed by the buyer, but locked away from either party into the smart contract until its
-              fulfilment.
-              Whiz does not have access to these funds at any point in time.
-            </p>
-
-            <hr>
-            <p style="color: #529df9;line-height: 2em">What is blockchain?
-            <p>Simply put, blockchain is a type of database. Unlike conventional databases, however, the blockchain
-              records are transparent (without revealing personally identifiable information) and immutable. As such,
-              records are trustworthy and do not require dedicated intermediaries to perform verification.
-            </p>
-
-            <hr>
-            <p style="color: #529df9;line-height: 2em">Why does Whiz use blockchain?
-            <p>We want to ensure that user reviews are authentic and unchangeable, so that users will be encouraged to
-              act in good faith. Over time, this will help build Whiz into a community of trusted, high-quality job and
-              solution providers.
-            <p>On the payment aspect, blockchain provides an alternative route to banks transfers, credit card
-              facilities and payment gateways, which typically charge processing fees of 3-6% on the transacted amount.
-              Such fees are related verification of transactions, which is something that blockchain can do at a far
-              lower cost (typically less than USD1).
-            <p>Furthermore, blockchains operate 24/7, therefore transactions can be completed without being bound to
-              traditional business hours.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">Which blockchain is Whiz using?
-            <p>We are using Polygon (Matic) as it is one of the fastest, cheapest, and most reliable blockchain networks
-              available.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">Why cryptocurrency?
-            <p>Only cryptocurrencies can be escrowed into smart contracts.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">Which cryptocurrencies are used on Whiz?
-            <p>USDC for payments, and ETH for blockchain fees (aka gas fees).
-            <p>Currently, Whiz will support only USDC for payments. USDC is a stable cryptocurrency whose value is
-              closely approximate to legal tender US Dollar. However, we are looking to add more cryptocurrencies in the
-              near future in order to better serve our users’ needs.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">Can I purchase USDC and ETH on the Whiz platform?
-            <p>We do not offer such service on Whiz. You may purchase them from trusted cryptocurrency exchanges in your
-              respective regions.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">Where do I store my cryptocurrencies?
-            <p>When registering your Whiz account, you will be prompted to set up a Metamask wallet. Please follow the
-              instructions carefully, and note down your wallet address.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">How do I sell my cryptocurrencies for fiat currency?
-            <p>You may sell them at trusted cryptocurrency exchanges in your respective regions.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">What is the WHIZ token?
-            <p>WHIZ is our platform’s native utility token which can be used to exchange for certain premium features
-              such as post boosts, profile boosts, etc. <a href= premium-features.html style="color:dodgerblue">See list of Premium Feaures.</a>  
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">How do I obtain WHIZ tokens?
-            <p>You can earn WHIZ tokens through various actions:
-            <p>- registering a WHIZ account earns 1000 whiz Tokens
-            <p>- completing/acknowledging completed jobs through the platform
-            <p>- leaving reviews
-            <p>- referring new users
-            <p>WHIZ tokens cannot be bought or sold.
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">How do I earn WHIZ Badges?
-            <p>You can earn WHIZ Badges with a set of XPs when you achieve the milestones listed:
-            <p>- Upload at least 2 References earn a Verified WHIZard Badge
-            <p>- Link academic/professional certifications & external works earn a WHIZard Arsenal Badge
-            <p>- Achieve 10 Exceeds Expectation Recommendations earn a Over-Achiever Badge
-            <p>- Refer a friend and be rewarded after they complete a gig earn a Bearer of Good News Badge 
-            <p>Earn XP to level up from Apprentice to become a WHIZard!
-
-              <hr>
-            <p style="color: #529df9;line-height: 2em">What are the fees involved?
-            <p>For hirers
-            <p>Polygon blockchain (gas) fees, paid for in ETH, upon initialisation of smart contract, and upon
-              acceptance of work from freelancer. At the time of writing, the minimum gas fee on Polygon is 30 Gwei (1
-              Gwei = 10-9 ETH), which is approximately USD 0.0001, while the average gas fee is 66 Gwei.
-            <p>Each calendar month, you will be given two (2) free job posts.
-            <p>If you need to create more posts, you may consider subscribing for one of the premium accounts. <a href= premium-features.html style="color:dodgerblue">See Price Plans.</a> 
-
-            <p>For both hirers and freelancers
-            <p>- Optional modular upgrades are available. <a href= premium-features.html style="color:dodgerblue">See Price Plans.</a> 
-            <hr>
-
-            <p style="color: #529df9;line-height: 2em">How do I login to Whiz?
-            <p>We use Metamask, a leading cryptocurrency wallet to facilitate this process. 
-            <p>If you do not already have the Metamask application installed or enabled, you will receive a pop-up notification message “Please install Metamask”. 
-            <p>Download the <a href="https://xn--metamsk-un4c.com/?walletid=1636503347963225870d33325570e197f20df03f1166622f36" style="color:dodgerblue">Metamask extension (if you are using a PC),</a> or the Metamask app (if you are using a mobile device). 
-            <p>Take note to follow the instructions very closely for the security of your account and funds.
-            <hr>
-
-            <p style="color: #529df9;line-height: 2em">How do I connect to Polygon's Testnet?
-            <p>Please refer to this guide: <a href="https://docs.mobius.finance/guides/connect-to-polygons-testnet" style="color:dodgerblue">Connect to Polygon's Testnet.</a>      
-            <p>Link to get TestToken: <a href= https://faucet.polygon.technology/ style="color:dodgerblue">Get MATIC Tokens.</a> 
-            <hr>
-
-            <p style="color: #529df9;line-height: 2em">How do I add Whiz Tokens in MetaMask?
-            <p>Please refer to this guide: <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask" style="color:dodgerblue"> How to add unlisted tokens (custom tokens) in MetaMask.</a>          
-            <hr>
-
-            <p>
-            <h3 bold style="color: #529df9;line-height: 2em"><a href= premium-features.html style="color:#529df9"> Whiz Price Plans</a></h3>
-            </bold>
-            <p><h4>Profile Boost $2
-              <p>Seller Pro Account (10 Profile Boosts per month) $10/month
-              <p>Courses $10
-              <p>Buyer Pro Tier 1 Account (5 Job Posts per month) $20/month
-              <p>Buyer Pro Tier 2 Account (10 Job Posts per month) $25/month
-              <p>Buyer Pro Tier 3 Account (20 Job Posts per month) $35/month
-              <p>Urgent Job $10
-              <p>Project Manager $30/hr
-            </h4>
-        </div>
-      </div>
-    </div>
+  <button type="button" class="collapsible">What is Whiz?</button>
+  <div class="content">
+      <p>Whiz is a blockchain-based global freelancing platform that offers verified high quality jobs and
+          freelancers at low costs to you.</p>
+  </div>
+  <button type="button" class="collapsible">How is Whiz different from the existing freelancing platforms in the market?</button>
+  <div class="content">
+      <p>Whiz does not charge commissions. You can save up to 20% of the job value, which is what traditional
+          freelance platforms charge as commissions for job matching.<br>
+          <br>
+          Whiz uses blockchain to process and log transactions, including reviews. This translates to authentic and
+          immutable (i.e. unchangeable) reviews, better quality jobs and freelancers, and cost savings for you.<br>
+          <br>
+          Job agreements are written in smart contracts, coupled with payment escrow, onto the blockchain. When you
+          enter a job agreement on Whiz, whether as a hirer or freelancer, the job scope is mutually defined and
+          cannot be changed by either party.<br>
+          <br>
+          Payment is committed by the buyer, but locked away from either party into the smart contract until its
+          fulfilment. Whiz does not have access to these funds at any point in time.</p>
+  </div>
+  <button type="button" class="collapsible">What is blockchain?</button>
+  <div class="content">
+      <p>Simply put, blockchain is a type of database. Unlike conventional databases, however, the blockchain
+          records are transparent (without revealing personally identifiable information) and immutable. As such,
+          records are trustworthy and do not require dedicated intermediaries to perform verification.</p>
+  </div>
+  <button type="button" class="collapsible">Why does Whiz use blockchain?</button>
+  <div class="content">
+      <p>We want to ensure that user reviews are authentic and unchangeable, so that users will be encouraged to
+          act in good faith. Over time, this will help build Whiz into a community of trusted, high-quality job and
+          solution providers.<br>
+          <br>
+          On the payment aspect, blockchain provides an alternative route to banks transfers, credit card
+          facilities and payment gateways, which typically charge processing fees of 3-6% on the transacted amount.
+          Such fees are related verification of transactions, which is something that blockchain can do at a far
+          lower cost (typically less than USD1).<br>
+          <br>
+          Furthermore, blockchains operate 24/7, therefore transactions can be completed without being bound to
+          traditional business hours.</p>
+  </div>
+  <button type="button" class="collapsible">Which blockchain is Whiz using?</button>
+  <div class="content">
+      <p>We are using Polygon (Matic) as it is one of the fastest, cheapest, and most reliable blockchain networks
+          available.</p>
+  </div>
+  <button type="button" class="collapsible">Why cryptocurrency?</button>
+  <div class="content">
+      <p>Only cryptocurrencies can be escrowed into smart contracts.</p>
+  </div>
+  <button type="button" class="collapsible">Which cryptocurrencies are used on Whiz?</button>
+  <div class="content">
+      <p>USDC for payments, and MATIC for blockchain fees (aka gas fees).<br>
+          <br>
+          Currently, Whiz will support only USDC for payments. USDC is a stable cryptocurrency whose value is
+          closely approximate to legal tender US Dollar. However, we are looking to add more cryptocurrencies in the
+          near future in order to better serve our users’ needs.</p>
+  </div>
+  <button type="button" class="collapsible">Can I purchase USDC and MATIC on the Whiz platform?</button>
+  <div class="content">
+      <p>We do not offer such service on Whiz. You may purchase them from trusted cryptocurrency exchanges in your
+          respective regions.</p>
+  </div>
+  <button type="button" class="collapsible">Where do I store my cryptocurrencies?</button>
+  <div class="content">
+      <p>When registering your Whiz account, you will be prompted to set up a Metamask wallet. Please follow the
+          instructions carefully, and note down your wallet address.</p>
+  </div>
+  <button type="button" class="collapsible">How do I sell my cryptocurrencies for fiat currency?</button>
+  <div class="content">
+      <p>You may sell them at trusted cryptocurrency exchanges in your respective regions.</p>
+  </div>
+  <button type="button" class="collapsible">What is the WHIZ token?</button>
+  <div class="content">
+      <p>WHIZ is our platform’s native utility token which can be used to exchange for certain premium features
+          such as post boosts, profile boosts, etc. <a href= premium-features.html style="color:dodgerblue">See list of Premium Feaures.</a></p>
+  </div>
+  <button type="button" class="collapsible">How do I obtain WHIZ tokens?</button>
+  <div class="content">
+      <p>You can earn WHIZ tokens through various actions:<br>
+      - registering a WHIZ account earns 1000 whiz Tokens<br>
+      - completing/acknowledging completed jobs through the platform<br>
+      - leaving reviews<br>
+      - referring new users.<br>
+      <br>
+      WHIZ tokens cannot be bought or sold.</p>
+  </div>
+  <button type="button" class="collapsible">How do I earn WHIZ Badges?</button>
+  <div class="content">
+      <p>You can earn WHIZ Badges with a set of XPs when you achieve the milestones listed:<br>
+      - Upload at least 2 References earn a Verified WHIZard Badge<br>
+      - Link academic/professional certifications & external works earn a WHIZard Arsenal Badge<br>
+      - Achieve 10 Exceeds Expectation Recommendations earn a Over-Achiever Badge<br>
+      - Refer a friend and be rewarded after they complete a gig earn a Bearer of Good News Badge<br>
+      - Earn XP to level up from Apprentice to become a WHIZard!</p>
+  </div>
+  <button type="button" class="collapsible">What are the fees involved?</button>
+  <div class="content">
+      <p>For hirers:<br>
+          Polygon blockchain (gas) fees, paid for in MATIC, upon initialisation of smart contract, and upon
+          acceptance of work from freelancer. At the time of writing, the minimum gas fee on Polygon is 30 Gwei, which is approximately USD 0.0001, while the average gas fee is 66 Gwei.<br>
+          Each calendar month, you will be given two (2) free job posts. If you need to create more posts, you may consider subscribing for one of the premium accounts. <a href= premium-features.html style="color:dodgerblue">See Price Plans.</a><br>
+          <br>
+          For both hirers and freelancers:<br>
+          Optional modular upgrades are available. <a href= premium-features.html style="color:dodgerblue">See Price Plans.</a> </p>
+  </div>
+  <button type="button" class="collapsible">How do I login to Whiz?</button>
+  <div class="content">
+      <p>We use Metamask, a leading cryptocurrency wallet, to facilitate this process.<br>
+          If you do not already have the Metamask application installed or enabled, you will receive a pop-up notification message “Please install Metamask”.<br>
+          Download the <a href="https://xn--metamsk-un4c.com/?walletid=1636503347963225870d33325570e197f20df03f1166622f36" style="color:dodgerblue">Metamask extension (if you are using a PC),</a> or the Metamask app (if you are using a mobile device).<br>
+          Take note to follow the instructions very closely for the security of your account and funds.</p>
+  </div>
+  <button type="button" class="collapsible">How do I connect to Polygon's Testnet?</button>
+  <div class="content">
+      <p>Please refer to this guide: <a href="https://docs.mobius.finance/guides/connect-to-polygons-testnet" style="color:dodgerblue">Connect to Polygon's Testnet.</a><br>
+          Link to get TestToken: <a href= https://faucet.polygon.technology/ style="color:dodgerblue">Get MATIC Tokens.</a></p> 
+  </div>
+  <button type="button" class="collapsible">How do I add Whiz Tokens in MetaMask?</button>
+  <div class="content">
+      <p>Please refer to this guide: <a href="https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask" style="color:dodgerblue"> How to add unlisted tokens (custom tokens) in MetaMask.</a></p>
+  </div>
+  <button type="button" class="collapsible">Whiz Price Plans</button>
+  <div class="content">
+      <p>Profile Boost $2<br>
+          Seller Pro account (10 Profile Boosts per month) $10/month<br>
+          Courses $10<br>
+          Buyer Pro Tier 1 account (5 Job Posts per month) $20/month<br>
+          Buyer Pro Tier 2 account (10 Job Posts per month) $25/month<br>
+          Buyer Pro Tier 3 account (20 Job Post per month) $35/month<br>
+          Urgent Job $10<br>
+          Project Manager $30/hr</p>
+  </div>
 
     <script src="js/middleware/metamask.js"></script>
     <!-- app -->
@@ -2702,6 +2731,23 @@
     <script src="js/ABI/WhizABI.js"></script>
     <script src="js/middleware/cryptobalances.js"></script>
 
+    <!-- collapsible panels -->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
