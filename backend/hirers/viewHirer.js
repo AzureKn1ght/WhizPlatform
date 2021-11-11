@@ -1,6 +1,6 @@
-// THIS FUNCTION IS TO RETURN LIST OF ALL FREELANCERS
+// THIS FUNCTION IS TO RETURN THE HIRER DETAILS
 exports = async function (payload, response) {
-  // Get list of freelancers from MongoDB Atlas database
+  // Get list of hirers from MongoDB Atlas database
   const hirers = context.services
     .get("mongodb-atlas")
     .db("users")
