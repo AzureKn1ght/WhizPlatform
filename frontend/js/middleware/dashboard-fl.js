@@ -103,7 +103,7 @@ const gigsProgress = async () => {
 
         <div class="user-short-description">
           <!-- USER SHORT DESCRIPTION AVATAR -->
-          <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+          <a class="user-short-description-avatar user-avatar medium" href="#">
             <!-- USER AVATAR BORDER -->
             <div class="user-avatar-border">
               <!-- HEXAGON -->
@@ -163,7 +163,7 @@ const gigsProgress = async () => {
           <!-- /USER SHORT DESCRIPTION AVATAR -->
 
           <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
+          <p class="user-short-description-title"><a href="#">${gigs.hirer_name}</a></p>
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
@@ -249,7 +249,7 @@ const gigsProgress = async () => {
 
         <div class="user-short-description">
           <!-- USER SHORT DESCRIPTION AVATAR -->
-          <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+          <a class="user-short-description-avatar user-avatar medium" href="#">
             <!-- USER AVATAR BORDER -->
             <div class="user-avatar-border">
               <!-- HEXAGON -->
@@ -309,7 +309,7 @@ const gigsProgress = async () => {
           <!-- /USER SHORT DESCRIPTION AVATAR -->
 
           <!-- USER SHORT DESCRIPTION TITLE -->
-          <p class="user-short-description-title"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
+          <p class="user-short-description-title"><a href="#">${gigs.hirer_name}</a></p>
           <!-- /USER SHORT DESCRIPTION TITLE -->
 
           <!-- USER SHORT DESCRIPTION TEXT -->
@@ -508,7 +508,7 @@ const gigsApplied = async () => {
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
+            <p class="product-preview-author-text"><a href="#">${gigs.hirer_name}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
@@ -620,7 +620,7 @@ const gigsRecommeded = async () => {
           <!-- PRODUCT PREVIEW AUTHOR -->
           <div class="product-preview-author">
             <!-- PRODUCT PREVIEW AUTHOR IMAGE -->
-            <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+            <a class="product-preview-author-image user-avatar micro no-border" href="#">
               <!-- USER AVATAR CONTENT -->
               <div class="user-avatar-content">
                 <!-- HEXAGON -->
@@ -636,7 +636,7 @@ const gigsRecommeded = async () => {
             <!-- /PRODUCT PREVIEW AUTHOR TITLE -->
 
             <!-- PRODUCT PREVIEW AUTHOR TEXT -->
-            <p class="product-preview-author-text"><a href="profile-timeline.html">${gigs.hirer_name}</a></p>
+            <p class="product-preview-author-text"><a href="#">${gigs.hirer_name}</a></p>
             <!-- /PRODUCT PREVIEW AUTHOR TEXT -->
           </div>
           <!-- /PRODUCT PREVIEW AUTHOR -->
