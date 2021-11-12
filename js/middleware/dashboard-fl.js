@@ -588,7 +588,7 @@ const gigsRecommeded = async () => {
       elm += `<!-- PRODUCT PREVIEW -->
       <div class="product-preview">
         <!-- PRODUCT PREVIEW IMAGE -->
-        <a href="gig-info.html?gigId=${gigs._id}">
+        <a href="gig-info.html?gigId=${gigs._id}&bidding=true">
           <figure class="product-preview-image liquid">
             <img src="${image}" alt="item-01">
           </figure>
