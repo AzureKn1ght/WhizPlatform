@@ -61,7 +61,7 @@ const showFreelancer = async (freelancer) =>{
                   <div class="user-short-description">
                       <!-- USER SHORT DESCRIPTION AVATAR -->
                       <a class="user-short-description-avatar user-avatar medium"
-                          href="profile-timeline.html">
+                          href="#">
                           <!-- USER AVATAR BORDER -->
                           <div class="user-avatar-border">
                               <!-- HEXAGON -->
@@ -121,7 +121,7 @@ const showFreelancer = async (freelancer) =>{
                       <!-- /USER SHORT DESCRIPTION AVATAR -->
 
                       <!-- USER SHORT DESCRIPTION TITLE -->
-                      <p class="user-short-description-title"><a href="profile-timeline.html">${data.full_name}</a></p>
+                      <p class="user-short-description-title"><a href="#">${data.full_name}</a></p>
                       <p class="user-short-description-text">joined 1 year ago</p>
                       <!-- /USER SHORT DESCRIPTION TITLE -->
 

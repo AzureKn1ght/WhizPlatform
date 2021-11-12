@@ -133,7 +133,7 @@ const gigsProgress = async () => {
           <!-- USER SHORT DESCRIPTION -->
           <div class="user-short-description">
             <!-- USER SHORT DESCRIPTION AVATAR -->
-            <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+            <a class="user-short-description-avatar user-avatar medium" href="#">
               <!-- USER AVATAR BORDER -->
               <div class="user-avatar-border">
                 <!-- HEXAGON -->
@@ -193,7 +193,7 @@ const gigsProgress = async () => {
             <!-- /USER SHORT DESCRIPTION AVATAR -->
 
             <!-- USER SHORT DESCRIPTION TITLE -->
-            <p class="user-short-description-title"><a href="profile-timeline.html">${assignedFl}</a></p>
+            <p class="user-short-description-title"><a href="#">${assignedFl}</a></p>
             <!-- /USER SHORT DESCRIPTION TITLE -->
 
             <!-- USER SHORT DESCRIPTION TEXT -->
@@ -278,7 +278,7 @@ const gigsProgress = async () => {
           <!-- USER SHORT DESCRIPTION -->
           <div class="user-short-description">
             <!-- USER SHORT DESCRIPTION AVATAR -->
-            <a class="user-short-description-avatar user-avatar medium" href="profile-timeline.html">
+            <a class="user-short-description-avatar user-avatar medium" href="#">
               <!-- USER AVATAR BORDER -->
               <div class="user-avatar-border">
                 <!-- HEXAGON -->
@@ -338,7 +338,7 @@ const gigsProgress = async () => {
             <!-- /USER SHORT DESCRIPTION AVATAR -->
 
             <!-- USER SHORT DESCRIPTION TITLE -->
-            <p class="user-short-description-title"><a href="profile-timeline.html">${assignedFl}</a></p>
+            <p class="user-short-description-title"><a href="#">${assignedFl}</a></p>
             <!-- /USER SHORT DESCRIPTION TITLE -->
 
             <!-- USER SHORT DESCRIPTION TEXT -->
