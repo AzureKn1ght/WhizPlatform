@@ -136,29 +136,27 @@ const gigDetails = async () => {
 };
 
 const approveUSDC = async () => {
- 
-    try {
-      console.log("clicked");
-      approveButton.disabled = true;
-      let approved = await usdcContract.methods
-        .approve(GigsAddress, budget)
-        .send({
-          from: currentAccount,
-        });
-      console.log(approved);
-      approveStatus = approved.status;
-      if (approveStatus === true) {
-        console.log("Success");
-        approveButton.disabled = false;
-        approveButton.innerText = "Create Gigs Contract";
-      } else {
-        console.log("Failed");
-      }
-    } catch (error) {
-      console.log(error);
+  try {
+    console.log("clicked");
+    approveButton.disabled = true;
+    let approved = await usdcContract.methods
+      .approve(GigsAddress, budget)
+      .send({
+        from: currentAccount,
+      });
+    console.log(approved);
+    approveStatus = approved.status;
+    if (approveStatus === true) {
+      console.log("Success");
       approveButton.disabled = false;
+      approveButton.innerText = "Create Gigs Contract";
+    } else {
+      console.log("Failed");
     }
-  
+  } catch (error) {
+    console.log(error);
+    approveButton.disabled = false;
+  }
 };
 
 const createGigContract = async () => {
@@ -170,24 +168,24 @@ const createGigContract = async () => {
   );
 
   if (confirmTransaction) {
-  try {
-    approveButton.disabled = true;
-    let confirmedGig = await gigsContract.methods
-      .createGigContract(jobId, Gig, budget)
-      .send({
-        from: currentAccount,
-      });
-    console.log(confirmedGig);
-    updateMongo();
-    alert("Gig contract created!");
-    window.location.href = "dashboard-hirer.html";
-  } catch (error) {
-    console.log(error);
-    approveButton.disabled = false;
+    try {
+      approveButton.disabled = true;
+      let confirmedGig = await gigsContract.methods
+        .createGigContract(jobId, Gig, budget)
+        .send({
+          from: currentAccount,
+        });
+      console.log(confirmedGig);
+      if (confirmedGig) {
+        updateMongo();
+      }
+    } catch (error) {
+      console.log(error);
+      approveButton.disabled = false;
+    }
+  } else {
+    alert("Transaction cancelled!");
   }
-} else {
-  alert("Transaction cancelled!");
-}
 };
 
 const processClick = async () => {
@@ -219,6 +217,10 @@ const updateMongo = async () => {
     });
     const job = await res.json();
     console.log(job);
+    if (job) {
+      alert("Gig contract created!");
+      window.location.href = "dashboard-hirer.html";
+    }
   } catch (error) {
     console.log(error);
   }
