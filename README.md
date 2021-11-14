@@ -1,6 +1,6 @@
 # Frontend Pages
 
-API endpoints to handle freelancer related functions. 
+These are the frontend pages and their related features. 
 
   
 | Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |  
