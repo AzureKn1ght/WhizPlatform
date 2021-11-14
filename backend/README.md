@@ -1,6 +1,8 @@
 # Backend Services
 
-Backend Documentation Goes Here.
+## 1\. Freelancers
+
+API endpoints to handle freelancer related functions. 
 
 
 | Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
@@ -9,3 +11,8 @@ Backend Documentation Goes Here.
 |                 |                        |            |        |                                                                                                                                           |
 |                 |                        |            |        |                                                                                                                                           |
 |                 |                        |            |        |                                                                                                                                           |
+
+
+## 2\. Hirers
+
+API endpoints to handle hirer related functions. 
