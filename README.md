@@ -2,4 +2,4 @@
 
 todo: documentation
 
-[https://azurekn1ght.github.io/whiz2/](https://azurekn1ght.github.io/whiz2/)
+[https://azurekn1ght.github.io/WhizPlatform/](https://azurekn1ght.github.io/WhizPlatform/)
