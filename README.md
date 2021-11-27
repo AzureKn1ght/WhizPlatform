@@ -4,4 +4,4 @@ todo: documentation
 
 [https://azurekn1ght.github.io/WhizPlatform/](https://azurekn1ght.github.io/WhizPlatform/)
 
-[![CC BY-NC-ND 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0][cc-by-shield]][cc-by]
