@@ -52,8 +52,10 @@ API endpoints to handle job related functions. 
 
 ## 4\. Reviews
 
-API endpoints to handle freelancer related functions. 
+API endpoints to handle review related functions. 
 
 
 | Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
 |-----------------|------------------------|------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| flReviews | Creates a new review | review ID, reviewer and reviewee metamask, ratings, comments, job details | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/flReview |
+| getReview | Returns the details of a specific review | job ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/getReview |
