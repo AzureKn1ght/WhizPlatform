@@ -34,7 +34,7 @@ todo: documentation
 [![Watchers][watchers-shield]][watchers-url]
 [![Issues][issues-shield]][issues-url]
 [![Deployments][deployments-shield]][deployments-url]
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 
 
