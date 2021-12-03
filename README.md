@@ -105,7 +105,7 @@ Key Technologies Used:
 * [MongoDB Atlas](https://www.mongodb.com/atlas/database) 
 * [MongoDB Realm](https://www.mongodb.com/realm) 
 * [web3.js](https://github.com/ChainSafe/web3.js) 
-* [Metamask](https://metamask.io) 
+* [MetaMask](https://metamask.io) 
 * [Solidity](https://soliditylang.org)
 * [Polygon](https://polygon.technology)  
 
@@ -154,9 +154,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-[![Watch the video](https://img.youtube.com/vi/7HDVIFfiGMw/maxresdefault.jpg)](https://youtu.be/7HDVIFfiGMw)
-https://github.com/AzureKn1ght/WhizPlatform/raw/main/screenshots/Whiz%20Demo.mp4
-
+https://user-images.githubusercontent.com/1888822/144605422-9e23bf66-b460-4a86-a31f-4ec6d794eceb.mp4
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
