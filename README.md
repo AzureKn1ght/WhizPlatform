@@ -96,16 +96,20 @@ In a nutshell, Whiz provides secure, traceable, reliable payments using smart co
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Whiz runs on a hybrid technology stack that employs the blockchain along with modern web technologies. The frontend client is built using HTML5, CSS3, and JavaScript. It is hosted on a web server and can be accessed via web browsers or installed on mobile devices as a progressive web application (PWA).
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
+The backend components are hosted using a state-of-the-art serverless computing architecture by means of the MongoDB Atlas and MongoDB Realm services. A secured connection between the business functions in MongoDB Realm and the MongoDB Atlas database allows for the processing of information required for the web application to function. By adopting a serverless architecture, we further lower our overhead operating and maintenance costs resulting in significant efficiency gains.
+
+Key Technologies Used:
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [MongoDB Atlas](https://www.mongodb.com/atlas/database) 
+* [MongoDB Realm](https://www.mongodb.com/realm) 
+* [web3.js](https://github.com/ChainSafe/web3.js) 
+* [Metamask](https://metamask.io) 
+* [Solidity](https://soliditylang.org)
+* [Polygon](https://polygon.technology)  
+
+Our solution leverages on the power of decentralized blockchains to implement robust and tamper- proof settlements. Agreements between buyers and sellers on terms and payment amounts are encoded within smart contracts that are deployed on the Polygon blockchain. Additionally, for our platform’s incentive system, we shall be issuing our native token (WHIZ) using the ERC20 token standard on Polygon.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
