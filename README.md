@@ -35,8 +35,8 @@ todo: documentation
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
-    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
+  <a align="center" href="https://azurekn1ght.github.io/WhizPlatform">
+    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="128" height="128">
   </a>
 
   <h3 align="center">WHIZ PLATFORM</h3>
@@ -47,7 +47,7 @@ todo: documentation
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">View Demo</a>
+    <a href="https://azurekn1ght.github.io/WhizPlatform">View Demo</a>
     ·
     <a href="https://github.com/AzureKn1ght/WhizPlatform/issues">Report Bug</a>
     ·
