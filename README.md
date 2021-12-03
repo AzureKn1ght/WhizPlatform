@@ -31,7 +31,7 @@
   <h3 align="center">WHIZ PLATFORM</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Next generation freelance network powered blockchains.
     <br />
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -75,7 +75,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About Whiz
 
 [![Product Name Screen Shot][product-screenshot]](https://azurekn1ght.github.io/WhizPlatform)
 
