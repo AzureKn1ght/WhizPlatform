@@ -208,20 +208,18 @@ API endpoints to handle freelancer related functions. 
 
 API endpoints to handle hirer related functions. 
 
-
-| Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
-|-----------------|------------------------|------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| createHirer | creates a new hirer record when a hirer registers | email, metamask, country of operations, company name, full name, country of issued id, skills required, industry, languages required| POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/createHirer |
-| viewHirer | Returns details of specified hirer based on hirer ID | Hirer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/viewHirer |
-| loginHirer | Login for hirers | metamask | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/loginHirer |
-| editHirer | updates a specified field for hirer records that meet the requirements| background img file (or any other field but endpoint must be edited accordingly) | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/hirers/incoming_webhook/editHirer |
+| Endpoint        | Description            | Parameters | Method |
+|-----------------|------------------------|------------|--------|
+| createHirer | creates a new hirer record when a hirer registers | email, metamask, country of operations, company name, full name, country of issued id, skills required, industry, languages required| POST |
+| viewHirer | Returns details of specified hirer based on hirer ID | Hirer ID | POST |
+| loginHirer | Login for hirers | metamask | POST |
+| editHirer | updates a specified field for hirer records that meet the requirements| background img file (or any other field but endpoint must be edited accordingly) | POST |
 
 
 
 ### Jobs
 
 API endpoints to handle job related functions. 
-
 
 | Endpoint        | Description            | Parameters | Method |
 |-----------------|------------------------|------------|--------|
