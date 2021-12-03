@@ -60,7 +60,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#network-setup">Network Setup</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -126,21 +126,10 @@ If you have not already done so, please install MetaMask wallet on your device.
 
 ### Network Setup
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+_You will need to be connected to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/)._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+* Please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask).  
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
