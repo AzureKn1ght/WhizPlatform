@@ -1,3 +1,4 @@
+#Whiz 
 <div id="top"></div>
 <!-- PROJECT SHIELDS -->
 <!--
@@ -17,7 +18,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
+  <a href="https://azurekn1ght.github.io/WhizPlatform">
     <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -29,7 +30,7 @@
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">View Demo</a>
+    <a href="https://azurekn1ght.github.io/WhizPlatform">View Demo</a>
     ·
     <a href="https://github.com/AzureKn1ght/WhizPlatform/issues">Report Bug</a>
     ·
