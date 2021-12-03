@@ -64,7 +64,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#frontend">Frontend</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -147,38 +147,56 @@ _For more details, please refer to [FAQ](https://azurekn1ght.github.io/WhizPlatf
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTRIBUTING -->
-## Contributing
+## Frontend
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+These are the frontend pages and their related features. 
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+  
+| # | Name         | File                     | Description                                         | Features                                                                                                                                    |
+|---|--------------|--------------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 | Landing Page | [index.html](frontend/index.html) | The landing page to introduce users to our platform | <ul> <li> Hero image, login/signup links</li>  <li> Introduction, platform benefits </li> <li> Highlights of the available gigs </li> </ul> |
+| 2  | Login Page | [login.html](frontend/login.html)  | The login paged allows users to login to the platform using their metamask. Users whose metamask id is not registered, will be redirected to registration | <ul> <li> Hirer/Freelancer login switch button</li> <li> Connect with metamask button </li> </ul> |
+| 3 | Freelancer Registration Page | [register-freelancer.html](frontend/register-freelancer.html) | The freelancer registration page allows a new user to create a freelancer account on the platform | <ul> <li> Input fields for user to fill up information about themselves</li> </ul> |
+| 4 | Hirer Registration Page | [register-hirer.html](frontend/register-hirer.html) | The hirer registration page allows a new user to create a hirer account on the platform | <ul> <li> Input fields for user to fill up information about themselves</li> </ul> |
+| 5 | Hirer Dashboard | [dashboard-hirer.html](frontend/dashboard-hirer.html) | The hirer dashboard page allows a the hirer to view recommended freelancers, their jobs in progress, jobs open for application, completed jobs, and reviews | <ul> <li> Recommended Freelancer </li> <li> Jobs in Progress </li> <li> Jobs open for application </li> <li> Completed Jobs </li> <li> Reviews </li> </ul> | 
+| 6 | Freelancer Dashboard | [dashboard-freelancer.html](frontend/dashboard-freelancer.html) | The freelancer dashboard page allows a the freelancer to view the recommended jobs, jobs in progress, jobs applied for, completed jobs, and reviews | <ul> <li> Recommended Jobs </li> <li> Jobs in Progress </li> <li> Jobs Applied for </li> <li> Completed Jobs </li> <li> Reviews </li> </ul> |
+| 7 | Create Gig Page | [create-gig.html](frontend/create-gig.html) | The create gig page allows a hirer to post a job on the platform | <ul> <li> Input fields for user to fill up information about the job </li> </ul> |
+| 8 | Gig Search Page | [gig-search.html](frontend/gig-search.html) | The gig search page allows a freelancer to view jobs on the platform | <ul> <li> Available jobs </li> </ul> |
+| 9 | Gig Info Page | [gig-info.html](frontend/gig-info.html) | The gig info page allows a freelancer to view the job details and apply for the job | <ul> <li> Job details </li> <li> Apply for job button </li> </ul> |
+| 10 | Select Freelancer Page | [select-freelancer.html](frontend/select-freelancer.html) | The select freelancer page allows a hirer to select a freelancer for the job | <ul> <li> Job details </li> <li> Freelancer details </li> <li> Select freelancer button </li> </ul> |
+| 11 | Contract Page | [contract.html](frontend/contract.html) | The contract page allows the hirer to confirm the escrowing of funds after selecting the freelancer and initialise the smart contract | <ul> <li> Job details </li> <li> Hirer Details </li> <li> Freelancer Details</li> <li> Approve USDC button </li> <li> Create Contract Button </li> </ul> |
+| 12 | Complete Gig Freelancer Page | [complete-gig-fl.html](frontend/complete-gig-fl.html) | The complete gig freelancer page allows the freelancer to confirm the completion of the job and leave a review for the hirer | <ul> <li> Job details </li> <li> Ratings and comments </li> <li> Recommendation </li> <li> Submit Button </li> </ul> |
+| 13 | Complete Gig Hirer Page | [complete-gig-hr.html](frontend/complete-gig-hr.html) | The complete gig hirer page allows the hirer to confirm the delivery of the job and leave a review for the freelancer | <ul> <li> Job details </li> <li> Ratings and comments </li> <li> Recommendation </li> <li> Submit Button </li> </ul> |
+| 14 | Badges Page | [badges.html](frontend/badges.html) | The badges page allows a user to view the badges they have earned and their current experience and progress towards being a WHIZard | <ul> <li> Progress and experience </li><li> Badges </li> </ul> |
+| 15 | Premium Features Page | [premium-features.html](frontend/premium-features.html) | The premium features page allows a user to view the premium features available for purchase or in exchange for the WHIZ tokens they have earned | <ul> <li> Premium features </li> </ul> |
+| 16 | FAQ Page | [FAQ.html](frontend/FAQ.html) | The FAQ page allows a user to view the frequently asked questions and answers | <ul> <li> FAQ </li> </ul> |
+| 17 | Freelancer Profile Page | [freelancer-profile.html](frontend/freelancer-profile.html) | The freelancer profile page allows a freelancer to view their profile | <ul> <li> Profile details </li> </ul> |
+| 18 | 404 Page | [404.html](frontend/404.html) | The 404 page is displayed when a user tries to access a page that does not exist | <ul> <li> 404 error </li> </ul> |
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+
+
+
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
