@@ -4,6 +4,7 @@
 -->
 
 
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -16,7 +17,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Watchers][watchers-shield]][watchers-url]
 [![Deployments][deployments-shield]][deployments-url]
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: CC BY-NC-ND 4.0][license-shield]][license-url]
 
 
 
@@ -76,7 +77,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://azurekn1ght.github.io/WhizPlatform)
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -242,8 +243,9 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-url]: https://github.com/AzureKn1ght/WhizPlatform/issues
 [watchers-shield]: https://img.shields.io/github/watchers/AzureKn1ght/WhizPlatform?style=for-the-badge
 [watchers-url]: https://github.com/AzureKn1ght/WhizPlatform/watchers
+[license-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge
+[license-url]: https://creativecommons.org/licenses/by-nc-nd/4.0/
 [deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages?style=for-the-badge
 [deployments-url]: https://github.com/AzureKn1ght/WhizPlatform/deployments
-
 [product-screenshot]: images/screenshot.png
 
