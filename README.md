@@ -154,6 +154,9 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
+[![Watch the video](https://img.youtube.com/vi/7HDVIFfiGMw/maxresdefault.jpg)](https://youtu.be/7HDVIFfiGMw)
+
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
