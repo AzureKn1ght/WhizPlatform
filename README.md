@@ -31,6 +31,7 @@ todo: documentation
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
+[![Watchers][watchers-shield]][watchers-url]
 [![Issues][issues-shield]][issues-url]
 [![Deployments][deployments-shield]][deployments-url]
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
@@ -259,8 +260,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [issues-url]: https://github.com/AzureKn1ght/WhizPlatform/issues
 
 
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[watchers-shield]: https://img.shields.io/github/watchers/AzureKn1ght/WhizPlatform
+[watchers-url]: https://github.com/AzureKn1ght/WhizPlatform/watchers
 
 
 [deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages
@@ -268,4 +269,3 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 [product-screenshot]: images/screenshot.png
-https://img.shields.io/github/workflow/status/AzureKn1ght/WhizPlatform/main.yml
