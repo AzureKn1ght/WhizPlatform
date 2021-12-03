@@ -1,4 +1,14 @@
-#Whiz 
+# Whiz Platform
+
+todo: documentation
+
+[https://azurekn1ght.github.io/WhizPlatform/](https://azurekn1ght.github.io/WhizPlatform/)
+
+
+
+
+
+
 <div id="top"></div>
 <!-- PROJECT SHIELDS -->
 <!--
@@ -12,13 +22,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Watchers][watchers-shield]][watchers-url]
 [![Deployments][deployments-shield]][deployments-url]
-[![License: CC BY-NC-ND 4.0][license-shield]][license-url]
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
+
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://azurekn1ght.github.io/WhizPlatform">
+  <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
     <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -30,7 +41,7 @@
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://azurekn1ght.github.io/WhizPlatform">View Demo</a>
+    <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">View Demo</a>
     ·
     <a href="https://github.com/AzureKn1ght/WhizPlatform/issues">Report Bug</a>
     ·
@@ -239,11 +250,6 @@ Use this space to list resources you find helpful and would like to give credit 
 [watchers-url]: https://github.com/AzureKn1ght/WhizPlatform/watchers
 [deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages?style=for-the-badge
 [deployments-url]: https://github.com/AzureKn1ght/WhizPlatform/deployments
-
-
-[license-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge
-[license-url]: https://creativecommons.org/licenses/by-nc-nd/4.0/
-
 
 [product-screenshot]: images/screenshot.png
 
