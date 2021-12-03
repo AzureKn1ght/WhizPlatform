@@ -65,7 +65,15 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#frontend">Frontend</a></li>
-    <li><a href="#backend">Backend</a></li>
+    <li>
+        <a href="#backend">Backend</a>
+        <ul>
+            <li><a href="#Freelancers">Freelancers</a></li>
+            <li><a href="#Hirers">Hirers</a></li>
+            <li><a href="#Jobs">Jobs</a></li>
+            <li><a href="#Reviews">Reviews</a></li>
+        </ul>
+    </li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -182,9 +190,7 @@ These are the frontend pages and their related features. 
 <!-- BACKEND -->
 ## Backend
 
-These are the Backend Services
-
-### 1\. Freelancers
+### Freelancers
 
 API endpoints to handle freelancer related functions. 
 
@@ -198,7 +204,7 @@ API endpoints to handle freelancer related functions. 
 | updateFreelancer | updates a specified field for freelancer records that meet the requirements | metamask (or any other field but endpoint must be edited accordingly) | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/updateFreelancer |
 
 
-## 2\. Hirers
+### Hirers
 
 API endpoints to handle hirer related functions. 
 
@@ -212,7 +218,7 @@ API endpoints to handle hirer related functions. 
 
 
 
-## 3\. Jobs
+### Jobs
 
 API endpoints to handle job related functions. 
 
@@ -234,7 +240,7 @@ API endpoints to handle job related functions. 
 | hirercompletedJobs | returns all jobs that the hirer has with an assigned freelancer with a status of COMPLETED | hirer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirercompletedJobs |
 
 
-## 4\. Reviews
+### Reviews
 
 API endpoints to handle review related functions. 
 
