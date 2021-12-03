@@ -96,7 +96,7 @@ Key Benefits of Whiz:
 * Smart Contracts ensure Well-Defined Scopes & Payments
 * Enjoy Zero Commission Fees, Only Pay For What You Need
 
-In a nutshell, Whiz provides secure, traceable, reliable payments using smart contracts powered and enabled via the blockchain. All your pain points with other freelancing platforms well taken care off!
+In a nutshell, Whiz provides secure, traceable, reliable payments using smart contracts enabled via the blockchain. All your pain points with other freelancing platforms are well taken care off!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
