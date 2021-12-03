@@ -223,21 +223,21 @@ API endpoints to handle hirer related functions. 
 API endpoints to handle job related functions. 
 
 
-| Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
-|-----------------|------------------------|------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| viewJobs | Returns all jobs with a status of open | NA | GET | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/viewJobs |
-| createGig | Creates a new gig | title, budget, description, deadline, skills required, location, hirer, hirer name, background, date created | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/createGig | 
-| jobInfo | Returns the details of a specific job | job ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobInfo |
-| bidJob | applies for the job and adds the freelancer to the array of applicants | freelancer ID, job ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/bidJob |
-| confirmJob | confirms the job | job ID, freelancer ID, freelancer name | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/confirmJob |
-| completeJob | marks the job as completed | job ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/completeJob |
-| appliedJobs | returns all jobs that the freelancer has applied for | freelancer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/appliedJobs |
-|jobsinProgress | returns all jobs that the freelancer is currently working on | freelancer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/jobsinProgress |
-| completedJobs | returns all jobs that the freelancer has completed | freelancer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/completedJobs |
-| recommendedJobs | returns all jobs that is recommended to the freelancer | skills | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/recommendedJobs |
-| hirerjobsopenforapplication | returns all jobs that the hirer has open for application | hirer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirerjobsopenforapplication |
-| hirerjobsinProgress | returns all jobs that the hirer has with an assigned freelancer with a status of ASSIGNED or DELIVERED | hirer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirerjobsinProgress |
-| hirercompletedJobs | returns all jobs that the hirer has with an assigned freelancer with a status of COMPLETED | hirer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/jobs/incoming_webhook/hirercompletedJobs |
+| Endpoint        | Description            | Parameters | Method |                                                                                                                                      |
+|-----------------|------------------------|------------|--------|
+| viewJobs | Returns all jobs with a status of open | NA | GET |
+| createGig | Creates a new gig | title, budget, description, deadline, skills required, location, hirer, hirer name, background, date created | POST |
+| jobInfo | Returns the details of a specific job | job ID | POST |
+| bidJob | applies for the job and adds the freelancer to the array of applicants | freelancer ID, job ID | POST |
+| confirmJob | confirms the job | job ID, freelancer ID, freelancer name | POST |
+| completeJob | marks the job as completed | job ID | POST |
+| appliedJobs | returns all jobs that the freelancer has applied for | freelancer ID | POST |
+|jobsinProgress | returns all jobs that the freelancer is currently working on | freelancer ID | POST |
+| completedJobs | returns all jobs that the freelancer has completed | freelancer ID | POST |
+| recommendedJobs | returns all jobs that is recommended to the freelancer | skills | POST |
+| hirerjobsopenforapplication | returns all jobs that the hirer has open for application | hirer ID | POST |
+| hirerjobsinProgress | returns all jobs that the hirer has with an assigned freelancer with a status of ASSIGNED or DELIVERED | hirer ID | POST |
+| hirercompletedJobs | returns all jobs that the hirer has with an assigned freelancer with a status of COMPLETED | hirer ID | POST |
 
 
 ### Reviews
@@ -245,10 +245,10 @@ API endpoints to handle job related functions. 
 API endpoints to handle review related functions. 
 
 
-| Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
-|-----------------|------------------------|------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| flReviews | Creates a new review | review ID, reviewer and reviewee metamask, ratings, comments, job details | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/flReview |
-| getReview | Returns the details of a specific review | job ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/flReview/incoming_webhook/getReview |
+| Endpoint        | Description            | Parameters | Method |
+|-----------------|------------------------|------------|--------|
+| flReviews | Creates a new review | review ID, reviewer and reviewee metamask, ratings, comments, job details | POST |
+| getReview | Returns the details of a specific review | job ID | POST |
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
