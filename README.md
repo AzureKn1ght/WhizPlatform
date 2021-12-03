@@ -223,7 +223,7 @@ API endpoints to handle hirer related functions. 
 API endpoints to handle job related functions. 
 
 
-| Endpoint        | Description            | Parameters | Method |                                                                                                                                      |
+| Endpoint        | Description            | Parameters | Method |
 |-----------------|------------------------|------------|--------|
 | viewJobs | Returns all jobs with a status of open | NA | GET |
 | createGig | Creates a new gig | title, budget, description, deadline, skills required, location, hirer, hirer name, background, date created | POST |
@@ -232,7 +232,7 @@ API endpoints to handle job related functions. 
 | confirmJob | confirms the job | job ID, freelancer ID, freelancer name | POST |
 | completeJob | marks the job as completed | job ID | POST |
 | appliedJobs | returns all jobs that the freelancer has applied for | freelancer ID | POST |
-|jobsinProgress | returns all jobs that the freelancer is currently working on | freelancer ID | POST |
+| jobsinProgress | returns all jobs that the freelancer is currently working on | freelancer ID | POST |
 | completedJobs | returns all jobs that the freelancer has completed | freelancer ID | POST |
 | recommendedJobs | returns all jobs that is recommended to the freelancer | skills | POST |
 | hirerjobsopenforapplication | returns all jobs that the hirer has open for application | hirer ID | POST |
