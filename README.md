@@ -39,7 +39,7 @@ todo: documentation
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://azurekn1ght.github.io/WhizPlatform">
+  <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
     <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -48,7 +48,7 @@ todo: documentation
   <p align="center">
     An awesome README template to jumpstart your projects!
     <br />
-    <a href="https://azurekn1ght.github.io/WhizPlatform"><strong>Visit the Live Website »</strong></a>
+    <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
