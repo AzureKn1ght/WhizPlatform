@@ -195,13 +195,13 @@ These are the frontend pages and their related features. 
 API endpoints to handle freelancer related functions. 
 
 
-| Endpoint        | Description            | Parameters | Method | URL                                                                                                                                       |
-|-----------------|------------------------|------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| loginFreelancer | Login for freelancers  | metamask   | POST   | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/loginFreelancer |
-| registerFreelancer | Registration for freelancers | email, metamask, country of residence, full name, country of issued id, languages, skills | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/registerFreelancer |
-| viewFlSkills | Returns the details of a specific freelancer based on the freelancer id | Freelancer ID | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFlSkills |
-| viewFreelancer | Returns all freelancers | NA | GET | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/viewFreelancers |
-| updateFreelancer | updates a specified field for freelancer records that meet the requirements | metamask (or any other field but endpoint must be edited accordingly) | POST | https://ap-southeast-1.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/whiz-ihwsd/service/freelancers/incoming_webhook/updateFreelancer |
+| Endpoint        | Description            | Parameters | Method |
+|-----------------|------------------------|------------|--------| 
+| loginFreelancer | Login for freelancers  | metamask   | POST   | 
+| registerFreelancer | Registration for freelancers | email, metamask, country of residence, full name, country of issued id, languages, skills | POST |
+| viewFlSkills | Returns the details of a specific freelancer based on the freelancer id | Freelancer ID | POST |
+| viewFreelancer | Returns all freelancers | NA | GET |
+| updateFreelancer | updates a specified field for freelancer records that meet the requirements | metamask (or any other field but endpoint must be edited accordingly) | POST |
 
 
 ### Hirers
