@@ -74,6 +74,7 @@
             <li><a href="#Reviews">Reviews</a></li>
         </ul>
     </li>
+    <li><a href="#smart-contracts">Smart Contracts</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -256,7 +257,7 @@ API endpoints to handle review related functions. 
 <!-- SMART CONTRACTS -->
 ## Smart Contracts
 
-These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the custom tokens to your MetaMask wallet, please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
+These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the custom ERC-20 tokens to your MetaMask wallet, please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
 <br>
 <br>
 
@@ -299,33 +300,15 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 **Deployed Address:** [0x9383fB4D8302a17044D34ffbA924a15d9C6Db292](https://mumbai.polygonscan.com/address/0x9383fB4D8302a17044D34ffbA924a15d9C6Db292)
 <br>
 <br>
-<br>
-
-
-
-
-
-
-
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
-
-
-
-
-
-
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the CC License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -334,9 +317,15 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Project Link: [https://github.com/AzureKn1ght/WhizPlatform](https://github.com/AzureKn1ght/WhizPlatform)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+If you have any further questions or comments, please feel free to our core contributors:
+
+* [AzureKn1ght](https://github.com/AzureKn1ght)
+* [Bright3stday](https://github.com/Bright3stday)
+* [Kenneth Cheong](https://github.com/kenneth-cheong)
+* [yihching8](https://github.com/yihching8)
+* [kennethzhg](https://github.com/kennethzhg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
