@@ -31,7 +31,7 @@
   <h3 align="center">WHIZ PLATFORM</h3>
 
   <p align="center">
-    next generation freelance ecosystem powered by blockchains
+    next-generation freelance ecosystem powered by blockchains
     <br />
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
