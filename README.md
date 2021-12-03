@@ -31,7 +31,7 @@
   <h3 align="center">WHIZ PLATFORM</h3>
 
   <p align="center">
-    next generation freelance ecosystem powered by blockchain
+    next generation freelance ecosystem powered by blockchains
     <br />
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
@@ -79,16 +79,16 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://azurekn1ght.github.io/WhizPlatform)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Whiz is a blockchain-based global freelancing platform that offers verified high quality jobs and freelancers at low costs. Whiz does not charge commissions. You can save on what traditional freelance platforms charge as commissions for job matching. Whiz uses blockchains to process and log transactions, including reviews. This translates to authentic and immutable (i.e. unchangeable) reviews, better quality jobs and freelancers, and cost savings.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Job agreements are written in smart contracts, coupled with payment escrow, onto the blockchain. When you enter a job agreement on Whiz, whether as a hirer or freelancer, the job scope is mutually defined and cannot be changed by either party. Payment is committed by the buyer, but locked away from either party into the smart contract until its fulfilment. Whiz does not have access to these funds at any point in time.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+Key Benefits of Whiz:
+* Access to Qualified Freelancers Globally
+* Smart Contracts ensure Well-Defined Scopes & Payments
+* Enjoy Zero Commission Fees, Only Pay For What You Need
 
-Use the `BLANK_README.md` to get started.
+In a nutshell, Whiz provides secure, traceable, reliable payments using smart contracts powered and enabled via the blockchain. All your pain points with other freelancing platforms well taken care off!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
