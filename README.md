@@ -75,8 +75,8 @@
         </ul>
     </li>
     <li><a href="#smart-contracts">Smart Contracts</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -305,21 +305,10 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the CC License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- CONTACT -->
 ## Contact
 
-Project Link: [https://github.com/AzureKn1ght/WhizPlatform](https://github.com/AzureKn1ght/WhizPlatform)
-
-If you have any further questions or comments, please feel free to our core contributors:
+If you have any further questions or comments, please feel free to contact any of our core contributors:
 
 * [AzureKn1ght](https://github.com/AzureKn1ght)
 * [Bright3stday](https://github.com/Bright3stday)
@@ -328,6 +317,17 @@ If you have any further questions or comments, please feel free to our core cont
 * [kennethzhg](https://github.com/kennethzhg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the CC License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 
 
