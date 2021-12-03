@@ -152,11 +152,11 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The following video shows an example of a completed workflow. Starting from the homepage, to the freelancer applying for and completing a job, followed by confirmation and payment.
 
 https://user-images.githubusercontent.com/1888822/144605790-3a99a67b-d0dc-4bde-b6d5-1df770d6dc9b.mp4
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more information, please refer to the [FAQ](https://azurekn1ght.github.io/WhizPlatform/FAQ.html)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
