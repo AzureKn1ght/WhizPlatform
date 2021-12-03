@@ -249,13 +249,13 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/badges/shields
+[contributors-shield]: https://img.shields.io/github/contributors/AzureKn1ght/WhizPlatform
 [contributors-url]: https://github.com/AzureKn1ght/WhizPlatform/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/badges/shields
+[forks-shield]: https://img.shields.io/github/forks/AzureKn1ght/WhizPlatform
 [forks-url]: https://github.com/AzureKn1ght/WhizPlatform/network/members
-[stars-shield]: https://img.shields.io/github/stars/badges/shields
+[stars-shield]: https://img.shields.io/github/stars/AzureKn1ght/WhizPlatform
 [stars-url]: https://github.com/AzureKn1ght/WhizPlatform/stargazers
-[issues-shield]: https://img.shields.io/github/issues/badges/shields
+[issues-shield]: https://img.shields.io/github/issues/AzureKn1ght/WhizPlatform
 [issues-url]: https://github.com/AzureKn1ght/WhizPlatform/issues
 
 
