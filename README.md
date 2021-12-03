@@ -154,7 +154,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-https://user-images.githubusercontent.com/1888822/144605422-9e23bf66-b460-4a86-a31f-4ec6d794eceb.mp4
+https://user-images.githubusercontent.com/1888822/144605790-3a99a67b-d0dc-4bde-b6d5-1df770d6dc9b.mp4
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
