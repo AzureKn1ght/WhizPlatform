@@ -1,25 +1,4 @@
-# Whiz Platform
-
-todo: documentation
-
-[https://azurekn1ght.github.io/WhizPlatform/](https://azurekn1ght.github.io/WhizPlatform/)
-
-
-
-
-
-
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -40,7 +19,7 @@ todo: documentation
 <br />
 <div align="center">
   <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
-    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
+    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="128" height="128">
   </a>
 
   <h3 align="center">WHIZ PLATFORM</h3>
@@ -51,11 +30,11 @@ todo: documentation
     <a href="README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/AzureKn1ght/WhizPlatform/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/AzureKn1ght/WhizPlatform/issues">Request Feature</a>
   </p>
 </div>
 
