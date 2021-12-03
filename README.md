@@ -76,7 +76,6 @@
     </li>
     <li><a href="#smart-contracts">Smart Contracts</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -257,7 +256,7 @@ API endpoints to handle review related functions. 
 <!-- SMART CONTRACTS -->
 ## Smart Contracts
 
-These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the custom ERC-20 tokens to your MetaMask wallet, please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
+These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the tokens to your MetaMask wallet, please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
 <br>
 <br>
 
@@ -320,21 +319,10 @@ If you have any further questions or comments, please feel free to reach out to 
 
 
 
-
-<!-- LICENSE -->
-## License
-
-Distributed under the CC License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-We would like to take this opportunity to thank the [NUS School of Computing](https://www.comp.nus.edu.sg/) and [NUS FinTech Lab](https://fintechlab.nus.edu.sg/) for giving us the experience to work on this exciting project!
+We would like to take this opportunity to thank the [NUS School of Computing](https://www.comp.nus.edu.sg/) and [NUS FinTech Lab](https://fintechlab.nus.edu.sg/) for the experience to work on this exciting project!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
