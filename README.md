@@ -256,7 +256,7 @@ API endpoints to handle review related functions. 
 <!-- SMART CONTRACTS -->
 ## Smart Contracts
 
-These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the tokens to your MetaMask wallet, please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
+These are the smart contracts deployed to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/). In order to add the tokens to your MetaMask wallet, please refer to: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask). 
 <br>
 <br>
 
