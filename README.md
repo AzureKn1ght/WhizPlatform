@@ -1,19 +1,7 @@
-# Whiz Platform
-
-todo: documentation
-
-[https://azurekn1ght.github.io/WhizPlatform/](https://azurekn1ght.github.io/WhizPlatform/)
-
-
-
-
-
-
 <div id="top"></div>
 <!--
 *** WHIZ DOCUMENTATION
 -->
-
 
 
 <!-- PROJECT SHIELDS -->
