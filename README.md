@@ -253,10 +253,10 @@ Use this space to list resources you find helpful and would like to give credit 
 [contributors-url]: https://github.com/AzureKn1ght/WhizPlatform/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/badges/shields
 [forks-url]: https://github.com/AzureKn1ght/WhizPlatform/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[stars-shield]: https://img.shields.io/github/stars/badges/shields
+[stars-url]: https://github.com/AzureKn1ght/WhizPlatform/stargazers
+[issues-shield]: https://img.shields.io/github/issues/badges/shields
+[issues-url]: https://github.com/AzureKn1ght/WhizPlatform/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
