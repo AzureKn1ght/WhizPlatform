@@ -322,7 +322,7 @@ If you have any further questions or comments, please feel free to reach out to 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-We would like to take this opportunity to thank the [NUS School of Computing](https://www.comp.nus.edu.sg/) and [NUS FinTech Lab](https://fintechlab.nus.edu.sg/) for the experience to work on this exciting project!
+We would like to take this opportunity to thank the [NUS School of Computing](https://www.comp.nus.edu.sg/) and [NUS FinTech Lab](https://fintechlab.nus.edu.sg/) for the experience of working on this exciting project!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
