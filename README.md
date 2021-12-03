@@ -116,11 +116,11 @@ Key Technologies Used:
 <!-- GETTING STARTED -->
 ## Getting Started
 
-We use web3.js to facilitate blockchain transactions, login and registration. You will need to have a Web3 compatible wallet installed on your browser and connect to the Polygon Testnet. 
+We use web3.js to facilitate blockchain transactions, login and registration. You will need to have a Web3 compatible wallet installed on your browser and connected to the Polygon Testnet. 
 
 ### Prerequisites
 
-If you have not already done so, please install the MetaMask wallet on your device.
+If you have not already done so, please install MetaMask wallet on your device.
 
 * [Install MetaMask](https://metamask.io/download) 
 
