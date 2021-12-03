@@ -154,7 +154,7 @@ The following video shows an example of a completed workflow. Starting from the 
 
 https://user-images.githubusercontent.com/1888822/144605790-3a99a67b-d0dc-4bde-b6d5-1df770d6dc9b.mp4
 
-_For more information, please refer to the [FAQ](https://azurekn1ght.github.io/WhizPlatform/FAQ.html)_
+_For more details, please refer to [FAQ](https://azurekn1ght.github.io/WhizPlatform/FAQ.html)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
