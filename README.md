@@ -11,15 +11,14 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Watchers][watchers-shield]][watchers-url]
 [![Deployments][deployments-shield]][deployments-url]
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
+[![License: CC BY-NC-ND 4.0][license-shield]][license-url]
 
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://azurekn1ght.github.io/WhizPlatform" target="_blank">
-    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="128" height="128">
+    <img src="frontend/img/whiz/hat_coin_icon.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">WHIZ PLATFORM</h3>
@@ -239,6 +238,11 @@ Use this space to list resources you find helpful and would like to give credit 
 [watchers-url]: https://github.com/AzureKn1ght/WhizPlatform/watchers
 [deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages?style=for-the-badge
 [deployments-url]: https://github.com/AzureKn1ght/WhizPlatform/deployments
+
+
+[license-shield]: https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg?style=for-the-badge
+[license-url]: https://creativecommons.org/licenses/by-nc-nd/4.0/
+
 
 [product-screenshot]: images/screenshot.png
 
