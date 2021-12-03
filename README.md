@@ -79,7 +79,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://azurekn1ght.github.io/WhizPlatform)
 
-Whiz is a blockchain-based global freelancing platform that offers verified high quality jobs and freelancers at low costs. Whiz does not charge commissions. You can save on what traditional freelance platforms charge as commissions for job matching. Whiz uses blockchains to process and log transactions, including reviews. This translates to authentic and immutable (i.e. unchangeable) reviews, better quality jobs and freelancers, and cost savings.
+Whiz is a blockchain-based global freelancing platform that offers verified high quality jobs and freelancers at low costs. Whiz does not charge commissions. You can save on what traditional freelance platforms charge as commissions for job matching. Whiz uses blockchains to process and log transactions, including reviews. This translates to authentic and immutable reviews, better quality jobs and freelancers, and cost savings.
 
 Job agreements are written in smart contracts, coupled with payment escrow, onto the blockchain. When you enter a job agreement on Whiz, whether as a hirer or freelancer, the job scope is mutually defined and cannot be changed by either party. Payment is committed by the buyer, but locked away from either party into the smart contract until its fulfilment. Whiz does not have access to these funds at any point in time.
 
