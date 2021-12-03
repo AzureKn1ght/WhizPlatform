@@ -308,7 +308,7 @@ A smart contract to escrow funds, manage gigs, reviews, and issue rewards. 
 <!-- CONTACT -->
 ## Contact
 
-If you have any further questions or comments, please feel free to contact any of our core contributors:
+If you have any further questions or comments, please feel free to reach out to any of our core contributors:
 
 * [AzureKn1ght](https://github.com/AzureKn1ght)
 * [Bright3stday](https://github.com/Bright3stday)
@@ -334,16 +334,7 @@ Distributed under the CC License. See `LICENSE.txt` for more information.
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+We would like to take this opportunity to thank the [NUS School of Computing](https://www.comp.nus.edu.sg/) and [NUS FinTech Lab](https://fintechlab.nus.edu.sg/) for giving us the experience to work on this exciting project!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
