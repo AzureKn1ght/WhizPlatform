@@ -247,5 +247,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-url]: https://creativecommons.org/licenses/by-nc-nd/4.0/
 [deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages?style=for-the-badge
 [deployments-url]: https://github.com/AzureKn1ght/WhizPlatform/deployments
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: screenshots/devices.png
 
