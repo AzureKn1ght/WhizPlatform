@@ -109,8 +109,6 @@ Key Technologies Used:
 * [Solidity](https://soliditylang.org)
 * [Polygon](https://polygon.technology)  
 
-Our solution leverages on the power of decentralized blockchains to implement robust and tamper- proof settlements. Agreements between buyers and sellers on terms and payment amounts are encoded within smart contracts that are deployed on the Polygon blockchain. Additionally, for our platform’s incentive system, we shall be issuing our native token (WHIZ) using the ERC20 token standard on Polygon.
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
