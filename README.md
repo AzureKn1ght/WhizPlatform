@@ -126,10 +126,9 @@ If you have not already done so, please install MetaMask wallet on your device.
 
 ### Network Setup
 
-_You will need to be connected to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on the [Polygon Blockchain](https://polygon.technology/)._
+_You will need to be connected to the [Mumbai Testnet](https://mumbai.polygonscan.com/) on [Polygon](https://polygon.technology/)._
 
-* Please refer to the following guide: [How to add unlisted tokens (custom tokens) in MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489031-How-to-add-unlisted-tokens-custom-tokens-in-MetaMask).  
-
+* Please refer to the following guide: [Connect to Polygon's Testnet](https://docs.mobius.finance/guides/connect-to-polygons-testnet).  
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
