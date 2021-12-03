@@ -120,7 +120,6 @@ We use web3.js to facilitate blockchain transactions, login and registration. Yo
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 If you have not already done so, please install the MetaMask wallet on your device.
 
 * [Install MetaMask](https://metamask.io/download) 
