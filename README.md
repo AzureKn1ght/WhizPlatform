@@ -250,22 +250,23 @@ Use this space to list resources you find helpful and would like to give credit 
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/AzureKn1ght/WhizPlatform
+[contributors-shield]: https://img.shields.io/github/contributors/AzureKn1ght/WhizPlatform?style=flat-square
 [contributors-url]: https://github.com/AzureKn1ght/WhizPlatform/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AzureKn1ght/WhizPlatform
+[forks-shield]: https://img.shields.io/github/forks/AzureKn1ght/WhizPlatform?style=flat-square
 [forks-url]: https://github.com/AzureKn1ght/WhizPlatform/network/members
-[stars-shield]: https://img.shields.io/github/stars/AzureKn1ght/WhizPlatform
+[stars-shield]: https://img.shields.io/github/stars/AzureKn1ght/WhizPlatform?style=flat-square
 [stars-url]: https://github.com/AzureKn1ght/WhizPlatform/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AzureKn1ght/WhizPlatform
+[issues-shield]: https://img.shields.io/github/issues/AzureKn1ght/WhizPlatform?style=flat-square
 [issues-url]: https://github.com/AzureKn1ght/WhizPlatform/issues
 
 
-[watchers-shield]: https://img.shields.io/github/watchers/AzureKn1ght/WhizPlatform
+[watchers-shield]: https://img.shields.io/github/watchers/AzureKn1ght/WhizPlatform?style=flat-square
 [watchers-url]: https://github.com/AzureKn1ght/WhizPlatform/watchers
 
 
-[deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages
+[deployments-shield]: https://img.shields.io/github/deployments/AzureKn1ght/WhizPlatform/github-pages?style=flat-square
 [deployments-url]: https://github.com/AzureKn1ght/WhizPlatform/deployments
 
 
 [product-screenshot]: images/screenshot.png
+
