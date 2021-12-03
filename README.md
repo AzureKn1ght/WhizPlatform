@@ -156,6 +156,11 @@ The following video shows an example of a completed workflow. Starting from the 
 
 https://user-images.githubusercontent.com/1888822/144605790-3a99a67b-d0dc-4bde-b6d5-1df770d6dc9b.mp4
 
+<video style="width:100%" controls>
+  <source src="https://github.com/AzureKn1ght/WhizPlatform/raw/main/screenshots/Whiz%20Demo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
 _For more details, please refer to [FAQ](https://azurekn1ght.github.io/WhizPlatform/FAQ.html)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
