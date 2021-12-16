@@ -311,7 +311,7 @@ If you have any further questions or comments, please feel free to reach out to 
 
 * [AzureKn1ght](https://github.com/AzureKn1ght)
 * [Bright3stday](https://github.com/Bright3stday)
-* [Kenneth Cheong](https://github.com/kenneth-cheong) | [Email](mailto:clarinet.kenneth@gmail.com)
+* Kenneth Cheong: [GitHub](https://github.com/kenneth-cheong) | [Email](mailto:clarinet.kenneth@gmail.com) | [LinkedIn](https://www.linkedin.com/in/kenneth-cheong-jw)
 * [yihching8](https://github.com/yihching8)
 * [kennethzhg](https://github.com/kennethzhg)
 
